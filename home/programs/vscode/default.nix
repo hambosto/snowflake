@@ -1,10 +1,11 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   programs.vscode = {
     enable = true;
     userSettings = {
       "editor.fontSize" = 14;
       "editor.fontFamily" = "Fira Code";
       "editor.fontLigatures" = true;
+      "editor.formatOnSave" = true;
       "workbench.colorTheme" = "Tokyo Night";
       "workbench.iconTheme" = "moxer-icons";
       "workbench.productIconTheme" = "fluent-icons";
@@ -12,6 +13,20 @@
       "terminal.integrated.fontFamily" = "Fira Code";
       "window.menuBarVisibility" = "toggle";
       "editor.minimap.enabled" = false;
+      "nix.enableLanguageServer" = true;
+      "nix.serverPath" = "nixd";
+      "nix.serverSettings" = {
+        "nixd" = {
+          "formatting" = {
+            "command" = ["alejandra"];
+          };
+          "options" = {
+            "nixos" = {
+              "expr" = "(builtins.getFlake \"/home/ilham/.config/snowflake\").nixosConfigurations.snowflake.options";
+            };
+          };
+        };
+      };
     };
     extensions = pkgs.vscode-utils.extensionsFromVscodeMarketplace [
       {
@@ -39,10 +54,10 @@
         sha256 = "sha256-LFJLU4Vodo8rGgQ5waxlN70jr0TZUMlknmqfx259egE=";
       }
       {
-        name = "Nix";
-        publisher = "bbenoist";
-        version = "1.0.1";
-        sha256 = "sha256-qwxqOGublQeVP2qrLF94ndX/Be9oZOn+ZMCFX1yyoH0=";
+        name = "nix-ide";
+        publisher = "jnoortheen";
+        version = "0.3.5";
+        sha256 = "sha256-hiyFZVsZkxpc2Kh0zi3NGwA/FUbetAS9khWxYesxT4s=";
       }
     ];
   };

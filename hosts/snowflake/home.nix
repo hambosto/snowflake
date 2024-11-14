@@ -16,7 +16,7 @@
     ../../home/programs/cava
     ../../home/programs/vscode
     ../../home/programs/firefox
-    ../../home/programs/development
+    ../../home/programs/dev
     # ../../home/programs/docker
     # ../../home/programs/kvm
 

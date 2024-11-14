@@ -49,6 +49,8 @@ in {
     xdg-utils
     wget
     curl
+    nixd
+    alejandra
   ];
 
   services.logind.extraConfig = ''
