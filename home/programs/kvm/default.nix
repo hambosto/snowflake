@@ -1,9 +1,11 @@
-{ config, pkgs, ... }:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   virtualisation.libvirtd.enable = true;
 
-  environment.systemPackages = with pkgs; [ virt-manager ];
+  environment.systemPackages = with pkgs; [virt-manager];
 
-  users.users.${config.var.system.username} = { extraGroups = [ "libvirtd" ]; };
+  users.users.${config.var.system.username} = {extraGroups = ["libvirtd"];};
 }

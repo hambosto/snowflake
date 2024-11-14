@@ -1,7 +1,5 @@
-{ config, ... }:
-
-{
+{config, ...}: {
   virtualisation.docker.enable = true;
 
-  users.users.${config.var.system.username} = { extraGroups = [ "docker" ]; };
+  users.users.${config.var.system.username} = {extraGroups = ["docker"];};
 }

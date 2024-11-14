@@ -1,5 +1,9 @@
-{ config, pkgs, ... }:
-let inherit (config.var.system) username;
+{
+  config,
+  pkgs,
+  ...
+}: let
+  inherit (config.var.system) username;
 in {
   programs.zsh.enable = true;
   users = {
@@ -7,7 +11,7 @@ in {
     users.${username} = {
       isNormalUser = true;
       description = "${username} account";
-      extraGroups = [ "networkmanager" "wheel" ];
+      extraGroups = ["networkmanager" "wheel"];
     };
   };
 }

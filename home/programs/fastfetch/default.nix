@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   programs.fastfetch = {
     enable = true;
     package = pkgs.fastfetch;
@@ -13,7 +13,7 @@
           left = 2; # Small left padding for alignment
         };
       };
-      display = { separator = " "; };
+      display = {separator = " ";};
       modules = [
         {
           key = "╭───────────╮";

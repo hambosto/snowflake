@@ -1,4 +1,4 @@
-{ config, ... }: {
+{config, ...}: {
   time.timeZone = config.var.system.timeZone;
   i18n.defaultLocale = config.var.system.defaultLocale;
   i18n.extraLocaleSettings = {

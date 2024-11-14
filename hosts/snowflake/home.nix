@@ -1,11 +1,13 @@
-{ pkgs, config, ... }: {
-
+{
+  pkgs,
+  config,
+  ...
+}: {
   imports = [
     ./variables.nix
 
     # Programs
     ../../home/programs/kitty
-    ../../home/programs/nvim
     ../../home/programs/shell
     ../../home/programs/fastfetch
     ../../home/programs/git
@@ -34,7 +36,6 @@
     # ../../home/system/udiskie
     ../../home/system/clipman
     ../../home/system/rofi
-
   ];
 
   stylix.targets.vscode.enable = false;
@@ -43,10 +44,18 @@
   home = {
     homeDirectory = "/home/" + config.var.system.username;
 
-    packages = with pkgs; [ zip unzip peaclock cbonsai pipes cmatrix ];
+    packages = with pkgs; [
+      zip
+      unzip
+      peaclock
+      cbonsai
+      pipes
+      cmatrix
+      neovim
+    ];
 
     # Import my profile picture, used by the hyprpanel dashboard
-    file.".profile_picture.png" = { source = ./profile_pictures.jpg; };
+    file.".profile_picture.png" = {source = ./profile_pictures.jpg;};
 
     # Don't touch this
     stateVersion = "24.05";

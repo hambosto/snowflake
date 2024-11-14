@@ -1,11 +1,11 @@
-{ config, ... }:
-let configDir = config.var.system.configDirectory;
+{config, ...}: let
+  configDir = config.var.system.configDirectory;
 in {
   system.autoUpgrade = {
     enable = config.var.maintenance.autoUpgrade;
     dates = "04:00";
     flake = "${configDir}";
-    flags = [ "--update-input" "nixpkgs" "--commit-lock-file" ];
+    flags = ["--update-input" "nixpkgs" "--commit-lock-file"];
     allowReboot = false;
   };
 }

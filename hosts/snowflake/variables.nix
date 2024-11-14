@@ -1,14 +1,13 @@
-{ config, ... }: {
+{config, ...}: {
   # Import external configuration for variables
-  imports = [ ../../nixos/variables-config.nix ];
+  imports = [../../nixos/variables-config.nix];
 
   config.var = {
     # System Settings
     system = {
       hostname = "snowflake"; # Hostname of the system
       username = "ilham"; # Default username
-      configDirectory =
-        "/home/${config.var.system.username}/.config/snowflake"; # Config directory
+      configDirectory = "/home/${config.var.system.username}/.config/snowflake"; # Config directory
       location = "Jakarta"; # Geographical location
       timeZone = "Asia/Jakarta"; # System timezone
       defaultLocale = "en_US.UTF-8"; # Default locale

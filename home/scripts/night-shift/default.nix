@@ -1,9 +1,9 @@
-{ pkgs, ... }:
-let
+{pkgs, ...}: let
   value = "4500";
 
-  night-shift-on = pkgs.writeShellScriptBin "night-shift-on"
-    # bash 
+  night-shift-on =
+    pkgs.writeShellScriptBin "night-shift-on"
+    # bash
     ''
       ${pkgs.hyprsunset}/bin/hyprsunset -t ${value} &
       title="󰖔  Night-Shift Activated"
@@ -12,8 +12,9 @@ let
       notif "night-shift" "$title" "$description"
     '';
 
-  night-shift-off = pkgs.writeShellScriptBin "night-shift-off"
-    # bash 
+  night-shift-off =
+    pkgs.writeShellScriptBin "night-shift-off"
+    # bash
     ''
       pkill hyprsunset
       title="󰖕  Night-Shift Deactivated"
@@ -22,7 +23,8 @@ let
       notif "night-shift" "$title" "$description"
     '';
 
-  night-shift = pkgs.writeShellScriptBin "night-shift"
+  night-shift =
+    pkgs.writeShellScriptBin "night-shift"
     # bash
     ''
       if pidof "hyprsunset"; then
@@ -32,7 +34,8 @@ let
       fi
     '';
 
-  night-shift-status = pkgs.writeShellScriptBin "night-shift-status"
+  night-shift-status =
+    pkgs.writeShellScriptBin "night-shift-status"
     # bash
     ''
       if pidof "hyprsunset"; then
@@ -42,7 +45,8 @@ let
       fi
     '';
 
-  night-shift-status-icon = pkgs.writeShellScriptBin "night-shift-status-icon"
+  night-shift-status-icon =
+    pkgs.writeShellScriptBin "night-shift-status-icon"
     # bash
     ''
       if pidof "hyprsunset"; then

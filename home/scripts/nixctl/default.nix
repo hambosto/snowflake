@@ -1,5 +1,8 @@
-{ pkgs, config, inputs, ... }:
-let
+{
+  pkgs,
+  config,
+  ...
+}: let
   configDirectory = config.var.system.configDirectory;
   hostname = config.var.system.hostname;
 
@@ -38,8 +41,13 @@ let
   ];
 
   # Convert menu items to the format expected by fzf
-  menuItemsString = builtins.concatStringsSep "\n" (map 
-    (item: "${if item.icon == "" then "󰘳" else item.icon};${item.name};${item.command}") 
+  menuItemsString = builtins.concatStringsSep "\n" (
+    map
+    (item: "${
+      if item.icon == ""
+      then "󰘳"
+      else item.icon
+    };${item.name};${item.command}")
     menuItems
   );
 
@@ -51,7 +59,7 @@ let
     function ui() {
       fzf_result=$(printf "%s\n" "${menuItemsString}" | awk -F ';' '{print $1" "$2}' | fzf)
       [[ -z $fzf_result ]] && exit 0
-      
+
       fzf_result=''${fzf_result/ /;}
       line=$(printf "%s\n" "${menuItemsString}" | grep "$fzf_result")
       command=$(echo "$line" | sed 's/^[^;]*;//;s/^[^;]*;//')
@@ -87,7 +95,7 @@ let
     function loop_mode() {
       while true; do
         nixctl
-        echo "Press enter to continue, e to exit" 
+        echo "Press enter to continue, e to exit"
         read -n 1 REPLY
         clear
         [[ $REPLY == "e" ]] && exit 0
@@ -127,5 +135,5 @@ let
     esac
   '';
 in {
-  home.packages = [ nixctl ];
+  home.packages = [nixctl];
 }

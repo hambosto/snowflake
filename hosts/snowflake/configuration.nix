@@ -1,6 +1,9 @@
-{ config, pkgs, ... }: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   imports = [
-
     ../../nixos/audio.nix
     ../../nixos/auto-upgrade.nix
     # ../../nixos/bluetooth.nix
@@ -21,7 +24,7 @@
     ./variables.nix
   ];
 
-  services.xserver.excludePackages = with pkgs; [ xterm ];
+  services.xserver.excludePackages = with pkgs; [xterm];
 
   home-manager.users."${config.var.system.username}" = import ./home.nix;
 

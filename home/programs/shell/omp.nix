@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   programs.oh-my-posh = {
     enable = true;
     package = pkgs.oh-my-posh;
@@ -20,15 +18,14 @@
               background = "transparent";
               foreground = "blue";
               template = "{{ .Path }}";
-              properties = { style = "full"; };
+              properties = {style = "full";};
             }
             {
               type = "git";
               style = "plain";
               foreground = "p:grey";
               background = "transparent";
-              template =
-                " {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>";
+              template = " {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <cyan>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>";
               properties = {
                 branch_icon = "";
                 commit_icon = "@";
@@ -40,34 +37,37 @@
         {
           type = "rprompt";
           overflow = "hidden";
-          segments = [{
-            type = "executiontime";
-            style = "plain";
-            foreground = "yellow";
-            background = "transparent";
-            template = "{{ .FormattedMs }}";
-            properties = { threshold = 5000; };
-          }];
+          segments = [
+            {
+              type = "executiontime";
+              style = "plain";
+              foreground = "yellow";
+              background = "transparent";
+              template = "{{ .FormattedMs }}";
+              properties = {threshold = 5000;};
+            }
+          ];
         }
         {
           type = "prompt";
           alignment = "left";
           newline = true;
-          segments = [{
-            type = "text";
-            style = "plain";
-            foreground_templates = [
-              "{{if gt .Code 0}}red{{end}}"
-              "{{if eq .Code 0}}magenta{{end}}"
-            ];
-            background = "transparent";
-            template = "❯";
-          }];
+          segments = [
+            {
+              type = "text";
+              style = "plain";
+              foreground_templates = [
+                "{{if gt .Code 0}}red{{end}}"
+                "{{if eq .Code 0}}magenta{{end}}"
+              ];
+              background = "transparent";
+              template = "❯";
+            }
+          ];
         }
       ];
       transient_prompt = {
-        foreground_templates =
-          [ "{{if gt .Code 0}}red{{end}}" "{{if eq .Code 0}}magenta{{end}}" ];
+        foreground_templates = ["{{if gt .Code 0}}red{{end}}" "{{if eq .Code 0}}magenta{{end}}"];
         background = "transparent";
         template = "❯ ";
       };

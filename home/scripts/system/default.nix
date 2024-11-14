@@ -1,8 +1,6 @@
-{ pkgs, ... }:
-
-let
-
-  menu = pkgs.writeShellScriptBin "menu"
+{pkgs, ...}: let
+  menu =
+    pkgs.writeShellScriptBin "menu"
     # bash
     ''
       if pgrep -x "rofi" > /dev/null; then
@@ -13,7 +11,8 @@ let
       rofi -show drun
     '';
 
-  powermenu = pkgs.writeShellScriptBin "powermenu"
+  powermenu =
+    pkgs.writeShellScriptBin "powermenu"
     # bash
     ''
       if pgrep -x rofi; then
@@ -49,7 +48,8 @@ let
       fi
     '';
 
-  quickmenu = pkgs.writeShellScriptBin "quickmenu"
+  quickmenu =
+    pkgs.writeShellScriptBin "quickmenu"
     # bash
     ''
       if pgrep -x rofi; then
@@ -80,10 +80,10 @@ let
       fi
     '';
 
-  lock = pkgs.writeShellScriptBin "lock"
+  lock =
+    pkgs.writeShellScriptBin "lock"
     # bash
     ''
       ${pkgs.hyprlock}/bin/hyprlock
     '';
-
-in { home.packages = [ menu powermenu lock quickmenu ]; }
+in {home.packages = [menu powermenu lock quickmenu];}

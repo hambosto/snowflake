@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-let
+{pkgs, ...}: let
   increments = "5";
 
   sound-change = pkgs.writeShellScriptBin "sound-change" ''
@@ -26,5 +24,5 @@ let
     sound-change mute
   '';
 in {
-  home.packages = [ sound-change sound-up sound-down sound-toggle sound-set ];
+  home.packages = [sound-change sound-up sound-down sound-toggle sound-set];
 }

@@ -1,7 +1,11 @@
-{ pkgs, config, inputs, ... }:
-let
+{
+  pkgs,
+  config,
+  inputs,
+  ...
+}: let
   inherit (config.var.appearance.window) rounding opacity gaps borderSize blurEnabled;
-  inherit (config.var.system) keyboardLayout; 
+  inherit (config.var.system) keyboardLayout;
 in {
   home.packages = with pkgs; [
     hyprpicker
@@ -18,7 +22,7 @@ in {
       "$terminal" = "kitty";
       "$mod" = "SUPER";
       "$shiftMod" = "SUPER_SHIFT";
-      monitor = [ ",preferred,auto,1" ];
+      monitor = [",preferred,auto,1"];
 
       # System environment variables
       env = [
@@ -84,7 +88,10 @@ in {
         };
 
         blur = {
-          enabled = if blurEnabled then "true" else "false";
+          enabled =
+            if blurEnabled
+            then "true"
+            else "false";
           size = 16;
           passes = 4;
           contrast = 0.9;
@@ -209,9 +216,9 @@ in {
       ];
 
       # Mouse bindings
-      bindm = [ 
-        "$mod,mouse:272, movewindow" 
-        "$mod,mouse:273, resizewindow" 
+      bindm = [
+        "$mod,mouse:272, movewindow"
+        "$mod,mouse:273, resizewindow"
       ];
 
       # Hardware event bindings

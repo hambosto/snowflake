@@ -4,7 +4,7 @@
     enableZshIntegration = true;
 
     settings = {
-      log = { enabled = false; };
+      log = {enabled = false;};
       manager = {
         show_hidden = true;
         sort_by = "modified";

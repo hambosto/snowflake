@@ -1,8 +1,7 @@
-{ inputs, ... }: {
+{inputs, ...}: {
   programs.firefox = {
     enable = true;
     profiles.default = {
-
       settings = {
         "dom.security.https_only_mode" = true;
         "browser.download.panel.shown" = true;
@@ -46,16 +45,15 @@
         "layout.css.grid-template-masonry-value.enabled" = true;
         "dom.enable_web_task_scheduling" = true;
 
-        /* ***************************************************************************
-            * SECTION: SECUREFOX                                                       *
-           ***************************************************************************
+        /*
+        ***************************************************************************
+         * SECTION: SECUREFOX                                                       *
+        ***************************************************************************
         */
         # * TRACKING PROTECTION **
         "browser.contentblocking.category" = "strict";
-        "urlclassifier.trackingSkipURLs" =
-          "*.reddit.com = *.twitter.com = *.twimg.com = *.tiktok.com";
-        "urlclassifier.features.socialtracking.skipURLs" =
-          "*.instagram.com = *.twitter.com = *.twimg.com";
+        "urlclassifier.trackingSkipURLs" = "*.reddit.com = *.twitter.com = *.twimg.com = *.tiktok.com";
+        "urlclassifier.features.socialtracking.skipURLs" = "*.instagram.com = *.twitter.com = *.twimg.com";
         "browser.download.start_downloads_in_tmp_dir" = true;
         "browser.helperApps.deleteTempFileOnExit" = true;
         "browser.uitour.enabled" = false;
@@ -155,9 +153,10 @@
         "network.captive-portal-service.enabled" = false;
         "network.connectivity-service.enabled" = false;
 
-        /* ***************************************************************************
-            * SECTION: PESKYFOX                                                        *
-           ***************************************************************************
+        /*
+        ***************************************************************************
+         * SECTION: PESKYFOX                                                        *
+        ***************************************************************************
         */
         # * MOZILLA UI **
         "browser.privatebrowsing.vpnpromourl" = "";
@@ -221,7 +220,6 @@
         sponsorblock
         mtab
       ];
-
     };
   };
 }

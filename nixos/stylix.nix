@@ -1,4 +1,9 @@
-{ pkgs, inputs, config, ... }: {
+{
+  pkgs,
+  inputs,
+  config,
+  ...
+}: {
   stylix = {
     enable = true;
 
@@ -32,7 +37,7 @@
 
     fonts = {
       monospace = {
-        package = pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; };
+        package = pkgs.nerdfonts.override {fonts = ["JetBrainsMono"];};
         name = "JetBrains Mono Nerd Font";
       };
       sansSerif = {
@@ -55,5 +60,4 @@
       };
     };
   };
-
 }

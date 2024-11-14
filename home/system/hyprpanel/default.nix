@@ -1,6 +1,8 @@
-{ pkgs, config, ... }:
-let
-
+{
+  pkgs,
+  config,
+  ...
+}: let
   inherit (config.var.system) username location;
   inherit (config.var.appearance.window) gaps rounding borderSize;
   inherit (config.var.appearance.bar) floating transparency position;
@@ -8,13 +10,13 @@ let
   font = "${config.stylix.fonts.serif.name}";
   fontSize = "${toString config.stylix.fonts.sizes.desktop}";
 in {
-  wayland.windowManager.hyprland.settings.exec-once =
-    [ "${pkgs.hyprpanel}/bin/hyprpanel" ];
+  wayland.windowManager.hyprland.settings.exec-once = ["${pkgs.hyprpanel}/bin/hyprpanel"];
 
-  home.packages = with pkgs; [ hyprpanel libnotify ];
+  home.packages = with pkgs; [hyprpanel libnotify];
 
   home.file.".cache/ags/hyprpanel/options.json" = {
-    text = # json
+    text =
+      # json
       ''
         {
           "bar.layouts": {
@@ -37,39 +39,52 @@ in {
           "theme.font.name": "${font}",
           "theme.font.size": "${fontSize}px",
           "theme.bar.outer_spacing": "${
-            if floating && transparency.enabled then "0" else "8"
-          }px",
+          if floating && transparency.enabled
+          then "0"
+          else "8"
+        }px",
           "theme.bar.buttons.y_margins": "${
-            if floating && transparency.enabled then "0" else "8"
-          }px",
+          if floating && transparency.enabled
+          then "0"
+          else "8"
+        }px",
           "theme.bar.buttons.spacing": "0.3em",
           "theme.bar.buttons.radius": "${
-            if transparency.enabled then
-              toString rounding
-            else
-              toString (rounding - 8)
-          }px",
-          "theme.bar.floating": ${if floating then "true" else "false"},
+          if transparency.enabled
+          then toString rounding
+          else toString (rounding - 8)
+        }px",
+          "theme.bar.floating": ${
+          if floating
+          then "true"
+          else "false"
+        },
           "theme.bar.buttons.padding_x": "0.8rem",
           "theme.bar.buttons.padding_y": "0.4rem",
 
           "theme.bar.buttons.workspaces.hover": "#${config.lib.stylix.colors.base02}",
           "theme.bar.buttons.workspaces.active": "#${config.lib.stylix.colors.base0D}",
           "theme.bar.buttons.workspaces.available": "#${config.lib.stylix.colors.base01}",
-          
+
           "theme.bar.margin_top": "${
-            if position == "top" then toString (gaps.inner * 2) else "0"
-          }px",
+          if position == "top"
+          then toString (gaps.inner * 2)
+          else "0"
+        }px",
           "theme.bar.margin_bottom": "${
-            if position == "top" then "0" else toString (gaps.inner * 2)
-          }px",
+          if position == "top"
+          then "0"
+          else toString (gaps.inner * 2)
+        }px",
           "theme.bar.margin_sides": "${toString gaps.outer}px",
           "theme.bar.border_radius": "${toString rounding}px",
 
           "bar.launcher.icon": "",
           "theme.bar.transparent": ${
-            if transparency.enabled then "true" else "false"
-          },
+          if transparency.enabled
+          then "true"
+          else "false"
+        },
           "bar.workspaces.show_numbered": false,
           "bar.workspaces.workspaces": 5,
           "bar.workspaces.monitorSpecific": true,
@@ -151,19 +166,28 @@ in {
           "theme.bar.menus.dropdownmenu.background": "#${config.lib.stylix.colors.base01}",
           "theme.bar.menus.dropdownmenu.text": "#${config.lib.stylix.colors.base05}",
           "theme.bar.background": "#${
-            config.lib.stylix.colors.base00
-            + (if transparency.buttonsTransparent then "00" else "")
-          }",
+          config.lib.stylix.colors.base00
+          + (
+            if transparency.buttonsTransparent
+            then "00"
+            else ""
+          )
+        }",
           "theme.bar.buttons.style": "default",
           "theme.bar.buttons.monochrome": false,
           "theme.bar.buttons.text": "#${config.lib.stylix.colors.base05}",
           "theme.bar.buttons.background": "#${
-            (if transparency.enabled then
-              config.lib.stylix.colors.base00
-            else
-              config.lib.stylix.colors.base01)
-            + (if transparency.buttonsTransparent then "00" else "")
-          }",
+          (
+            if transparency.enabled
+            then config.lib.stylix.colors.base00
+            else config.lib.stylix.colors.base01
+          )
+          + (
+            if transparency.buttonsTransparent
+            then "00"
+            else ""
+          )
+        }",
           "theme.bar.buttons.icon": "#${config.lib.stylix.colors.base0C}",
           "theme.bar.buttons.notifications.background": "#${config.lib.stylix.colors.base01}",
           "theme.bar.buttons.hover": "#${config.lib.stylix.colors.base02}",

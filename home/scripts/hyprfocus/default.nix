@@ -1,6 +1,6 @@
-{ pkgs, ... }:
-let
-  hyprfocus-on = pkgs.writeShellScriptBin "hyprfocus-on"
+{pkgs, ...}: let
+  hyprfocus-on =
+    pkgs.writeShellScriptBin "hyprfocus-on"
     # bash
     ''
       hyprpanel-hide
@@ -14,7 +14,8 @@ let
       echo "1" > /tmp/hyprfocus
     '';
 
-  hyprfocus-off = pkgs.writeShellScriptBin "hyprfocus-off"
+  hyprfocus-off =
+    pkgs.writeShellScriptBin "hyprfocus-off"
     # bash
     ''
       hyprctl reload
@@ -22,8 +23,9 @@ let
       rm /tmp/hyprfocus
     '';
 
-  hyprfocus-toggle = pkgs.writeShellScriptBin "hyprfocus-toggle"
-    # bash 
+  hyprfocus-toggle =
+    pkgs.writeShellScriptBin "hyprfocus-toggle"
+    # bash
     ''
       if [ -f /tmp/hyprfocus ]; then
         hyprfocus-off
@@ -31,4 +33,4 @@ let
         hyprfocus-on
       fi
     '';
-in { home.packages = [ hyprfocus-on hyprfocus-off hyprfocus-toggle ]; }
+in {home.packages = [hyprfocus-on hyprfocus-off hyprfocus-toggle];}

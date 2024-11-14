@@ -1,5 +1,9 @@
-{ config, pkgs, lib, ... }:
-let
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}: let
   accent = "#${config.lib.stylix.colors.base0D}";
   foreground = "#${config.lib.stylix.colors.base05}";
   background = "#${config.lib.stylix.colors.base00}";
@@ -21,9 +25,7 @@ let
   c13 = "#${config.lib.stylix.colors.base0E}";
   c14 = "#${config.lib.stylix.colors.base0C}";
   c15 = "#${config.lib.stylix.colors.base07}";
-
 in {
-
   qt = {
     enable = true;
     platformTheme.name = "gtk2";
@@ -33,18 +35,18 @@ in {
   gtk = {
     enable = true;
 
-    theme = lib.mkForce { name = "FlatColor"; };
+    theme = lib.mkForce {name = "FlatColor";};
 
     iconTheme = {
       package = pkgs.kora-icon-theme;
       name = "Kora";
     };
 
-    font = { name = config.stylix.fonts.serif.name; };
+    font = {name = config.stylix.fonts.serif.name;};
 
-    gtk3.extraConfig = { gtk-application-prefer-dark-theme = 1; };
+    gtk3.extraConfig = {gtk-application-prefer-dark-theme = 1;};
 
-    gtk4.extraConfig = { gtk-application-prefer-dark-theme = 1; };
+    gtk4.extraConfig = {gtk-application-prefer-dark-theme = 1;};
   };
 
   home.file = {
@@ -75,7 +77,7 @@ in {
           sed -i '2,26d' $file
           sed -i '2i @import url("../colors3");' $file
 
-          cp -r . $out 
+          cp -r . $out
         '';
       };
     };

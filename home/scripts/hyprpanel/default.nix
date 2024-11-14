@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-let
+{pkgs, ...}: let
   hyprpanel-toggle = pkgs.writeShellScriptBin "hyprpanel-toggle" ''
     hyprpanel -t bar-0
     hyprpanel -t bar-1
@@ -34,6 +33,5 @@ let
     hyprctl dispatch exec hyprpanel
   '';
 in {
-  home.packages =
-    [ hyprpanel-toggle hyprpanel-reload hyprpanel-hide hyprpanel-show ];
+  home.packages = [hyprpanel-toggle hyprpanel-reload hyprpanel-hide hyprpanel-show];
 }

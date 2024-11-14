@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-let
+{pkgs, ...}: let
   screenshot = pkgs.writeShellScriptBin "screenshot" ''
     if [[ $2 == "swappy" ]];then
       folder="/tmp"
@@ -24,6 +23,5 @@ let
     fi
   '';
 in {
-  home.packages =
-    [ pkgs.hyprshot screenshot pkgs.slurp pkgs.grim pkgs.grimblast ];
+  home.packages = [pkgs.hyprshot screenshot pkgs.slurp pkgs.grim pkgs.grimblast];
 }

@@ -1,7 +1,10 @@
-{ pkgs, config, ... }:
-let inherit (config.var.system) hostname keyboardLayout;
+{
+  pkgs,
+  config,
+  ...
+}: let
+  inherit (config.var.system) hostname keyboardLayout;
 in {
-
   networking.hostName = hostname;
 
   services = {
@@ -51,6 +54,8 @@ in {
     curl
     nixd
     alejandra
+    deadnix
+    statix
   ];
 
   services.logind.extraConfig = ''
