@@ -18,7 +18,7 @@
     # Git Settings
     git = {
       username = "Ilham Putra Husada"; # Git username
-      email = "reply+AZMZ3HFFBUFBAFYMGMZRVPOFIDQAFEVBNHHJ4MG6HY@reply.github.com"; # Git email
+      email = "hambosto@gmail.com"; # Git email
     };
 
     # Update and Maintenance
