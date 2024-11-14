@@ -8,7 +8,6 @@
     ./hyprfocus
     ./night-shift
     ./screenshot
-    ./nerdfont-fzf
     ./notification
     ./system
   ];
