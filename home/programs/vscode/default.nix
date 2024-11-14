@@ -20,11 +20,6 @@
           "formatting" = {
             "command" = ["alejandra"];
           };
-          "options" = {
-            "nixos" = {
-              "expr" = "(builtins.getFlake \"/home/ilham/.config/snowflake\").nixosConfigurations.snowflake.options";
-            };
-          };
         };
       };
     };
