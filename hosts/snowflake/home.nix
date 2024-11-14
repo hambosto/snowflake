@@ -13,6 +13,7 @@
     ../../home/programs/btop
     ../../home/programs/lazygit
     ../../home/programs/nh
+    ../../home/programs/cava
     ../../home/programs/vscode
     ../../home/programs/firefox
     ../../home/programs/development
@@ -42,7 +43,7 @@
   home = {
     homeDirectory = "/home/" + config.var.system.username;
 
-    packages = with pkgs; [ zip unzip peaclock cbonsai pipes cmatrix cava ];
+    packages = with pkgs; [ zip unzip peaclock cbonsai pipes cmatrix ];
 
     # Import my profile picture, used by the hyprpanel dashboard
     file.".profile_picture.png" = { source = ./profile_pictures.jpg; };

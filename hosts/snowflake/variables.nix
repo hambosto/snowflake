@@ -7,7 +7,8 @@
     system = {
       hostname = "snowflake"; # Hostname of the system
       username = "ilham"; # Default username
-      configDirectory = "/home/${config.var.system.username}/.config/snowflake"; # Config directory
+      configDirectory =
+        "/home/${config.var.system.username}/.config/snowflake"; # Config directory
       location = "Jakarta"; # Geographical location
       timeZone = "Asia/Jakarta"; # System timezone
       defaultLocale = "en_US.UTF-8"; # Default locale
@@ -29,7 +30,7 @@
 
     # Appearance
     appearance = {
-      wallpaper = ../../wallpapers/dracula-cat.png; # Default wallpaper
+      wallpaper = ../../wallpapers/retro.png; # Default wallpaper
       window = {
         rounding = 15; # Window corner rounding radius
         gaps = {

@@ -21,6 +21,11 @@ let
       command = "nixctl update";
     }
     {
+      icon = "";
+      name = "Optimise Nix Store";
+      command = "nixctl optimise";
+    }
+    {
       icon = "";
       name = "Collect Garbage";
       command = "nixctl gc";
@@ -75,6 +80,10 @@ let
       sudo /run/current-system/bin/switch-to-configuration boot
     }
 
+    function store_optimise() {
+      nix store optimise
+    }
+
     function loop_mode() {
       while true; do
         nixctl
@@ -104,6 +113,9 @@ let
         ;;
       "cb")
         clean_boot
+        ;;
+      "optimise")
+        store_optimise
         ;;
       "loop")
         loop_mode

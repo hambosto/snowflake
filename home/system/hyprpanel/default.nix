@@ -21,17 +21,17 @@ in {
             "0": {
               "left": ["dashboard", "workspaces", "windowtitle"],
               "middle": ["media"],
-              "right": ["systray", "volume", "bluetooth", "battery", "network", "clock", "notifications"]
+              "right": ["systray", "cpu", "ram", "volume", "bluetooth", "battery", "network", "clock", "notifications"]
             },
             "1": {
               "left": ["dashboard", "workspaces", "windowtitle"],
               "middle": ["media"],
-              "right": ["systray", "volume", "bluetooth", "battery", "network", "clock", "notifications"]
+              "right": ["systray", "cpu", "ram", "volume", "bluetooth", "battery", "network", "clock", "notifications"]
             },
             "2": {
               "left": ["dashboard", "workspaces", "windowtitle"],
               "middle": ["media"],
-              "right": ["systray", "volume", "bluetooth", "battery", "network", "clock", "notifications"]
+              "right": ["systray", "cpu", "ram", "volume", "bluetooth", "battery", "network", "clock", "notifications"]
             }
           },
           "theme.font.name": "${font}",
@@ -78,7 +78,7 @@ in {
           "bar.volume.label": false,
           "bar.network.truncation_size": 12,
           "bar.bluetooth.label": false,
-          "bar.clock.format": "%a %b %d  %I:%M %p",
+          "bar.clock.format": "%a %b %d %H:%M %p",
           "bar.notifications.show_total": true,
           "theme.notification.border_radius": "${toString rounding}px",
           "theme.osd.enable": true,
