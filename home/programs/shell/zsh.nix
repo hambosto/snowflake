@@ -1,12 +1,9 @@
 {
   pkgs,
-  lib,
   config,
   ...
 }: {
   home.packages = with pkgs; [bat ripgrep tldr];
-
-  home.sessionPath = ["$HOME/go/bin"];
 
   programs.zsh = {
     enable = true;
@@ -17,6 +14,13 @@
 
     initExtraFirst = ''
       fastfetch
+
+      # Go configuration
+      export GOPATH="$HOME/go"
+      export PATH="$PATH:$GOPATH/bin"
+
+      # Cargo configuration
+      export PATH="$PATH:$HOME/.cargo/bin"
     '';
 
     history = {
@@ -24,12 +28,6 @@
       save = 10000;
       size = 10000;
     };
-
-    profileExtra = lib.optionalString (config.home.sessionPath != []) ''
-      export PATH="$PATH''${PATH:+:}${
-        lib.concatStringsSep ":" config.home.sessionPath
-      }"
-    '';
 
     shellAliases = {
       cd = "z";
