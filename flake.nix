@@ -20,14 +20,8 @@
     apple-fonts.url = "github:Lyndeno/apple-fonts.nix";
   };
 
-  outputs = inputs @ {
-    self,
-    nixpkgs,
-    ...
-  }: let
+  outputs = inputs @ {nixpkgs, ...}: let
     system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system};
-
     mkSystem = hostname:
       nixpkgs.lib.nixosSystem {
         inherit system;
@@ -77,5 +71,9 @@
           }
         ];
       };
-  in {nixosConfigurations = {snowflake = mkSystem "snowflake";};};
+  in {
+    nixosConfigurations = {
+      snowflake = mkSystem "snowflake";
+    };
+  };
 }
