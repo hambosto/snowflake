@@ -29,7 +29,7 @@
 
     # Appearance
     appearance = {
-      wallpaper = ../../wallpapers/retro.png; # Default wallpaper
+      wallpaper = ../../wallpapers/japan.png; # Default wallpaper
       window = {
         rounding = 15; # Window corner rounding radius
         gaps = {
