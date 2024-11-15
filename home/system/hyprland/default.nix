@@ -137,7 +137,6 @@ in {
         "float, title:^(Picture-in-Picture)$"
         "pin, title:^(Picture-in-Picture)$"
         "move 69.5% 4%, title:^(Picture-in-Picture)$"
-        "opacity 0.75 0.75,class:^(code)$ "
       ];
 
       # Gesture and cursor settings
@@ -158,6 +157,7 @@ in {
         "$mod,RETURN, exec, ${pkgs.kitty}/bin/kitty"
         "$mod,E, exec, ${pkgs.kitty}/bin/kitty -e ${pkgs.yazi}/bin/yazi"
         "$mod,L, exec, ${pkgs.hyprlock}/bin/hyprlock"
+        "$mod,B, exec, ${pkgs.firefox}/bin/firefox"
         "$mod,X, exec, powermenu"
         "$mod,SPACE, exec, menu"
         "$mod,C, exec, quickmenu"

@@ -24,16 +24,6 @@ in {
               "left": ["dashboard", "workspaces", "windowtitle"],
               "middle": ["media"],
               "right": ["systray", "cpu", "ram", "volume", "bluetooth", "battery", "network", "clock", "notifications"]
-            },
-            "1": {
-              "left": ["dashboard", "workspaces", "windowtitle"],
-              "middle": ["media"],
-              "right": ["systray", "cpu", "ram", "volume", "bluetooth", "battery", "network", "clock", "notifications"]
-            },
-            "2": {
-              "left": ["dashboard", "workspaces", "windowtitle"],
-              "middle": ["media"],
-              "right": ["systray", "cpu", "ram", "volume", "bluetooth", "battery", "network", "clock", "notifications"]
             }
           },
           "theme.font.name": "${font}",
@@ -105,6 +95,8 @@ in {
           "menus.clock.weather.location": "${location}",
           "menus.clock.weather.key": "myapikey",
           "menus.clock.weather.unit": "metric",
+          "menus.clock.time.military": true,
+          "menus.dashboard.stats.enabled": false,
           "menus.dashboard.powermenu.avatar.image": "/home/${username}/.profile_picture.png",
           "menus.dashboard.powermenu.confirmation": false,
 
@@ -116,16 +108,16 @@ in {
           "menus.dashboard.shortcuts.left.shortcut2.tooltip": "Caffeine",
           "menus.dashboard.shortcuts.left.shortcut3.icon": "󰖔",
           "menus.dashboard.shortcuts.left.shortcut3.command": "night-shift",
-          "menus.dashboard.shortcuts.left.shortcut3.tooltip": "Night-shift",
+          "menus.dashboard.shortcuts.left.shortcut3.tooltip": "Night Shift",
           "menus.dashboard.shortcuts.left.shortcut4.icon": "",
           "menus.dashboard.shortcuts.left.shortcut4.command": "menu",
           "menus.dashboard.shortcuts.left.shortcut4.tooltip": "Search Apps",
-          "menus.dashboard.shortcuts.right.shortcut1.icon": "",
-          "menus.dashboard.shortcuts.right.shortcut1.command": "hyprpicker -a",
-          "menus.dashboard.shortcuts.right.shortcut1.tooltip": "Color Picker",
-          "menus.dashboard.shortcuts.right.shortcut3.icon": "󰄀",
-          "menus.dashboard.shortcuts.right.shortcut3.command": "screenshot region swappy",
-          "menus.dashboard.shortcuts.right.shortcut3.tooltip": "Screenshot",
+          "menus.dashboard.shortcuts.right.shortcut1.icon": "",
+          "menus.dashboard.shortcuts.right.shortcut1.command": "btop",
+          "menus.dashboard.shortcuts.right.shortcut1.tooltip": "Resource Monitor",
+          "menus.dashboard.shortcuts.right.shortcut3.icon": "󰨞",
+          "menus.dashboard.shortcuts.right.shortcut3.command": "code",
+          "menus.dashboard.shortcuts.right.shortcut3.tooltip": "Visual Studio Code",
 
           "menus.dashboard.directories.left.directory1.label": "󰉍 Downloads",
           "menus.dashboard.directories.left.directory1.command": "${pkgs.kitty}/bin/kitty -e ${pkgs.yazi}/bin/yazi $HOME/Downloads",
