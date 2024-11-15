@@ -175,6 +175,8 @@
 
         # * THEME ADJUSTMENTS **
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+        "svg.context-properties.content.enabled" = true;
+        "layout.css.color-mix.enabled" = true;
         "browser.compactmode.show" = true;
         "browser.privateWindowSeparation.enabled" = false;
         "browser.newtabpage.activity-stream.newtabWallpapers.v2.enabled" = true;
