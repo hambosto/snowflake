@@ -3,7 +3,7 @@
   config,
   ...
 }: {
-  home.packages = with pkgs; [bat ripgrep tldr];
+  home.packages = with pkgs; [bat ripgrep];
 
   programs.zsh = {
     enable = true;

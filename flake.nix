@@ -16,7 +16,7 @@
 
     hyprland.url = "github:hyprwm/Hyprland";
     hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
-    stylix.url = "github:danth/stylix/9cad2b044a6de7502235b66d78a9df6efcf0ddcf";
+    stylix.url = "github:danth/stylix";
     apple-fonts.url = "github:Lyndeno/apple-fonts.nix";
   };
 

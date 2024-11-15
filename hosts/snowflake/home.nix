@@ -40,6 +40,7 @@
 
   stylix.targets.vscode.enable = false;
   stylix.targets.rofi.enable = false;
+  stylix.targets.hyprlock.enable = false;
 
   home = {
     homeDirectory = "/home/" + config.var.system.username;
