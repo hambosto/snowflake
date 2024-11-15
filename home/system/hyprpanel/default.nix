@@ -113,7 +113,7 @@ in {
           "menus.dashboard.shortcuts.left.shortcut4.command": "menu",
           "menus.dashboard.shortcuts.left.shortcut4.tooltip": "Search Apps",
           "menus.dashboard.shortcuts.right.shortcut1.icon": "",
-          "menus.dashboard.shortcuts.right.shortcut1.command": "btop",
+          "menus.dashboard.shortcuts.right.shortcut1.command": "${pkgs.kitty}/bin/kitty -e ${pkgs.btop}/bin/btop",
           "menus.dashboard.shortcuts.right.shortcut1.tooltip": "Resource Monitor",
           "menus.dashboard.shortcuts.right.shortcut3.icon": "󰨞",
           "menus.dashboard.shortcuts.right.shortcut3.command": "code",
