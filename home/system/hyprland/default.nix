@@ -22,6 +22,8 @@ in {
       "$terminal" = "kitty";
       "$mod" = "SUPER";
       "$shiftMod" = "SUPER_SHIFT";
+
+      # Monitor setup
       monitor = [",preferred,auto,1"];
 
       # System environment variables
@@ -135,6 +137,7 @@ in {
         "float, title:^(Picture-in-Picture)$"
         "pin, title:^(Picture-in-Picture)$"
         "move 69.5% 4%, title:^(Picture-in-Picture)$"
+        "opacity 0.75 0.75,class:^(code)$ "
       ];
 
       # Gesture and cursor settings
