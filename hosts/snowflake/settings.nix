@@ -1,5 +1,5 @@
 {username, ...}: {
-  imports = [./../../options];
+  imports = [./../../nixos/options.nix];
 
   settings = {
     system = {
