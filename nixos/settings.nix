@@ -15,6 +15,12 @@
       email = "hambosto@gmail.com";
     };
 
+    # based on https://github.com/adi1090x/plymouth-themes
+    plymouth = {
+      enable = true;
+      theme = "rog";
+    };
+
     wallpaper = ../wallpapers/default.jpg; # default wallpapaper
   };
 }

@@ -1,7 +1,7 @@
 {
   imports = [
     ./audio.nix
-    # ./bluetooth.nix
+    ./bluetooth.nix
     ./boot.nix
     ./display-manager.nix
     ./fonts.nix
@@ -12,6 +12,7 @@
     ./nix.nix
     ./options.nix
     ./packages.nix
+    ./plymouth.nix
     ./polkit-agent.nix
     ./security.nix
     ./services.nix

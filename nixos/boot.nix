@@ -1,6 +1,5 @@
 {pkgs, ...}: {
   boot = {
-    plymouth.enable = true;
     bootspec.enable = true;
     loader = {
       efi.canTouchEfiVariables = true;
