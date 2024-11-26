@@ -3,21 +3,20 @@
     ./audio.nix
     # ./bluetooth.nix
     ./boot.nix
-    ./environment.nix
+    ./display-manager.nix
     ./fonts.nix
-    ./hardware.nix
+    ./graphics.nix
+    ./keyboard.nix
     ./networking.nix
     ./nix.nix
     ./packages.nix
     ./polkit-agent.nix
     ./security.nix
     ./services.nix
+    ./shell.nix
     ./stylix.nix
     ./timezone.nix
-    ./tuigreet.nix
     ./users.nix
-    ./utils.nix
-    ./variables-config.nix
     ./xdg-portal.nix
     ./zram.nix
   ];
