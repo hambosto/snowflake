@@ -1,0 +1,22 @@
+{
+  imports = [
+    ./btop.nix
+    ./cava.nix
+    ./eza.nix
+    ./fastfetch.nix
+    ./firefox.nix
+    ./fzf.nix
+    ./gemini-commit.nix
+    ./git.nix
+    ./go-encryption.nix
+    ./kitty.nix
+    ./lazygit.nix
+    ./nh.nix
+    ./spicetify.nix
+    ./vscode.nix
+    ./yazi.nix
+    ./zen.nix
+    ./zoxide.nix
+    ./zsh.nix
+  ];
+}
