@@ -10,6 +10,7 @@
   };
 
   environment.systemPackages = with pkgs; [greetd.tuigreet];
+
   systemd.services.greetd.serviceConfig = {
     Type = "idle";
     StandardInput = "tty";

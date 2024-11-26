@@ -4,8 +4,9 @@
   ...
 }: {
   imports = [
-    ./../../home-manager
-    ./settings.nix
+    ./../home-manager
+    ./../nixos/options.nix
+    ./../nixos/settings.nix
   ];
 
   home = {
@@ -68,5 +69,11 @@
       zoxide.enable = true;
       zsh.enable = true;
     };
+  };
+
+  home.sessionVariables = {
+    EDITOR = "nvim";
+    BROWSER = "firefox";
+    TERMINAL = "kitty";
   };
 }

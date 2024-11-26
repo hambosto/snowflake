@@ -1,6 +1,4 @@
 {username, ...}: {
-  imports = [./../../nixos/options.nix];
-
   settings = {
     system = {
       fullName = "Ilham Putra Husada";
@@ -17,6 +15,6 @@
       email = "hambosto@gmail.com";
     };
 
-    wallpaper = ../../wallpapers/default.jpg; # default wallpapaper
+    wallpaper = ../wallpapers/default.jpg; # default wallpapaper
   };
 }
