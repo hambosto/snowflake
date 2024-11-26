@@ -15,19 +15,11 @@ in {
       package = inputs.hyprland.packages.${pkgs.system}.hyprland;
 
       settings = {
-        # Basic configurations
-        "$terminal" = "kitty";
         "$mod" = "SUPER";
         "$shiftMod" = "SUPER_SHIFT";
 
         # Monitor setup
         monitor = [",preferred,auto,1"];
-
-        plugin = {
-          overview = {
-            autoDrag = false;
-          };
-        };
 
         # System environment variables
         env = [
