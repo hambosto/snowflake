@@ -21,7 +21,7 @@
       unzip
       peaclock
       cbonsai
-      pipes
+      pipes-rs
       cmatrix
       neovim
 
