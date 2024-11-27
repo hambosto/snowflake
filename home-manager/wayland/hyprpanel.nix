@@ -52,7 +52,7 @@ in {
         "theme.bar.margin_bottom" = "2";
         "theme.bar.margin_sides" = "1px";
         "theme.bar.border_radius" = "15px";
-        "bar.launcher.icon" = "󰊠";
+        "bar.launcher.icon" = "";
         "theme.bar.transparent" = true;
         "bar.workspaces.show_numbered" = false;
         "bar.workspaces.workspaces" = 5;
