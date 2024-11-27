@@ -26,7 +26,7 @@ cd ~/.config/snowflake
 ### 3. Generate Hardware Configuration  
 Generate the hardware configuration for your system:  
 ```bash  
-nixos-generate-config --show-hardware-config > nixos/hardware-configuration.nix  
+nixos-generate-config --show-hardware-config > modules/hardware-configuration/default.nix  
 ```  
 This ensures the configuration aligns with your hardware setup.  
 
