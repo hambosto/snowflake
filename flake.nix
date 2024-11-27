@@ -33,7 +33,7 @@
           inherit hostname;
         };
         modules = [
-          ./hosts/configuration.nix
+          ./modules/configuration.nix
           inputs.stylix.nixosModules.stylix
           home-manager.nixosModules.home-manager
           {
@@ -42,23 +42,7 @@
               inherit inputs;
               inherit hostname;
             };
-            nixpkgs.overlays = [
-              inputs.hyprpanel.overlay
-
-              # Custom overlay to override gnome.gnome-bluetooth
-              (self: super: {
-                gnome =
-                  super.gnome
-                  // {
-                    gnome-bluetooth = super.pkgs.gnome-bluetooth;
-                    gnome-bluetooth_1_0 = super.pkgs.gnome-bluetooth_1_0;
-                  };
-              })
-            ];
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.backupFileExtension = "hm-backup";
-            home-manager.users.${username} = import ./hosts/home.nix;
+            home-manager.users.${username} = import ./home-manager;
           }
         ];
       };

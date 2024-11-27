@@ -1,6 +1,8 @@
 {lib, ...}: {
   imports = [
     ./gtk
+    ./home
+    ./nixpkgs
     ./programs
     ./scripts
     ./services

@@ -4,9 +4,8 @@
   ...
 }: {
   imports = [
-    ./../home-manager
-    ./../nixos/options.nix
-    ./../nixos/settings.nix
+    ./../../modules/options.nix
+    ./../../modules/settings.nix
   ];
 
   home = {

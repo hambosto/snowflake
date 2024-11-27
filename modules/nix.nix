@@ -1,8 +1,4 @@
 {
-  nixpkgs.config = {
-    allowUnfree = true;
-    allowBroken = true;
-  };
   nix = {
     settings = {
       auto-optimise-store = true;
