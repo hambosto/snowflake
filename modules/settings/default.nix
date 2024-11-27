@@ -21,6 +21,6 @@
       theme = "rog";
     };
 
-    wallpaper = ../wallpapers/default.jpg; # default wallpapaper
+    wallpaper = ../../wallpapers/default.jpg; # default wallpapaper
   };
 }

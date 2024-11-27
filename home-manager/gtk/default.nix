@@ -1,12 +1,6 @@
 {pkgs, ...}: {
   stylix.targets.gtk.enable = false;
 
-  qt = {
-    enable = true;
-    style.name = "adwaita-dark";
-    platformTheme.name = "gtk3";
-  };
-
   gtk = {
     enable = true;
 

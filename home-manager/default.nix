@@ -4,6 +4,7 @@
     ./home
     ./nixpkgs
     ./programs
+    ./qt
     ./scripts
     ./services
     ./wayland

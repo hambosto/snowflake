@@ -1,5 +1,4 @@
 {config, ...}: {
-  time.timeZone = config.settings.system.timeZone;
   i18n.defaultLocale = config.settings.system.defaultLocale;
   i18n.extraLocaleSettings = {
     LC_ADDRESS = config.settings.system.extraLocale;
