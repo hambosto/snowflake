@@ -44,6 +44,16 @@
             };
             nixpkgs.overlays = [
               inputs.hyprpanel.overlay
+
+              # Custom overlay to override gnome.gnome-bluetooth
+              (self: super: {
+                gnome =
+                  super.gnome
+                  // {
+                    gnome-bluetooth = super.pkgs.gnome-bluetooth;
+                    gnome-bluetooth_1_0 = super.pkgs.gnome-bluetooth_1_0;
+                  };
+              })
             ];
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
