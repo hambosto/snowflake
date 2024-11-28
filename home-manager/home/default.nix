@@ -55,7 +55,7 @@
     services = {
       clipman.enable = true; # Enable Clipman (clipboard manager)
       hypridle.enable = true; # Enable Hypridle (idle detection for Hyprland)
-      udiskie.enable = false; # Enavle Udiskie (automounting for USB drives)
+      udiskie.enable = false; # Enable Udiskie (automounting for USB drives)
     };
 
     # Programs and utilities configuration, enabling or disabling various software
