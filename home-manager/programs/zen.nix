@@ -3,9 +3,11 @@
   lib,
   pkgs,
   ...
-}: let
+}:
+let
   cfg = config.modules.programs.zen;
-in {
+in
+{
   config = lib.mkIf cfg.enable {
     programs.oh-my-posh = {
       enable = true;
@@ -26,7 +28,9 @@ in {
                 background = "transparent";
                 foreground = "blue";
                 template = "{{ .Path }}";
-                properties = {style = "full";};
+                properties = {
+                  style = "full";
+                };
               }
               {
                 type = "git";
@@ -52,7 +56,9 @@ in {
                 foreground = "yellow";
                 background = "transparent";
                 template = "{{ .FormattedMs }}";
-                properties = {threshold = 5000;};
+                properties = {
+                  threshold = 5000;
+                };
               }
             ];
           }
@@ -75,7 +81,10 @@ in {
           }
         ];
         transient_prompt = {
-          foreground_templates = ["{{if gt .Code 0}}red{{end}}" "{{if eq .Code 0}}magenta{{end}}"];
+          foreground_templates = [
+            "{{if gt .Code 0}}red{{end}}"
+            "{{if eq .Code 0}}magenta{{end}}"
+          ];
           background = "transparent";
           template = "❯ ";
         };

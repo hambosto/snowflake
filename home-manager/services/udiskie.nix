@@ -2,9 +2,11 @@
   config,
   lib,
   ...
-}: let
+}:
+let
   cfg = config.modules.services.udiskie;
-in {
+in
+{
   config = lib.mkIf cfg.enable {
     services.udiskie = {
       enable = true;

@@ -2,14 +2,16 @@
   config,
   lib,
   ...
-}: let
+}:
+let
   cfg = config.settings.plymouth;
-in {
+in
+{
   config = lib.mkIf cfg.enable {
     boot = {
       plymouth = {
         enable = cfg.enable;
-        themePackages = [cfg.themesPackage];
+        themePackages = [ cfg.themesPackage ];
         theme = lib.mkForce cfg.theme;
       };
       consoleLogLevel = 0;

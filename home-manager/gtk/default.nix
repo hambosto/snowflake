@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   stylix.targets.gtk.enable = false;
 
   gtk = {

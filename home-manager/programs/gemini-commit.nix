@@ -3,9 +3,11 @@
   lib,
   pkgs,
   ...
-}: let
+}:
+let
   cfg = config.modules.programs.gemini-commit;
-in {
+in
+{
   config = lib.mkIf cfg.enable {
     home.packages = [
       (pkgs.buildGoModule rec {
@@ -25,7 +27,7 @@ in {
           description = "A CLI that writes your git commit messages for you with Google Gemini AI";
           homepage = "https://github.com/tfkhdyt/geminicommit";
           license = licenses.gpl3Only;
-          maintainers = [maintainers.tfkhdyt];
+          maintainers = [ maintainers.tfkhdyt ];
           platforms = platforms.all;
         };
       })

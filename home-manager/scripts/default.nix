@@ -1,4 +1,4 @@
-{...}: {
+{
   imports = [
     ./nixctl.nix
     ./screenshot.nix

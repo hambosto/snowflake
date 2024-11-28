@@ -1,5 +1,6 @@
 # User configuration settings, including system preferences, git, virtualization, and other settings.
-{username, ...}: {
+{ username, ... }:
+{
   settings = {
     # System configuration details, including user-specific information and locales.
     system = {

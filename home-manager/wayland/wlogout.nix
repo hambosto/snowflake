@@ -2,10 +2,12 @@
   config,
   lib,
   ...
-}: let
+}:
+let
   cfg = config.modules.wayland.wlogout;
   iconsPath = "${config.programs.wlogout.package}/share/wlogout/icons";
-in {
+in
+{
   config = lib.mkIf cfg.enable {
     programs.wlogout = {
       enable = true;

@@ -3,7 +3,8 @@
   lib,
   pkgs,
   ...
-}: let
+}:
+let
   screenshot = pkgs.writeShellScriptBin "screenshot" ''
     # Default screenshot save directory
     SAVE_DIR="''${HOME}/Pictures/Screenshots"
@@ -35,8 +36,9 @@
   '';
 
   cfg = config.modules.wayland.hyprland;
-in {
+in
+{
   config = lib.mkIf cfg.enable {
-    home.packages = [screenshot];
+    home.packages = [ screenshot ];
   };
 }

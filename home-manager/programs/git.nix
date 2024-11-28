@@ -2,9 +2,11 @@
   config,
   lib,
   ...
-}: let
+}:
+let
   cfg = config.modules.programs.git;
-in {
+in
+{
   config = lib.mkIf cfg.enable {
     programs.git = {
       enable = true;

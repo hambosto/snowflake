@@ -1,12 +1,13 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   systemd = {
     user = {
       services = {
         polkit-agent = {
           description = "Polkit GNOME Authentication Agent";
-          wants = ["graphical-session.target"];
-          wantedBy = ["graphical-session.target"];
-          after = ["graphical-session.target"];
+          wants = [ "graphical-session.target" ];
+          wantedBy = [ "graphical-session.target" ];
+          after = [ "graphical-session.target" ];
 
           serviceConfig = {
             Type = "simple";

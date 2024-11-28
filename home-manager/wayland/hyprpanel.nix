@@ -4,11 +4,13 @@
   pkgs,
   username,
   ...
-}: let
+}:
+let
   cfg = config.modules.wayland.hyprpanel;
-in {
+in
+{
   config = lib.mkIf cfg.enable {
-    wayland.windowManager.hyprland.settings.exec-once = ["${pkgs.hyprpanel}/bin/hyprpanel"];
+    wayland.windowManager.hyprland.settings.exec-once = [ "${pkgs.hyprpanel}/bin/hyprpanel" ];
 
     home.packages = with pkgs; [
       hyprpanel

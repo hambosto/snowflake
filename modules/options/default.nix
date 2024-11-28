@@ -3,9 +3,11 @@
   lib,
   pkgs,
   ...
-}: let
+}:
+let
   cfg = config.settings;
-in {
+in
+{
   options.settings = {
     system = {
       fullName = lib.mkOption {
@@ -77,7 +79,7 @@ in {
     plymouth = {
       enable = lib.mkEnableOption "Enable Plymouth";
       themesPackage = lib.mkOption {
-        default = pkgs.adi1090x-plymouth-themes.override {selected_themes = [cfg.plymouth.theme];};
+        default = pkgs.adi1090x-plymouth-themes.override { selected_themes = [ cfg.plymouth.theme ]; };
         type = lib.types.package;
       };
       theme = lib.mkOption {

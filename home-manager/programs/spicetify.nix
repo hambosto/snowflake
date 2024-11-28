@@ -4,14 +4,15 @@
   lib,
   inputs,
   ...
-}: let
+}:
+let
   cfg = config.modules.programs.spicetify;
   spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
-in {
-  imports = [inputs.spicetify-nix.homeManagerModules.default];
+in
+{
+  imports = [ inputs.spicetify-nix.homeManagerModules.default ];
   config = lib.mkIf cfg.enable {
-    nixpkgs.config.allowUnfreePredicate = pkg:
-      builtins.elem (lib.getName pkg) ["spotify"];
+    nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [ "spotify" ];
 
     stylix.targets.spicetify.enable = false;
 

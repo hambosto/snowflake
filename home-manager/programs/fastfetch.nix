@@ -2,9 +2,11 @@
   config,
   lib,
   ...
-}: let
+}:
+let
   cfg = config.modules.programs.fastfetch;
-in {
+in
+{
   config = lib.mkIf cfg.enable {
     programs.fastfetch = {
       enable = true;
@@ -48,7 +50,10 @@ in {
             type = "colors";
             key = "Colors";
             block = {
-              range = [1 6];
+              range = [
+                1
+                6
+              ];
             };
           }
         ];

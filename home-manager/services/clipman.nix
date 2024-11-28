@@ -3,11 +3,13 @@
   lib,
   pkgs,
   ...
-}: let
+}:
+let
   cfg = config.modules.services.clipman;
-in {
+in
+{
   config = lib.mkIf cfg.enable {
-    wayland.windowManager.hyprland.settings.exec-once = ["${pkgs.clipman}/bin/clipman clear --all"];
+    wayland.windowManager.hyprland.settings.exec-once = [ "${pkgs.clipman}/bin/clipman clear --all" ];
     services.clipman.enable = true;
     systemd.user.services.clipman = {
       Service = {

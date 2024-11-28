@@ -2,9 +2,11 @@
   config,
   lib,
   ...
-}: let
+}:
+let
   cfg = config.modules.programs.zoxide;
-in {
+in
+{
   config = lib.mkIf cfg.enable {
     programs.zoxide = {
       enable = true;

@@ -2,9 +2,11 @@
   config,
   lib,
   ...
-}: let
+}:
+let
   cfg = config.modules.programs.nh;
-in {
+in
+{
   config = lib.mkIf cfg.enable {
     programs.nh = {
       enable = true;

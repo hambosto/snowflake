@@ -4,9 +4,11 @@
   username,
   inputs,
   ...
-}: let
+}:
+let
   cfg = config.modules.programs.firefox;
-in {
+in
+{
   config = lib.mkIf cfg.enable {
     programs.firefox = {
       enable = true;
@@ -55,9 +57,9 @@ in {
           "dom.enable_web_task_scheduling" = true;
 
           /*
-          ***************************************************************************
-           * SECTION: SECUREFOX                                                       *
-          ***************************************************************************
+            ***************************************************************************
+             * SECTION: SECUREFOX                                                       *
+            ***************************************************************************
           */
           # * TRACKING PROTECTION **
           "browser.contentblocking.category" = "strict";
@@ -163,9 +165,9 @@ in {
           "network.connectivity-service.enabled" = false;
 
           /*
-          ***************************************************************************
-           * SECTION: PESKYFOX                                                        *
-          ***************************************************************************
+            ***************************************************************************
+             * SECTION: PESKYFOX                                                        *
+            ***************************************************************************
           */
           # * MOZILLA UI **
           "browser.privatebrowsing.vpnpromourl" = "";
@@ -173,10 +175,8 @@ in {
           "extensions.htmlaboutaddons.recommendations.enabled" = false;
           "browser.discovery.enabled" = false;
           "browser.shell.checkDefaultBrowser" = false;
-          "browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons" =
-            false;
-          "browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features" =
-            false;
+          "browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons" = false;
+          "browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features" = false;
           "browser.preferences.moreFromMozilla" = false;
           "browser.aboutConfig.showWarning" = false;
           "browser.aboutwelcome.enabled" = false;

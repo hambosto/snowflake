@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   environment.systemPackages = with pkgs; [
     fd
     bc
@@ -6,10 +7,5 @@
     xdg-utils
     wget
     curl
-
-    nixd
-    alejandra
-    deadnix
-    statix
   ];
 }

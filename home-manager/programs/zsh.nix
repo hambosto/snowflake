@@ -3,11 +3,16 @@
   lib,
   pkgs,
   ...
-}: let
+}:
+let
   cfg = config.modules.programs.zsh;
-in {
+in
+{
   config = lib.mkIf cfg.enable {
-    home.packages = with pkgs; [bat ripgrep];
+    home.packages = with pkgs; [
+      bat
+      ripgrep
+    ];
 
     programs.zsh = {
       enable = true;

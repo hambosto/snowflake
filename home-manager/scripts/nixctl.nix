@@ -3,7 +3,8 @@
   pkgs,
   config,
   ...
-}: let
+}:
+let
   configDirectory = config.settings.system.configDirectory;
 
   # Define menu items in a more structured way
@@ -42,13 +43,7 @@
 
   # Convert menu items to the format expected by fzf
   menuItemsString = builtins.concatStringsSep "\n" (
-    map
-    (item: "${
-      if item.icon == ""
-      then "󰘳"
-      else item.icon
-    };${item.name};${item.command}")
-    menuItems
+    map (item: "${if item.icon == "" then "󰘳" else item.icon};${item.name};${item.command}") menuItems
   );
 
   nixctl = pkgs.writeShellScriptBin "nixctl" ''
@@ -134,6 +129,7 @@
         ;;
     esac
   '';
-in {
-  home.packages = [nixctl];
+in
+{
+  home.packages = [ nixctl ];
 }

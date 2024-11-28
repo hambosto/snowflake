@@ -2,7 +2,8 @@
   pkgs,
   username,
   ...
-}: let
+}:
+let
   random-wallpaper = pkgs.writeShellScriptBin "random-wallpaper" ''
     directory=/home/${username}/Pictures
     monitor=`hyprctl monitors | grep Monitor | awk '{print $2}'`
@@ -15,6 +16,7 @@
         hyprctl hyprpaper wallpaper "$monitor, $random_background"
     fi
   '';
-in {
-  home.packages = [random-wallpaper];
+in
+{
+  home.packages = [ random-wallpaper ];
 }

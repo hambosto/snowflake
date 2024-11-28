@@ -2,9 +2,11 @@
   config,
   lib,
   ...
-}: let
+}:
+let
   cfg = config.modules.programs.btop;
-in {
+in
+{
   config = lib.mkIf cfg.enable {
     programs.btop = {
       enable = true;

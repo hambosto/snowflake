@@ -4,9 +4,11 @@
   pkgs,
   inputs,
   ...
-}: let
+}:
+let
   cfg = config.modules.wayland.hyprland;
-in {
+in
+{
   config = lib.mkIf cfg.enable {
     wayland.windowManager.hyprland = {
       enable = true;
@@ -19,7 +21,7 @@ in {
         "$shiftMod" = "SUPER_SHIFT";
 
         # Monitor setup
-        monitor = [",preferred,auto,1"];
+        monitor = [ ",preferred,auto,1" ];
 
         # System environment variables
         env = [
@@ -87,7 +89,7 @@ in {
             size = 16;
             passes = 4;
             contrast = 0.9;
-            noise = 0.01;
+            noise = 1.0e-2;
             brightness = 0.8;
             new_optimizations = "on";
             ignore_opacity = true;

@@ -2,9 +2,11 @@
   config,
   lib,
   ...
-}: let
+}:
+let
   cfg = config.modules.wayland.hyprlock;
-in {
+in
+{
   config = lib.mkIf cfg.enable {
     stylix.targets.hyprlock.enable = true;
     programs.hyprlock = {

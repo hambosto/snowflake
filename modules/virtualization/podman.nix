@@ -2,9 +2,11 @@
   config,
   lib,
   ...
-}: let
+}:
+let
   cfg = config.settings.virtualization.podman;
-in {
+in
+{
   config = lib.mkIf cfg.enable {
     virtualisation = {
       podman = {

@@ -2,16 +2,20 @@
   config,
   lib,
   ...
-}: let
+}:
+let
   cfg = config.modules.programs.yazi;
-in {
+in
+{
   config = lib.mkIf cfg.enable {
     programs.yazi = {
       enable = true;
       enableZshIntegration = true;
 
       settings = {
-        log = {enabled = false;};
+        log = {
+          enabled = false;
+        };
         manager = {
           show_hidden = true;
           sort_by = "modified";

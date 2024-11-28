@@ -3,9 +3,11 @@
   lib,
   pkgs,
   ...
-}: let
+}:
+let
   cfg = config.modules.services.hypridle;
-in {
+in
+{
   config = lib.mkIf cfg.enable {
     services.hypridle = {
       enable = true;

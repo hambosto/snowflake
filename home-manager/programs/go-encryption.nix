@@ -3,9 +3,11 @@
   lib,
   pkgs,
   ...
-}: let
+}:
+let
   cfg = config.modules.programs.go-encryption;
-in {
+in
+{
   config = lib.mkIf cfg.enable {
     home.packages = [
       (pkgs.buildGoModule rec {
@@ -25,7 +27,7 @@ in {
           description = "Secure file encryption and decryption CLI tool built with Go";
           homepage = "https://github.com/hambosto/go-encryption";
           license = licenses.mit;
-          maintainers = [maintainers.hambosto];
+          maintainers = [ maintainers.hambosto ];
           platforms = platforms.all;
         };
       })

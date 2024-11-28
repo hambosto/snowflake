@@ -1,4 +1,4 @@
-{...}: {
+{
   imports = [
     ./clipman.nix
     ./hypridle.nix

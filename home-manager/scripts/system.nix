@@ -3,7 +3,8 @@
   lib,
   pkgs,
   ...
-}: let
+}:
+let
   menu = pkgs.writeShellScriptBin "menu" ''
     if pgrep -x "rofi" > /dev/null; then
       pkill -x rofi
@@ -16,7 +17,8 @@
     hyprctl dispatch exec hyprpanel
   '';
   cfg = config.modules.wayland.hyprland;
-in {
+in
+{
   config = lib.mkIf cfg.enable {
     home.packages = [
       menu

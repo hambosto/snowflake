@@ -2,7 +2,8 @@
   username,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     ./../../modules/options
     ./../../modules/settings

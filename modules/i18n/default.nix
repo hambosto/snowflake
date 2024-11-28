@@ -1,4 +1,5 @@
-{config, ...}: {
+{ config, ... }:
+{
   i18n.defaultLocale = config.settings.system.defaultLocale;
   i18n.extraLocaleSettings = {
     LC_ADDRESS = config.settings.system.extraLocale;

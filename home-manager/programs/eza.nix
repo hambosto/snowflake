@@ -2,9 +2,11 @@
   config,
   lib,
   ...
-}: let
+}:
+let
   cfg = config.modules.programs.eza;
-in {
+in
+{
   config = lib.mkIf cfg.enable {
     programs.eza = {
       enable = true;
