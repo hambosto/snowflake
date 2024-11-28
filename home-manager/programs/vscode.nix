@@ -3,9 +3,11 @@
   lib,
   pkgs,
   ...
-}: let
+}:
+let
   cfg = config.modules.programs.vscode;
-in {
+in
+{
   config = lib.mkIf cfg.enable {
     stylix.targets.vscode.enable = false;
     programs.vscode = {
@@ -22,22 +24,38 @@ in {
         "editor.acceptSuggestionOnCommitCharacter" = true;
         "editor.acceptSuggestionOnEnter" = "on";
         "editor.autoClosingBrackets" = "always";
-
         "workbench.colorTheme" = "Tokyo Night";
         "workbench.iconTheme" = "moxer-icons";
         "workbench.productIconTheme" = "fluent-icons";
-
         "terminal.integrated.fontSize" = 14;
         "terminal.integrated.fontFamily" = "Fira Code";
-
         "window.menuBarVisibility" = "toggle";
 
+        "go.inlayHints.assignVariableTypes" = true;
+        "go.inlayHints.constantValues" = true;
+        "go.inlayHints.parameterNames" = true;
+        "go.inlayHints.rangeVariableTypes" = true;
+        "go.alternateTools" = {
+          "gofumpt" = "${pkgs.gofumpt}/bin/gofumpt";
+          "golangci-lint" = "${pkgs.golangci-lint}/bin/golangci-lint";
+          "gomodifytags" = "${pkgs.gomodifytags}/bin/gomodifytags";
+          "gopls" = "${pkgs.gopls}/bin/gopls";
+          "impl" = "${pkgs.impl}/bin/impl";
+          "staticcheck" = "${pkgs.go-tools}/bin/staticcheck";
+          "delve" = "${pkgs.delve}/bin/dlv";
+        };
+        "go.lintTool" = "golangci-lint";
+        "gopls" = {
+          "formatting.gofumpt" = true;
+          "ui.semanticTokens" = true;
+        };
+
         "nix.enableLanguageServer" = true;
-        "nix.serverPath" = "nixd";
+        "nix.serverPath" = "${pkgs.nixd}/bin/nixd";
         "nix.serverSettings" = {
           "nixd" = {
             "formatting" = {
-              "command" = ["alejandra"];
+              "command" = [ "${pkgs.nixfmt-rfc-style}/bin/nixfmt" ];
             };
           };
         };
