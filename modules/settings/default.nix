@@ -37,7 +37,7 @@
 
     # Virtualization settings, in this case, Podman (a containerization tool) is disabled
     virtualization = {
-      # Disable Podman container platform
+      # Enable Podman container platform
       podman.enable = false;
     };
 
