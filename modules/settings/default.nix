@@ -15,6 +15,10 @@
       email = "hambosto@gmail.com";
     };
 
+    virtualization = {
+      podman.enable = false;
+    };
+
     # based on https://github.com/adi1090x/plymouth-themes
     plymouth = {
       enable = true;

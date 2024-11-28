@@ -20,6 +20,7 @@
     ./systemd
     ./time
     ./users
+    ./virtualization
     ./xdg
   ];
 }

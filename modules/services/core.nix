@@ -6,6 +6,5 @@
     dbus.enable = true;
     gvfs.enable = true;
     fstrim.enable = true;
-    udisks2.enable = false; # usb auto mounting
   };
 }

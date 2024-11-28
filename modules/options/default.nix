@@ -65,6 +65,10 @@ in {
       };
     };
 
+    virtualization = {
+      podman.enable = lib.mkEnableOption "Enable Podman";
+    };
+
     wallpaper = lib.mkOption {
       type = lib.types.path;
       description = "Path to wallpaper image";
