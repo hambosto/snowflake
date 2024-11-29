@@ -191,13 +191,14 @@ in
       "theme.bar.menus.text" = "#${config.lib.stylix.colors.base07}";
       "theme.bar.menus.tooltip.background" = "#${config.lib.stylix.colors.base02}";
       "theme.bar.menus.tooltip.text" = "#${config.lib.stylix.colors.base07}";
-      "theme.notification.actions.background" = "#${config.lib.stylix.colors.base0D}";
-      "theme.notification.actions.text" = "#${config.lib.stylix.colors.base07}";
-      "theme.notification.background" = "#${config.lib.stylix.colors.base01}";
-      "theme.notification.border" = "#${config.lib.stylix.colors.base02}";
-      "theme.notification.label" = "#${config.lib.stylix.colors.base0A}";
-      "theme.notification.labelicon" = "#${config.lib.stylix.colors.base0B}";
+      "theme.notification.labelicon" = "#${config.lib.stylix.colors.base0C}";
       "theme.notification.text" = "#${config.lib.stylix.colors.base07}";
+      "theme.notification.time" = "#${config.lib.stylix.colors.base07}";
+      "theme.notification.border" = "#${config.lib.stylix.colors.base02}";
+      "theme.notification.label" = "#${config.lib.stylix.colors.base0D}";
+      "theme.notification.actions.text" = "#${config.lib.stylix.colors.base00}";
+      "theme.notification.actions.background" = "#${config.lib.stylix.colors.base0B}";
+      "theme.notification.background" = "#${config.lib.stylix.colors.base01}";
       "theme.osd.bar_color" = "#${config.lib.stylix.colors.base0B}";
       "theme.osd.bar_container" = "#${config.lib.stylix.colors.base01}";
       "theme.osd.bar_overflow_color" = "#${config.lib.stylix.colors.base08}";
@@ -289,6 +290,8 @@ in
       "theme.bar.menus.menu.clock.background.color" = "#${config.lib.stylix.colors.base00}";
       "theme.bar.menus.menu.clock.card.color" = "#${config.lib.stylix.colors.base01}";
       "theme.bar.menus.menu.notifications.background" = "#${config.lib.stylix.colors.base00}";
+      "theme.notification.close_button.label" = "#${config.lib.stylix.colors.base07}";
+      "theme.notification.close_button.background" = "#${config.lib.stylix.colors.base08}";
     };
   };
 }
