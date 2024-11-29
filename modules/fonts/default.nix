@@ -2,6 +2,7 @@
 {
   fonts = {
     packages = with pkgs; [
+      cascadia-code
       fira-code
       noto-fonts
       noto-fonts-emoji

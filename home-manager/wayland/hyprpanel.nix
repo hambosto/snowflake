@@ -39,7 +39,7 @@ in
           ];
         };
       };
-      "theme.font.name" = "JetBrainsMono Nerd Font";
+      "theme.font.name" = "Cascadia Code NF";
       "theme.font.size" = "${toString config.stylix.fonts.sizes.desktop}px";
       "theme.bar.outer_spacing" = "0px";
       "theme.bar.buttons.y_margins" = "0px";
@@ -268,6 +268,17 @@ in
       "theme.bar.buttons.media.icon_background" = "#${config.lib.stylix.colors.base05}";
       "theme.bar.buttons.media.border" = "#${config.lib.stylix.colors.base05}";
       "theme.bar.menus.menu.media.timestamp" = "#${config.lib.stylix.colors.base06}";
+      "theme.bar.buttons.notifications.background" = "#${config.lib.stylix.colors.base00}";
+      "theme.bar.buttons.clock.background" = "#${config.lib.stylix.colors.base00}";
+      "theme.bar.buttons.battery.background" = "#${config.lib.stylix.colors.base00}";
+      "theme.bar.buttons.systray.background" = "#${config.lib.stylix.colors.base00}";
+      "theme.bar.buttons.bluetooth.background" = "#${config.lib.stylix.colors.base00}";
+      "theme.bar.buttons.network.background" = "#${config.lib.stylix.colors.base00}";
+      "theme.bar.buttons.volume.background" = "#${config.lib.stylix.colors.base00}";
+      "theme.bar.buttons.windowtitle.background" = "#${config.lib.stylix.colors.base00}";
+      "theme.bar.buttons.workspaces.background" = "#${config.lib.stylix.colors.base00}";
+      "theme.bar.buttons.dashboard.background" = "#${config.lib.stylix.colors.base00}";
+      "theme.bar.buttons.modules.hyprsunset.background" = "#${config.lib.stylix.colors.base00}";
     };
   };
 }
