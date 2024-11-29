@@ -82,6 +82,7 @@ in
       "menus.clock.time.military" = true;
       "menus.dashboard.stats.enabled" = false;
       "menus.dashboard.powermenu.avatar.image" = "/home/${username}/.profile_picture.jpg";
+      "theme.bar.menus.menu.dashboard.profile.radius" = "10em";
       "menus.dashboard.powermenu.avatar.name" = "${config.settings.system.fullName}";
       "menus.dashboard.powermenu.confirmation" = false;
       "menus.dashboard.shortcuts.left.shortcut1.icon" = "";
@@ -127,12 +128,9 @@ in
       "bar.customModules.hyprsunset.temperature" = "4500k";
       "bar.media.show_active_only" = true;
       "theme.bar.location" = "top";
-
       # ========================================================= #
-
       "theme.bar.background" = "#${config.lib.stylix.colors.base00}";
       "theme.bar.buttons.background" = "#${config.lib.stylix.colors.base00}";
-
       "theme.bar.buttons.hover" = "#${config.lib.stylix.colors.base03}";
       "theme.bar.buttons.icon" = "#${config.lib.stylix.colors.base0A}";
       "theme.bar.buttons.notifications.border" = "#${config.lib.stylix.colors.base09}";
@@ -169,8 +167,6 @@ in
       "theme.bar.menus.menu.clock.weather.hourly.time" = "#${config.lib.stylix.colors.base0E}";
       "theme.bar.menus.menu.clock.weather.hourly.icon" = "#${config.lib.stylix.colors.base0E}";
       "theme.bar.menus.menu.clock.weather.hourly.temperature" = "#${config.lib.stylix.colors.base0E}";
-      "theme.bar.menus.menu.media.background.color" = "#${config.lib.stylix.colors.base02}";
-      "theme.bar.menus.menu.media.card.color" = "#${config.lib.stylix.colors.base03}";
       "theme.bar.menus.menu.notifications.clear" = "#${config.lib.stylix.colors.base09}";
       "theme.bar.menus.menu.notifications.switch.enabled" = "#${config.lib.stylix.colors.base09}";
       "theme.bar.menus.menu.notifications.scrollbar.color" = "#${config.lib.stylix.colors.base09}";
@@ -224,6 +220,54 @@ in
       "theme.bar.buttons.modules.hyprsunset.border" = "#${config.lib.stylix.colors.base0A}";
       "theme.bar.buttons.dashboard.icon" = "#${config.lib.stylix.colors.base0B}";
       "theme.bar.buttons.dashboard.border" = "#${config.lib.stylix.colors.base0B}";
+      "theme.bar.menus.menu.dashboard.directories.right.bottom.color" = "#${config.lib.stylix.colors.base08}";
+      "theme.bar.menus.menu.dashboard.directories.right.middle.color" = "#${config.lib.stylix.colors.base0A}";
+      "theme.bar.menus.menu.dashboard.directories.right.top.color" = "#${config.lib.stylix.colors.base0B}";
+      "theme.bar.menus.menu.dashboard.directories.left.bottom.color" = "#${config.lib.stylix.colors.base0C}";
+      "theme.bar.menus.menu.dashboard.directories.left.middle.color" = "#${config.lib.stylix.colors.base09}";
+      "theme.bar.menus.menu.dashboard.directories.left.top.color" = "#${config.lib.stylix.colors.base0E}";
+      "theme.bar.menus.menu.dashboard.controls.input.text" = "#${config.lib.stylix.colors.base05}";
+      "theme.bar.menus.menu.dashboard.controls.input.background" = "#${config.lib.stylix.colors.base0D}";
+      "theme.bar.menus.menu.dashboard.controls.volume.text" = "#${config.lib.stylix.colors.base05}";
+      "theme.bar.menus.menu.dashboard.controls.volume.background" = "#${config.lib.stylix.colors.base08}";
+      "theme.bar.menus.menu.dashboard.controls.notifications.text" = "#${config.lib.stylix.colors.base05}";
+      "theme.bar.menus.menu.dashboard.controls.notifications.background" = "#${config.lib.stylix.colors.base09}";
+      "theme.bar.menus.menu.dashboard.controls.bluetooth.text" = "#${config.lib.stylix.colors.base05}";
+      "theme.bar.menus.menu.dashboard.controls.bluetooth.background" = "#${config.lib.stylix.colors.base0C}";
+      "theme.bar.menus.menu.dashboard.controls.wifi.text" = "#${config.lib.stylix.colors.base05}";
+      "theme.bar.menus.menu.dashboard.controls.wifi.background" = "#${config.lib.stylix.colors.base0E}";
+      "theme.bar.menus.menu.dashboard.controls.disabled" = "#${config.lib.stylix.colors.base03}";
+      "theme.bar.menus.menu.dashboard.shortcuts.recording" = "#${config.lib.stylix.colors.base0B}";
+      "theme.bar.menus.menu.dashboard.shortcuts.text" = "#${config.lib.stylix.colors.base05}";
+      "theme.bar.menus.menu.dashboard.shortcuts.background" = "#${config.lib.stylix.colors.base02}";
+      "theme.bar.menus.menu.dashboard.powermenu.shutdown" = "#${config.lib.stylix.colors.base08}";
+      "theme.bar.menus.menu.dashboard.powermenu.sleep" = "#${config.lib.stylix.colors.base0D}";
+      "theme.bar.menus.menu.dashboard.powermenu.logout" = "#${config.lib.stylix.colors.base0B}";
+      "theme.bar.menus.menu.dashboard.powermenu.restart" = "#${config.lib.stylix.colors.base0A}";
+      "theme.bar.menus.menu.dashboard.profile.name" = "#${config.lib.stylix.colors.base0E}";
+      "theme.bar.menus.menu.dashboard.border.color" = "#${config.lib.stylix.colors.base02}";
+      "theme.bar.menus.menu.dashboard.background.color" = "#${config.lib.stylix.colors.base00}";
+      "theme.bar.menus.menu.dashboard.card.color" = "#${config.lib.stylix.colors.base01}";
+      "theme.bar.buttons.media.icon" = "#${config.lib.stylix.colors.base05}";
+      "theme.bar.buttons.media.text" = "#${config.lib.stylix.colors.base05}";
+      "theme.bar.buttons.media.background" = "#${config.lib.stylix.colors.base01}";
+      "theme.bar.menus.menu.media.slider.puck" = "#${config.lib.stylix.colors.base04}";
+      "theme.bar.menus.menu.media.slider.backgroundhover" = "#${config.lib.stylix.colors.base03}";
+      "theme.bar.menus.menu.media.slider.background" = "#${config.lib.stylix.colors.base02}";
+      "theme.bar.menus.menu.media.slider.primary" = "#${config.lib.stylix.colors.base0E}";
+      "theme.bar.menus.menu.media.buttons.text" = "#${config.lib.stylix.colors.base00}";
+      "theme.bar.menus.menu.media.buttons.background" = "#${config.lib.stylix.colors.base05}";
+      "theme.bar.menus.menu.media.buttons.enabled" = "#${config.lib.stylix.colors.base0B}";
+      "theme.bar.menus.menu.media.buttons.inactive" = "#${config.lib.stylix.colors.base03}";
+      "theme.bar.menus.menu.media.border.color" = "#${config.lib.stylix.colors.base02}";
+      "theme.bar.menus.menu.media.background.color" = "#${config.lib.stylix.colors.base00}";
+      "theme.bar.menus.menu.media.album" = "#${config.lib.stylix.colors.base0E}";
+      "theme.bar.menus.menu.media.artist" = "#${config.lib.stylix.colors.base0B}";
+      "theme.bar.menus.menu.media.song" = "#${config.lib.stylix.colors.base05}";
+      "theme.bar.menus.menu.media.card.color" = "#${config.lib.stylix.colors.base01}";
+      "theme.bar.buttons.media.icon_background" = "#${config.lib.stylix.colors.base05}";
+      "theme.bar.buttons.media.border" = "#${config.lib.stylix.colors.base05}";
+      "theme.bar.menus.menu.media.timestamp" = "#${config.lib.stylix.colors.base06}";
     };
   };
 }
