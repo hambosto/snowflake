@@ -33,6 +33,7 @@ in
             "hyprsunset"
             "volume"
             "battery"
+            # "bluetooth" enable this when is needed.
             "network"
             "clock"
             "notifications"
@@ -61,7 +62,7 @@ in
       "bar.windowtitle.label" = true;
       "bar.volume.label" = true;
       "bar.network.showWifiInfo" = false;
-      "bar.network.label" = true;
+      "bar.network.label" = false;
       "bar.network.truncation" = false;
       "bar.bluetooth.label" = false;
       "bar.clock.format" = "%H:%M %Z";
@@ -279,6 +280,15 @@ in
       "theme.bar.buttons.workspaces.background" = "#${config.lib.stylix.colors.base00}";
       "theme.bar.buttons.dashboard.background" = "#${config.lib.stylix.colors.base00}";
       "theme.bar.buttons.modules.hyprsunset.background" = "#${config.lib.stylix.colors.base00}";
+      "theme.bar.menus.menu.battery.background.color" = "#${config.lib.stylix.colors.base00}";
+      "theme.bar.menus.menu.battery.card.color" = "#${config.lib.stylix.colors.base01}";
+      "theme.bar.menus.menu.volume.background.color" = "#${config.lib.stylix.colors.base00}";
+      "theme.bar.menus.menu.volume.card.color" = "#${config.lib.stylix.colors.base01}";
+      "theme.bar.menus.menu.network.background.color" = "#${config.lib.stylix.colors.base00}";
+      "theme.bar.menus.menu.network.card.color" = "#${config.lib.stylix.colors.base01}";
+      "theme.bar.menus.menu.clock.background.color" = "#${config.lib.stylix.colors.base00}";
+      "theme.bar.menus.menu.clock.card.color" = "#${config.lib.stylix.colors.base01}";
+      "theme.bar.menus.menu.notifications.background" = "#${config.lib.stylix.colors.base00}";
     };
   };
 }
