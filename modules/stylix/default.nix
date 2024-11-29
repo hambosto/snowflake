@@ -10,20 +10,20 @@
     base16Scheme = {
       base00 = "0a0b1a"; # Default Background - Deep Space Black
       base01 = "141526"; # Lighter Background - Midnight Core
-      base02 = "1e2137"; # Selection Background - Midnight Azure
-      base03 = "2d3154"; # Comments - Royal Indigo
-      base04 = "4a4f7c"; # Dark Foreground - Dusty Purple
-      base05 = "eef1ff"; # Default Foreground - Ice White
-      base06 = "ffd7eb"; # Light Foreground - Rose Mist
-      base07 = "c3e8ff"; # Light Background - Crystal Blue
-      base08 = "ff5d8f"; # Variables - Electric Pink
-      base09 = "ff9c55"; # Integers - Sunset Orange
-      base0A = "ffcb5c"; # Classes - Golden Ray
-      base0B = "46f9b8"; # Strings - Neon Mint
-      base0C = "50e5ff"; # Support - Electric Blue
+      base02 = "1e1f35"; # Selection Background - Deep Navy
+      base03 = "2b2d4d"; # Comments - Twilight Purple
+      base04 = "4d4f7f"; # Dark Foreground - Mystic Violet
+      base05 = "f8e2ff"; # Default Foreground - Cotton Candy White
+      base06 = "ffd6f3"; # Light Foreground - Bubble Gum Pink
+      base07 = "ffebf9"; # Light Background - Sweet Pink
+      base08 = "ff3c7c"; # Variables - Hot Pink
+      base09 = "ff5d4d"; # Integers - Cyber Red
+      base0A = "ffcc00"; # Classes - Electric Yellow
+      base0B = "00ff9f"; # Strings - Neon Green
+      base0C = "00ffff"; # Support - Cyber Cyan
       base0D = "7c4dff"; # Functions - Deep Purple
-      base0E = "da6dff"; # Keywords - Bright Violet
-      base0F = "ff8ab7"; # Deprecated - Soft Rose
+      base0E = "f54fff"; # Keywords - Sugar Purple
+      base0F = "ff6e9c"; # Deprecated - Strawberry Pink
     };
 
     polarity = "dark";
