@@ -129,6 +129,10 @@ in
           "float, title:^(Picture-in-Picture)$"
           "pin, title:^(Picture-in-Picture)$"
           "move 69.5% 4%, title:^(Picture-in-Picture)$"
+          "float,class:(window-floating)"
+          "size 1000 700,class:(window-floating)"
+          "center,class:(window-floating)"
+          "pin, class:(window-floating)"
         ];
 
         # Gesture and cursor settings
@@ -181,7 +185,7 @@ in
           "SHIFT, PRINT, exec, screenshot everything"
 
           # Random Wallpaper
-          "$shiftMod,W, exec, random-wallpaper"
+          "$shiftMod, W, exec, ${pkgs.kitty}/bin/kitty --class window-floating -e wallpaper-selector"
 
           # Workspace management
           "$mod, 1, workspace, 1"

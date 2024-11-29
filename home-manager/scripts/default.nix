@@ -1,8 +1,9 @@
 {
   imports = [
+    ./hyprpanel.nix
+    ./menu.nix
     ./nixctl.nix
     ./screenshot.nix
-    ./system.nix
     ./wallpaper.nix
   ];
 }
