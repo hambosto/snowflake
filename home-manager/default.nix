@@ -17,7 +17,6 @@
       hyprlock.enable = lib.mkEnableOption "Enable Hyprlock";
       hyprpanel.enable = lib.mkEnableOption "Enable Hyprpanel";
       rofi.enable = lib.mkEnableOption "Enable Rofi";
-      wlogout.enable = lib.mkEnableOption "Enable Wlogout";
     };
 
     services = {

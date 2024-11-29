@@ -48,7 +48,6 @@
       hyprlock.enable = true; # Enable Hyprlock (screen locker for Wayland)
       hyprpanel.enable = true; # Enable Hyprpanel (panel for Hyprland)
       rofi.enable = true; # Enable Rofi (window switcher/application launcher)
-      wlogout.enable = true; # Enable Wlogout (Wayland logout tool)
     };
 
     # Service settings, enabling or disabling specific background services

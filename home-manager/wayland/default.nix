@@ -4,6 +4,5 @@
     ./hyprlock.nix
     ./hyprpanel.nix
     ./rofi.nix
-    ./wlogout.nix
   ];
 }
