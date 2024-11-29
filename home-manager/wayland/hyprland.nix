@@ -155,7 +155,6 @@ in
           "$mod,M, exec, ${pkgs.kitty}/bin/kitty -e ${pkgs.btop}/bin/btop"
           "$mod,L, exec, ${pkgs.hyprlock}/bin/hyprlock"
           "$mod,B, exec, ${pkgs.firefox}/bin/firefox"
-          "$mod,X, exec, ${pkgs.wlogout}/bin/wlogout"
           "$mod,SPACE, exec, menu"
           "$mod,C, exec, quickmenu"
 
