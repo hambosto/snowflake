@@ -25,7 +25,7 @@ in
         "editor.acceptSuggestionOnEnter" = "on";
         "editor.autoClosingBrackets" = "always";
 
-        "workbench.colorTheme" = "Tokyo Night";
+        "workbench.colorTheme" = "Mana Lord's Moon Light Theme";
         "workbench.iconTheme" = "moxer-icons";
         "workbench.productIconTheme" = "fluent-icons";
         "terminal.integrated.fontSize" = 14;
@@ -63,7 +63,7 @@ in
         };
       };
       extensions = with pkgs.vscode-marketplace; [
-        enkia.tokyo-night
+        manalord.mana-lord-theme
         equinusocio.moxer-icons
         miguelsolorio.fluent-icons
         golang.go
