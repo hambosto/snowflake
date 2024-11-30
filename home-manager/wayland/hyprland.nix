@@ -104,20 +104,21 @@ in
 
           shadow = {
             enabled = true;
-            range = 20;
+            range = 10;
             render_power = 3;
+            scale = 0.97;
           };
 
           blur = {
             enabled = true;
             size = 16;
-            passes = 4;
+            xray = true;
+            new_optimizations = "on";
+            brightness = 0.8;
             contrast = 0.9;
             noise = 1.0e-2;
-            brightness = 0.8;
-            new_optimizations = "on";
+            passes = 4;
             ignore_opacity = true;
-            xray = true;
           };
         };
 
