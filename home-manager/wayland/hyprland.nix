@@ -6,6 +6,30 @@
   ...
 }:
 let
+  wallpaper-activator = pkgs.writeShellScript "wallpaper-activator" ''
+    WALLPAPER_CACHE="$HOME/.cache/.active_wallpaper"
+
+    # Check if cache file exists
+    if [ ! -f "$WALLPAPER_CACHE" ]; then
+      exit 0
+    fi
+
+    # Read the wallpaper path
+    SELECTED_IMAGE=$(<"$WALLPAPER_CACHE")
+
+    # Verify image exists
+    if [ ! -f "$SELECTED_IMAGE" ]; then
+      exit 1
+    fi
+
+    # Get current monitor
+    MONITOR=$(hyprctl monitors | grep Monitor | awk '{print $2}')
+
+    # Set wallpaper
+    hyprctl hyprpaper unload all > /dev/null 2>&1
+    hyprctl hyprpaper preload "$SELECTED_IMAGE" > /dev/null 2>&1
+    hyprctl hyprpaper wallpaper "$MONITOR, $SELECTED_IMAGE" > /dev/null 2>&1
+  '';
   cfg = config.modules.wayland.hyprland;
 in
 {
@@ -236,6 +260,7 @@ in
         # Startup applications
         exec-once = [
           "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+          "sleep 1 && ${wallpaper-activator}"
         ];
       };
     };
