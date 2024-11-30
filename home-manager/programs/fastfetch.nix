@@ -42,10 +42,12 @@ in
           }
           "os"
           "kernel"
+          "cpu"
           "memory"
           "packages"
-          "uptime"
+          "terminal"
           "disk"
+          "uptime"
           {
             type = "colors";
             key = "Colors";
