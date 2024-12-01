@@ -2,8 +2,8 @@
   imports = [
     ./hyprland.nix
     ./hyprpanel.nix
-    ./menu.nix
     ./nixctl.nix
+    ./rofi.nix
     ./screenshot.nix
   ];
 }
