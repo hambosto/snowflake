@@ -6,7 +6,7 @@
       fira-code
       noto-fonts
       noto-fonts-emoji
-      (nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+      nerd-fonts.jetbrains-mono
     ];
 
     enableDefaultPackages = false;
