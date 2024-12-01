@@ -14,7 +14,7 @@ in
       enable = true;
       userSettings = {
         "editor.fontSize" = 14;
-        "editor.fontFamily" = "Fira Code";
+        "editor.fontFamily" = "GeistMono Nerd Font";
         "editor.fontLigatures" = true;
         "editor.formatOnSave" = true;
         "editor.minimap.enabled" = false;

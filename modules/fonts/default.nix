@@ -2,11 +2,8 @@
 {
   fonts = {
     packages = with pkgs; [
-      cascadia-code
       fira-code
-      noto-fonts
-      noto-fonts-emoji
-      nerd-fonts.jetbrains-mono
+      nerd-fonts.geist-mono
     ];
 
     enableDefaultPackages = false;

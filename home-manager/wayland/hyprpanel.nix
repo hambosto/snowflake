@@ -40,7 +40,7 @@ in
           ];
         };
       };
-      "theme.font.name" = "Cascadia Code NF";
+      "theme.font.name" = "JetBrainsMono Nerd Font";
       "theme.font.size" = "${toString config.stylix.fonts.sizes.desktop}px";
       "theme.bar.outer_spacing" = "0px";
       "theme.bar.buttons.y_margins" = "0px";
