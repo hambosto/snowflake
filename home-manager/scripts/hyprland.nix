@@ -7,7 +7,10 @@
 let
   wallpaper-selector = pkgs.writeShellScriptBin "wallpaper-selector" ''
     WALLPAPER_DIR="$HOME/Pictures"
-    MONITOR=$(hyprctl monitors | awk '/Monitor/ {print $2}')
+    CACHE_FILE="$HOME/.cache/.active_wallpaper"
+
+    # Detect all monitors using hyprctl and jq
+    MONITORS=$(hyprctl -j monitors | ${pkgs.jq}/bin/jq -r '.[].name')
 
     # Verify that the wallpaper directory exists
     if [ ! -d "$WALLPAPER_DIR" ]; then
@@ -25,26 +28,38 @@ let
     fi
 
     # Select an image using fzf
-    SELECTED_IMAGE=$(echo "$IMAGE_FILES" | fzf --no-border --preview "${pkgs.chafa}/bin/chafa --clear --size=40x20 {}")
+    SELECTED_IMAGE=$(echo "$IMAGE_FILES" | ${pkgs.fzf}/bin/fzf --no-border --preview "${pkgs.chafa}/bin/chafa --clear --size=40x20 {}")
     if [ -z "$SELECTED_IMAGE" ]; then
       exit 0
     fi
 
     # Save the selected image path to the cache
-    CACHE_FILE="$HOME/.cache/.active_wallpaper"
     echo "$SELECTED_IMAGE" > "$CACHE_FILE"
 
-    # Set the selected image as wallpaper
+    # Apply the wallpaper to all monitors
     hyprctl hyprpaper unload all > /dev/null 2>&1
     hyprctl hyprpaper preload "$SELECTED_IMAGE" > /dev/null 2>&1
-    hyprctl hyprpaper wallpaper "$MONITOR, $SELECTED_IMAGE" > /dev/null 2>&1
+    for monitor in $MONITORS; do
+      hyprctl hyprpaper wallpaper "$monitor, $SELECTED_IMAGE" > /dev/null 2>&1
+    done
 
     exit 0
+  '';
+  close-active-windows = pkgs.writeShellScriptBin "close-active-windows" ''
+    active_workspace=$(hyprctl -j activeworkspace | ${pkgs.jq}/bin/jq -r '.id')
+    addresses=$(hyprctl -j clients | ${pkgs.jq}/bin/jq -r ".[] | select(.workspace.id == $active_workspace) | .address")
+
+    for address in $addresses; do
+      hyprctl dispatch closewindow address:$address
+    done
   '';
   cfg = config.modules.wayland.hyprland;
 in
 {
   config = lib.mkIf cfg.enable {
-    home.packages = [ wallpaper-selector ];
+    home.packages = [
+      wallpaper-selector
+      close-active-windows
+    ];
   };
 }

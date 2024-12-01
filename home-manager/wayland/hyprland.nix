@@ -9,26 +9,30 @@ let
   wallpaper-activator = pkgs.writeShellScript "wallpaper-activator" ''
     WALLPAPER_CACHE="$HOME/.cache/.active_wallpaper"
 
-    # Check if cache file exists
+    # Check if the cache file exists
     if [ ! -f "$WALLPAPER_CACHE" ]; then
       exit 0
     fi
 
-    # Read the wallpaper path
+    # Read the wallpaper path from the cache
     SELECTED_IMAGE=$(<"$WALLPAPER_CACHE")
 
-    # Verify image exists
+    # Verify the image exists
     if [ ! -f "$SELECTED_IMAGE" ]; then
       exit 1
     fi
 
-    # Get current monitor
-    MONITOR=$(hyprctl monitors | grep Monitor | awk '{print $2}')
+    # Get all monitors using jq
+    MONITORS=$(hyprctl -j monitors | ${pkgs.jq}/bin/jq -r '.[].name')
 
-    # Set wallpaper
+    # Apply wallpaper to all monitors
     hyprctl hyprpaper unload all > /dev/null 2>&1
     hyprctl hyprpaper preload "$SELECTED_IMAGE" > /dev/null 2>&1
-    hyprctl hyprpaper wallpaper "$MONITOR, $SELECTED_IMAGE" > /dev/null 2>&1
+    for monitor in $MONITORS; do
+      hyprctl hyprpaper wallpaper "$monitor, $SELECTED_IMAGE" > /dev/null 2>&1
+    done
+
+    exit 0
   '';
   cfg = config.modules.wayland.hyprland;
 in
@@ -175,33 +179,33 @@ in
         # Key bindings
         bind = [
           # Application launchers
-          "$mod,RETURN, exec, ${pkgs.kitty}/bin/kitty"
-          "$mod,E, exec, ${pkgs.kitty}/bin/kitty -e ${pkgs.yazi}/bin/yazi"
-          "$mod,M, exec, ${pkgs.kitty}/bin/kitty -e ${pkgs.btop}/bin/btop"
-          "$mod,L, exec, ${pkgs.hyprlock}/bin/hyprlock"
-          "$mod,B, exec, ${pkgs.firefox}/bin/firefox"
-          "$mod,SPACE, exec, menu"
-          "$mod,C, exec, quickmenu"
+          "$mod, RETURN, exec, ${pkgs.kitty}/bin/kitty"
+          "$mod, E, exec, ${pkgs.kitty}/bin/kitty -e ${pkgs.yazi}/bin/yazi"
+          "$mod, M, exec, ${pkgs.kitty}/bin/kitty -e ${pkgs.btop}/bin/btop"
+          "$mod, L, exec, ${pkgs.hyprlock}/bin/hyprlock"
+          "$mod, B, exec, ${pkgs.firefox}/bin/firefox"
+          "$mod, SPACE, exec, menu"
+          "$mod, C, exec, quickmenu"
 
           # Window management
-          "$mod,Q, killactive,"
-          "$mod,T, togglefloating,"
-          "$mod,F, fullscreen"
-          "$shiftMod,SPACE, exec, hyprfocus-toggle"
+          "$mod, Q, killactive,"
+          "$mod, T, togglefloating,"
+          "$mod, F, fullscreen"
+          "$shiftMod, SPACE, exec, hyprfocus-toggle"
 
           # Window focus
-          "$mod,left, movefocus, l"
-          "$mod,right, movefocus, r"
-          "$mod,up, movefocus, u"
-          "$mod,down, movefocus, d"
+          "$mod, left, movefocus, l"
+          "$mod, right, movefocus, r"
+          "$mod, up, movefocus, u"
+          "$mod, down, movefocus, d"
 
           # Monitor management
-          "$shiftMod,up, focusmonitor, -1"
-          "$shiftMod,down, focusmonitor, 1"
+          "$shiftMod, up, focusmonitor, -1"
+          "$shiftMod, down, focusmonitor, 1"
 
           # Layout controls
-          "$shiftMod,left, layoutmsg, addmaster"
-          "$shiftMod,right, layoutmsg, removemaster"
+          "$shiftMod, left, layoutmsg, addmaster"
+          "$shiftMod, right, layoutmsg, removemaster"
 
           # Screenshot controls
           ",PRINT, exec, screenshot selection"
@@ -210,6 +214,9 @@ in
 
           # Random Wallpaper
           "$shiftMod, W, exec, ${pkgs.kitty}/bin/kitty --class window-floating -e wallpaper-selector"
+
+          # Close active windows
+          "$shiftMod, Q, exec, close-active-windows"
 
           # Workspace management
           "$mod, 1, workspace, 1"
