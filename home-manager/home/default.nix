@@ -4,79 +4,77 @@
   ...
 }:
 {
+  # Import user-defined modules for additional options and settings
   imports = [
     ./../../modules/options
     ./../../modules/settings
   ];
 
+  # Configure home directory and user-specific settings
   home = {
-    # User-specific home directory settings
     username = "${username}"; # The username of the user
-    homeDirectory = "/home/${username}"; # Full path to the user's home directory
-    stateVersion = "24.05"; # State version, specifying the version of Home Manager being used
+    homeDirectory = "/home/${username}";
+    stateVersion = "24.05"; # Specify the state version for compatibility
 
-    # Profile picture configuration (using a local file for the user’s profile picture)
-    file.".profile_picture.jpg".source = ./profile_picture.jpg; # Dashboard profile picture
+    # Add a profile picture in the home directory
+    file.".profile_picture.jpg".source = ./profile_picture.jpg;
 
-    # Packages to be installed for the user, including utilities and development tools
+    # List of packages to install in the user's environment
     packages = with pkgs; [
-      # Common utilities and games
-      zip # Utility for compressing files into ZIP archives
-      unzip # Utility for extracting files from ZIP archives
-      peaclock # A peaceful clock application
-      cbonsai # A Bonsai tree program in the terminal
-      pipes-rs # A terminal game involving pipes
-      cmatrix # Matrix-style screen saver for the terminal
-      neovim # Modern text editor based on Vim
-
-      # Development tools and programming languages
-      go # Go programming language
-      nodejs # Node.js runtime for JavaScript
-      python3 # Python 3 interpreter
-      python3Packages.pip # Python package installer (PIP)
+      zip
+      unzip
+      peaclock
+      cbonsai
+      pipes-rs
+      cmatrix
+      neovim
+      python3
+      python3Packages.pip
     ];
   };
 
-  # Enable Home Manager for managing user-specific configurations
+  # Enable Home Manager for user-specific configuration management
   programs.home-manager.enable = true;
 
-  # Configuration for different modules (Wayland, services, and programs)
   modules = {
-    # Wayland and related desktop environment settings
+    # Wayland-specific modules and settings
     wayland = {
-      hyprland.enable = true; # Enable Hyprland (Wayland compositor)
-      hyprlock.enable = true; # Enable Hyprlock (screen locker for Wayland)
-      hyprpanel.enable = true; # Enable Hyprpanel (panel for Hyprland)
-      rofi.enable = true; # Enable Rofi (window switcher/application launcher)
+      hyprland.enable = true; # Enable Hyprland Wayland compositor
+      hyprlock.enable = true; # Enable Hyprlock screen locker
+      hyprpanel.enable = true; # Enable Hyprpanel status bar/panel
+      rofi.enable = true; # Enable Rofi launcher
     };
 
-    # Service settings, enabling or disabling specific background services
+    # Enable or disable system services
     services = {
-      clipman.enable = true; # Enable Clipman (clipboard manager)
-      hypridle.enable = true; # Enable Hypridle (idle detection for Hyprland)
-      udiskie.enable = false; # Enable Udiskie (automounting for USB drives)
+      clipman.enable = true; # Enable clipboard manager
+      hypridle.enable = true; # Enable Hyprland idle manager
+      udiskie.enable = false; # Enable automatic disk mounting
     };
 
-    # Programs and utilities configuration, enabling or disabling various software
+    # Enable or configure additional programs
     programs = {
-      btop.enable = true; # Enable btop (system monitoring tool)
-      cava.enable = false; # Enable Cava (audio visualizer for the terminal)
-      eza.enable = true; # Enable eza (modern replacement for `ls`)
-      fastfetch.enable = true; # Enable fastfetch (information fetching utility)
-      firefox.enable = true; # Enable Firefox (web browser)
-      fzf.enable = true; # Enable fzf (fuzzy finder for the terminal)
-      gemini-commit.enable = true; # Enable Gemini commit (Git commit utility)
-      git.enable = true; # Enable Git (version control system)
-      go-encryption.enable = true; # Enable Go encryption tools
-      kitty.enable = true; # Enable Kitty (fast terminal emulator)
-      lazygit.enable = true; # Enable Lazygit (terminal UI for Git)
-      nh.enable = true; # Enable nh (news aggregator)
-      spicetify.enable = true; # Enable Spicetify (Spotify customization)
-      vscode.enable = true; # Enable VSCode (code editor)
-      yazi.enable = true; # Enable Yazi (terminal-based file manager)
-      zen.enable = true; # Enable Zen (minimalist application launcher)
-      zoxide.enable = true; # Enable Zoxide (fast directory navigation)
-      zsh.enable = true; # Enable Zsh (shell with advanced features)
+      bat.enable = true; # Enable bat (cat alternative with syntax highlighting)
+      btop.enable = true; # Enable btop (resource monitor)
+      bun.enable = true; # JavaScript runtime for fast builds and scripting
+      cava.enable = false; # Disable CAVA audio visualizer
+      eza.enable = true; # Enable eza (enhanced ls command)
+      fastfetch.enable = true; # Enable fastfetch (system info tool)
+      firefox.enable = true; # Enable Firefox browser
+      fzf.enable = true; # Enable fzf (fuzzy finder)
+      gemini-commit.enable = true; # Enable Gemini Commit (version control)
+      git.enable = true; # Enable Git (version control)
+      go-encryption.enable = true; # Enable Go encryption utility
+      go.enable = true; # Enable Go programming language
+      kitty.enable = true; # Enable Kitty terminal emulator
+      lazygit.enable = true; # Enable Lazygit (Git UI)
+      nh.enable = true; # Enable NH (tool for something specific)
+      spicetify.enable = true; # Enable Spicetify (Spotify theming)
+      vscode.enable = true; # Enable Visual Studio Code editor
+      yazi.enable = true; # Enable Yazi (file manager)
+      zen.enable = true; # Enable Zen (Oh My Posh with Zen theme)
+      zoxide.enable = true; # Enable Zoxide (directory jumper)
+      zsh.enable = true; # Enable Zsh shell
     };
   };
 }

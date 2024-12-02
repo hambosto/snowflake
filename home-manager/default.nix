@@ -26,7 +26,9 @@
     };
 
     programs = {
+      bat.enable = lib.mkEnableOption "Enable Bat";
       btop.enable = lib.mkEnableOption "Enable Btop";
+      bun.enable = lib.mkEnableOption "Enable Bun";
       cava.enable = lib.mkEnableOption "Enable Cava";
       eza.enable = lib.mkEnableOption "Enable Eza";
       fastfetch.enable = lib.mkEnableOption "Enable Fastfetch";
@@ -35,6 +37,7 @@
       gemini-commit.enable = lib.mkEnableOption "Enable Gemini Commit";
       git.enable = lib.mkEnableOption "Enable Git";
       go-encryption.enable = lib.mkEnableOption "Enable Go Encryption";
+      go.enable = lib.mkEnableOption "Enable Golang";
       kitty.enable = lib.mkEnableOption "Enable Kitty";
       lazygit.enable = lib.mkEnableOption "Enable Lazygit";
       nh.enable = lib.mkEnableOption "Enable NH";

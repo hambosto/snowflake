@@ -1,6 +1,8 @@
 {
   imports = [
+    ./bat.nix
     ./btop.nix
+    ./bun.nix
     ./cava.nix
     ./eza.nix
     ./fastfetch.nix
@@ -9,6 +11,7 @@
     ./gemini-commit.nix
     ./git.nix
     ./go-encryption.nix
+    ./go.nix
     ./kitty.nix
     ./lazygit.nix
     ./nh.nix

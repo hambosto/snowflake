@@ -1,7 +1,6 @@
 {
   config,
   lib,
-  pkgs,
   ...
 }:
 let
@@ -9,11 +8,6 @@ let
 in
 {
   config = lib.mkIf cfg.enable {
-    home.packages = with pkgs; [
-      bat
-      ripgrep
-    ];
-
     programs.zsh = {
       enable = true;
       enableCompletion = true;
@@ -23,13 +17,6 @@ in
 
       initExtraFirst = ''
         fastfetch
-
-        # Go configuration
-        export GOPATH="$HOME/go"
-        export PATH="$PATH:$GOPATH/bin"
-
-        # Cargo configuration
-        export PATH="$PATH:$HOME/.cargo/bin"
       '';
 
       history = {
