@@ -45,11 +45,10 @@ in
       package = inputs.hyprland.packages.${pkgs.system}.hyprland;
 
       settings = {
-        "$mod" = "SUPER";
-        "$shiftMod" = "SUPER_SHIFT";
+        "$mainMod" = "SUPER";
 
         # Monitor setup
-        monitor = [ ",preferred,auto,1" ];
+        monitor = [ ",highres,auto,1" ];
 
         # System environment variables
         env = [
@@ -176,77 +175,72 @@ in
           workspace_swipe_forever = true;
         };
 
+        dwindle = {
+          pseudotile = true;
+          preserve_split = true;
+        };
+
         # Key bindings
         bind = [
           # Application launchers
-          "$mod, RETURN, exec, ${pkgs.kitty}/bin/kitty"
-          "$mod, E, exec, ${pkgs.kitty}/bin/kitty -e ${pkgs.yazi}/bin/yazi"
-          "$mod, M, exec, ${pkgs.kitty}/bin/kitty -e ${pkgs.btop}/bin/btop"
-          "$mod, L, exec, ${pkgs.hyprlock}/bin/hyprlock"
-          "$mod, B, exec, ${pkgs.firefox}/bin/firefox"
-          "$mod, SPACE, exec, menu"
-          "$mod, C, exec, quickmenu"
+          "$mainMod, RETURN, exec, ${pkgs.kitty}/bin/kitty"
+          "$mainMod, E, exec, ${pkgs.kitty}/bin/kitty -e ${pkgs.yazi}/bin/yazi"
+          "$mainMod, M, exec, ${pkgs.kitty}/bin/kitty -e ${pkgs.btop}/bin/btop"
+          "$mainMod, L, exec, ${pkgs.hyprlock}/bin/hyprlock"
+          "$mainMod, B, exec, ${pkgs.firefox}/bin/firefox"
+          "$mainMod, SPACE, exec, menu"
 
           # Window management
-          "$mod, Q, killactive,"
-          "$mod, T, togglefloating,"
-          "$mod, F, fullscreen"
-          "$shiftMod, SPACE, exec, hyprfocus-toggle"
+          "$mainMod, Q, killactive,"
+          "$mainMod, T, togglefloating,"
+          "$mainMod, F, fullscreen"
 
           # Window focus
-          "$mod, left, movefocus, l"
-          "$mod, right, movefocus, r"
-          "$mod, up, movefocus, u"
-          "$mod, down, movefocus, d"
-
-          # Monitor management
-          "$shiftMod, up, focusmonitor, -1"
-          "$shiftMod, down, focusmonitor, 1"
-
-          # Layout controls
-          "$shiftMod, left, layoutmsg, addmaster"
-          "$shiftMod, right, layoutmsg, removemaster"
+          "$mainMod, left, movefocus, l"
+          "$mainMod, right, movefocus, r"
+          "$mainMod, up, movefocus, u"
+          "$mainMod, down, movefocus, d"
 
           # Screenshot controls
           ",PRINT, exec, screenshot selection"
-          "$mod, PRINT, exec, screenshot active"
+          "$mainMod, PRINT, exec, screenshot active"
           "SHIFT, PRINT, exec, screenshot everything"
 
-          # Random Wallpaper
-          "$shiftMod, W, exec, ${pkgs.kitty}/bin/kitty --class window-floating -e wallpaper-selector"
+          # Wallpaper Selector
+          "$mainMod SHIFT, W, exec, ${pkgs.kitty}/bin/kitty --class window-floating -e wallpaper-selector"
 
           # Close active windows
-          "$shiftMod, Q, exec, close-active-windows"
+          "$mainMod SHIFT, Q, exec, close-active-windows"
 
           # Workspace management
-          "$mod, 1, workspace, 1"
-          "$mod, 2, workspace, 2"
-          "$mod, 3, workspace, 3"
-          "$mod, 4, workspace, 4"
-          "$mod, 5, workspace, 5"
-          "$mod, 6, workspace, 6"
-          "$mod, 7, workspace, 7"
-          "$mod, 8, workspace, 8"
-          "$mod, 9, workspace, 9"
-          "$mod, 0, workspace, 10"
+          "$mainMod, 1, workspace, 1"
+          "$mainMod, 2, workspace, 2"
+          "$mainMod, 3, workspace, 3"
+          "$mainMod, 4, workspace, 4"
+          "$mainMod, 5, workspace, 5"
+          "$mainMod, 6, workspace, 6"
+          "$mainMod, 7, workspace, 7"
+          "$mainMod, 8, workspace, 8"
+          "$mainMod, 9, workspace, 9"
+          "$mainMod, 0, workspace, 10"
 
           # Move windows to workspaces
-          "$mod SHIFT, 1, movetoworkspace, 1"
-          "$mod SHIFT, 2, movetoworkspace, 2"
-          "$mod SHIFT, 3, movetoworkspace, 3"
-          "$mod SHIFT, 4, movetoworkspace, 4"
-          "$mod SHIFT, 5, movetoworkspace, 5"
-          "$mod SHIFT, 6, movetoworkspace, 6"
-          "$mod SHIFT, 7, movetoworkspace, 7"
-          "$mod SHIFT, 8, movetoworkspace, 8"
-          "$mod SHIFT, 9, movetoworkspace, 9"
-          "$mod SHIFT, 0, movetoworkspace, 10"
+          "$mainMod SHIFT, 1, movetoworkspace, 1"
+          "$mainMod SHIFT, 2, movetoworkspace, 2"
+          "$mainMod SHIFT, 3, movetoworkspace, 3"
+          "$mainMod SHIFT, 4, movetoworkspace, 4"
+          "$mainMod SHIFT, 5, movetoworkspace, 5"
+          "$mainMod SHIFT, 6, movetoworkspace, 6"
+          "$mainMod SHIFT, 7, movetoworkspace, 7"
+          "$mainMod SHIFT, 8, movetoworkspace, 8"
+          "$mainMod SHIFT, 9, movetoworkspace, 9"
+          "$mainMod SHIFT, 0, movetoworkspace, 10"
         ];
 
         # Mouse bindings
         bindm = [
-          "$mod,mouse:272, movewindow"
-          "$mod,mouse:273, resizewindow"
+          "$mainMod,mouse:272, movewindow"
+          "$mainMod,mouse:273, resizewindow"
         ];
 
         # Hardware event bindings
