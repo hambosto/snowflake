@@ -260,10 +260,7 @@ in
         ];
 
         # Startup applications
-        exec-once = [
-          "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-          "sleep 1 && ${wallpaper-activator}"
-        ];
+        exec-once = [ "sleep 1 && ${wallpaper-activator}" ];
       };
     };
   };

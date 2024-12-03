@@ -4,11 +4,13 @@
   pkgs,
   ...
 }:
+
 let
   cfg = config.settings;
 in
 {
   options.settings = {
+    # System settings
     system = {
       fullName = lib.mkOption {
         type = lib.types.str;
@@ -53,6 +55,7 @@ in
       };
     };
 
+    # Git settings
     git = {
       username = lib.mkOption {
         type = lib.types.str;
@@ -67,10 +70,12 @@ in
       };
     };
 
+    # Virtualization settings
     virtualization = {
       podman.enable = lib.mkEnableOption "Enable Podman";
     };
 
+    # Appearance settings
     wallpaper = lib.mkOption {
       type = lib.types.path;
       description = "Path to wallpaper image";
@@ -78,13 +83,19 @@ in
 
     plymouth = {
       enable = lib.mkEnableOption "Enable Plymouth";
+
       themesPackage = lib.mkOption {
-        default = pkgs.adi1090x-plymouth-themes.override { selected_themes = [ cfg.plymouth.theme ]; };
         type = lib.types.package;
+        default = pkgs.adi1090x-plymouth-themes.override {
+          selected_themes = [ cfg.plymouth.theme ];
+        };
+        description = "Plymouth themes package";
       };
+
       theme = lib.mkOption {
         type = lib.types.str;
         default = "rings";
+        description = "Plymouth theme";
       };
     };
   };
