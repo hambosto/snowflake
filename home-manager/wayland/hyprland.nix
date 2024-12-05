@@ -48,7 +48,7 @@ in
         "$mainMod" = "SUPER";
 
         # Monitor setup
-        monitor = [ ",highres,auto,1" ];
+        monitor = [ "desc:Chimei Innolux Corporation 0x1441, preferred, auto, 1" ];
 
         # System environment variables
         env = [
@@ -70,10 +70,10 @@ in
 
         # Window management and layout
         general = {
-          resize_on_border = true;
           gaps_in = 1;
           gaps_out = 1;
-          border_size = 3;
+          border_size = 0;
+          resize_on_border = true;
           border_part_of_window = true;
           layout = "dwindle";
         };
@@ -82,20 +82,18 @@ in
         animations = {
           enabled = true;
           bezier = [
-            "wind, 0.05, 0.9, 0.1, 1.05"
-            "winIn, 0.1, 1.1, 0.1, 1.1"
-            "winOut, 0.3, -0.3, 0, 1"
-            "liner, 1, 1, 1, 1"
+            "overshot, 0.05, 0.9, 0.1, 1.05"
+            "smoothOut, 0.36, 0, 0.66, -0.56"
+            "smoothIn, 0.25, 1, 0.5, 1"
           ];
           animation = [
-            "windows, 1, 6, wind, slide"
-            "windowsIn, 1, 6, winIn, slide"
-            "windowsOut, 1, 5, winOut, slide"
-            "windowsMove, 1, 5, wind, slide"
-            "border, 1, 1, liner"
-            "borderangle, 1, 30, liner, once"
-            "fade, 1, 10, default"
-            "workspaces, 1, 5, wind"
+            "windows, 1, 5, overshot, slide"
+            "windowsOut, 1, 4, smoothOut, slide"
+            "windowsMove, 1, 4, default"
+            "border, 1, 10, default"
+            "fade, 1, 10, smoothIn"
+            "fadeDim, 1, 10, smoothIn"
+            "workspaces, 1, 6, default"
           ];
         };
 
