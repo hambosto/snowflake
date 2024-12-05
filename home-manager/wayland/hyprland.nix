@@ -82,17 +82,20 @@ in
         animations = {
           enabled = true;
           bezier = [
-            "Workspace, 0.4, 0.0, 0.2, 1.0"
-            "Window, 0.25, 0.1, 0.25, 1.0"
-            "Layer, 0.4, 0.0, 0.2, 1.0"
+            "cosmic, 0.25, 0.1, 0.25, 1"
+            "hyperfast, 0.16, 1, 0.3, 1"
+            "hyperdynamic, 0.68, -0.55, 0.27, 1.55"
+            "ultrasmooth, 0.45, 0, 0.55, 1"
+            "workspace, 0.15, 0.9, 0.1, 1.1"
           ];
           animation = [
-            "workspaces, 1, 5, Workspace, slide"
-            "windowsIn, 1, 4, Window, popin 85%"
-            "windowsOut, 1, 4, Window, popin 75%"
-            "windowsMove, 1, 5, Window, slide"
-            "fadeLayersIn, 1, 3, Layer"
-            "fadeLayersOut, 1, 3, Layer"
+            "windows, 1, 7, cosmic, popin 30%"
+            "windowsIn, 1, 5, hyperfast, slide"
+            "windowsOut, 1, 7, hyperdynamic, slidevert"
+            "border, 1, 10, default"
+            "borderangle, 1, 50, ultrasmooth, once"
+            "fade, 1, 5, cosmic"
+            "workspaces, 1, 3, workspace, slide"
           ];
         };
 
@@ -152,10 +155,6 @@ in
 
         # Window and layer rules
         windowrulev2 = [
-          "animation popin 85%,class:^(kitty)$"
-          "animation popin 80%,class:^(firefox)$"
-          "animation slide,class:^(code)$"
-
           "float, title:^(Picture-in-Picture)$"
           "pin, title:^(Picture-in-Picture)$"
           "move 69.5% 4%, title:^(Picture-in-Picture)$"
