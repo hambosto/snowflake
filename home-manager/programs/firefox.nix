@@ -10,8 +10,8 @@ let
   firefox-gnome-theme = pkgs.fetchFromGitHub {
     owner = "rafaelmardojai";
     repo = "firefox-gnome-theme";
-    rev = "v133";
-    sha256 = "sha256-k7v5PE6OcqMkC/u7aokwcxKDmTKM+ejiZGCsH9MK0s0=";
+    rev = "aa9b67045fcdec7ae045b36d7a41b36b3463b842";
+    sha256 = "sha256-Q8W1YlsZmxhUaXLOJhPCeEzKqaqmspT9VKYZxn5Kh40=";
   };
   cfg = config.modules.programs.firefox;
 in
