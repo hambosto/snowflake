@@ -82,18 +82,17 @@ in
         animations = {
           enabled = true;
           bezier = [
-            "overshot, 0.05, 0.9, 0.1, 1.05"
-            "smoothOut, 0.36, 0, 0.66, -0.56"
-            "smoothIn, 0.25, 1, 0.5, 1"
+            "Workspace, 0.4, 0.0, 0.2, 1.0"
+            "Window, 0.25, 0.1, 0.25, 1.0"
+            "Layer, 0.4, 0.0, 0.2, 1.0"
           ];
           animation = [
-            "windows, 1, 5, overshot, slide"
-            "windowsOut, 1, 4, smoothOut, slide"
-            "windowsMove, 1, 4, default"
-            "border, 1, 10, default"
-            "fade, 1, 10, smoothIn"
-            "fadeDim, 1, 10, smoothIn"
-            "workspaces, 1, 6, default"
+            "workspaces, 1, 5, Workspace, slide"
+            "windowsIn, 1, 4, Window, popin 85%"
+            "windowsOut, 1, 4, Window, popin 75%"
+            "windowsMove, 1, 5, Window, slide"
+            "fadeLayersIn, 1, 3, Layer"
+            "fadeLayersOut, 1, 3, Layer"
           ];
         };
 
@@ -107,6 +106,7 @@ in
             enabled = true;
             range = 10;
             render_power = 3;
+            offset = "12 12";
             scale = 0.97;
           };
 
@@ -117,7 +117,7 @@ in
             new_optimizations = "on";
             brightness = 0.8;
             contrast = 0.9;
-            noise = 1.0e-2;
+            noise = 0.01;
             passes = 4;
             ignore_opacity = true;
           };
@@ -152,9 +152,14 @@ in
 
         # Window and layer rules
         windowrulev2 = [
+          "animation popin 85%,class:^(kitty)$"
+          "animation popin 80%,class:^(firefox)$"
+          "animation slide,class:^(code)$"
+
           "float, title:^(Picture-in-Picture)$"
           "pin, title:^(Picture-in-Picture)$"
           "move 69.5% 4%, title:^(Picture-in-Picture)$"
+
           "float,class:(window-floating)"
           "size 1000 700,class:(window-floating)"
           "center,class:(window-floating)"
