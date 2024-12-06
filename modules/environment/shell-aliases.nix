@@ -1,7 +1,7 @@
 {
   environment.shellAliases = {
     cd = "z";
-    cat = "bat";
+    cat = "bat --paging=never";
     ls = "eza --icons=always --no-quotes";
     ll = "eza -al --icons=always";
     lt = "eza -a --tree --level=1 --icons=always";

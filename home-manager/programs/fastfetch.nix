@@ -11,20 +11,15 @@ in
     programs.fastfetch = {
       enable = true;
       settings = {
-        "$schema" = "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json";
 
         logo = {
-          source = "nixos_old_small";
+          source = "linux-generic";
         };
 
         display = {
           separator = "  ";
           color = {
             keys = "magenta";
-          };
-          size = {
-            ndigits = 0;
-            maxPrefix = "MB";
           };
           key = {
             type = "icon";
@@ -44,10 +39,15 @@ in
           "kernel"
           "cpu"
           "memory"
+          "disk"
+          {
+            "type" = "localip";
+            "format" = "{ipv4} ({ifname})";
+          }
+          "uptime"
+          "shell"
           "packages"
           "terminal"
-          "disk"
-          "uptime"
           {
             type = "colors";
             key = "Colors";

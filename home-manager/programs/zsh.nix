@@ -1,6 +1,7 @@
 {
   config,
   lib,
+  pkgs,
   ...
 }:
 let
@@ -16,7 +17,7 @@ in
       historySubstringSearch.enable = true;
 
       initExtraFirst = ''
-        fastfetch
+        ${pkgs.fastfetch}/bin/fastfetch
       '';
 
       history = {
