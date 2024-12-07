@@ -12,12 +12,12 @@ in
     home.packages = [
       (pkgs.buildGoModule rec {
         pname = "go-encryption";
-        version = "0.0.1";
+        version = "0.0.2";
         src = pkgs.fetchFromGitHub {
           owner = "hambosto";
           repo = "go-encryption";
           rev = "v${version}";
-          hash = "sha256-NUQIViWsvi1YG5yM85/yIQhfjQJQwaN0zBSLdP5PSpY=";
+          hash = "sha256-00GNQmPkJOvZ38ZOAXhT5hAZoIGBt6NtL1RDDbJqPns=";
         };
         vendorHash = "sha256-6fKolW8dBS0R6RvKfaOPwljRRZruVN+ATi4qEkk3VXY=";
         ldflags = [
