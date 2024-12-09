@@ -3,7 +3,6 @@
   lib,
   pkgs,
   username,
-  inputs,
   ...
 }:
 let
@@ -170,10 +169,19 @@ in
           @import "${firefox-gnome-theme}/userContent.css";
         '';
 
-        extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
+        extensions = with pkgs.nur.repos.rycee.firefox-addons; [
           bitwarden
           ublock-origin
           sponsorblock
+
+          (buildFirefoxXpiAddon rec {
+            pname = "phantom-app";
+            version = "24.26.0";
+            addonId = "{7c42eea1-b3e4-4be4-a56f-82a5852b12dc}";
+            url = "https://addons.mozilla.org/firefox/downloads/file/4392574/phantom_app-${version}.xpi";
+            sha256 = "sha256-AEWV5pxxHweDWv6txHvV1u4Cbc8pE8uFRmNK7LhHku8=";
+            meta = { };
+          })
         ];
       };
     };
