@@ -20,9 +20,14 @@ in
           hash = "sha256-7LZUfipJi6gR2zHSv9HoVvSSd+QWKnY0wn3US3vAifA=";
         };
         vendorHash = "sha256-+eKJLXgKuUHelUjD8MpMa+cRP+clmYK+1olcb/jmabk=";
+
+        CGO_ENABLED = 0;
+
         ldflags = [
+          "-extldflags '-static'"
           "-s -w"
         ];
+
         meta = with lib; {
           description = "A CLI that writes your git commit messages for you with Google Gemini AI";
           homepage = "https://github.com/tfkhdyt/geminicommit";
