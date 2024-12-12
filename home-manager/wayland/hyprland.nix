@@ -159,10 +159,7 @@ in
           "pin, title:^(Picture-in-Picture)$"
           "move 69.5% 4%, title:^(Picture-in-Picture)$"
 
-          "float,class:(window-floating)"
-          "size 1000 700,class:(window-floating)"
-          "center,class:(window-floating)"
-          "pin, class:(window-floating)"
+          "float,class:(terminal-floating)"
         ];
 
         # Gesture and cursor settings
@@ -209,7 +206,7 @@ in
           "SHIFT, PRINT, exec, screenshot everything"
 
           # Wallpaper Selector
-          "$mainMod SHIFT, W, exec, ${pkgs.kitty}/bin/kitty --class window-floating -e wallpaper-selector"
+          "$mainMod SHIFT, W, exec, ${pkgs.kitty}/bin/kitty --class terminal-floating -e wallpaper-selector"
 
           # Close active windows
           "$mainMod SHIFT, Q, exec, close-active-windows"

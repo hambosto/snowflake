@@ -21,12 +21,6 @@
 
     # List of packages to install in the user's environment
     packages = with pkgs; [
-      zip
-      unzip
-      peaclock
-      cbonsai
-      pipes-rs
-      cmatrix
       neovim
       python3
       python3Packages.pip

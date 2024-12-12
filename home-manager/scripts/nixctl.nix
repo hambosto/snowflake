@@ -6,8 +6,6 @@
 }:
 let
   configDirectory = config.settings.system.configDirectory;
-
-  # Define menu items in a more structured way
   menuItems = [
     {
       icon = "󰑓";
@@ -40,8 +38,6 @@ let
       command = "nixctl cb";
     }
   ];
-
-  # Convert menu items to the format expected by fzf
   menuItemsString = builtins.concatStringsSep "\n" (
     map (item: "${if item.icon == "" then "󰘳" else item.icon};${item.name};${item.command}") menuItems
   );
