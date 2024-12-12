@@ -23,13 +23,6 @@
       podman.enable = false;
     };
 
-    # Plymouth configuration
-    # The theme is based on the Plymouth themes repository: https://github.com/adi1090x/plymouth-themes
-    plymouth = {
-      enable = true;
-      theme = "rog_2";
-    };
-
     # Wallpaper path
     wallpaper = ../../wallpapers/default.jpg;
   };
