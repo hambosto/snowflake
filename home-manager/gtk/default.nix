@@ -12,7 +12,7 @@
 
     iconTheme = {
       package = pkgs.kora-icon-theme;
-      name = "Kora";
+      name = "kora";
     };
 
     gtk3.extraConfig = {
