@@ -24,6 +24,7 @@
       neovim
       python3
       python3Packages.pip
+      rust-bin.stable.latest.default
     ];
   };
 
