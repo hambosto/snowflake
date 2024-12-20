@@ -68,6 +68,8 @@ in
         miguelsolorio.fluent-icons
         golang.go
         jnoortheen.nix-ide
+        github.copilot
+        ms-python.python
       ];
     };
   };
