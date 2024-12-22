@@ -69,11 +69,11 @@ in
         golang.go
         jnoortheen.nix-ide
         github.copilot
-        ms-python.python
-        rust-lang.rust-analyzer
-        tamasfe.even-better-toml
-        serayuzgur.crates
-        vadimcn.vscode-lldb
+        # ms-python.python
+        # rust-lang.rust-analyzer
+        # tamasfe.even-better-toml
+        # serayuzgur.crates
+        # vadimcn.vscode-lldb
       ];
     };
   };

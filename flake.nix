@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     hyprland.url = "github:hyprwm/Hyprland";
-    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
+    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel/955eed6c60a3ea5d6b0b1b8b7086cffbae984277";
     stylix.url = "github:danth/stylix";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
 
@@ -20,10 +20,10 @@
       url = "github:nix-community/nix-vscode-extensions";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    rust-overlay = {
-      url = "github:oxalica/rust-overlay";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # rust-overlay = {
+    #   url = "github:oxalica/rust-overlay";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
   };
 
   outputs =

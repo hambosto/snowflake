@@ -22,9 +22,9 @@
     # List of packages to install in the user's environment
     packages = with pkgs; [
       neovim
-      python3
-      python3Packages.pip
-      rust-bin.stable.latest.default
+      # python3
+      # python3Packages.pip
+      # rust-bin.stable.latest.default
     ];
   };
 

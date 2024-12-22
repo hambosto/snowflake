@@ -41,18 +41,19 @@ in
         };
       };
       "theme.font.name" = "JetBrainsMono Nerd Font";
-      "theme.font.size" = "${toString config.stylix.fonts.sizes.desktop}px";
+      "theme.font.size" = "14px";
       "theme.bar.outer_spacing" = "0px";
       "theme.bar.buttons.y_margins" = "0px";
       "theme.bar.buttons.spacing" = "0.3em";
-      "theme.bar.buttons.radius" = "15px";
+      "theme.bar.buttons.radius" = "5px";
+      "theme.bar.scaling" = 85;
       "theme.bar.floating" = true;
       "theme.bar.buttons.padding_x" = "0.8rem";
       "theme.bar.buttons.padding_y" = "0.4rem";
       "theme.bar.margin_top" = "2";
       "theme.bar.margin_bottom" = "2";
       "theme.bar.margin_sides" = "1px";
-      "theme.bar.border_radius" = "15px";
+      "theme.bar.border_radius" = "5px";
       "bar.launcher.icon" = "";
       "theme.bar.transparent" = true;
       "bar.customModules.updates.pollingInterval" = 1440000;
@@ -71,11 +72,11 @@ in
       "bar.clock.showIcon" = true;
       "bar.clock.icon" = "";
       "bar.notifications.show_total" = true;
-      "theme.notification.border_radius" = "15px";
+      "theme.notification.border_radius" = "5px";
       "theme.osd.enable" = true;
       "theme.osd.orientation" = "vertical";
       "theme.osd.location" = "left";
-      "theme.osd.radius" = "15px";
+      "theme.osd.radius" = "5px";
       "theme.osd.margins" = "0px 0px 0px 10px";
       "theme.osd.muted_zero" = true;
       "menus.clock.weather.location" = "${config.settings.system.location}";
@@ -100,31 +101,39 @@ in
       "menus.dashboard.shortcuts.left.shortcut4.command" = "menu";
       "menus.dashboard.shortcuts.left.shortcut4.tooltip" = "Search Apps";
       "menus.dashboard.shortcuts.right.shortcut1.icon" = "";
-      "menus.dashboard.shortcuts.right.shortcut1.command" = "${pkgs.kitty}/bin/kitty -e ${pkgs.btop}/bin/btop";
+      "menus.dashboard.shortcuts.right.shortcut1.command" =
+        "${pkgs.kitty}/bin/kitty -e ${pkgs.btop}/bin/btop";
       "menus.dashboard.shortcuts.right.shortcut1.tooltip" = "Resource Monitor";
       "menus.dashboard.shortcuts.right.shortcut3.icon" = "󰨞";
       "menus.dashboard.shortcuts.right.shortcut3.command" = "code";
       "menus.dashboard.shortcuts.right.shortcut3.tooltip" = "Visual Studio Code";
       "menus.dashboard.directories.left.directory1.label" = "󰉍 Downloads";
-      "menus.dashboard.directories.left.directory1.command" = "${pkgs.kitty}/bin/kitty -e ${pkgs.yazi}/bin/yazi $HOME/Downloads";
+      "menus.dashboard.directories.left.directory1.command" =
+        "${pkgs.kitty}/bin/kitty -e ${pkgs.yazi}/bin/yazi $HOME/Downloads";
       "menus.dashboard.directories.left.directory2.label" = "󰉏 Pictures";
-      "menus.dashboard.directories.left.directory2.command" = "${pkgs.kitty}/bin/kitty -e ${pkgs.yazi}/bin/yazi $HOME/Pictures";
+      "menus.dashboard.directories.left.directory2.command" =
+        "${pkgs.kitty}/bin/kitty -e ${pkgs.yazi}/bin/yazi $HOME/Pictures";
       "menus.dashboard.directories.left.directory3.label" = "󱧶 Documents";
-      "menus.dashboard.directories.left.directory3.command" = "${pkgs.kitty}/bin/kitty -e ${pkgs.yazi}/bin/yazi $HOME/Documents";
+      "menus.dashboard.directories.left.directory3.command" =
+        "${pkgs.kitty}/bin/kitty -e ${pkgs.yazi}/bin/yazi $HOME/Documents";
       "menus.dashboard.directories.right.directory1.label" = "󱂵 Home";
-      "menus.dashboard.directories.right.directory1.command" = "${pkgs.kitty}/bin/kitty -e ${pkgs.yazi}/bin/yazi $HOME";
+      "menus.dashboard.directories.right.directory1.command" =
+        "${pkgs.kitty}/bin/kitty -e ${pkgs.yazi}/bin/yazi $HOME";
       "menus.dashboard.directories.right.directory2.label" = "󰚝 Projects";
-      "menus.dashboard.directories.right.directory2.command" = "${pkgs.kitty}/bin/kitty -e ${pkgs.yazi}/bin/yazi $HOME/dev";
+      "menus.dashboard.directories.right.directory2.command" =
+        "${pkgs.kitty}/bin/kitty -e ${pkgs.yazi}/bin/yazi $HOME/dev";
       "menus.dashboard.directories.right.directory3.label" = " Config";
-      "menus.dashboard.directories.right.directory3.command" = "${pkgs.kitty}/bin/kitty -e ${pkgs.yazi}/bin/yazi $HOME/.config";
+      "menus.dashboard.directories.right.directory3.command" =
+        "${pkgs.kitty}/bin/kitty -e ${pkgs.yazi}/bin/yazi $HOME/.config";
       "menus.power.lowBatteryNotification" = true;
       "menus.power.lowBatteryThreshold" = 20;
-      "menus.power.lowBatteryNotificationText" = "Your battery is running low.\n\nPlease plug in your charger";
+      "menus.power.lowBatteryNotificationText" =
+        "Your battery is running low.\n\nPlease plug in your charger";
       "theme.bar.menus.monochrome" = false;
       "wallpaper.enable" = false;
-      "theme.bar.menus.card_radius" = "15px";
+      "theme.bar.menus.card_radius" = "5px";
       "theme.bar.menus.border.size" = "3px";
-      "theme.bar.menus.border.radius" = "15px";
+      "theme.bar.menus.border.radius" = "5px";
       "theme.bar.buttons.monochrome" = false;
       "theme.bar.menus.menu.media.card.tint" = 90;
       "bar.customModules.hyprsunset.temperature" = "4500k";
@@ -223,20 +232,28 @@ in
       "theme.bar.buttons.modules.hyprsunset.border" = "#${config.lib.stylix.colors.base0A}";
       "theme.bar.buttons.dashboard.icon" = "#${config.lib.stylix.colors.base0B}";
       "theme.bar.buttons.dashboard.border" = "#${config.lib.stylix.colors.base0B}";
-      "theme.bar.menus.menu.dashboard.directories.right.bottom.color" = "#${config.lib.stylix.colors.base08}";
-      "theme.bar.menus.menu.dashboard.directories.right.middle.color" = "#${config.lib.stylix.colors.base0A}";
-      "theme.bar.menus.menu.dashboard.directories.right.top.color" = "#${config.lib.stylix.colors.base0B}";
-      "theme.bar.menus.menu.dashboard.directories.left.bottom.color" = "#${config.lib.stylix.colors.base0C}";
-      "theme.bar.menus.menu.dashboard.directories.left.middle.color" = "#${config.lib.stylix.colors.base09}";
+      "theme.bar.menus.menu.dashboard.directories.right.bottom.color" =
+        "#${config.lib.stylix.colors.base08}";
+      "theme.bar.menus.menu.dashboard.directories.right.middle.color" =
+        "#${config.lib.stylix.colors.base0A}";
+      "theme.bar.menus.menu.dashboard.directories.right.top.color" =
+        "#${config.lib.stylix.colors.base0B}";
+      "theme.bar.menus.menu.dashboard.directories.left.bottom.color" =
+        "#${config.lib.stylix.colors.base0C}";
+      "theme.bar.menus.menu.dashboard.directories.left.middle.color" =
+        "#${config.lib.stylix.colors.base09}";
       "theme.bar.menus.menu.dashboard.directories.left.top.color" = "#${config.lib.stylix.colors.base0E}";
       "theme.bar.menus.menu.dashboard.controls.input.text" = "#${config.lib.stylix.colors.base05}";
       "theme.bar.menus.menu.dashboard.controls.input.background" = "#${config.lib.stylix.colors.base0D}";
       "theme.bar.menus.menu.dashboard.controls.volume.text" = "#${config.lib.stylix.colors.base05}";
       "theme.bar.menus.menu.dashboard.controls.volume.background" = "#${config.lib.stylix.colors.base08}";
-      "theme.bar.menus.menu.dashboard.controls.notifications.text" = "#${config.lib.stylix.colors.base05}";
-      "theme.bar.menus.menu.dashboard.controls.notifications.background" = "#${config.lib.stylix.colors.base09}";
+      "theme.bar.menus.menu.dashboard.controls.notifications.text" =
+        "#${config.lib.stylix.colors.base05}";
+      "theme.bar.menus.menu.dashboard.controls.notifications.background" =
+        "#${config.lib.stylix.colors.base09}";
       "theme.bar.menus.menu.dashboard.controls.bluetooth.text" = "#${config.lib.stylix.colors.base05}";
-      "theme.bar.menus.menu.dashboard.controls.bluetooth.background" = "#${config.lib.stylix.colors.base0C}";
+      "theme.bar.menus.menu.dashboard.controls.bluetooth.background" =
+        "#${config.lib.stylix.colors.base0C}";
       "theme.bar.menus.menu.dashboard.controls.wifi.text" = "#${config.lib.stylix.colors.base05}";
       "theme.bar.menus.menu.dashboard.controls.wifi.background" = "#${config.lib.stylix.colors.base0E}";
       "theme.bar.menus.menu.dashboard.controls.disabled" = "#${config.lib.stylix.colors.base03}";
