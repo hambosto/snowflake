@@ -44,7 +44,7 @@ in
       "theme.font.size" = "14px";
       "theme.bar.outer_spacing" = "0px";
       "theme.bar.buttons.y_margins" = "0px";
-      "theme.bar.buttons.spacing" = "0.3em";
+      "theme.bar.buttons.spacing" = "0.1em";
       "theme.bar.buttons.radius" = "20px";
       "theme.bar.scaling" = 85;
       "theme.bar.floating" = true;
@@ -55,7 +55,7 @@ in
       "theme.bar.margin_sides" = "1px";
       "theme.bar.border_radius" = "20px";
       "bar.launcher.icon" = "";
-      "theme.bar.transparent" = true;
+      "theme.bar.transparent" = false;
       "bar.customModules.updates.pollingInterval" = 1440000;
       "bar.workspaces.show_numbered" = false;
       "bar.workspaces.workspaces" = 5;
@@ -270,7 +270,7 @@ in
       "theme.bar.menus.menu.dashboard.card.color" = "#${config.lib.stylix.colors.base01}";
       "theme.bar.buttons.media.icon" = "#${config.lib.stylix.colors.base05}";
       "theme.bar.buttons.media.text" = "#${config.lib.stylix.colors.base05}";
-      "theme.bar.buttons.media.background" = "#${config.lib.stylix.colors.base01}";
+      "theme.bar.buttons.media.background" = "#${config.lib.stylix.colors.base00}";
       "theme.bar.menus.menu.media.slider.puck" = "#${config.lib.stylix.colors.base04}";
       "theme.bar.menus.menu.media.slider.backgroundhover" = "#${config.lib.stylix.colors.base03}";
       "theme.bar.menus.menu.media.slider.background" = "#${config.lib.stylix.colors.base02}";
