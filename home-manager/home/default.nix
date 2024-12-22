@@ -22,9 +22,7 @@
     # List of packages to install in the user's environment
     packages = with pkgs; [
       neovim
-      #rust-bin.stable.latest.default
-      jetbrains.rust-rover
-      rustup
+      # rustup
     ];
   };
 

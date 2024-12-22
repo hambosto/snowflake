@@ -17,7 +17,7 @@ in
       hyprsunset
     ];
 
-    home.file.".cache/ags/hyprpanel/options.json".text = builtins.toJSON {
+    home.file.".config/hyprpanel/config.json".text = builtins.toJSON {
       "bar.layouts" = {
         "0" = {
           left = [
