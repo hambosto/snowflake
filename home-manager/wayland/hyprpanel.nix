@@ -54,7 +54,7 @@ in
       "theme.bar.margin_bottom" = "2";
       "theme.bar.margin_sides" = "1px";
       "theme.bar.border_radius" = "20px";
-      "bar.launcher.icon" = "";
+      "bar.launcher.icon" = "";
       "theme.bar.transparent" = true;
       "bar.customModules.updates.pollingInterval" = 1440000;
       "bar.workspaces.show_numbered" = false;
