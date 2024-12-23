@@ -22,7 +22,7 @@
     # List of packages to install in the user's environment
     packages = with pkgs; [
       neovim
-      rustup
+      # rustup
     ];
   };
 
