@@ -21,7 +21,7 @@ in
         };
         vendorHash = "sha256-+eKJLXgKuUHelUjD8MpMa+cRP+clmYK+1olcb/jmabk=";
 
-        CGO_ENABLED = 0;
+        env.CGO_ENABLED = 0;
 
         ldflags = [
           "-extldflags '-static'"

@@ -68,7 +68,11 @@ in
         miguelsolorio.fluent-icons
         golang.go
         jnoortheen.nix-ide
-        github.copilot
+        supermaven.supermaven
+        rust-lang.rust-analyzer
+        vadimcn.vscode-lldb
+        tamasfe.even-better-toml
+        fill-labs.dependi
       ];
     };
   };
