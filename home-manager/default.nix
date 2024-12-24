@@ -33,7 +33,6 @@
       chromium.enable = lib.mkEnableOption "Enable Chromium";
       eza.enable = lib.mkEnableOption "Enable Eza";
       fastfetch.enable = lib.mkEnableOption "Enable Fastfetch";
-      firefox.enable = lib.mkEnableOption "Enable Firefox";
       fzf.enable = lib.mkEnableOption "Enable Fzf";
       gemini-commit.enable = lib.mkEnableOption "Enable Gemini Commit";
       git.enable = lib.mkEnableOption "Enable Git";

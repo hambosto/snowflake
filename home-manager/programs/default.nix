@@ -7,7 +7,6 @@
     ./chromium.nix
     ./eza.nix
     ./fastfetch.nix
-    ./firefox.nix
     ./fzf.nix
     ./gemini-commit.nix
     ./git.nix
