@@ -88,9 +88,9 @@ in
       "theme.bar.menus.menu.dashboard.profile.radius" = "10em";
       "menus.dashboard.powermenu.avatar.name" = "${config.settings.system.fullName}";
       "menus.dashboard.powermenu.confirmation" = false;
-      "menus.dashboard.shortcuts.left.shortcut1.icon" = "";
-      "menus.dashboard.shortcuts.left.shortcut1.command" = "firefox";
-      "menus.dashboard.shortcuts.left.shortcut1.tooltip" = "Firefox";
+      "menus.dashboard.shortcuts.left.shortcut1.icon" = "";
+      "menus.dashboard.shortcuts.left.shortcut1.command" = "chromium";
+      "menus.dashboard.shortcuts.left.shortcut1.tooltip" = "Chromium";
       "menus.dashboard.shortcuts.left.shortcut2.icon" = "";
       "menus.dashboard.shortcuts.left.shortcut2.command" = "${pkgs.kitty}/bin/kitty";
       "menus.dashboard.shortcuts.left.shortcut2.tooltip" = "Terminal";

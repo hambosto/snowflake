@@ -30,6 +30,7 @@
       btop.enable = lib.mkEnableOption "Enable Btop";
       bun.enable = lib.mkEnableOption "Enable Bun";
       cava.enable = lib.mkEnableOption "Enable Cava";
+      chromium.enable = lib.mkEnableOption "Enable Chromium";
       eza.enable = lib.mkEnableOption "Enable Eza";
       fastfetch.enable = lib.mkEnableOption "Enable Fastfetch";
       firefox.enable = lib.mkEnableOption "Enable Firefox";

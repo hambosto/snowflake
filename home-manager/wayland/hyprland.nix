@@ -186,7 +186,7 @@ in
           "$mainMod, E, exec, ${pkgs.kitty}/bin/kitty -e ${pkgs.yazi}/bin/yazi"
           "$mainMod, M, exec, ${pkgs.kitty}/bin/kitty -e ${pkgs.btop}/bin/btop"
           "$mainMod, L, exec, ${pkgs.hyprlock}/bin/hyprlock"
-          "$mainMod, B, exec, ${pkgs.firefox}/bin/firefox"
+          "$mainMod, B, exec, ${pkgs.chromium}/bin/chromium"
           "$mainMod, SPACE, exec, menu"
 
           # Window management

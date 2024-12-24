@@ -50,10 +50,11 @@
       bat.enable = true; # Enable bat (cat alternative with syntax highlighting)
       btop.enable = true; # Enable btop (resource monitor)
       bun.enable = true; # JavaScript runtime for fast builds and scripting
-      cava.enable = true; # Disable CAVA audio visualizer
+      cava.enable = true; # Enable CAVA audio visualizer
+      chromium.enable = true; # Enable Chromium web browser
       eza.enable = true; # Enable eza (enhanced ls command)
       fastfetch.enable = true; # Enable fastfetch (system info tool)
-      firefox.enable = true; # Enable Firefox browser
+      firefox.enable = false; # Enable Firefox browser
       fzf.enable = true; # Enable fzf (fuzzy finder)
       gemini-commit.enable = true; # Enable Gemini Commit (version control)
       git.enable = true; # Enable Git (version control)

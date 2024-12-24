@@ -2,7 +2,7 @@
   environment.variables = {
     EDITOR = "nvim";
     VISUAL = "nvim";
-    BROWSER = "firefox";
+    BROWSER = "chromium";
     TERMINAL = "kitty";
   };
 }
