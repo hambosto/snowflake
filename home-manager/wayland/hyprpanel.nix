@@ -52,7 +52,7 @@ in
         theme.bar.outer_spacing = "0px";
         theme.bar.buttons.y_margins = "0px";
         theme.bar.buttons.spacing = "0.1em";
-        theme.bar.buttons.radius = "5px";
+        theme.bar.buttons.radius = "20px";
         theme.bar.scaling = 85;
         theme.bar.floating = true;
         theme.bar.buttons.padding_x = "0.8rem";
@@ -60,7 +60,7 @@ in
         theme.bar.margin_top = "2";
         theme.bar.margin_bottom = "2";
         theme.bar.margin_sides = "1px";
-        theme.bar.border_radius = "5px";
+        theme.bar.border_radius = "20px";
         bar.launcher.icon = "󰊠";
         theme.bar.transparent = true;
         bar.customModules.updates.pollingInterval = 1440000;
@@ -79,11 +79,11 @@ in
         bar.clock.showIcon = true;
         bar.clock.icon = "";
         bar.notifications.show_total = true;
-        theme.notification.border_radius = "5px";
+        theme.notification.border_radius = "20px";
         theme.osd.enable = true;
         theme.osd.orientation = "vertical";
         theme.osd.location = "left";
-        theme.osd.radius = "5px";
+        theme.osd.radius = "20px";
         theme.osd.margins = "0px 0px 0px 10px";
         theme.osd.muted_zero = true;
         menus.clock.weather.location = "${config.settings.system.location}";
@@ -136,9 +136,9 @@ in
         menus.power.lowBatteryThreshold = 20;
         theme.bar.menus.monochrome = false;
         wallpaper.enable = false;
-        theme.bar.menus.card_radius = "5px";
+        theme.bar.menus.card_radius = "20px";
         theme.bar.menus.border.size = "3px";
-        theme.bar.menus.border.radius = "5px";
+        theme.bar.menus.border.radius = "20px";
         theme.bar.buttons.monochrome = false;
         theme.bar.menus.menu.media.card.tint = 90;
         bar.customModules.hyprsunset.temperature = "4500k";
