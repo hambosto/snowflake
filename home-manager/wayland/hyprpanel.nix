@@ -44,7 +44,7 @@ in
         };
       };
 
-      theme = "tokyo_night";
+      theme = "catppuccin_mocha";
 
       settings = {
         theme.font.name = "JetBrainsMono Nerd Font";
