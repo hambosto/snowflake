@@ -1,14 +1,9 @@
 { pkgs, ... }:
 {
-  stylix.targets.gtk.enable = false;
+  stylix.targets.gtk.enable = true;
 
   gtk = {
     enable = true;
-
-    theme = {
-      package = pkgs.whitesur-gtk-theme;
-      name = "WhiteSur-Dark";
-    };
 
     iconTheme = {
       package = pkgs.kora-icon-theme;

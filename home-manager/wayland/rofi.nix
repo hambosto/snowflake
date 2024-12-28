@@ -14,15 +14,13 @@ in
       enable = true;
       package = pkgs.rofi-wayland;
       extraConfig = {
-        modi = "drun,filebrowser,run";
+        modi = "drun,run";
         show-icons = true;
         location = 0;
         drun-display-format = "{icon} {name}";
         window-format = "{w} · {c} · {t}";
         display-drun = " Apps";
         display-run = " Run";
-        display-filebrowser = " File";
-        display-window = "WINDOW";
       };
       theme =
         let
