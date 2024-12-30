@@ -18,6 +18,7 @@ in
       systemd.enable = true;
       hyprland.enable = true;
       overwrite.enable = true;
+      overlay.enable = true;
 
       layout = {
         "bar.layouts" = {
