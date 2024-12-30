@@ -39,7 +39,6 @@
       go-encryption.enable = lib.mkEnableOption "Enable Go Encryption";
       go.enable = lib.mkEnableOption "Enable Golang";
       kitty.enable = lib.mkEnableOption "Enable Kitty";
-      lazygit.enable = lib.mkEnableOption "Enable Lazygit";
       nh.enable = lib.mkEnableOption "Enable NH";
       spicetify.enable = lib.mkEnableOption "Enable Spicetify";
       vscode.enable = lib.mkEnableOption "Enable VSCode";

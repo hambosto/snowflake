@@ -60,7 +60,6 @@
       go-encryption.enable = true; # Enable Go encryption utility
       go.enable = true; # Enable Go programming language
       kitty.enable = true; # Enable Kitty terminal emulator
-      lazygit.enable = true; # Enable Lazygit (Git UI)
       nh.enable = true; # Enable NH (tool for something specific)
       spicetify.enable = true; # Enable Spicetify (Spotify theming)
       vscode.enable = true; # Enable Visual Studio Code editor

@@ -13,7 +13,6 @@
     ./go-encryption.nix
     ./go.nix
     ./kitty.nix
-    ./lazygit.nix
     ./nh.nix
     ./spicetify.nix
     ./vscode.nix
