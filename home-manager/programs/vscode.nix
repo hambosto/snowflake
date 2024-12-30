@@ -29,7 +29,7 @@ in
         "workbench.iconTheme" = "moxer-icons";
         "workbench.productIconTheme" = "fluent-icons";
         "terminal.integrated.fontSize" = 14;
-        "terminal.integrated.fontFamily" = "Fira Code";
+        "terminal.integrated.fontFamily" = "GeistMono Nerd Font";
         "window.menuBarVisibility" = "toggle";
         "telemetry.telemetryLevel" = "off";
 
