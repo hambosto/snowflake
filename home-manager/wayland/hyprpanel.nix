@@ -45,7 +45,7 @@ in
         };
       };
 
-      theme = "cyberpunk";
+      theme = "catppuccin_mocha";
 
       settings = {
         theme.font.name = "JetBrainsMono Nerd Font";
