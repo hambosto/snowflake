@@ -68,7 +68,6 @@ in
         bar.workspaces.show_numbered = false;
         bar.workspaces.workspaces = 5;
         bar.workspaces.monitorSpecific = true;
-        bar.workspaces.hideUnoccupied = false;
         bar.windowtitle.label = true;
         bar.volume.label = true;
         bar.network.showWifiInfo = false;
