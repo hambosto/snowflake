@@ -6,6 +6,6 @@
       systemd-boot.enable = true;
     };
     tmp.cleanOnBoot = true;
-    kernelPackages = pkgs.linuxPackages_xanmod_latest;
+    kernelPackages = pkgs.linuxPackages_latest;
   };
 }
