@@ -14,13 +14,13 @@ in
   config = lib.mkIf cfg.enable {
     nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [ "spotify" ];
 
-    stylix.targets.spicetify.enable = false;
+    stylix.targets.spicetify.enable = true;
 
     programs.spicetify = {
       enable = true;
-      theme = lib.mkForce spicePkgs.themes.catppuccin;
+      # theme = lib.mkForce spicePkgs.themes.catppuccin;
 
-      colorScheme = "mocha";
+      # colorScheme = "mocha";
 
       enabledExtensions = with spicePkgs.extensions; [
         playlistIcons
