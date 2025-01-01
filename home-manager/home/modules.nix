@@ -13,7 +13,6 @@
     };
 
     services = {
-      clipman.enable = true;
       hypridle.enable = true;
       udiskie.enable = false;
     };

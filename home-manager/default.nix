@@ -20,7 +20,6 @@
     };
 
     services = {
-      clipman.enable = lib.mkEnableOption "Enable Clipman";
       hypridle.enable = lib.mkEnableOption "Enable Hypridle";
       udiskie.enable = lib.mkEnableOption "Enable Udiskie";
     };
