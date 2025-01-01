@@ -9,7 +9,7 @@ let
     [ $(pgrep "ags") ] && pkill ags
     hyprctl dispatch exec hyprpanel
   '';
-  cfg = config.modules.wayland.hyprland;
+  cfg = config.modules.wayland.hyprpanel;
 in
 {
   config = lib.mkIf cfg.enable {
