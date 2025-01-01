@@ -14,13 +14,18 @@ in
       enable = true;
       package = pkgs.rofi-wayland;
       extraConfig = {
-        modi = "drun,run";
+        modi = "run,drun,window";
         show-icons = true;
-        location = 0;
+        terminal = "kitty";
         drun-display-format = "{icon} {name}";
-        window-format = "{w} · {c} · {t}";
-        display-drun = " Apps";
-        display-run = " Run";
+        location = 0;
+        disable-history = false;
+        hide-scrollbar = true;
+        display-drun = "   Apps ";
+        display-run = "   Run ";
+        display-window = " 󰕰  Window";
+        display-Network = " 󰤨  Network";
+        sidebar-mode = true;
       };
       theme =
         let
@@ -29,190 +34,120 @@ in
         in
         {
           "*" = {
-            bg = mkLiteral "#${colors.base00}";
-            bg-alt = mkLiteral "#${colors.base09}";
-            foreground = mkLiteral "#${colors.base01}";
-            selected = mkLiteral "#${colors.base0D}";
-            active = mkLiteral "#${colors.base0B}";
-            text-selected = mkLiteral "#${colors.base00}";
-            text-color = mkLiteral "#${colors.base05}";
-            border-color = mkLiteral "#${colors.base02}";
-            urgent = mkLiteral "#${colors.base0E}";
+            bg-col = mkLiteral "#${colors.base00}";
+            bg-col-light = mkLiteral "#${colors.base01}";
+            border-col = mkLiteral "#${colors.base02}";
+            selected-col = mkLiteral "#${colors.base02}";
+            blue = mkLiteral "#${colors.base0D}";
+            fg-col = mkLiteral "#${colors.base05}";
+            fg-col2 = mkLiteral "#${colors.base08}";
+            grey = mkLiteral "#${colors.base03}";
+            width = mkLiteral "600";
+            font = config.stylix.fonts.monospace.name;
           };
-          "window" = {
-            width = mkLiteral "50%";
-            transparency = "real";
-            orientation = mkLiteral "vertical";
-            cursor = mkLiteral "default";
-            spacing = mkLiteral "0px";
-            border = mkLiteral "2px";
-            border-color = "@border-color";
-            border-radius = mkLiteral "20px";
-            background-color = mkLiteral "@bg";
-          };
-          "mainbox" = {
-            padding = mkLiteral "15px";
-            enabled = true;
-            orientation = mkLiteral "vertical";
-            children = map mkLiteral [
-              "inputbar"
-              "listbox"
-            ];
-            background-color = mkLiteral "transparent";
-          };
-          "inputbar" = {
-            enabled = true;
-            padding = mkLiteral "10px 10px 100px 10px";
-            margin = mkLiteral "10px";
-            background-color = mkLiteral "transparent";
-            border-radius = "5px";
-            orientation = mkLiteral "horizontal";
-            children = map mkLiteral [
-              "entry"
-              "dummy"
-              "mode-switcher"
-            ];
-          };
-          "entry" = {
-            enabled = true;
-            expand = false;
-            width = mkLiteral "20%";
-            padding = mkLiteral "10px";
-            border-radius = mkLiteral "12px";
-            background-color = mkLiteral "@selected";
-            text-color = mkLiteral "@text-selected";
-            cursor = mkLiteral "text";
-            placeholder = "🖥️ Search ";
-            placeholder-color = mkLiteral "inherit";
-          };
-          "listbox" = {
-            spacing = mkLiteral "10px";
-            padding = mkLiteral "10px";
-            background-color = mkLiteral "transparent";
-            orientation = mkLiteral "vertical";
-            children = map mkLiteral [
-              "message"
-              "listview"
-            ];
-          };
-          "listview" = {
-            enabled = true;
-            columns = 2;
-            lines = 6;
-            cycle = true;
-            dynamic = true;
-            scrollbar = false;
-            layout = mkLiteral "vertical";
-            reverse = false;
-            fixed-height = false;
-            fixed-columns = true;
-            spacing = mkLiteral "10px";
-            background-color = mkLiteral "transparent";
-            border = mkLiteral "0px";
-          };
-          "dummy" = {
-            expand = true;
-            background-color = mkLiteral "transparent";
-          };
-          "mode-switcher" = {
-            enabled = true;
-            spacing = mkLiteral "10px";
-            background-color = mkLiteral "transparent";
-          };
-          "button" = {
-            width = mkLiteral "5%";
-            padding = mkLiteral "12px";
-            border-radius = mkLiteral "12px";
-            background-color = mkLiteral "@text-selected";
-            text-color = mkLiteral "@text-color";
-            cursor = mkLiteral "pointer";
-          };
-          "button selected" = {
-            background-color = mkLiteral "@selected";
-            text-color = mkLiteral "@text-selected";
-          };
-          "scrollbar" = {
-            width = mkLiteral "4px";
-            border = 0;
-            handle-color = mkLiteral "@border-color";
-            handle-width = mkLiteral "8px";
-            padding = 0;
-          };
-          "element" = {
-            enabled = true;
-            spacing = mkLiteral "10px";
-            padding = mkLiteral "10px";
-            border-radius = mkLiteral "12px";
-            background-color = mkLiteral "transparent";
-            cursor = mkLiteral "pointer";
-          };
-          "element normal.normal" = {
+
+          "element-text, element-icon, mode-switcher" = {
             background-color = mkLiteral "inherit";
             text-color = mkLiteral "inherit";
           };
-          "element normal.urgent" = {
-            background-color = mkLiteral "@urgent";
-            text-color = mkLiteral "@foreground";
-          };
-          "element normal.active" = {
-            background-color = mkLiteral "@active";
-            text-color = mkLiteral "@foreground";
-          };
-          "element selected.normal" = {
-            background-color = mkLiteral "@selected";
-            text-color = mkLiteral "@text-selected";
-          };
-          "element selected.urgent" = {
-            background-color = mkLiteral "@urgent";
-            text-color = mkLiteral "@text-selected";
-          };
-          "element selected.active" = {
-            background-color = mkLiteral "@urgent";
-            text-color = mkLiteral "@text-selected";
-          };
-          "element alternate.normal" = {
-            background-color = mkLiteral "transparent";
-            text-color = mkLiteral "inherit";
-          };
-          "element alternate.urgent" = {
-            background-color = mkLiteral "transparent";
-            text-color = mkLiteral "inherit";
-          };
-          "element alternate.active" = {
-            background-color = mkLiteral "transparent";
-            text-color = mkLiteral "inherit";
-          };
-          "element-icon" = {
-            background-color = mkLiteral "transparent";
-            text-color = mkLiteral "inherit";
-            size = mkLiteral "36px";
-            cursor = mkLiteral "inherit";
-          };
-          "element-text" = {
-            background-color = mkLiteral "transparent";
-            font = "JetBrainsMono Nerd Font 12";
-            text-color = mkLiteral "inherit";
-            cursor = mkLiteral "inherit";
-            vertical-align = mkLiteral "0.5";
-            horizontal-align = mkLiteral "0.0";
-          };
-          "message" = {
-            background-color = mkLiteral "transparent";
-            border = mkLiteral "0px";
-          };
-          "textbox" = {
-            padding = mkLiteral "12px";
-            border-radius = mkLiteral "10px";
-            background-color = mkLiteral "@bg-alt";
-            text-color = mkLiteral "@bg";
-            vertical-align = mkLiteral "0.5";
-            horizontal-align = mkLiteral "0.0";
-          };
-          "error-message" = {
-            padding = mkLiteral "12px";
+
+          "window" = {
+            height = mkLiteral "360px";
+            border = mkLiteral "3px";
+            border-color = mkLiteral "@border-col";
+            background-color = mkLiteral "@bg-col";
             border-radius = mkLiteral "20px";
-            background-color = mkLiteral "@bg-alt";
-            text-color = mkLiteral "@bg";
+          };
+
+          "mainbox" = {
+            background-color = mkLiteral "@bg-col";
+          };
+
+          "inputbar" = {
+            children = mkLiteral "[prompt,entry]";
+            background-color = mkLiteral "@bg-col";
+            border-radius = mkLiteral "20px";
+            padding = mkLiteral "2px";
+          };
+
+          "prompt" = {
+            background-color = mkLiteral "@blue";
+            padding = mkLiteral "6px";
+            text-color = mkLiteral "@bg-col";
+            border-radius = mkLiteral "20px";
+            margin = mkLiteral "20px 0px 0px 20px";
+          };
+
+          "textbox-prompt-colon" = {
+            expand = false;
+            str = ":";
+          };
+
+          "entry" = {
+            padding = mkLiteral "6px";
+            margin = mkLiteral "20px 0px 0px 10px";
+            text-color = mkLiteral "@fg-col";
+            background-color = mkLiteral "@bg-col";
+          };
+
+          "listview" = {
+            border = mkLiteral "0px 0px 0px";
+            padding = mkLiteral "6px 0px 0px";
+            margin = mkLiteral "10px 0px 0px 20px";
+            columns = 2;
+            lines = 5;
+            background-color = mkLiteral "@bg-col";
+          };
+
+          "element" = {
+            padding = mkLiteral "5px";
+            background-color = mkLiteral "@bg-col";
+            text-color = mkLiteral "@fg-col";
+            border-radius = mkLiteral "20px";
+          };
+
+          "element-icon" = {
+            size = mkLiteral "25px";
+          };
+
+          "element selected" = {
+            background-color = mkLiteral "@selected-col";
+            text-color = mkLiteral "@fg-col2";
+            border-radius = mkLiteral "20px";
+          };
+
+          "mode-switcher" = {
+            spacing = 0;
+          };
+
+          "button" = {
+            padding = mkLiteral "10px";
+            background-color = mkLiteral "@bg-col-light";
+            text-color = mkLiteral "@grey";
+            vertical-align = mkLiteral "0.5";
+            horizontal-align = mkLiteral "0.5";
+            border-radius = mkLiteral "20px";
+          };
+
+          "button selected" = {
+            background-color = mkLiteral "@bg-col";
+            text-color = mkLiteral "@blue";
+            border-radius = mkLiteral "20px";
+          };
+
+          "message" = {
+            background-color = mkLiteral "@bg-col-light";
+            margin = mkLiteral "2px";
+            padding = mkLiteral "2px";
+            border-radius = mkLiteral "20px";
+          };
+
+          "textbox" = {
+            padding = mkLiteral "6px";
+            margin = mkLiteral "20px 0px 0px 20px";
+            text-color = mkLiteral "@blue";
+            background-color = mkLiteral "@bg-col-light";
+            border-radius = mkLiteral "20px";
           };
         };
     };
