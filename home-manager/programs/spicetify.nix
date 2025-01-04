@@ -18,9 +18,9 @@ in
 
     programs.spicetify = {
       enable = true;
-      theme = lib.mkForce spicePkgs.themes.hazy;
+      theme = lib.mkForce spicePkgs.themes.lucid;
 
-      # colorScheme = "dark";
+      colorScheme = "dark";
 
       enabledExtensions = with spicePkgs.extensions; [
         playlistIcons
