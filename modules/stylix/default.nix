@@ -41,13 +41,13 @@
         name = "JetBrainsMono Nerd Font";
       };
       serif = {
-        package = pkgs.noto-fonts;
-        name = "Noto Serif";
+        package = pkgs.noto-fonts-cjk-serif;
+        name = "Noto Serif CJK JP";
       };
 
       sansSerif = {
-        package = pkgs.noto-fonts;
-        name = "Noto Sans";
+        package = pkgs.noto-fonts-cjk-sans;
+        name = "Noto Sans CJK JP";
       };
       emoji = {
         package = pkgs.noto-fonts-emoji;
