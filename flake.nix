@@ -49,6 +49,7 @@
                 inherit username;
                 inherit inputs;
                 inherit hostname;
+                inherit system;
               };
               home-manager.users.${username} = import ./home-manager;
             }
