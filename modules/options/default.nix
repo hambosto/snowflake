@@ -68,6 +68,7 @@
     # Virtualization settings
     virtualization = {
       podman.enable = lib.mkEnableOption "Enable Podman";
+      qemu.enable = lib.mkEnableOption "Enable QEMU";
     };
 
     # Appearance settings

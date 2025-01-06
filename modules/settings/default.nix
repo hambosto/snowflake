@@ -21,6 +21,7 @@
     # Virtualization settings
     virtualization = {
       podman.enable = false;
+      qemu.enable = false;
     };
 
     # Wallpaper path
