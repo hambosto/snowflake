@@ -21,7 +21,6 @@
 
     services = {
       hypridle.enable = lib.mkEnableOption "Enable Hypridle";
-      udiskie.enable = lib.mkEnableOption "Enable Udiskie";
     };
 
     programs = {

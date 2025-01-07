@@ -14,7 +14,6 @@
 
     services = {
       hypridle.enable = true;
-      udiskie.enable = false;
     };
 
     programs = {

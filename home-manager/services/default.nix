@@ -1,6 +1,3 @@
 {
-  imports = [
-    ./hypridle.nix
-    ./udiskie.nix
-  ];
+  imports = [ ./hypridle.nix ];
 }
