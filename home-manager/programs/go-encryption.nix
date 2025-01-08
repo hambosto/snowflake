@@ -17,7 +17,7 @@ in
           owner = "hambosto";
           repo = "go-encryption";
           rev = "v${version}";
-          hash = "sha256-PhhgBID68dC8TCT1fSaCYeYOp64MXo5OnJNNcVLZsZE=";
+          hash = "sha256-zQRsXey3NSLBgcOWlcJ6J5ieYy0thxFNQCcsv+CjHhA=";
         };
         vendorHash = "sha256-670vFdRND7lAXUxhFTgqdjZOG0Zaww6CET8dehcCq/c=";
 
