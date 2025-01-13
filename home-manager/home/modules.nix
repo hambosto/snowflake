@@ -30,7 +30,6 @@
       go-encryption.enable = true;
       go.enable = true;
       kitty.enable = true;
-      neovim.enable = true;
       nh.enable = true;
       spicetify.enable = true;
       vscode.enable = true;

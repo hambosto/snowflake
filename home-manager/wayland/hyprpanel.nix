@@ -33,6 +33,7 @@ in
             ];
             right = [
               "systray"
+              "cava"
               "hyprsunset"
               "volume"
               "battery"
@@ -144,6 +145,8 @@ in
         bar.customModules.hyprsunset.temperature = "4500k";
         bar.media.show_active_only = true;
         theme.bar.location = "top";
+        bar.customModules.cava.showActiveOnly = true;
+        bar.customModules.cava.showIcon = false;
       };
     };
   };

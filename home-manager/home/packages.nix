@@ -3,5 +3,8 @@
   ...
 }:
 {
-  home.packages = with pkgs; [ nautilus ];
+  home.packages = with pkgs; [
+    nautilus
+    neovim
+  ];
 }
