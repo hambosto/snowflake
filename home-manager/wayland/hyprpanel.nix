@@ -147,6 +147,7 @@ in
         theme.bar.location = "top";
         bar.customModules.cava.showActiveOnly = true;
         bar.customModules.cava.showIcon = false;
+        bar.customModules.cava.bars = 11;
       };
     };
   };
