@@ -20,7 +20,6 @@ in
         "nngceckbapebfimnlniiiahkandclblb" # Bitwarden
         "bfnaelmomeimhlpmgjnjophhpkkoljpa" # Phantom Wallet
         "nkbihfbeogaeaoehlefnkodbefgpgknn" # MetaMask
-        "glloabhodjfmeoccmdngmhkpmdlakfbn" # Material You New Tab
       ];
     };
   };
