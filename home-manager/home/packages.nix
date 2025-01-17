@@ -6,5 +6,6 @@
   home.packages = with pkgs; [
     nautilus
     neovim
+    scrcpy
   ];
 }

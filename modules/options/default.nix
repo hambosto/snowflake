@@ -69,6 +69,7 @@
     virtualization = {
       podman.enable = lib.mkEnableOption "Enable Podman";
       qemu.enable = lib.mkEnableOption "Enable QEMU";
+      waydroid.enable = lib.mkEnableOption "Enable Waydroid";
     };
 
     # Appearance settings

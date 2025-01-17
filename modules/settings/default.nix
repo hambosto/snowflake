@@ -22,6 +22,7 @@
     virtualization = {
       podman.enable = false;
       qemu.enable = false;
+      waydroid.enable = false;
     };
 
     # Wallpaper path
