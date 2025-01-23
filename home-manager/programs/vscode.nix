@@ -13,6 +13,7 @@ in
     programs.vscode = {
       enable = true;
       userSettings = {
+        # Editor
         "editor.fontSize" = 14;
         "editor.fontFamily" = "GeistMono Nerd Font";
         "editor.fontLigatures" = true;
@@ -25,9 +26,35 @@ in
         "editor.acceptSuggestionOnEnter" = "on";
         "editor.autoClosingBrackets" = "always";
 
+        # Workbench
         "workbench.colorTheme" = "Mana Lord's Moon Light Theme";
-        "workbench.iconTheme" = "moxer-icons";
-        "workbench.productIconTheme" = "fluent-icons";
+        "workbench.iconTheme" = "material-icon-theme";
+        # "workbench.productIconTheme" = "fluent-icons";
+        "workbench.activityBar.location" = "hidden";
+        "workbench.editor.showTabs" = "single";
+        "workbench.statusBar.visible" = false;
+        "workbench.startupEditor" = "none";
+        "workbench.sideBar.location" = "right";
+        "workbench.tips.enabled" = false;
+        "workbench.tree.enableStickyScroll" = false;
+        "workbench.tree.renderIndentGuides" = "none";
+        "workbench.tree.indent" = 8;
+
+        # Explorer
+        "explorer.compactFolders" = false;
+        "explorer.confirmDragAndDrop" = false;
+        "explorer.confirmDelete" = false;
+        "explorer.decorations.badges" = false;
+
+        # Git
+        "git.decorations.enabled" = false;
+
+        # Breadcrumbs
+        "breadcrumbs.enabled" = false;
+
+        # Material Icon Theme
+        "material-icon-theme.hidesExplorerArrows" = true;
+
         "terminal.integrated.fontSize" = 14;
         "terminal.integrated.fontFamily" = "GeistMono Nerd Font";
         "window.menuBarVisibility" = "toggle";
@@ -64,11 +91,12 @@ in
       };
       extensions = with pkgs.vscode-marketplace; [
         manalord.mana-lord-theme
-        equinusocio.moxer-icons
+        # equinusocio.moxer-icons
         miguelsolorio.fluent-icons
         golang.go
         jnoortheen.nix-ide
         supermaven.supermaven
+        pkief.material-icon-theme
         # rust-lang.rust-analyzer
         # vadimcn.vscode-lldb
         # tamasfe.even-better-toml
