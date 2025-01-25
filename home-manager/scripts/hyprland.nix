@@ -20,7 +20,7 @@ let
     fi
 
     # Find image files in the directory
-    IMAGE_FILES=$(find "$WALLPAPER_DIR" -type f \( -iname '*.png' -o -iname '*.jpg' -o -iname '*.jpeg' \))
+    IMAGE_FILES=$(find "$WALLPAPER_DIR" -type f \( -iname '*.png' -o -iname '*.jpg' -o -iname '*.jpeg' \) ! -path "$WALLPAPER_DIR/Screenshots/*")
     if [ -z "$IMAGE_FILES" ]; then
         echo "Error: No images found in the directory '$WALLPAPER_DIR'."
         read -n 1 -s -r -p "Press any key to exit..."
