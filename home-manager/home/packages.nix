@@ -7,5 +7,9 @@
     nautilus
     neovim
     scrcpy
+    nixd
+    alejandra
+    deadnix
+    statix
   ];
 }
