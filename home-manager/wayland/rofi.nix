@@ -19,7 +19,7 @@ in
         terminal = "kitty";
         drun-display-format = "{icon} {name}";
         location = 0;
-        disable-history = false;
+        disable-history = true;
         hide-scrollbar = true;
         display-drun = "   Apps ";
         display-run = "   Run ";
