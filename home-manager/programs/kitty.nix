@@ -12,7 +12,7 @@ in
     programs.kitty = {
       enable = true;
       settings = {
-        font_family = "Fira Code";
+        font_family = "ComicShannsMono Nerd Font";
         font_size = 12;
         bold_font = "auto";
         italic_font = "auto";

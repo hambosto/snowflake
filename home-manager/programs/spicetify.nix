@@ -12,7 +12,6 @@ in
 {
   imports = [ inputs.spicetify-nix.homeManagerModules.default ];
   config = lib.mkIf cfg.enable {
-    nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [ "spotify" ];
 
     stylix.targets.spicetify.enable = false;
 

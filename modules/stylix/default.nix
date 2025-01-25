@@ -8,22 +8,22 @@
     enable = true;
 
     base16Scheme = {
-      base00 = "1e1e2e"; # base
-      base01 = "181825"; # mantle
-      base02 = "313244"; # surface0
-      base03 = "45475a"; # surface1
-      base04 = "585b70"; # surface2
-      base05 = "cdd6f4"; # text
-      base06 = "f5e0dc"; # rosewater
-      base07 = "b4befe"; # lavender
-      base08 = "f38ba8"; # red
-      base09 = "fab387"; # peach
-      base0A = "f9e2af"; # yellow
-      base0B = "a6e3a1"; # green
-      base0C = "94e2d5"; # teal
-      base0D = "89b4fa"; # blue
-      base0E = "cba6f7"; # mauve
-      base0F = "f2cdcd"; # flamingo
+      base00 = "0a0b1a"; # Default Background - Deep Space Black
+      base01 = "141526"; # Lighter Background - Midnight Core
+      base02 = "1e1f35"; # Selection Background - Deep Navy
+      base03 = "2b2d4d"; # Comments - Twilight Purple
+      base04 = "4d4f7f"; # Dark Foreground - Mystic Violet
+      base05 = "f8e2ff"; # Default Foreground - Cotton Candy White
+      base06 = "ffd6f3"; # Light Foreground - Bubble Gum Pink
+      base07 = "ffebf9"; # Light Background - Sweet Pink
+      base08 = "ff3c7c"; # Variables - Hot Pink
+      base09 = "ff5d4d"; # Integers - Cyber Red
+      base0A = "ffcc00"; # Classes - Electric Yellow
+      base0B = "00ff9f"; # Strings - Neon Green
+      base0C = "00ffff"; # Support - Cyber Cyan
+      base0D = "7c4dff"; # Functions - Deep Purple
+      base0E = "f54fff"; # Keywords - Sugar Purple
+      base0F = "ff6e9c"; # Deprecated - Strawberry Pink
     };
 
     polarity = "dark";

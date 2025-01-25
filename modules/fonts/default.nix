@@ -2,8 +2,8 @@
 {
   fonts = {
     packages = with pkgs; [
-      fira-code
       nerd-fonts.geist-mono
+      nerd-fonts.comic-shanns-mono
     ];
 
     enableDefaultPackages = false;

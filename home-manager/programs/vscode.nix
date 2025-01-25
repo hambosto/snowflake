@@ -14,8 +14,9 @@ in
       enable = true;
       userSettings = {
         "editor.fontSize" = 14;
-        "editor.fontFamily" = "GeistMono Nerd Font";
+        "editor.fontFamily" = "ComicShannsMono Nerd Font";
         "editor.fontLigatures" = true;
+        "editor.fontWeight" = "800";
         "editor.formatOnSave" = true;
         "editor.minimap.enabled" = false;
         "editor.cursorBlinking" = "expand";
@@ -49,7 +50,7 @@ in
         "material-icon-theme.hidesExplorerArrows" = true;
 
         "terminal.integrated.fontSize" = 14;
-        "terminal.integrated.fontFamily" = "GeistMono Nerd Font";
+        "terminal.integrated.fontFamily" = "ComicShannsMono Nerd Font";
         "telemetry.telemetryLevel" = "off";
 
         "window.menuBarVisibility" = "toggle";
