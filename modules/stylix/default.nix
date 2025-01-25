@@ -30,8 +30,8 @@
     image = config.settings.wallpaper;
 
     cursor = {
-      package = pkgs.apple-cursor;
-      name = "macOS";
+      package = pkgs.banana-cursor;
+      name = "Banana";
       size = 24;
     };
 
