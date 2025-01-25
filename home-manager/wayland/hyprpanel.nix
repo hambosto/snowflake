@@ -46,7 +46,7 @@ in
       };
 
       settings = {
-        theme.font.name = "ComicShannsMono Nerd Font";
+        theme.font.name = "JetBrainsMono Nerd Font";
         theme.font.size = "14px";
         theme.bar.outer_spacing = "0px";
         theme.bar.buttons.y_margins = "0px";
