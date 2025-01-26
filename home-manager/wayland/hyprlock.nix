@@ -2,11 +2,9 @@
   config,
   lib,
   ...
-}:
-let
+}: let
   cfg = config.modules.wayland.hyprlock;
-in
-{
+in {
   config = lib.mkIf cfg.enable {
     stylix.targets.hyprlock.enable = true;
     programs.hyprlock = {
@@ -15,93 +13,56 @@ in
       settings = {
         general = {
           ignore_empty_input = true;
+          grace = 0;
         };
 
         background = {
-          monitor = "";
           blur_passes = 3;
-          contrast = 0.8916;
-          brightness = 0.8172;
-          vibrancy = 0.1696;
-          vibrancy_darkness = 0.0;
+          blur_size = 10;
+          brightness = 1.0;
+          contrast = 1.0;
+          noise = 0.02;
         };
 
         input-field = lib.mkForce {
           monitor = "";
-          size = "200, 50";
-          outline_thickness = 3;
-          dots_size = 0.33;
-          dots_spacing = 0.15;
+          size = "250, 50";
+          outline_thickness = 0;
+          dots_size = 0.26;
+          inner_color = "#${config.lib.stylix.colors.base05}";
+          dots_spacing = 0.64;
           dots_center = true;
-          dots_rounding = -1;
-          outer_color = "rgb(151515)";
-          inner_color = "rgb(FFFFFF)";
           fade_on_empty = true;
-          fade_timeout = 1000;
-          placeholder_text = "<i>Input Password...</i>";
+          placeholder_text = "<i>Password...</i>";
           hide_input = false;
-          rounding = 40;
-          check_color = "rgb(204, 136, 34)";
-          fail_color = "rgb(204, 34, 34)";
-          fail_text = "<i>$FAIL <b>($ATTEMPTS)</b></i>";
-          fail_transition = 300;
-          capslock_color = -1;
-          numlock_color = -1;
-          bothlock_color = -1;
-          invert_numlock = false;
-          swap_font_color = false;
-          position = "0, -20";
+          check_color = "rgb(40, 200, 250)";
+          position = "0, 50";
           halign = "center";
-          valign = "center";
-          shadow_passes = 10;
-          shadow_size = 20;
-          shadow_color = "rgb(0,0,0)";
-          shadow_boost = 1.6;
+          valign = "bottom";
         };
 
         label = [
           {
             monitor = "";
-            text = "cmd[update:1000] echo \"$TIME\"";
-            color = "rgba(200, 200, 200, 1.0)";
-            font_size = 55;
-            font_family = "Fira Semibold";
-            position = "-100, 70";
-            halign = "right";
-            valign = "bottom";
-            shadow_passes = 5;
-            shadow_size = 10;
+            text = "cmd[update:1000] echo \"<b><big> $(date +\"%H:%M\") </big></b>\"";
+            color = "#${config.lib.stylix.colors.base05}";
+            font_size = 64;
+            font_family = "JetBrains Mono Nerd Font 10";
+            position = "0, -70";
+            halign = "center";
+            valign = "center";
           }
           {
             monitor = "";
-            text = "$USER";
-            color = "rgba(200, 200, 200, 1.0)";
-            font_size = 20;
-            font_family = "Fira Semibold";
-            position = "-100, 160";
-            halign = "right";
-            valign = "bottom";
-            shadow_passes = 5;
-            shadow_size = 10;
+            text = "cmd[update:18000000] echo \"<b> \"$(date +\'%A, %-d %B %Y\')\"\</b>\"";
+            color = "#${config.lib.stylix.colors.base05}";
+            font_size = 24;
+            font_family = "JetBrains Mono Nerd Font 10";
+            position = "0, -120";
+            halign = "center";
+            valign = "center";
           }
         ];
-
-        image = {
-          monitor = "";
-          size = 280;
-          rounding = 40;
-          border_size = 4;
-          border_color = "rgb(221, 221, 221)";
-          rotate = 0;
-          reload_time = -1;
-          position = "0, 200";
-          halign = "center";
-          valign = "center";
-          shadow_passes = 10;
-          shadow_size = 20;
-          shadow_color = "rgb(0,0,0)";
-          shadow_boost = 1.6;
-        };
       };
     };
   };

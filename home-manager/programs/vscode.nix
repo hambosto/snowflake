@@ -76,21 +76,21 @@ in
           "ui.semanticTokens" = true;
         };
 
-        # "nix.enableLanguageServer" = true;
-        # "nix.serverPath" = "${pkgs.nixd}/bin/nixd";
-        # "nix.serverSettings" = {
-        #   "nixd" = {
-        #     "formatting" = {
-        #       "command" = [ "${pkgs.nixfmt-rfc-style}/bin/nixfmt" ];
-        #     };
-        #   };
-        # };
+        "nix.enableLanguageServer" = true;
+        "nix.serverPath" = "${pkgs.nixd}/bin/nixd";
+        "nix.serverSettings" = {
+          "nixd" = {
+            "formatting" = {
+              "command" = [ "${pkgs.nixfmt-rfc-style}/bin/nixfmt" ];
+            };
+          };
+        };
       };
       extensions = with pkgs.vscode-marketplace; [
         manalord.mana-lord-theme
         miguelsolorio.fluent-icons
         golang.go
-        # jnoortheen.nix-ide
+        jnoortheen.nix-ide
         supermaven.supermaven
         pkief.material-icon-theme
         # rust-lang.rust-analyzer
