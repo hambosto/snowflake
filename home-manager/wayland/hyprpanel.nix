@@ -244,20 +244,28 @@ in
         "theme.bar.buttons.modules.hyprsunset.border" = "#${config.lib.stylix.colors.base0A}";
         "theme.bar.buttons.dashboard.icon" = "#${config.lib.stylix.colors.base0B}";
         "theme.bar.buttons.dashboard.border" = "#${config.lib.stylix.colors.base0B}";
-        "theme.bar.menus.menu.dashboard.directories.right.bottom.color" = "#${config.lib.stylix.colors.base08}";
-        "theme.bar.menus.menu.dashboard.directories.right.middle.color" = "#${config.lib.stylix.colors.base0A}";
-        "theme.bar.menus.menu.dashboard.directories.right.top.color" = "#${config.lib.stylix.colors.base0B}";
-        "theme.bar.menus.menu.dashboard.directories.left.bottom.color" = "#${config.lib.stylix.colors.base0C}";
-        "theme.bar.menus.menu.dashboard.directories.left.middle.color" = "#${config.lib.stylix.colors.base09}";
+        "theme.bar.menus.menu.dashboard.directories.right.bottom.color" =
+          "#${config.lib.stylix.colors.base08}";
+        "theme.bar.menus.menu.dashboard.directories.right.middle.color" =
+          "#${config.lib.stylix.colors.base0A}";
+        "theme.bar.menus.menu.dashboard.directories.right.top.color" =
+          "#${config.lib.stylix.colors.base0B}";
+        "theme.bar.menus.menu.dashboard.directories.left.bottom.color" =
+          "#${config.lib.stylix.colors.base0C}";
+        "theme.bar.menus.menu.dashboard.directories.left.middle.color" =
+          "#${config.lib.stylix.colors.base09}";
         "theme.bar.menus.menu.dashboard.directories.left.top.color" = "#${config.lib.stylix.colors.base0E}";
         "theme.bar.menus.menu.dashboard.controls.input.text" = "#${config.lib.stylix.colors.base05}";
         "theme.bar.menus.menu.dashboard.controls.input.background" = "#${config.lib.stylix.colors.base0D}";
         "theme.bar.menus.menu.dashboard.controls.volume.text" = "#${config.lib.stylix.colors.base05}";
         "theme.bar.menus.menu.dashboard.controls.volume.background" = "#${config.lib.stylix.colors.base08}";
-        "theme.bar.menus.menu.dashboard.controls.notifications.text" = "#${config.lib.stylix.colors.base05}";
-        "theme.bar.menus.menu.dashboard.controls.notifications.background" = "#${config.lib.stylix.colors.base09}";
+        "theme.bar.menus.menu.dashboard.controls.notifications.text" =
+          "#${config.lib.stylix.colors.base05}";
+        "theme.bar.menus.menu.dashboard.controls.notifications.background" =
+          "#${config.lib.stylix.colors.base09}";
         "theme.bar.menus.menu.dashboard.controls.bluetooth.text" = "#${config.lib.stylix.colors.base05}";
-        "theme.bar.menus.menu.dashboard.controls.bluetooth.background" = "#${config.lib.stylix.colors.base0C}";
+        "theme.bar.menus.menu.dashboard.controls.bluetooth.background" =
+          "#${config.lib.stylix.colors.base0C}";
         "theme.bar.menus.menu.dashboard.controls.wifi.text" = "#${config.lib.stylix.colors.base05}";
         "theme.bar.menus.menu.dashboard.controls.wifi.background" = "#${config.lib.stylix.colors.base0E}";
         "theme.bar.menus.menu.dashboard.controls.disabled" = "#${config.lib.stylix.colors.base03}";

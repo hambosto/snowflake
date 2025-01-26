@@ -26,7 +26,8 @@ in
         "editor.acceptSuggestionOnEnter" = "on";
         "editor.autoClosingBrackets" = "always";
 
-        "workbench.colorTheme" = "Mana Lord's Moon Light Theme";
+        # "workbench.colorTheme" = "Mana Lord's Moon Light Theme";
+        "workbench.colorTheme" = "Karma";
         "workbench.iconTheme" = "material-icon-theme";
         "workbench.activityBar.location" = "hidden";
         "workbench.editor.showTabs" = "single";
@@ -87,7 +88,8 @@ in
         };
       };
       extensions = with pkgs.vscode-marketplace; [
-        manalord.mana-lord-theme
+        # manalord.mana-lord-theme
+        sreetamd.karma
         miguelsolorio.fluent-icons
         golang.go
         jnoortheen.nix-ide

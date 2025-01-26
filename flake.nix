@@ -12,7 +12,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-vscode-extensions = {
-      url = "github:nix-community/nix-vscode-extensions";
+      url = "github:nix-community/nix-vscode-extensions/83e447a2ae38dc584ce572d0d80847e3d53fac90";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprpanel = {
