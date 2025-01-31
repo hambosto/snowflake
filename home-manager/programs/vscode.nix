@@ -86,9 +86,15 @@ in
             };
           };
         };
+
+        "bun.runtime" = "${pkgs.bun}/bin/bun";
+        "bun.debugTerminal.enabled" = true;
+        "bun.debugTerminal.stopOnEntry" = false;
+        "bun.test.filePattern" = "**/*{.test.,.spec.,_test_,_spec_}{js,ts,tsx,jsx,mts,cts}";
       };
       extensions = with pkgs.vscode-marketplace; [
         # manalord.mana-lord-theme
+        oven.bun-vscode
         sreetamd.karma
         miguelsolorio.fluent-icons
         golang.go
