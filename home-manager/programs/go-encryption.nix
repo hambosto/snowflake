@@ -10,7 +10,7 @@ in
 {
   config = lib.mkIf cfg.enable {
     home.packages = [
-      (pkgs.buildGoModule rec {
+      (pkgs.buildGoModule {
         pname = "go-encryption";
         version = "1.0";
         src = pkgs.fetchFromGitHub {
