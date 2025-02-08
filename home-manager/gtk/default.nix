@@ -4,8 +4,8 @@
     enable = true;
 
     iconTheme = {
-      package = pkgs.kora-icon-theme;
-      name = "kora";
+      package = pkgs.arc-icon-theme;
+      name = "Arc";
     };
 
     gtk3.extraConfig = {
