@@ -91,6 +91,13 @@ in
         "bun.debugTerminal.enabled" = true;
         "bun.debugTerminal.stopOnEntry" = false;
         "bun.test.filePattern" = "**/*{.test.,.spec.,_test_,_spec_}{js,ts,tsx,jsx,mts,cts}";
+
+        "powermode.enabled" = true;
+        "powermode.shake.enabled" = true;
+        "powermode.presets" = "flames";
+        "powermode.combo.counterEnabled" = "hide";
+        "powermode.combo.timerEnabled" = "hide";
+
       };
       extensions = with pkgs.vscode-marketplace; [
         # manalord.mana-lord-theme
@@ -102,6 +109,7 @@ in
         jnoortheen.nix-ide
         supermaven.supermaven
         pkief.material-icon-theme
+        hoovercj.vscode-power-mode
         # rust-lang.rust-analyzer
         # vadimcn.vscode-lldb
         # tamasfe.even-better-toml
