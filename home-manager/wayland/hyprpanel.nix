@@ -61,7 +61,7 @@ in
         theme.bar.margin_sides = "1px";
         theme.bar.border_radius = "20px";
         bar.launcher.icon = "󰊠";
-        theme.bar.transparent = false;
+        theme.bar.transparent = true;
         bar.customModules.updates.pollingInterval = 1440000;
         bar.workspaces.show_numbered = false;
         bar.workspaces.workspaces = 5;
@@ -72,8 +72,8 @@ in
         bar.workspaces.showWsIcons = true;
         bar.windowtitle.label = true;
         bar.volume.label = true;
-        bar.network.showWifiInfo = false;
-        bar.network.label = false;
+        bar.network.showWifiInfo = true;
+        bar.network.label = true;
         bar.network.truncation = false;
         bar.bluetooth.label = false;
         bar.clock.format = "%H:%M %Z";
@@ -147,8 +147,8 @@ in
         bar.media.show_active_only = true;
         theme.bar.location = "top";
         bar.customModules.cava.showActiveOnly = true;
-        bar.customModules.cava.showIcon = false;
-        bar.customModules.cava.bars = 11;
+        bar.customModules.cava.showIcon = true;
+        bar.customModules.cava.bars = 15;
       };
       override = {
         "theme.bar.background" = "#${config.lib.stylix.colors.base00}";

@@ -4,8 +4,8 @@
     enable = true;
 
     iconTheme = {
-      package = pkgs.arc-icon-theme;
-      name = "Arc";
+      package = pkgs.papirus-icon-theme;
+      name = "Papirus-Dark";
     };
 
     gtk3.extraConfig = {
