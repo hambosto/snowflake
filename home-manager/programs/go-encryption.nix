@@ -16,10 +16,10 @@ in
         src = pkgs.fetchFromGitHub {
           owner = "hambosto";
           repo = "go-encryption";
-          rev = "1388271f795147af0bf1c7543568ed65bd88b323";
-          hash = "sha256-b3qdPQMXfYkaSZL5t04q+Bo6GxaIHubJssg1DxnEtkY=";
+          rev = "6aa4321f60123c494650e01e5ee069d660b29f2a";
+          hash = "sha256-XMzTqeFDqLkZ0qHuJOlkSGWW8oZGkaieiz6abQ5SCE8=";
         };
-        vendorHash = "sha256-4kuaQyWRIu6k9zBxdbl1oPHlfqjOPXQbnF99/QRc3Wg=";
+        vendorHash = "sha256-HrwA8L4AOUYi39i34T1gdF7SgDvbpxLECu9AWJjewu4=";
 
         env.CGO_ENABLED = 0;
 

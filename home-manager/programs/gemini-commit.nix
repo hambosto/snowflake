@@ -10,7 +10,7 @@ in
 {
   config = lib.mkIf cfg.enable {
     home.packages = [
-      (pkgs.buildGoModule rec {
+      (pkgs.buildGoModule {
         pname = "geminicommit";
         version = "0.2.6";
         src = pkgs.fetchFromGitHub {
