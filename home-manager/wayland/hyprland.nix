@@ -72,7 +72,7 @@ in
         general = {
           gaps_in = 1;
           gaps_out = 1;
-          border_size = 0;
+          border_size = 2;
           resize_on_border = true;
           border_part_of_window = true;
           layout = "dwindle";

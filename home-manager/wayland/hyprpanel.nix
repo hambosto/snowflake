@@ -60,7 +60,7 @@ in
         theme.bar.margin_bottom = "2";
         theme.bar.margin_sides = "1px";
         theme.bar.border_radius = "20px";
-        bar.launcher.icon = "󰊠";
+        bar.launcher.icon = "";
         theme.bar.transparent = true;
         bar.customModules.updates.pollingInterval = 1440000;
         bar.workspaces.show_numbered = false;
@@ -106,9 +106,9 @@ in
         menus.dashboard.shortcuts.left.shortcut3.icon = "";
         menus.dashboard.shortcuts.left.shortcut3.command = "spotify";
         menus.dashboard.shortcuts.left.shortcut3.tooltip = "Spotify";
-        menus.dashboard.shortcuts.left.shortcut4.icon = "";
+        menus.dashboard.shortcuts.left.shortcut4.icon = "󱓞";
         menus.dashboard.shortcuts.left.shortcut4.command = "launcher";
-        menus.dashboard.shortcuts.left.shortcut4.tooltip = "Search Apps";
+        menus.dashboard.shortcuts.left.shortcut4.tooltip = "Apps Launcher";
         menus.dashboard.shortcuts.right.shortcut1.icon = "";
         menus.dashboard.shortcuts.right.shortcut1.command =
           "${pkgs.kitty}/bin/kitty -e ${pkgs.btop}/bin/btop";
