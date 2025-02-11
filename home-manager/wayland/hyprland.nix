@@ -188,7 +188,7 @@ in
           "$mainMod, M, exec, ${pkgs.kitty}/bin/kitty -e ${pkgs.btop}/bin/btop"
           "$mainMod, L, exec, ${pkgs.hyprlock}/bin/hyprlock"
           "$mainMod, B, exec, ${pkgs.chromium}/bin/chromium"
-          "$mainMod, SPACE, exec, menu"
+          "$mainMod, SPACE, exec, launcher"
 
           # Window management
           "$mainMod, Q, killactive,"

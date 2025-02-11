@@ -107,7 +107,7 @@ in
         menus.dashboard.shortcuts.left.shortcut3.command = "spotify";
         menus.dashboard.shortcuts.left.shortcut3.tooltip = "Spotify";
         menus.dashboard.shortcuts.left.shortcut4.icon = "";
-        menus.dashboard.shortcuts.left.shortcut4.command = "menu";
+        menus.dashboard.shortcuts.left.shortcut4.command = "launcher";
         menus.dashboard.shortcuts.left.shortcut4.tooltip = "Search Apps";
         menus.dashboard.shortcuts.right.shortcut1.icon = "";
         menus.dashboard.shortcuts.right.shortcut1.command =

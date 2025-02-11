@@ -16,7 +16,7 @@
       hyprland.enable = lib.mkEnableOption "Enable Hyprland";
       hyprlock.enable = lib.mkEnableOption "Enable Hyprlock";
       hyprpanel.enable = lib.mkEnableOption "Enable Hyprpanel";
-      rofi.enable = lib.mkEnableOption "Enable Rofi";
+      anyrun.enable = lib.mkEnableOption "Enable Anyrun";
     };
 
     services = {

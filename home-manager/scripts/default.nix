@@ -1,8 +1,8 @@
 {
   imports = [
+    ./anyrun.nix
     ./hyprland.nix
     ./nixctl.nix
-    ./rofi.nix
     ./screenshot.nix
   ];
 }

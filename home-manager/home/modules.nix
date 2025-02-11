@@ -9,7 +9,7 @@
       hyprland.enable = true;
       hyprlock.enable = true;
       hyprpanel.enable = true;
-      rofi.enable = true;
+      anyrun.enable = true;
     };
 
     services = {
