@@ -1,10 +1,7 @@
 {
-  services.zram-generator = {
+  zramSwap = {
     enable = true;
-    settings = {
-      zram0 = {
-        zram-size = "min(ram / 2, 4096)";
-      };
-    };
+    algorithm = "zstd";
+    memoryPercent = 90;
   };
 }
