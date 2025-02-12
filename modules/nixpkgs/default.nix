@@ -1,8 +1,6 @@
 {
   nixpkgs = {
-    overlays = [
-      # neovim-nightly-overlay.overlays.default
-    ];
+    overlays = [ ];
     config = {
       allowUnfree = true;
       allowBroken = true;

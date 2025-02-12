@@ -8,7 +8,6 @@ let
 in
 {
   config = lib.mkIf cfg.enable {
-    stylix.targets.kitty.enable = false;
     programs.kitty = {
       enable = true;
       settings = {
@@ -28,7 +27,7 @@ in
         window_padding_width = 10;
         hide_window_decorations = "yes";
         background_blur = 10;
-        background_opacity = 0.4;
+        background_opacity = lib.mkForce 0.4;
         dynamic_background_opacity = "yes";
         confirm_os_window_close = 0;
         selection_foreground = "none";

@@ -2,7 +2,6 @@
 {
   fonts = {
     packages = with pkgs; [
-      nerd-fonts.geist-mono
       nerd-fonts.comic-shanns-mono
     ];
 

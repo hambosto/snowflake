@@ -6,6 +6,7 @@
     hyprland.url = "github:hyprwm/Hyprland";
     stylix.url = "github:danth/stylix";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -48,6 +49,7 @@
             ./modules/configuration.nix
             inputs.stylix.nixosModules.stylix
             inputs.home-manager.nixosModules.home-manager
+            inputs.chaotic.nixosModules.default
             {
               home-manager.extraSpecialArgs = {
                 inherit username;
