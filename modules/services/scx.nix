@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   services.scx = {
-    enable = true;
+    enable = false;
     scheduler = "scx_rusty";
     package = pkgs.scx_git.full;
   };
