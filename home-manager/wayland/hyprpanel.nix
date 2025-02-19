@@ -151,6 +151,7 @@ in
         bar.customModules.cava.bars = 15;
       };
       override = {
+        "theme.bar.shadow" = "0px 0px 0px 0px #16161e";
         "theme.bar.background" = "#${config.lib.stylix.colors.base00}";
         "theme.bar.buttons.background" = "#${config.lib.stylix.colors.base00}";
         "theme.bar.buttons.hover" = "#${config.lib.stylix.colors.base03}";
