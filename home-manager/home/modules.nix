@@ -19,7 +19,7 @@
     programs = {
       bat.enable = true;
       btop.enable = true;
-      bun.enable = true;
+      bun.enable = false;
       cava.enable = true;
       chromium.enable = true;
       eza.enable = true;

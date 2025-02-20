@@ -4,5 +4,6 @@
     nautilus
     neovim
     obsidian
+    nodejs
   ];
 }

@@ -87,29 +87,29 @@ in
           };
         };
 
-        "bun.runtime" = "${pkgs.bun}/bin/bun";
-        "bun.debugTerminal.enabled" = true;
-        "bun.debugTerminal.stopOnEntry" = false;
-        "bun.test.filePattern" = "**/*{.test.,.spec.,_test_,_spec_}{js,ts,tsx,jsx,mts,cts}";
+        # "bun.runtime" = "${pkgs.bun}/bin/bun";
+        # "bun.debugTerminal.enabled" = true;
+        # "bun.debugTerminal.stopOnEntry" = false;
+        # "bun.test.filePattern" = "**/*{.test.,.spec.,_test_,_spec_}{js,ts,tsx,jsx,mts,cts}";
 
-        "powermode.enabled" = true;
-        "powermode.shake.enabled" = true;
-        "powermode.presets" = "flames";
-        "powermode.combo.counterEnabled" = "hide";
-        "powermode.combo.timerEnabled" = "hide";
+        # "powermode.enabled" = true;
+        # "powermode.shake.enabled" = true;
+        # "powermode.presets" = "flames";
+        # "powermode.combo.counterEnabled" = "hide";
+        # "powermode.combo.timerEnabled" = "hide";
 
       };
       extensions = with pkgs.vscode-marketplace; [
         # manalord.mana-lord-theme
         enkia.tokyo-night
-        oven.bun-vscode
+        # oven.bun-vscode
         # sreetamd.karma
         miguelsolorio.fluent-icons
         golang.go
         jnoortheen.nix-ide
         supermaven.supermaven
         pkief.material-icon-theme
-        hoovercj.vscode-power-mode
+        # hoovercj.vscode-power-mode
         # rust-lang.rust-analyzer
         # vadimcn.vscode-lldb
         # tamasfe.even-better-toml
