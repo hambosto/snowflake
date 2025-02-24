@@ -60,14 +60,14 @@ in
         theme.bar.margin_bottom = "2";
         theme.bar.margin_sides = "1px";
         theme.bar.border_radius = "20px";
-        bar.launcher.icon = "";
+        bar.launcher.icon = "";
         theme.bar.transparent = true;
         bar.customModules.updates.pollingInterval = 1440000;
         bar.workspaces.show_numbered = false;
         bar.workspaces.workspaces = 5;
         bar.workspaces.monitorSpecific = false;
         bar.workspaces.numbered_active_indicator = "color";
-        bar.workspaces.applicationIconEmptyWorkspace = "";
+        bar.workspaces.applicationIconEmptyWorkspace = "";
         bar.workspaces.showApplicationIcons = true;
         bar.workspaces.showWsIcons = true;
         bar.windowtitle.label = true;

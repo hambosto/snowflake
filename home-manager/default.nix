@@ -33,6 +33,7 @@
       fastfetch.enable = lib.mkEnableOption "Enable Fastfetch";
       fzf.enable = lib.mkEnableOption "Enable Fzf";
       gemini-commit.enable = lib.mkEnableOption "Enable Gemini Commit";
+      ghostty.enable = lib.mkEnableOption "Enable Ghostty";
       git.enable = lib.mkEnableOption "Enable Git";
       go-encryption.enable = lib.mkEnableOption "Enable Go Encryption";
       go.enable = lib.mkEnableOption "Enable Golang";

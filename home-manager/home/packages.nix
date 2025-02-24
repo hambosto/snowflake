@@ -5,5 +5,7 @@
     neovim
     obsidian
     nodejs
+
+    vlc
   ];
 }

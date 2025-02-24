@@ -9,6 +9,7 @@
     ./fastfetch.nix
     ./fzf.nix
     ./gemini-commit.nix
+    ./ghostty.nix
     ./git.nix
     ./go-encryption.nix
     ./go.nix

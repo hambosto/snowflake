@@ -26,6 +26,7 @@
       fastfetch.enable = true;
       fzf.enable = true;
       gemini-commit.enable = true;
+      ghostty.enable = false;
       git.enable = true;
       go-encryption.enable = true;
       go.enable = true;
