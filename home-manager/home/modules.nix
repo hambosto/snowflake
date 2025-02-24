@@ -32,7 +32,7 @@
       go.enable = true;
       kitty.enable = true;
       nh.enable = true;
-      spicetify.enable = true;
+      spicetify.enable = false;
       vscode.enable = true;
       yazi.enable = true;
       zen.enable = true;
