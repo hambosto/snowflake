@@ -5,6 +5,5 @@
     dbus.enable = true;
     gvfs.enable = true;
     fstrim.enable = true;
-    # bpftune.enable = false;
   };
 }
