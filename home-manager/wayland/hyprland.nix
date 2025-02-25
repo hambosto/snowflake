@@ -6,34 +6,6 @@
   ...
 }:
 let
-  wallpaper-activator = pkgs.writeShellScript "wallpaper-activator" ''
-    WALLPAPER_CACHE="$HOME/.cache/.active_wallpaper"
-
-    # Check if the cache file exists
-    if [ ! -f "$WALLPAPER_CACHE" ]; then
-      exit 0
-    fi
-
-    # Read the wallpaper path from the cache
-    SELECTED_IMAGE=$(<"$WALLPAPER_CACHE")
-
-    # Verify the image exists
-    if [ ! -f "$SELECTED_IMAGE" ]; then
-      exit 1
-    fi
-
-    # Get all monitors using jq
-    MONITORS=$(hyprctl -j monitors | ${pkgs.jq}/bin/jq -r '.[].name')
-
-    # Apply wallpaper to all monitors
-    hyprctl hyprpaper unload all > /dev/null 2>&1
-    hyprctl hyprpaper preload "$SELECTED_IMAGE" > /dev/null 2>&1
-    for monitor in $MONITORS; do
-      hyprctl hyprpaper wallpaper "$monitor, $SELECTED_IMAGE" > /dev/null 2>&1
-    done
-
-    exit 0
-  '';
   cfg = config.modules.wayland.hyprland;
 in
 {
@@ -72,7 +44,7 @@ in
         general = {
           gaps_in = 1;
           gaps_out = 1;
-          border_size = 2;
+          border_size = 0;
           resize_on_border = true;
           border_part_of_window = true;
           layout = "dwindle";
@@ -183,9 +155,9 @@ in
         # Key bindings
         bind = [
           # Application launchers
-          "$mainMod, RETURN, exec, ${pkgs.kitty}/bin/kitty"
-          "$mainMod, E, exec, ${pkgs.kitty}/bin/kitty -e ${pkgs.yazi}/bin/yazi"
-          "$mainMod, M, exec, ${pkgs.kitty}/bin/kitty -e ${pkgs.btop}/bin/btop"
+          "$mainMod, RETURN, exec, ${pkgs.ghostty}/bin/ghostty"
+          "$mainMod, E, exec, ${pkgs.ghostty}/bin/ghostty -e ${pkgs.yazi}/bin/yazi"
+          "$mainMod, M, exec, ${pkgs.ghostty}/bin/ghostty -e ${pkgs.btop}/bin/btop"
           "$mainMod, L, exec, ${pkgs.hyprlock}/bin/hyprlock"
           "$mainMod, B, exec, ${pkgs.chromium}/bin/chromium"
           "$mainMod, SPACE, exec, launcher"
@@ -205,9 +177,6 @@ in
           ",PRINT, exec, screenshot selection"
           "$mainMod, PRINT, exec, screenshot active"
           "SHIFT, PRINT, exec, screenshot everything"
-
-          # Wallpaper Selector
-          "$mainMod SHIFT, W, exec, ${pkgs.kitty}/bin/kitty --class terminal-floating -e wallpaper-selector"
 
           # Close active windows
           "$mainMod SHIFT, Q, exec, close-active-windows"
@@ -259,8 +228,6 @@ in
           ",XF86MonBrightnessDown, exec, ${pkgs.brightnessctl}/bin/brightnessctl set 5%-"
         ];
 
-        # Startup applications
-        exec-once = [ "sleep 1 && ${wallpaper-activator}" ];
       };
     };
   };

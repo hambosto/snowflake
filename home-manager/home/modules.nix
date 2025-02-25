@@ -26,11 +26,11 @@
       fastfetch.enable = true;
       fzf.enable = true;
       gemini-commit.enable = true;
-      ghostty.enable = false;
+      ghostty.enable = true;
       git.enable = true;
       go-encryption.enable = true;
       go.enable = true;
-      kitty.enable = true;
+      kitty.enable = false;
       nh.enable = true;
       spicetify.enable = false;
       vscode.enable = true;

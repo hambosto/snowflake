@@ -3,6 +3,6 @@
     EDITOR = "nvim";
     VISUAL = "nvim";
     BROWSER = "chromium";
-    TERMINAL = "kitty";
+    TERMINAL = "ghostty";
   };
 }

@@ -4,7 +4,7 @@
   ...
 }:
 let
-  cfg = config.modules.programs.git;
+  cfg = config.modules.programs.kitty;
 in
 {
   config = lib.mkIf cfg.enable {

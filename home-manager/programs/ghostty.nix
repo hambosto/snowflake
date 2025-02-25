@@ -14,7 +14,7 @@ in
       enableBashIntegration = true;
       settings = {
         background-opacity = lib.mkForce 0.4;
-        background-blur = true;
+        background-blur = 10;
         font-family = "ComicShannsMono Nerd Font";
         font-size = 12;
         window-width = 950;
@@ -23,6 +23,17 @@ in
         copy-on-select = true;
         confirm-close-surface = false;
         font-synthetic-style = true;
+        font-thicken = false;
+        bold-is-bright = false;
+        adjust-box-thickness = 1;
+        cursor-style = "bar";
+        adjust-cursor-thickness = 1;
+        mouse-hide-while-typing = true;
+        window-padding-x = 4;
+        window-padding-y = 6;
+        window-padding-balance = true;
+        title = "GhosTTY";
+        gtk-single-instance = true;
       };
     };
   };
