@@ -7,7 +7,6 @@
     stylix.url = "github:danth/stylix";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
-    ghostty.url = "github:ghostty-org/ghostty";
 
     home-manager = {
       url = "github:nix-community/home-manager";
