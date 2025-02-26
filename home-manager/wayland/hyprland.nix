@@ -46,7 +46,6 @@ in
           gaps_out = 1;
           border_size = 0;
           resize_on_border = true;
-          border_part_of_window = true;
           layout = "dwindle";
         };
 

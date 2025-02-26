@@ -27,8 +27,8 @@ in
           "editor.acceptSuggestionOnEnter" = "on";
           "editor.autoClosingBrackets" = "always";
 
-          # "workbench.colorTheme" = "Mana Lord's Moon Light Theme";
-          "workbench.colorTheme" = "Tokyo Night";
+          "workbench.colorTheme" = "Mana Lord's Moon Light Theme";
+          # "workbench.colorTheme" = "Tokyo Night";
           "workbench.iconTheme" = "material-icon-theme";
           "workbench.activityBar.location" = "hidden";
           "workbench.editor.showTabs" = "single";
@@ -44,21 +44,15 @@ in
           "explorer.confirmDragAndDrop" = false;
           "explorer.confirmDelete" = false;
           "explorer.decorations.badges" = false;
-
           "git.decorations.enabled" = false;
-
           "breadcrumbs.enabled" = false;
-
           "material-icon-theme.hidesExplorerArrows" = true;
-
           "terminal.integrated.fontSize" = 14;
           "terminal.integrated.fontFamily" = "ComicShannsMono Nerd Font";
           "telemetry.telemetryLevel" = "off";
-
           "window.menuBarVisibility" = "toggle";
           "window.titleBarStyle" = "native";
           "window.customTitleBarVisibility" = "never";
-
           "go.inlayHints.assignVariableTypes" = true;
           "go.inlayHints.constantValues" = true;
           "go.inlayHints.parameterNames" = true;
@@ -101,8 +95,8 @@ in
 
         };
         extensions = with pkgs.vscode-marketplace; [
-          # manalord.mana-lord-theme
-          enkia.tokyo-night
+          manalord.mana-lord-theme
+          # enkia.tokyo-night
           # oven.bun-vscode
           # sreetamd.karma
           miguelsolorio.fluent-icons
