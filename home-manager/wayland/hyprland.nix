@@ -14,7 +14,7 @@ in
       enable = true;
       xwayland.enable = true;
       systemd.enable = true;
-      package = inputs.hyprland.packages.${pkgs.system}.hyprland;
+      package = inputs.hyprland.packages.x86_64-linux.hyprland;
 
       settings = {
         "$mainMod" = "SUPER";

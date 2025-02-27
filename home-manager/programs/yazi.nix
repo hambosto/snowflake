@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  inputs,
   ...
 }:
 let
@@ -17,6 +18,7 @@ in
   config = lib.mkIf cfg.enable {
     programs.yazi = {
       enable = true;
+      package = inputs.yazi.packages.x86_64-linux.default;
       enableZshIntegration = true;
 
       plugins = {
@@ -24,13 +26,12 @@ in
         full-border = "${yazi-plugins}/full-border.yazi";
         toggle-pane = "${yazi-plugins}/toggle-pane.yazi";
         mime-ext = "${yazi-plugins}/mime-ext.yazi";
-        git = "${yazi-plugins}/git.yazi";
+        smart-filter = "${yazi-plugins}/smart-filter.yazi";
         mount = "${yazi-plugins}/mount.yazi";
       };
 
       initLua = ''
         require("full-border"):setup()
-        require("git"):setup()
       '';
 
       settings = {
@@ -64,6 +65,11 @@ in
             on = "M";
             run = "plugin mount";
             desc = "Mount Disk";
+          }
+          {
+            on = "F";
+            run = "plugin smart-filter";
+            desc = "Smart filter";
           }
         ];
       };
