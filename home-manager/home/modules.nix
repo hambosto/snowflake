@@ -31,6 +31,7 @@
       go-encryption.enable = true;
       go.enable = true;
       kitty.enable = false;
+      lazygit.enable = true;
       nh.enable = true;
       spicetify.enable = false;
       vscode.enable = true;
