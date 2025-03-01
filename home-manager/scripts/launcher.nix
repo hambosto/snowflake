@@ -6,10 +6,10 @@
 }:
 let
   launcher = pkgs.writeShellScriptBin "launcher" ''
-    if [[ ! $(pidof anyrun) ]]; then
-    	anyrun
+    if [[ ! $(pidof rofi) ]]; then
+    	rofi -show drun
     else
-    	pkill anyrun
+    	pkill rofi
     fi
   '';
   cfg = config.modules.wayland.hyprland;

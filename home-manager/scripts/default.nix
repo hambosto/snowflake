@@ -1,7 +1,7 @@
 {
   imports = [
-    ./anyrun.nix
     ./hyprland.nix
+    ./launcher.nix
     ./nixctl.nix
     ./screenshot.nix
   ];

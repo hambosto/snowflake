@@ -9,7 +9,7 @@
       hyprland.enable = true;
       hyprlock.enable = true;
       hyprpanel.enable = true;
-      anyrun.enable = true;
+      rofi.enable = true;
     };
 
     services = {
@@ -21,6 +21,7 @@
       btop.enable = true;
       bun.enable = false;
       cava.enable = true;
+      cavalier.enable = true;
       chromium.enable = true;
       eza.enable = true;
       fastfetch.enable = true;

@@ -4,6 +4,7 @@
     ./btop.nix
     ./bun.nix
     ./cava.nix
+    ./cavalier.nix
     ./chromium.nix
     ./eza.nix
     ./fastfetch.nix

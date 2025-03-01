@@ -16,7 +16,7 @@
       hyprland.enable = lib.mkEnableOption "Enable Hyprland";
       hyprlock.enable = lib.mkEnableOption "Enable Hyprlock";
       hyprpanel.enable = lib.mkEnableOption "Enable Hyprpanel";
-      anyrun.enable = lib.mkEnableOption "Enable Anyrun";
+      rofi.enable = lib.mkEnableOption "Enable Rofi";
     };
 
     services = {
@@ -28,6 +28,7 @@
       btop.enable = lib.mkEnableOption "Enable Btop";
       bun.enable = lib.mkEnableOption "Enable Bun";
       cava.enable = lib.mkEnableOption "Enable Cava";
+      cavalier.enable = lib.mkEnableOption "Enable Cavalier";
       chromium.enable = lib.mkEnableOption "Enable Chromium";
       eza.enable = lib.mkEnableOption "Enable Eza";
       fastfetch.enable = lib.mkEnableOption "Enable Fastfetch";
