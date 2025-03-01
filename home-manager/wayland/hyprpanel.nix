@@ -61,7 +61,7 @@ in
         theme.bar.margin_sides = "1px";
         theme.bar.border_radius = "20px";
         bar.launcher.icon = "";
-        theme.bar.transparent = true;
+        theme.bar.transparent = false;
         bar.customModules.updates.pollingInterval = 1440000;
         bar.workspaces.show_numbered = false;
         bar.workspaces.workspaces = 5;

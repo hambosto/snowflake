@@ -2,7 +2,7 @@
   config,
   lib,
   pkgs,
-  inputs,
+  # inputs,
   ...
 }:
 let
@@ -18,7 +18,7 @@ in
   config = lib.mkIf cfg.enable {
     programs.yazi = {
       enable = true;
-      package = inputs.yazi.packages.x86_64-linux.default;
+      # package = inputs.yazi.packages.x86_64-linux.default;
       enableZshIntegration = true;
 
       plugins = {

@@ -6,8 +6,8 @@
     hyprland.url = "github:hyprwm/Hyprland";
     stylix.url = "github:danth/stylix";
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
-    ghostty.url = "github:ghostty-org/ghostty";
-    yazi.url = "github:sxyazi/yazi";
+    # ghostty.url = "github:ghostty-org/ghostty";
+    # yazi.url = "github:sxyazi/yazi";
 
     home-manager = {
       url = "github:nix-community/home-manager";

@@ -26,6 +26,6 @@
     };
 
     # Wallpaper path
-    wallpaper = ../../wallpapers/default.jpg;
+    wallpaper = ../../wallpapers/default.png;
   };
 }
