@@ -19,25 +19,39 @@ in
       settings = {
         "$mainMod" = "SUPER";
 
-        # Monitor setup
-        monitor = [ "desc:Chimei Innolux Corporation 0x1441, preferred, auto, 1" ];
+        monitor = [ ",preferred,auto,1" ];
 
-        # System environment variables
         env = [
+
+          # XDG Desktop Portal
           "XDG_CURRENT_DESKTOP,Hyprland"
           "XDG_SESSION_TYPE,wayland"
           "XDG_SESSION_DESKTOP,Hyprland"
-          "GDK_BACKEND,wayland,x11,*"
+
+          # QT
           "QT_QPA_PLATFORM,wayland;xcb"
-          "CLUTTER_BACKEND,wayland"
           "QT_QPA_PLATFORMTHEME,qt6ct"
           "QT_QPA_PLATFORMTHEME,qt5ct"
           "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
           "QT_AUTO_SCREEN_SCALE_FACTOR,1"
+
+          # GDK
           "GDK_SCALE,1"
+
+          # Toolkit Backend
+          "GDK_BACKEND,wayland,x11,*"
+          "CLUTTER_BACKEND,wayland"
+
+          # Mozilla
           "MOZ_ENABLE_WAYLAND,1"
+
+          # Disable appimage launcher by default
+          "APPIMAGELAUNCHER_DISABLE,1"
+
+          # Ozone
           "OZONE_PLATFORM,wayland"
           "ELECTRON_OZONE_PLATFORM_HINT,wayland"
+
         ];
 
         # Window management and layout
@@ -67,7 +81,6 @@ in
             "borderangle, 1, 30, liner, once"
             "fade, 1, 10, default"
             "workspaces, 1, 5, wind"
-            "specialWorkspace, 1, 5, wind, slidevert"
           ];
         };
 
@@ -131,7 +144,7 @@ in
           "pin, title:^(Picture-in-Picture)$"
           "move 69.5% 4%, title:^(Picture-in-Picture)$"
 
-          "float,class:(terminal-floating)"
+          "opacity 0.80 0.80,class:^(code)$"
         ];
 
         # Gesture and cursor settings
