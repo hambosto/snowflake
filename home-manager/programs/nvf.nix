@@ -20,8 +20,6 @@
 
         undoFile.enable = true;
         notify.nvim-notify.enable = true;
-        presence.neocord.enable = true;
-        projects.project-nvim.enable = true;
         telescope.enable = true;
         globals.editorconfig = true;
 

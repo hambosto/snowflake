@@ -4,6 +4,7 @@
 }:
 {
   stylix.targets.vscode.enable = false;
+
   programs.vscode = {
     enable = true;
     profiles.default = {
@@ -21,8 +22,8 @@
         "editor.acceptSuggestionOnEnter" = "on";
         "editor.autoClosingBrackets" = "always";
 
-        "workbench.colorTheme" = "Mana Lord's Moon Light Theme";
-        # "workbench.colorTheme" = "Tokyo Night";
+        # "workbench.colorTheme" = "Mana Lord's Moon Light Theme";
+        "workbench.colorTheme" = "Tokyo Night";
         "workbench.iconTheme" = "material-icon-theme";
         "workbench.activityBar.location" = "hidden";
         "workbench.editor.showTabs" = "single";
@@ -89,8 +90,8 @@
 
       };
       extensions = with pkgs.vscode-marketplace; [
-        manalord.mana-lord-theme
-        # enkia.tokyo-night
+        # manalord.mana-lord-theme
+        enkia.tokyo-night
         # oven.bun-vscode
         # sreetamd.karma
         miguelsolorio.fluent-icons

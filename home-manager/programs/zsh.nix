@@ -10,9 +10,7 @@
     syntaxHighlighting.enable = true;
     historySubstringSearch.enable = true;
 
-    initExtraFirst = ''
-      ${pkgs.fastfetch}/bin/fastfetch
-    '';
+    initExtraFirst = "${pkgs.fastfetch}/bin/fastfetch";
 
     history = {
       ignoreDups = true;

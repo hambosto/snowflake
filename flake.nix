@@ -32,29 +32,27 @@
       username = "ilham";
     in
     {
-      nixosConfigurations = {
-        "${hostname}" = nixpkgs.lib.nixosSystem {
-          specialArgs = {
-            inherit system;
-            inherit inputs;
-            inherit username;
-            inherit hostname;
-          };
-          modules = [
-            ./modules/configuration.nix
-            inputs.stylix.nixosModules.stylix
-            inputs.home-manager.nixosModules.home-manager
-            {
-              home-manager.extraSpecialArgs = {
-                inherit username;
-                inherit inputs;
-                inherit hostname;
-                inherit system;
-              };
-              home-manager.users.${username} = import ./home-manager;
-            }
-          ];
+      nixosConfigurations."${hostname}" = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          inherit system;
+          inherit inputs;
+          inherit username;
+          inherit hostname;
         };
+        modules = [
+          ./modules/configuration.nix
+          inputs.stylix.nixosModules.stylix
+          inputs.home-manager.nixosModules.home-manager
+          {
+            home-manager.extraSpecialArgs = {
+              inherit username;
+              inherit inputs;
+              inherit hostname;
+              inherit system;
+            };
+            home-manager.users.${username} = import ./home-manager;
+          }
+        ];
       };
     };
 }
