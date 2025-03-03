@@ -1,6 +1,4 @@
 {
-  config,
-  lib,
   pkgs,
   ...
 }:
@@ -35,10 +33,7 @@ let
     esac
   '';
 
-  cfg = config.modules.wayland.hyprland;
 in
 {
-  config = lib.mkIf cfg.enable {
-    home.packages = [ screenshot ];
-  };
+  home.packages = [ screenshot ];
 }

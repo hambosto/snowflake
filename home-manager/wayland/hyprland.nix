@@ -1,246 +1,239 @@
 {
-  config,
-  lib,
   pkgs,
   inputs,
   ...
 }:
-let
-  cfg = config.modules.wayland.hyprland;
-in
 {
-  config = lib.mkIf cfg.enable {
-    wayland.windowManager.hyprland = {
-      enable = true;
-      xwayland.enable = true;
-      systemd.enable = true;
-      package = inputs.hyprland.packages.x86_64-linux.hyprland;
+  wayland.windowManager.hyprland = {
+    enable = true;
+    xwayland.enable = true;
+    systemd.enable = true;
+    package = inputs.hyprland.packages.x86_64-linux.hyprland;
 
-      settings = {
-        "$mainMod" = "SUPER";
+    settings = {
+      "$mainMod" = "SUPER";
 
-        monitor = [ ",preferred,auto,1" ];
+      monitor = [ ",preferred,auto,1" ];
 
-        env = [
+      env = [
 
-          # XDG Desktop Portal
-          "XDG_CURRENT_DESKTOP,Hyprland"
-          "XDG_SESSION_TYPE,wayland"
-          "XDG_SESSION_DESKTOP,Hyprland"
+        # XDG Desktop Portal
+        "XDG_CURRENT_DESKTOP,Hyprland"
+        "XDG_SESSION_TYPE,wayland"
+        "XDG_SESSION_DESKTOP,Hyprland"
 
-          # QT
-          "QT_QPA_PLATFORM,wayland;xcb"
-          "QT_QPA_PLATFORMTHEME,qt6ct"
-          "QT_QPA_PLATFORMTHEME,qt5ct"
-          "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
-          "QT_AUTO_SCREEN_SCALE_FACTOR,1"
+        # QT
+        "QT_QPA_PLATFORM,wayland;xcb"
+        "QT_QPA_PLATFORMTHEME,qt6ct"
+        "QT_QPA_PLATFORMTHEME,qt5ct"
+        "QT_WAYLAND_DISABLE_WINDOWDECORATION,1"
+        "QT_AUTO_SCREEN_SCALE_FACTOR,1"
 
-          # GDK
-          "GDK_SCALE,1"
+        # GDK
+        "GDK_SCALE,1"
 
-          # Toolkit Backend
-          "GDK_BACKEND,wayland,x11,*"
-          "CLUTTER_BACKEND,wayland"
+        # Toolkit Backend
+        "GDK_BACKEND,wayland,x11,*"
+        "CLUTTER_BACKEND,wayland"
 
-          # Mozilla
-          "MOZ_ENABLE_WAYLAND,1"
+        # Mozilla
+        "MOZ_ENABLE_WAYLAND,1"
 
-          # Disable appimage launcher by default
-          "APPIMAGELAUNCHER_DISABLE,1"
+        # Disable appimage launcher by default
+        "APPIMAGELAUNCHER_DISABLE,1"
 
-          # Ozone
-          "OZONE_PLATFORM,wayland"
-          "ELECTRON_OZONE_PLATFORM_HINT,wayland"
+        # Ozone
+        "OZONE_PLATFORM,wayland"
+        "ELECTRON_OZONE_PLATFORM_HINT,wayland"
 
-        ];
+      ];
 
-        # Window management and layout
-        general = {
-          gaps_in = 1;
-          gaps_out = 1;
-          border_size = 0;
-          resize_on_border = true;
-          layout = "dwindle";
-        };
-
-        # Visual effects and animations
-        animations = {
-          enabled = true;
-          bezier = [
-            "wind, 0.05, 0.9, 0.1, 1.05"
-            "winIn, 0.1, 1.1, 0.1, 1.1"
-            "winOut, 0.3, -0.3, 0, 1"
-            "liner, 1, 1, 1, 1"
-          ];
-          animation = [
-            "windows, 1, 6, wind, slide"
-            "windowsIn, 1, 6, winIn, slide"
-            "windowsOut, 1, 5, winOut, slide"
-            "windowsMove, 1, 5, wind, slide"
-            "border, 1, 1, liner"
-            "borderangle, 1, 30, liner, once"
-            "fade, 1, 10, default"
-            "workspaces, 1, 5, wind"
-          ];
-        };
-
-        # Window decorations and effects
-        decoration = {
-          active_opacity = 1;
-          inactive_opacity = 1;
-          rounding = 15;
-
-          shadow = {
-            enabled = true;
-            range = 10;
-            render_power = 3;
-            offset = "12 12";
-            scale = 0.97;
-          };
-
-          blur = {
-            enabled = true;
-            size = 16;
-            xray = true;
-            new_optimizations = "on";
-            brightness = 0.8;
-            contrast = 0.9;
-            noise = 0.01;
-            passes = 4;
-            ignore_opacity = true;
-          };
-        };
-
-        # Input device configuration
-        input = {
-          kb_layout = config.settings.system.keyboardLayout;
-          kb_variant = "";
-          kb_model = "";
-          kb_options = "";
-          numlock_by_default = true;
-          mouse_refocus = false;
-          follow_mouse = 1;
-          sensitivity = 0;
-
-          touchpad = {
-            natural_scroll = true;
-            middle_button_emulation = true;
-            clickfinger_behavior = false;
-            disable_while_typing = true;
-            scroll_factor = 1.0;
-          };
-        };
-
-        # Miscellaneous settings
-        misc = {
-          disable_hyprland_logo = true;
-          disable_splash_rendering = true;
-          initial_workspace_tracking = 1;
-        };
-
-        # Window and layer rules
-        windowrulev2 = [
-          "float, title:^(Picture-in-Picture)$"
-          "pin, title:^(Picture-in-Picture)$"
-          "move 69.5% 4%, title:^(Picture-in-Picture)$"
-
-          "opacity 0.80 0.80,class:^(code)$"
-        ];
-
-        # Gesture and cursor settings
-        gestures = {
-          workspace_swipe = true;
-          workspace_swipe_fingers = 3;
-          workspace_swipe_distance = 500;
-          workspace_swipe_invert = true;
-          workspace_swipe_min_speed_to_force = 30;
-          workspace_swipe_cancel_ratio = 0.5;
-          workspace_swipe_create_new = true;
-          workspace_swipe_forever = true;
-        };
-
-        dwindle = {
-          pseudotile = true;
-          preserve_split = true;
-        };
-
-        # Key bindings
-        bind = [
-          # Application launchers
-          "$mainMod, RETURN, exec, ${pkgs.ghostty}/bin/ghostty"
-          "$mainMod, E, exec, ${pkgs.ghostty}/bin/ghostty -e ${pkgs.yazi}/bin/yazi"
-          "$mainMod, M, exec, ${pkgs.ghostty}/bin/ghostty -e ${pkgs.btop}/bin/btop"
-          "$mainMod, L, exec, ${pkgs.hyprlock}/bin/hyprlock"
-          "$mainMod, B, exec, ${pkgs.chromium}/bin/chromium"
-          "$mainMod, SPACE, exec, launcher"
-
-          # Window management
-          "$mainMod, Q, killactive,"
-          "$mainMod, T, togglefloating,"
-          "$mainMod, F, fullscreen"
-
-          # Window focus
-          "$mainMod, left, movefocus, l"
-          "$mainMod, right, movefocus, r"
-          "$mainMod, up, movefocus, u"
-          "$mainMod, down, movefocus, d"
-
-          # Screenshot controls
-          ",PRINT, exec, screenshot selection"
-          "$mainMod, PRINT, exec, screenshot active"
-          "SHIFT, PRINT, exec, screenshot everything"
-
-          # Close active windows
-          "$mainMod SHIFT, Q, exec, close-active-windows"
-
-          # Workspace management
-          "$mainMod, 1, workspace, 1"
-          "$mainMod, 2, workspace, 2"
-          "$mainMod, 3, workspace, 3"
-          "$mainMod, 4, workspace, 4"
-          "$mainMod, 5, workspace, 5"
-          "$mainMod, 6, workspace, 6"
-          "$mainMod, 7, workspace, 7"
-          "$mainMod, 8, workspace, 8"
-          "$mainMod, 9, workspace, 9"
-          "$mainMod, 0, workspace, 10"
-
-          # Move windows to workspaces
-          "$mainMod SHIFT, 1, movetoworkspace, 1"
-          "$mainMod SHIFT, 2, movetoworkspace, 2"
-          "$mainMod SHIFT, 3, movetoworkspace, 3"
-          "$mainMod SHIFT, 4, movetoworkspace, 4"
-          "$mainMod SHIFT, 5, movetoworkspace, 5"
-          "$mainMod SHIFT, 6, movetoworkspace, 6"
-          "$mainMod SHIFT, 7, movetoworkspace, 7"
-          "$mainMod SHIFT, 8, movetoworkspace, 8"
-          "$mainMod SHIFT, 9, movetoworkspace, 9"
-          "$mainMod SHIFT, 0, movetoworkspace, 10"
-        ];
-
-        # Mouse bindings
-        bindm = [
-          "$mainMod,mouse:272, movewindow"
-          "$mainMod,mouse:273, resizewindow"
-        ];
-
-        # Hardware event bindings
-        bindl = [
-          ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-          ",XF86AudioPlay, exec, ${pkgs.playerctl}/bin/playerctl play-pause"
-          ",XF86AudioNext, exec, ${pkgs.playerctl}/bin/playerctl next"
-          ",XF86AudioPrev, exec, ${pkgs.playerctl}/bin/playerctl previous"
-        ];
-
-        # Volume and brightness controls
-        bindle = [
-          ",XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
-          ",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-          ",XF86MonBrightnessUp, exec, ${pkgs.brightnessctl}/bin/brightnessctl set +5%"
-          ",XF86MonBrightnessDown, exec, ${pkgs.brightnessctl}/bin/brightnessctl set 5%-"
-        ];
-
+      # Window management and layout
+      general = {
+        gaps_in = 1;
+        gaps_out = 1;
+        border_size = 0;
+        resize_on_border = true;
+        layout = "dwindle";
       };
+
+      # Visual effects and animations
+      animations = {
+        enabled = true;
+        bezier = [
+          "wind, 0.05, 0.9, 0.1, 1.05"
+          "winIn, 0.1, 1.1, 0.1, 1.1"
+          "winOut, 0.3, -0.3, 0, 1"
+          "liner, 1, 1, 1, 1"
+        ];
+        animation = [
+          "windows, 1, 6, wind, slide"
+          "windowsIn, 1, 6, winIn, slide"
+          "windowsOut, 1, 5, winOut, slide"
+          "windowsMove, 1, 5, wind, slide"
+          "border, 1, 1, liner"
+          "borderangle, 1, 30, liner, once"
+          "fade, 1, 10, default"
+          "workspaces, 1, 5, wind"
+        ];
+      };
+
+      # Window decorations and effects
+      decoration = {
+        active_opacity = 1;
+        inactive_opacity = 1;
+        rounding = 15;
+
+        shadow = {
+          enabled = true;
+          range = 10;
+          render_power = 3;
+          offset = "12 12";
+          scale = 0.97;
+        };
+
+        blur = {
+          enabled = true;
+          size = 16;
+          xray = true;
+          new_optimizations = "on";
+          brightness = 0.8;
+          contrast = 0.9;
+          noise = 0.01;
+          passes = 4;
+          ignore_opacity = true;
+        };
+      };
+
+      # Input device configuration
+      input = {
+        kb_layout = "us";
+        kb_variant = "";
+        kb_model = "";
+        kb_options = "";
+        numlock_by_default = true;
+        mouse_refocus = false;
+        follow_mouse = 1;
+        sensitivity = 0;
+
+        touchpad = {
+          natural_scroll = true;
+          middle_button_emulation = true;
+          clickfinger_behavior = false;
+          disable_while_typing = true;
+          scroll_factor = 1.0;
+        };
+      };
+
+      # Miscellaneous settings
+      misc = {
+        disable_hyprland_logo = true;
+        disable_splash_rendering = true;
+        initial_workspace_tracking = 1;
+      };
+
+      # Window and layer rules
+      windowrulev2 = [
+        "float, title:^(Picture-in-Picture)$"
+        "pin, title:^(Picture-in-Picture)$"
+        "move 69.5% 4%, title:^(Picture-in-Picture)$"
+
+        "opacity 0.80 0.80,class:^(code)$"
+      ];
+
+      # Gesture and cursor settings
+      gestures = {
+        workspace_swipe = true;
+        workspace_swipe_fingers = 3;
+        workspace_swipe_distance = 500;
+        workspace_swipe_invert = true;
+        workspace_swipe_min_speed_to_force = 30;
+        workspace_swipe_cancel_ratio = 0.5;
+        workspace_swipe_create_new = true;
+        workspace_swipe_forever = true;
+      };
+
+      dwindle = {
+        pseudotile = true;
+        preserve_split = true;
+      };
+
+      # Key bindings
+      bind = [
+        # Application launchers
+        "$mainMod, RETURN, exec, ${pkgs.ghostty}/bin/ghostty"
+        "$mainMod, E, exec, ${pkgs.ghostty}/bin/ghostty -e ${pkgs.yazi}/bin/yazi"
+        "$mainMod, M, exec, ${pkgs.ghostty}/bin/ghostty -e ${pkgs.btop}/bin/btop"
+        "$mainMod, L, exec, ${pkgs.hyprlock}/bin/hyprlock"
+        "$mainMod, B, exec, ${pkgs.chromium}/bin/chromium"
+        "$mainMod, SPACE, exec, launcher"
+
+        # Window management
+        "$mainMod, Q, killactive,"
+        "$mainMod, T, togglefloating,"
+        "$mainMod, F, fullscreen"
+
+        # Window focus
+        "$mainMod, left, movefocus, l"
+        "$mainMod, right, movefocus, r"
+        "$mainMod, up, movefocus, u"
+        "$mainMod, down, movefocus, d"
+
+        # Screenshot controls
+        ",PRINT, exec, screenshot selection"
+        "$mainMod, PRINT, exec, screenshot active"
+        "SHIFT, PRINT, exec, screenshot everything"
+
+        # Close active windows
+        "$mainMod SHIFT, Q, exec, close-active-windows"
+
+        # Workspace management
+        "$mainMod, 1, workspace, 1"
+        "$mainMod, 2, workspace, 2"
+        "$mainMod, 3, workspace, 3"
+        "$mainMod, 4, workspace, 4"
+        "$mainMod, 5, workspace, 5"
+        "$mainMod, 6, workspace, 6"
+        "$mainMod, 7, workspace, 7"
+        "$mainMod, 8, workspace, 8"
+        "$mainMod, 9, workspace, 9"
+        "$mainMod, 0, workspace, 10"
+
+        # Move windows to workspaces
+        "$mainMod SHIFT, 1, movetoworkspace, 1"
+        "$mainMod SHIFT, 2, movetoworkspace, 2"
+        "$mainMod SHIFT, 3, movetoworkspace, 3"
+        "$mainMod SHIFT, 4, movetoworkspace, 4"
+        "$mainMod SHIFT, 5, movetoworkspace, 5"
+        "$mainMod SHIFT, 6, movetoworkspace, 6"
+        "$mainMod SHIFT, 7, movetoworkspace, 7"
+        "$mainMod SHIFT, 8, movetoworkspace, 8"
+        "$mainMod SHIFT, 9, movetoworkspace, 9"
+        "$mainMod SHIFT, 0, movetoworkspace, 10"
+      ];
+
+      # Mouse bindings
+      bindm = [
+        "$mainMod,mouse:272, movewindow"
+        "$mainMod,mouse:273, resizewindow"
+      ];
+
+      # Hardware event bindings
+      bindl = [
+        ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+        ",XF86AudioPlay, exec, ${pkgs.playerctl}/bin/playerctl play-pause"
+        ",XF86AudioNext, exec, ${pkgs.playerctl}/bin/playerctl next"
+        ",XF86AudioPrev, exec, ${pkgs.playerctl}/bin/playerctl previous"
+      ];
+
+      # Volume and brightness controls
+      bindle = [
+        ",XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+        ",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+        ",XF86MonBrightnessUp, exec, ${pkgs.brightnessctl}/bin/brightnessctl set +5%"
+        ",XF86MonBrightnessDown, exec, ${pkgs.brightnessctl}/bin/brightnessctl set 5%-"
+      ];
+
     };
   };
 }

@@ -14,5 +14,5 @@
       ];
     };
   };
-  console.keyMap = config.settings.system.keyboardLayout;
+  console.keyMap = "us";
 }

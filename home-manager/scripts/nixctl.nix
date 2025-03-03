@@ -1,11 +1,11 @@
 {
   hostname,
   pkgs,
-  config,
+  username,
   ...
 }:
 let
-  configDirectory = config.settings.system.configDirectory;
+  configDirectory = "/home/${username}/.config/snowflake";
   menuItems = [
     {
       icon = "󰑓";

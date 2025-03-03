@@ -1,6 +1,4 @@
 {
-  config,
-  lib,
   pkgs,
   ...
 }:
@@ -12,10 +10,7 @@ let
     	pkill rofi
     fi
   '';
-  cfg = config.modules.wayland.hyprland;
 in
 {
-  config = lib.mkIf cfg.enable {
-    home.packages = [ launcher ];
-  };
+  home.packages = [ launcher ];
 }

@@ -1,5 +1,4 @@
 {
-  config,
   pkgs,
   ...
 }:
@@ -7,7 +6,7 @@
   services.xserver = {
     enable = true;
     xkb = {
-      layout = config.settings.system.keyboardLayout;
+      layout = "us";
     };
     excludePackages = [ pkgs.xterm ];
   };

@@ -17,10 +17,10 @@
     ./kitty.nix
     ./lazygit.nix
     ./nh.nix
+    ./oh-my-posh.nix
     ./spicetify.nix
     ./vscode.nix
     ./yazi.nix
-    ./zen.nix
     ./zoxide.nix
     ./zsh.nix
   ];

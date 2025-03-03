@@ -1,4 +1,3 @@
-{ config, ... }:
 {
-  time.timeZone = config.settings.system.timeZone;
+  time.timeZone = "Asia/Jakarta";
 }

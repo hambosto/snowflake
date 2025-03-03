@@ -1,6 +1,4 @@
 {
-  config,
-  lib,
   pkgs,
   ...
 }:
@@ -13,10 +11,7 @@ let
       hyprctl dispatch closewindow address:$address
     done
   '';
-  cfg = config.modules.wayland.hyprland;
 in
 {
-  config = lib.mkIf cfg.enable {
-    home.packages = [ close-active-windows ];
-  };
+  home.packages = [ close-active-windows ];
 }

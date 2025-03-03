@@ -27,7 +27,7 @@
     };
 
     polarity = "dark";
-    image = config.settings.wallpaper;
+    image = ../../wallpapers/default.png;
 
     cursor = {
       package = pkgs.apple-cursor;

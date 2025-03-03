@@ -9,11 +9,9 @@
     ./networking
     ./nix
     ./nixpkgs
-    ./options
     ./packages
     ./security
     ./services
-    ./settings
     ./shell
     ./stylix
     ./system
