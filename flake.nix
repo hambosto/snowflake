@@ -25,10 +25,7 @@
   };
 
   outputs =
-    {
-      nixpkgs,
-      ...
-    }@inputs:
+    { nixpkgs, ... }@inputs:
     let
       system = "x86_64-linux";
       hostname = "snowflake";
