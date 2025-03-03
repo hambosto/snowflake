@@ -17,6 +17,7 @@
     ./kitty.nix
     ./lazygit.nix
     ./nh.nix
+    ./nvf.nix
     ./oh-my-posh.nix
     ./spicetify.nix
     ./vscode.nix

@@ -138,7 +138,7 @@
         "pin, title:^(Picture-in-Picture)$"
         "move 69.5% 4%, title:^(Picture-in-Picture)$"
 
-        "opacity 0.80 0.80,class:^(code)$"
+        # "opacity 0.80 0.80,class:^(code)$"
       ];
 
       # Gesture and cursor settings
