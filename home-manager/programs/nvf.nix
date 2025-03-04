@@ -1,7 +1,4 @@
-{
-  inputs,
-  ...
-}:
+{ inputs, ... }:
 {
   imports = [ inputs.nvf.homeManagerModules.default ];
 
@@ -37,8 +34,9 @@
         };
 
         dashboard = {
-          dashboard-nvim.enable = false;
+          dashboard-nvim.enable = true;
           alpha.enable = true;
+          startify.enable = true;
         };
 
         statusline.lualine = {
@@ -118,7 +116,12 @@
           enableLSP = true;
           enableTreesitter = true;
 
-          go.enable = true;
+          go = {
+            enable = true;
+            format.enable = true;
+            lsp.enable = true;
+            treesitter.enable = true;
+          };
 
           nix = {
             enable = true;
@@ -155,8 +158,6 @@
 
         ui = {
           borders.enable = true;
-          breadcrumbs.enable = true;
-          breadcrumbs.navbuddy.enable = true;
           colorizer.enable = true;
           illuminate.enable = true;
           modes-nvim.enable = true;
@@ -164,15 +165,11 @@
           smartcolumn.enable = true;
         };
 
-        utility = {
-          surround.enable = true;
-        };
-
         visuals = {
           nvim-cursorline.enable = true;
-          fidget-nvim.enable = true;
           indent-blankline.enable = true;
           nvim-web-devicons.enable = true;
+          highlight-undo.enable = true;
         };
       };
     };
