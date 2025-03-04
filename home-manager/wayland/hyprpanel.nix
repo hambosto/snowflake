@@ -57,7 +57,7 @@
       theme.bar.margin_sides = "1px";
       theme.bar.border_radius = "20px";
       bar.launcher.icon = "";
-      theme.bar.transparent = false;
+      theme.bar.transparent = true;
       bar.customModules.updates.pollingInterval = 1440000;
       bar.workspaces.show_numbered = false;
       bar.workspaces.workspaces = 5;
@@ -89,7 +89,7 @@
       menus.clock.weather.unit = "metric";
       menus.clock.time.military = true;
       menus.dashboard.stats.enabled = false;
-      menus.dashboard.powermenu.avatar.image = "/home/${username}/.profile_picture.jpg";
+      menus.dashboard.powermenu.avatar.image = toString ../../img/profile_picture.png;
       theme.bar.menus.menu.dashboard.profile.radius = "10em";
       menus.dashboard.powermenu.avatar.name = "${fullname}";
       menus.dashboard.powermenu.confirmation = false;
@@ -134,6 +134,7 @@
       menus.power.lowBatteryThreshold = 20;
       theme.bar.menus.monochrome = false;
       wallpaper.enable = false;
+      wallpaper.pywal = false;
       theme.bar.menus.card_radius = "20px";
       theme.bar.menus.border.size = "3px";
       theme.bar.menus.border.radius = "20px";

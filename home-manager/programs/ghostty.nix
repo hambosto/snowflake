@@ -11,7 +11,7 @@
     enableBashIntegration = true;
     settings = {
       background-opacity = lib.mkForce 0.4;
-      background-blur = 10;
+      background-blur = 5;
       font-family = "ComicShannsMono Nerd Font";
       font-size = 12;
       window-width = 950;
