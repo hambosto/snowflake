@@ -1,4 +1,8 @@
-{ inputs, ... }:
+{
+  inputs,
+  pkgs,
+  ...
+}:
 {
   imports = [ inputs.nvf.homeManagerModules.default ];
 
@@ -126,7 +130,10 @@
           nix = {
             enable = true;
             extraDiagnostics.enable = true;
-            format.enable = true;
+            format = {
+              type = "nixfmt";
+              package = pkgs.nixfmt-rfc-style;
+            };
             lsp.enable = true;
             treesitter.enable = true;
           };
