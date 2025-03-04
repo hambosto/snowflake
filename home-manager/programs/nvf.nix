@@ -20,7 +20,6 @@
         preventJunkFiles = true;
 
         undoFile.enable = true;
-        notify.nvim-notify.enable = true;
         telescope.enable = true;
         globals.editorconfig = true;
 
@@ -43,10 +42,21 @@
           startify.enable = true;
         };
 
-        statusline.lualine = {
-          enable = true;
-          globalStatus = true;
+        mini = {
           icons.enable = true;
+          statusline.enable = true;
+          git.enable = true;
+          diff.enable = true;
+          align.enable = true;
+          notify.enable = true;
+          operators.enable = true;
+          starter.enable = true;
+          comment.enable = true;
+          move.enable = true;
+          pairs.enable = true;
+          splitjoin.enable = true;
+          bracketed.enable = true;
+          indentscope.enable = true;
         };
 
         tabline.nvimBufferline = {
@@ -69,11 +79,11 @@
           enable = true;
 
           mappings = {
-            close = "<C-e>"; # ctrl-e
-            complete = "<C-Space>"; # ctrl-space
-            confirm = "<CR>"; # return
-            next = "<Tab>";
-            previous = "<S-Tab>";
+            close = "<C-e>";
+            complete = "<C-Space>";
+            confirm = "<CR>";
+            next = "<Down>";
+            previous = "<Up>";
             scrollDocsDown = "<C-f>";
             scrollDocsUp = "<C-d>";
           };
@@ -83,7 +93,7 @@
           enable = true;
 
           mappings = {
-            toggleCurrentLine = "<C-l>"; # ctrl-/
+            toggleCurrentLine = "<C-l>";
           };
         };
 
@@ -101,15 +111,6 @@
 
           mappings = {
             toggle = "<C-n>";
-          };
-        };
-
-        git = {
-          enable = true;
-
-          gitsigns = {
-            enable = true;
-            codeActions.enable = true;
           };
         };
 
@@ -144,39 +145,31 @@
         lsp = {
           enable = true;
           formatOnSave = true;
+          lspkind.enable = true;
+          trouble.enable = true;
+          otter-nvim.enable = true;
           lightbulb.enable = true;
+          lspsaga.enable = true;
           lspSignature.enable = true;
-          lspconfig.enable = true;
           lsplines.enable = true;
           nvim-docs-view.enable = true;
-          trouble.enable = true;
-          lspkind.enable = true;
-          lspsaga.enable = true;
         };
 
         theme = {
           enable = true;
-          name = "catppuccin";
-          style = "mocha";
+          name = "gruvbox";
+          style = "dark";
           transparent = true;
         };
 
         treesitter.context.enable = true;
 
         ui = {
-          borders.enable = true;
-          colorizer.enable = true;
-          illuminate.enable = true;
-          modes-nvim.enable = true;
           noice.enable = true;
-          smartcolumn.enable = true;
         };
 
         visuals = {
-          nvim-cursorline.enable = true;
-          indent-blankline.enable = true;
           nvim-web-devicons.enable = true;
-          highlight-undo.enable = true;
         };
       };
     };

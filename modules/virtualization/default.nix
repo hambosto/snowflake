@@ -1,7 +1,3 @@
 {
-  imports = [
-    ./podman.nix
-    ./qemu.nix
-    ./waydroid.nix
-  ];
+  imports = [ ./podman.nix ];
 }

@@ -1,18 +1,15 @@
 {
   username,
-  config,
+  fullname,
   ...
 }:
 {
-  users = {
-    users.${username} = {
-      isNormalUser = true;
-      description = "${username} account";
-      extraGroups = [
-        "networkmanager"
-        "wheel"
-      ];
-    };
+  users.users."${username}" = {
+    isNormalUser = true;
+    description = "${fullname}";
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
   };
-  console.keyMap = "us";
 }

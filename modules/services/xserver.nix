@@ -5,9 +5,7 @@
 {
   services.xserver = {
     enable = true;
-    xkb = {
-      layout = "us";
-    };
+    xkb.layout = "us";
     excludePackages = [ pkgs.xterm ];
   };
 }

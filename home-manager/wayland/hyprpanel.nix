@@ -3,6 +3,7 @@
   config,
   pkgs,
   username,
+  fullname,
   ...
 }:
 {
@@ -90,7 +91,7 @@
       menus.dashboard.stats.enabled = false;
       menus.dashboard.powermenu.avatar.image = "/home/${username}/.profile_picture.jpg";
       theme.bar.menus.menu.dashboard.profile.radius = "10em";
-      menus.dashboard.powermenu.avatar.name = "Ilham Putra Husada";
+      menus.dashboard.powermenu.avatar.name = "${fullname}";
       menus.dashboard.powermenu.confirmation = false;
       menus.dashboard.shortcuts.left.shortcut1.icon = "";
       menus.dashboard.shortcuts.left.shortcut1.command = "chromium";

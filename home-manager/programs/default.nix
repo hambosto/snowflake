@@ -18,6 +18,7 @@
     ./lazygit.nix
     ./nh.nix
     ./nvf.nix
+    ./obs-studio.nix
     ./oh-my-posh.nix
     ./spicetify.nix
     ./vscode.nix

@@ -30,6 +30,7 @@
       system = "x86_64-linux";
       hostname = "snowflake";
       username = "ilham";
+      fullname = "Ilham Putra Husada";
     in
     {
       nixosConfigurations."${hostname}" = nixpkgs.lib.nixosSystem {
@@ -38,6 +39,7 @@
           inherit inputs;
           inherit username;
           inherit hostname;
+          inherit fullname;
         };
         modules = [
           ./modules/configuration.nix
@@ -49,6 +51,7 @@
               inherit inputs;
               inherit hostname;
               inherit system;
+              inherit fullname;
             };
             home-manager.users.${username} = import ./home-manager;
           }
