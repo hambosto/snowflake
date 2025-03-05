@@ -1,12 +1,12 @@
 { pkgs, ... }:
 let
-  wallpaper = ../../img/pixel-animated.gif;
+  selected_wallpaper = ../../img/rog-animated.gif;
 in
 {
   systemd.user.services = {
     swww = {
       Unit = {
-        Description = "SWWW: Wayland Wallpaper Daemon";
+        Description = "Wayland Wallpaper Daemon";
         PartOf = [ "graphical-session.target" ];
         After = [ "graphical-session.target" ];
       };
@@ -18,7 +18,7 @@ in
         Restart = "on-failure";
       };
     };
-    swww-update = {
+    wallpaper = {
       Unit = {
         Description = "Set Default Wallpaper for Wayland";
         Requires = [ "swww.service" ];
@@ -27,19 +27,11 @@ in
       };
       Install.WantedBy = [ "swww.service" ];
       Service = {
-        ExecStart = "${pkgs.swww}/bin/swww img ${wallpaper} --transition-type random";
+        ExecStart = "${pkgs.swww}/bin/swww img ${selected_wallpaper} --transition-type random";
+        ExecStartPre = "${pkgs.coreutils}/bin/sleep 1";
         Restart = "on-failure";
         Type = "oneshot";
       };
     };
-  };
-
-  # Activation script to restart swww-update after rebuild
-  home.activation.restartSwwwUpdate = {
-    after = [ "writeBoundary" ]; # Runs after config is written
-    before = [ ];
-    data = ''
-      ${pkgs.systemd}/bin/systemctl --user restart swww-update.service || true
-    '';
   };
 }
