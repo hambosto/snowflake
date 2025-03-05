@@ -20,6 +20,7 @@
     ./nvf.nix
     ./obs-studio.nix
     ./oh-my-posh.nix
+    ./rust.nix
     ./spicetify.nix
     ./vscode.nix
     ./yazi.nix
