@@ -1,4 +1,7 @@
 { pkgs, ... }:
+let
+  wallpaper = ../../img/pixel-animated.gif;
+in
 {
   systemd.user.services = {
     swww = {
@@ -24,10 +27,19 @@
       };
       Install.WantedBy = [ "swww.service" ];
       Service = {
-        ExecStart = "${pkgs.swww}/bin/swww img ${toString ../../img/rog-animated.gif} --transition-type random";
+        ExecStart = "${pkgs.swww}/bin/swww img ${wallpaper} --transition-type random";
         Restart = "on-failure";
         Type = "oneshot";
       };
     };
+  };
+
+  # Activation script to restart swww-update after rebuild
+  home.activation.restartSwwwUpdate = {
+    after = [ "writeBoundary" ]; # Runs after config is written
+    before = [ ];
+    data = ''
+      ${pkgs.systemd}/bin/systemctl --user restart swww-update.service || true
+    '';
   };
 }

@@ -2,10 +2,12 @@
   inputs,
   config,
   pkgs,
-  username,
   fullname,
   ...
 }:
+let
+  profile_picture = ../../img/profile_picture.png;
+in
 {
   imports = [ inputs.hyprpanel.homeManagerModules.hyprpanel ];
 
@@ -89,7 +91,7 @@
       menus.clock.weather.unit = "metric";
       menus.clock.time.military = true;
       menus.dashboard.stats.enabled = false;
-      menus.dashboard.powermenu.avatar.image = toString ../../img/profile_picture.png;
+      menus.dashboard.powermenu.avatar.image = "${profile_picture}";
       theme.bar.menus.menu.dashboard.profile.radius = "10em";
       menus.dashboard.powermenu.avatar.name = "${fullname}";
       menus.dashboard.powermenu.confirmation = false;
