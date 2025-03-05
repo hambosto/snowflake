@@ -23,6 +23,7 @@
     ./spicetify.nix
     ./vscode.nix
     ./yazi.nix
+    ./zed-editor.nix
     ./zoxide.nix
     ./zsh.nix
   ];
