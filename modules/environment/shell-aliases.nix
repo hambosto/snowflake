@@ -6,6 +6,7 @@
     ll = "eza -al --icons=always";
     lt = "eza -a --tree --level=1 --icons=always";
     tree = "eza --icons=always --tree --no-quotes";
-    edit-config = "nvim ~/.config/snowflake";
+    nixos-config = "code ~/.config/snowflake";
+    nixos-edit = "nvim ~/.config/snowflake";
   };
 }
