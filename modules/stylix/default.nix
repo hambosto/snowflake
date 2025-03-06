@@ -56,7 +56,4 @@
       };
     };
   };
-
-  # Enable and disable specific stylix targets
-  stylix.targets.chromium.enable = false;
 }

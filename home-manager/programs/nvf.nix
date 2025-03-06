@@ -7,7 +7,7 @@
   imports = [ inputs.nvf.homeManagerModules.default ];
 
   programs.nvf = {
-    enable = true;
+    enable = false;
     settings = {
       vim = {
         viAlias = true;
@@ -137,6 +137,19 @@
             };
             lsp.enable = true;
             treesitter.enable = true;
+          };
+
+          rust = {
+            enable = false;
+            dap.enable = true;
+            format.enable = true;
+            lsp.enable = true;
+            treesitter.enable = true;
+
+            crates = {
+              enable = true;
+              codeActions = true;
+            };
           };
         };
 

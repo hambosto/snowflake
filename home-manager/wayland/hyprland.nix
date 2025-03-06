@@ -52,7 +52,7 @@
       general = {
         gaps_in = 1;
         gaps_out = 1;
-        border_size = 0;
+        border_size = 2;
         resize_on_border = true;
         layout = "dwindle";
       };
@@ -138,7 +138,10 @@
         "pin, title:^(Picture-in-Picture)$"
         "move 69.5% 4%, title:^(Picture-in-Picture)$"
 
-        # "opacity 0.80 0.80,class:^(code)$"
+        "float, class:(org.nickvision.cavalier)"
+        "pin, class:(org.nickvision.cavalier)"
+        "size 400 726,class:(org.nickvision.cavalier)"
+        "move 100%-w-16 66,class:(org.nickvision.cavalier)"
       ];
 
       # Gesture and cursor settings

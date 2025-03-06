@@ -24,7 +24,7 @@ let
     in
     {
       options.programs.rust = {
-        enable = mkEnableOption "Rust";
+        enable = mkEnableOption "Enable the Rust programming language";
 
         package = mkOption {
           type = types.package;
