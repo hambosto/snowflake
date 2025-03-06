@@ -2,43 +2,70 @@
   lib,
   ...
 }:
+let
+  selected_wallpaper = ../../img/default.png;
+in
 {
   programs.hyprlock = {
     enable = true;
-
-    settings = {
+    settings = lib.mkForce {
       general = {
-        hide_cursor = true;
-        grace = 2;
+        grace = 5;
+        no_fadein = true;
+        no_fade_out = true;
       };
-
-      background = lib.mkForce {
-        blur_passes = 3;
-        blur_size = 10;
-        brightness = 1.0;
-        contrast = 1.0;
-        noise = 0.02;
+      background = {
+        monitor = "";
+        path = "${selected_wallpaper}";
+        color = "rgb(303030)";
+        blur_passes = 1;
+        blur_size = 1;
+        brightness = 0.5;
       };
-
-      label = {
-        text = "パスワードをご入力ください";
-        color = "rgba(222, 222, 222, 1.0)";
-        font_size = 50;
-        font_family = "Noto Sans CJK JP";
-        position = "0, 70";
-        halign = "center";
-        valign = "center";
-      };
-
       input-field = {
-        size = "50, 50";
-        dots_size = 0.33;
-        dots_spacing = 0.15;
-        outer_color = lib.mkForce "rgba(25, 20, 20, 0)";
-        inner_color = lib.mkForce "rgba(25, 20, 20, 0)";
-        font_color = lib.mkForce "rgba(222, 222, 222, 1.0)";
-        placeholder_text = "パスワード";
+        monitor = "";
+        size = "300, 50";
+        outline_thickness = 0;
+        inner_color = "rgb(404040)";
+        dots_size = 0.3;
+        dots_center = false;
+        font_color = "rgb(f0f0f0)";
+        fade_on_empty = false;
+        placeholder_text = "Password";
+        fail_color = "rgb(9a1818)";
+        position = "0, -200";
       };
+      label = [
+        {
+          monitor = "";
+          text = ''cmd[update:1000] echo "<b>$(date "+%F")</b>"'';
+          color = "rgb(f0f0f0)";
+          font_size = 24;
+          font_family = "JetBrainsMono Nerd Font";
+          position = "0, -150";
+          halign = "center";
+          valign = "top";
+        }
+        {
+          monitor = "";
+          text = ''cmd[update:1000] echo "<b>$(date "+%H:%M")</b>"'';
+          font_size = 64;
+          color = "rgb(f0f0f0)";
+          font_family = "JetBrainsMono Nerd Font";
+          position = "0, -50";
+          halign = "center";
+          valign = "top";
+        }
+        {
+          monitor = "";
+          text = " <b>$USER</b>";
+          color = "rgb(f0f0f0)";
+          font_family = "JetBrainsMono Nerd Font";
+          position = "0, -150";
+          halign = "center";
+          valign = "center";
+        }
+      ];
     };
   };
 }

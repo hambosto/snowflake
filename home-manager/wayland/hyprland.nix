@@ -172,8 +172,8 @@
         "$mainMod, SPACE, exec, launcher"
 
         # Window management
-        "$mainMod, Q, killactive,"
-        "$mainMod, T, togglefloating,"
+        "$mainMod, Q, killactive"
+        "$mainMod, T, togglefloating"
         "$mainMod, F, fullscreen"
 
         # Window focus
@@ -188,7 +188,7 @@
         "SHIFT, PRINT, exec, screenshot everything"
 
         # Close active windows
-        "$mainMod SHIFT, Q, exec, close-active-windows"
+        "$mainMod SHIFT, Q, exec, hyprctl activewindow | grep pid | tr -d 'pid:' | xargs kill"
 
         # Workspace management
         "$mainMod, 1, workspace, 1"
@@ -202,7 +202,6 @@
         "$mainMod, 9, workspace, 9"
         "$mainMod, 0, workspace, 10"
 
-        # Move windows to workspaces
         "$mainMod SHIFT, 1, movetoworkspace, 1"
         "$mainMod SHIFT, 2, movetoworkspace, 2"
         "$mainMod SHIFT, 3, movetoworkspace, 3"
@@ -213,6 +212,19 @@
         "$mainMod SHIFT, 8, movetoworkspace, 8"
         "$mainMod SHIFT, 9, movetoworkspace, 9"
         "$mainMod SHIFT, 0, movetoworkspace, 10"
+
+        "$mainMod ALT, left, swapwindow, l"
+        "$mainMod ALT, right, swapwindow, r"
+        "$mainMod ALT, up, swapwindow, u"
+        "$mainMod ALT, down, swapwindow, d"
+
+        "$mainMod, Tab, workspace, m+1"
+        "$mainMod SHIFT, Tab, workspace, m-1"
+
+        "$mainMod, mouse_down, workspace, e+1"
+        "$mainMod, mouse_up, workspace, e-1"
+        "$mainMod CTRL, down, workspace, empty"
+
       ];
 
       # Mouse bindings
@@ -222,12 +234,7 @@
       ];
 
       # Hardware event bindings
-      bindl = [
-        ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-        ",XF86AudioPlay, exec, ${pkgs.playerctl}/bin/playerctl play-pause"
-        ",XF86AudioNext, exec, ${pkgs.playerctl}/bin/playerctl next"
-        ",XF86AudioPrev, exec, ${pkgs.playerctl}/bin/playerctl previous"
-      ];
+      bindl = [ ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle" ];
 
       # Volume and brightness controls
       bindle = [

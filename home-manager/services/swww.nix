@@ -1,6 +1,6 @@
 { pkgs, ... }:
 let
-  selected_wallpaper = ../../img/rog-animated.gif;
+  selected_wallpaper = ../../img/pixel-animated.gif;
 in
 {
   systemd.user.services = {
