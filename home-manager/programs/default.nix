@@ -17,6 +17,7 @@
     ./kitty.nix
     ./lazygit.nix
     ./nh.nix
+    ./nixcord.nix
     ./nvf.nix
     ./obs-studio.nix
     ./oh-my-posh.nix

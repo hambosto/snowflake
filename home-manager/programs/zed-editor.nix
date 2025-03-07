@@ -1,7 +1,7 @@
 { lib, ... }:
 {
   programs.zed-editor = {
-    enable = false;
+    enable = true;
     userSettings = {
       theme = lib.mkForce "Tokyo Night";
       ui_font_size = lib.mkForce 18;
@@ -14,7 +14,13 @@
         metrics = false;
       };
     };
-    extensions = [ "tokyo-night" ];
+    extensions = [
+      "tokyo-night"
+      "dockerfile"
+      "docker-compose"
+      "sql"
+      "make"
+    ];
 
   };
 }

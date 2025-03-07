@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 {
   stylix = {
     enable = true;
@@ -36,13 +36,13 @@
         name = "JetBrainsMono Nerd Font";
       };
       serif = {
-        package = pkgs.noto-fonts-cjk-serif;
-        name = "Noto Serif CJK JP";
+        package = inputs.apple-fonts.packages.${pkgs.system}.sf-pro-nerd;
+        name = "SFProDisplay Nerd Font";
       };
 
       sansSerif = {
-        package = pkgs.noto-fonts-cjk-sans;
-        name = "Noto Sans CJK JP";
+        package = inputs.apple-fonts.packages.${pkgs.system}.sf-pro-nerd;
+        name = "SFProDisplay Nerd Font";
       };
       emoji = {
         package = pkgs.noto-fonts-emoji;
