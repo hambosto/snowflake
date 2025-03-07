@@ -1,7 +1,7 @@
 { lib, ... }:
 {
   programs.zed-editor = {
-    enable = true;
+    enable = false;
     userSettings = {
       theme = lib.mkForce "Tokyo Night";
       ui_font_size = lib.mkForce 18;
