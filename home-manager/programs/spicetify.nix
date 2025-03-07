@@ -12,7 +12,7 @@ in
   stylix.targets.spicetify.enable = false;
 
   programs.spicetify = {
-    enable = true;
+    enable = false;
     theme = lib.mkForce spicePkgs.themes.lucid;
 
     colorScheme = "dark";

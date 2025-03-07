@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ pkgs, ... }:
 {
   stylix = {
     enable = true;
@@ -32,8 +32,8 @@
 
     fonts = {
       monospace = {
-        package = pkgs.nerd-fonts.jetbrains-mono;
-        name = "JetBrainsMono Nerd Font";
+        package = pkgs.noto-fonts-cjk-sans;
+        name = "Noto Sans Mono CJK JP";
       };
       serif = {
         package = pkgs.noto-fonts-cjk-serif;
