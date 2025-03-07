@@ -44,8 +44,8 @@ in
     };
 
     settings = {
-      theme.font.name = "${config.stylix.fonts.serif.name}";
-      theme.font.size = "${toString config.stylix.fonts.sizes.desktop}px";
+      theme.font.name = "JetBrainsMono Nerd Font";
+      theme.font.size = "14px";
       theme.bar.outer_spacing = "0px";
       theme.bar.buttons.y_margins = "0px";
       theme.bar.buttons.spacing = "0.1em";

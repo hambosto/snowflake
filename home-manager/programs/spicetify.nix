@@ -1,11 +1,10 @@
 {
-  pkgs,
   lib,
   inputs,
   ...
 }:
 let
-  spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
+  spicePkgs = inputs.spicetify-nix.legacyPackages.x86_64-linux;
 in
 {
   imports = [ inputs.spicetify-nix.homeManagerModules.default ];
@@ -13,7 +12,7 @@ in
   stylix.targets.spicetify.enable = false;
 
   programs.spicetify = {
-    enable = false;
+    enable = true;
     theme = lib.mkForce spicePkgs.themes.lucid;
 
     colorScheme = "dark";

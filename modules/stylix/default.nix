@@ -36,23 +36,23 @@
         name = "JetBrainsMono Nerd Font";
       };
       serif = {
-        package = inputs.apple-fonts.packages.${pkgs.system}.sf-pro-nerd;
-        name = "SFProDisplay Nerd Font";
+        package = pkgs.noto-fonts-cjk-serif;
+        name = "Noto Serif CJK JP";
       };
 
       sansSerif = {
-        package = inputs.apple-fonts.packages.${pkgs.system}.sf-pro-nerd;
-        name = "SFProDisplay Nerd Font";
+        package = pkgs.noto-fonts-cjk-sans;
+        name = "Noto Sans CJK JP";
       };
       emoji = {
         package = pkgs.noto-fonts-emoji;
         name = "Noto Color Emoji";
       };
       sizes = {
-        applications = 13;
-        desktop = 13;
-        popups = 13;
-        terminal = 13;
+        applications = 14;
+        desktop = 14;
+        popups = 14;
+        terminal = 14;
       };
     };
   };

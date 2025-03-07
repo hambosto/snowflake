@@ -14,12 +14,6 @@
         enable = true;
         autohint = true;
       };
-      defaultFonts = {
-        monospace = [ "JetBrainsMono Nerd Font" ];
-        sansSerif = [ "Noto Sans" ];
-        serif = [ "Noto Serif" ];
-        emoji = [ "Noto Color Emoji" ];
-      };
     };
   };
 }

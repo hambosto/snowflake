@@ -13,7 +13,7 @@
       background-opacity = lib.mkForce 0.4;
       background-blur = 5;
       font-family = "ComicShannsMono Nerd Font";
-      font-size = 12;
+      font-size = lib.mkForce 13;
       window-width = 950;
       window-height = 500;
       cursor-style-blink = true;
