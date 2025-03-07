@@ -8,9 +8,6 @@
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     nvf.url = "github:notashelf/nvf";
     nixcord.url = "github:kaylorben/nixcord";
-    apple-fonts.url = "github:Lyndeno/apple-fonts.nix";
-    # ghostty.url = "github:ghostty-org/ghostty";
-    # yazi.url = "github:sxyazi/yazi";
 
     home-manager = {
       url = "github:nix-community/home-manager";

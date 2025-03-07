@@ -1,6 +1,5 @@
 {
   pkgs,
-  # inputs,
   ...
 }:
 let
@@ -14,7 +13,6 @@ in
 {
   programs.yazi = {
     enable = true;
-    # package = inputs.yazi.packages.x86_64-linux.default;
     enableZshIntegration = true;
 
     plugins = {

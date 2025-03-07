@@ -1,12 +1,10 @@
 {
   lib,
-  # inputs,
   ...
 }:
 {
   programs.ghostty = {
     enable = true;
-    # package = inputs.ghostty.packages.x86_64-linux.default;
     enableZshIntegration = true;
     enableBashIntegration = true;
     settings = {
