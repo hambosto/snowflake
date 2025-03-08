@@ -32,8 +32,8 @@
 
     fonts = {
       monospace = {
-        package = pkgs.noto-fonts-cjk-sans;
-        name = "Noto Sans Mono CJK JP";
+        package = pkgs.nerd-fonts.jetbrains-mono;
+        name = "JetBrainsMono Nerd Font";
       };
       serif = {
         package = pkgs.noto-fonts-cjk-serif;
