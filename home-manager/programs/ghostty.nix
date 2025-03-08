@@ -5,8 +5,7 @@
 {
   programs.ghostty = {
     enable = true;
-    enableZshIntegration = true;
-    enableBashIntegration = true;
+    enableFishIntegration = true;
     settings = {
       background-opacity = lib.mkForce 0.4;
       background-blur = 5;

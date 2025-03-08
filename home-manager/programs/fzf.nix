@@ -6,7 +6,7 @@
 {
   programs.fzf = {
     enable = true;
-    enableZshIntegration = true;
+    enableFishIntegration = true;
     colors = lib.mkForce {
       "fg+" = "#${config.lib.stylix.colors.base0D}";
       "bg+" = "-1";

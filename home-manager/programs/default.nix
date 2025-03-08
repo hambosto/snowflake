@@ -8,6 +8,7 @@
     ./chromium.nix
     ./eza.nix
     ./fastfetch.nix
+    ./fish.nix
     ./fzf.nix
     ./gemini-commit.nix
     ./ghostty.nix
@@ -27,6 +28,5 @@
     ./yazi.nix
     ./zed-editor.nix
     ./zoxide.nix
-    ./zsh.nix
   ];
 }

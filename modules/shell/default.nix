@@ -1,5 +1,11 @@
 { pkgs, ... }:
 {
-  programs.zsh.enable = true;
-  users.defaultUserShell = pkgs.zsh;
+  programs.fish = {
+    enable = true;
+    vendor = {
+      completions.enable = true;
+      config.enable = true;
+    };
+  };
+  users.defaultUserShell = pkgs.fish;
 }

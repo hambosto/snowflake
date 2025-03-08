@@ -13,7 +13,7 @@ in
 {
   programs.yazi = {
     enable = true;
-    enableZshIntegration = true;
+    enableFishIntegration = true;
 
     plugins = {
       chmod = "${yazi-plugins}/chmod.yazi";
