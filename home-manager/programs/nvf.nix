@@ -1,14 +1,15 @@
 {
   inputs,
   pkgs,
+  lib,
   ...
 }:
 {
   imports = [ inputs.nvf.homeManagerModules.default ];
 
   programs.nvf = {
-    enable = false;
-    settings = {
+    enable = true;
+    settings = lib.mkForce {
       vim = {
         viAlias = true;
         vimAlias = true;
@@ -82,8 +83,8 @@
             close = "<C-e>";
             complete = "<C-Space>";
             confirm = "<CR>";
-            next = "<Down>";
-            previous = "<Up>";
+            next = "<Tab>";
+            previous = "<S-Tab>";
             scrollDocsDown = "<C-f>";
             scrollDocsUp = "<C-d>";
           };
@@ -172,10 +173,12 @@
           enable = true;
           name = "gruvbox";
           style = "dark";
-          transparent = true;
+          transparent = false;
         };
 
         treesitter.context.enable = true;
+        treesitter.highlight.enable = true;
+        treesitter.indent.enable = true;
 
         ui = {
           noice.enable = true;
