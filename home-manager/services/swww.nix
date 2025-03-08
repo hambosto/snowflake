@@ -28,7 +28,7 @@ in
       Install.WantedBy = [ "swww.service" ];
       Service = {
         ExecStart = "${pkgs.swww}/bin/swww img ${selected_wallpaper} --transition-type random";
-        ExecStartPre = "${pkgs.coreutils}/bin/sleep 1";
+        # ExecStartPre = "${pkgs.coreutils}/bin/sleep 1";
         Restart = "on-failure";
         Type = "oneshot";
       };
