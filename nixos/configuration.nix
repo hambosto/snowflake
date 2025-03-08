@@ -5,7 +5,7 @@
     ./environment
     ./fonts
     ./hardware
-    ../hardware-configuration
+    ../hardware
     ./i18n
     ./networking
     ./nix

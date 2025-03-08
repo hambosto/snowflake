@@ -45,7 +45,7 @@
           inherit fullname;
         };
         modules = [
-          ./modules/configuration.nix
+          ./nixos/configuration.nix
           inputs.stylix.nixosModules.stylix
           inputs.home-manager.nixosModules.home-manager
           {

@@ -3,7 +3,7 @@
   ...
 }:
 let
-  selected_wallpaper = ../../img/default.png;
+  selected_wallpaper = ../../wallpapers/default.png;
 in
 {
   programs.hyprlock = {

@@ -5,10 +5,44 @@
 {
   programs.fish = {
     enable = true;
-    shellInit = ''
-      set fish_greeting
+    interactiveShellInit = ''
+      set fish_greeting # Disable greeting
       ${pkgs.fastfetch}/bin/fastfetch
     '';
+    plugins = [
+      {
+        name = "grc";
+        src = pkgs.fishPlugins.grc.src;
+      }
+      {
+        name = "z";
+        src = pkgs.fishPlugins.z.src;
+      }
+      {
+        name = "sponge";
+        src = pkgs.fishPlugins.sponge.src;
+      }
+      {
+        name = "plugin-git";
+        src = pkgs.fishPlugins.plugin-git.src;
+      }
+      {
+        name = "fzf-fish";
+        src = pkgs.fishPlugins.fzf-fish.src;
+      }
+      {
+        name = "done";
+        src = pkgs.fishPlugins.done.src;
+      }
+      {
+        name = "autopair";
+        src = pkgs.fishPlugins.autopair.src;
+      }
+      {
+        name = "hydro";
+        src = pkgs.fishPlugins.hydro.src;
+      }
+    ];
     shellAliases = {
       cd = "z";
       cat = "bat --paging=never";
@@ -18,4 +52,5 @@
       tree = "eza --icons=always --tree --no-quotes";
     };
   };
+  home.packages = [ pkgs.grc ];
 }
