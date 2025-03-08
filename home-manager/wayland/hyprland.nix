@@ -160,7 +160,7 @@
         "$mainMod, M, exec, ${pkgs.ghostty}/bin/ghostty -e ${pkgs.btop}/bin/btop"
         "$mainMod, L, exec, ${pkgs.hyprlock}/bin/hyprlock"
         "$mainMod, B, exec, ${pkgs.chromium}/bin/chromium"
-        "$mainMod, SPACE, exec, launcher"
+        "$mainMod, SPACE, exec, menu"
 
         # Window management
         "$mainMod, Q, killactive"

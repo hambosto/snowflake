@@ -1,7 +1,7 @@
 {
   imports = [
     ./hyprland.nix
-    ./launcher.nix
+    ./menu.nix
     ./nixctl.nix
     ./screenshot.nix
   ];

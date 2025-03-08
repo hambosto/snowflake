@@ -101,12 +101,12 @@ in
       menus.dashboard.shortcuts.left.shortcut2.icon = "";
       menus.dashboard.shortcuts.left.shortcut2.command = "${pkgs.ghostty}/bin/ghostty";
       menus.dashboard.shortcuts.left.shortcut2.tooltip = "Terminal";
-      menus.dashboard.shortcuts.left.shortcut3.icon = "";
-      menus.dashboard.shortcuts.left.shortcut3.command = "spotify";
-      menus.dashboard.shortcuts.left.shortcut3.tooltip = "Spotify";
-      menus.dashboard.shortcuts.left.shortcut4.icon = "󱓞";
-      menus.dashboard.shortcuts.left.shortcut4.command = "launcher";
-      menus.dashboard.shortcuts.left.shortcut4.tooltip = "Apps Launcher";
+      menus.dashboard.shortcuts.left.shortcut3.icon = "";
+      menus.dashboard.shortcuts.left.shortcut3.command = "vesktop";
+      menus.dashboard.shortcuts.left.shortcut3.tooltip = "Discord";
+      menus.dashboard.shortcuts.left.shortcut4.icon = "";
+      menus.dashboard.shortcuts.left.shortcut4.command = "menu";
+      menus.dashboard.shortcuts.left.shortcut4.tooltip = "Search Apps";
       menus.dashboard.shortcuts.right.shortcut1.icon = "";
       menus.dashboard.shortcuts.right.shortcut1.command =
         "${pkgs.ghostty}/bin/ghostty -e ${pkgs.btop}/bin/btop";
