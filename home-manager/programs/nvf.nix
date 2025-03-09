@@ -171,9 +171,9 @@
 
         theme = {
           enable = true;
-          name = "gruvbox";
-          style = "dark";
-          transparent = false;
+          name = "catppuccin";
+          style = "mocha";
+          transparent = true;
         };
 
         treesitter.context.enable = true;

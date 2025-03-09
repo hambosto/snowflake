@@ -13,7 +13,7 @@
     settings = {
       "$mainMod" = "SUPER";
 
-      monitor = [ ",preferred,auto,1" ];
+      monitor = [ ", preferred, auto, 1, bitdepth, 10" ];
 
       env = [
         "XDG_CURRENT_DESKTOP,Hyprland"

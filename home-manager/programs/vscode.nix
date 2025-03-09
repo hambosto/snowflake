@@ -12,7 +12,7 @@
         "editor.fontSize" = 14;
         "editor.fontFamily" = "Fira Code";
         "editor.fontLigatures" = true;
-        "editor.fontWeight" = "600";
+        "editor.fontWeight" = "500";
         "editor.formatOnSave" = true;
         "editor.minimap.enabled" = false;
         "editor.cursorBlinking" = "expand";
