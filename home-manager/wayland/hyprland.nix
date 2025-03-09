@@ -155,9 +155,9 @@
       # Key bindings
       bind = [
         # Application launchers
-        "$mainMod, RETURN, exec, ${pkgs.ghostty}/bin/ghostty"
-        "$mainMod, E, exec, ${pkgs.ghostty}/bin/ghostty -e ${pkgs.yazi}/bin/yazi"
-        "$mainMod, M, exec, ${pkgs.ghostty}/bin/ghostty -e ${pkgs.btop}/bin/btop"
+        "$mainMod, RETURN, exec, ${pkgs.kitty}/bin/kitty"
+        "$mainMod, E, exec, ${pkgs.kitty}/bin/kitty -e ${pkgs.yazi}/bin/yazi"
+        "$mainMod, M, exec, ${pkgs.kitty}/bin/kitty -e ${pkgs.btop}/bin/btop"
         "$mainMod, L, exec, ${pkgs.hyprlock}/bin/hyprlock"
         "$mainMod, B, exec, ${pkgs.chromium}/bin/chromium"
         "$mainMod, SPACE, exec, menu"

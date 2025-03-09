@@ -4,12 +4,12 @@
 }:
 {
   programs.ghostty = {
-    enable = true;
+    enable = false;
     enableFishIntegration = true;
     settings = {
       background-opacity = lib.mkForce 0.4;
       background-blur = 5;
-      font-family = "ComicShannsMono Nerd Font";
+      font-family = "Fira Code";
       font-size = lib.mkForce 13;
       window-width = 950;
       window-height = 500;

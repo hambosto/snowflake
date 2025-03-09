@@ -99,7 +99,7 @@ in
       menus.dashboard.shortcuts.left.shortcut1.command = "chromium";
       menus.dashboard.shortcuts.left.shortcut1.tooltip = "Chromium";
       menus.dashboard.shortcuts.left.shortcut2.icon = "";
-      menus.dashboard.shortcuts.left.shortcut2.command = "${pkgs.ghostty}/bin/ghostty";
+      menus.dashboard.shortcuts.left.shortcut2.command = "${pkgs.kitty}/bin/kitty";
       menus.dashboard.shortcuts.left.shortcut2.tooltip = "Terminal";
       menus.dashboard.shortcuts.left.shortcut3.icon = "";
       menus.dashboard.shortcuts.left.shortcut3.command = "vesktop";
@@ -109,29 +109,29 @@ in
       menus.dashboard.shortcuts.left.shortcut4.tooltip = "Search Apps";
       menus.dashboard.shortcuts.right.shortcut1.icon = "";
       menus.dashboard.shortcuts.right.shortcut1.command =
-        "${pkgs.ghostty}/bin/ghostty -e ${pkgs.btop}/bin/btop";
+        "${pkgs.kitty}/bin/kitty -e ${pkgs.btop}/bin/btop";
       menus.dashboard.shortcuts.right.shortcut1.tooltip = "Resource Monitor";
       menus.dashboard.shortcuts.right.shortcut3.icon = "󰨞";
       menus.dashboard.shortcuts.right.shortcut3.command = "code";
       menus.dashboard.shortcuts.right.shortcut3.tooltip = "Visual Studio Code";
       menus.dashboard.directories.left.directory1.label = "󰉍 Downloads";
       menus.dashboard.directories.left.directory1.command =
-        "${pkgs.ghostty}/bin/ghostty -e ${pkgs.yazi}/bin/yazi $HOME/Downloads";
+        "${pkgs.kitty}/bin/kitty -e ${pkgs.yazi}/bin/yazi $HOME/Downloads";
       menus.dashboard.directories.left.directory2.label = "󰉏 Pictures";
       menus.dashboard.directories.left.directory2.command =
-        "${pkgs.ghostty}/bin/ghostty -e ${pkgs.yazi}/bin/yazi $HOME/Pictures";
+        "${pkgs.kitty}/bin/kitty -e ${pkgs.yazi}/bin/yazi $HOME/Pictures";
       menus.dashboard.directories.left.directory3.label = "󱧶 Documents";
       menus.dashboard.directories.left.directory3.command =
-        "${pkgs.ghostty}/bin/ghostty -e ${pkgs.yazi}/bin/yazi $HOME/Documents";
+        "${pkgs.kitty}/bin/kitty -e ${pkgs.yazi}/bin/yazi $HOME/Documents";
       menus.dashboard.directories.right.directory1.label = "󱂵 Home";
       menus.dashboard.directories.right.directory1.command =
-        "${pkgs.ghostty}/bin/ghostty -e ${pkgs.yazi}/bin/yazi $HOME";
+        "${pkgs.kitty}/bin/kitty -e ${pkgs.yazi}/bin/yazi $HOME";
       menus.dashboard.directories.right.directory2.label = "󰚝 Projects";
       menus.dashboard.directories.right.directory2.command =
-        "${pkgs.ghostty}/bin/ghostty -e ${pkgs.yazi}/bin/yazi $HOME/dev";
+        "${pkgs.kitty}/bin/kitty -e ${pkgs.yazi}/bin/yazi $HOME/dev";
       menus.dashboard.directories.right.directory3.label = " Config";
       menus.dashboard.directories.right.directory3.command =
-        "${pkgs.ghostty}/bin/ghostty -e ${pkgs.yazi}/bin/yazi $HOME/.config";
+        "${pkgs.kitty}/bin/kitty -e ${pkgs.yazi}/bin/yazi $HOME/.config";
       menus.power.lowBatteryNotification = true;
       menus.power.lowBatteryThreshold = 20;
       theme.bar.menus.monochrome = false;

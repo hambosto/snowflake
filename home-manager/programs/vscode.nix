@@ -10,9 +10,9 @@
     profiles.default = {
       userSettings = {
         "editor.fontSize" = 14;
-        "editor.fontFamily" = "ComicShannsMono Nerd Font";
+        "editor.fontFamily" = "Fira Code";
         "editor.fontLigatures" = true;
-        "editor.fontWeight" = "800";
+        "editor.fontWeight" = "600";
         "editor.formatOnSave" = true;
         "editor.minimap.enabled" = false;
         "editor.cursorBlinking" = "expand";
@@ -43,7 +43,7 @@
         "breadcrumbs.enabled" = false;
         "material-icon-theme.hidesExplorerArrows" = true;
         "terminal.integrated.fontSize" = 14;
-        "terminal.integrated.fontFamily" = "ComicShannsMono Nerd Font";
+        "terminal.integrated.fontFamily" = "Fira Code";
         "telemetry.telemetryLevel" = "off";
         "window.menuBarVisibility" = "toggle";
         "window.titleBarStyle" = "native";
