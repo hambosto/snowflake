@@ -23,6 +23,7 @@
     ./obs-studio.nix
     ./oh-my-posh.nix
     ./rust.nix
+    ./starship.nix
     ./spicetify.nix
     ./vscode.nix
     ./yazi.nix

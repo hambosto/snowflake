@@ -29,11 +29,11 @@
         "os"
         "kernel"
         "cpu"
+        "gpu"
         "memory"
-        "disk"
         {
-          "type" = "localip";
-          "format" = "{ipv4} ({ifname})";
+          "type" = "disk";
+          "format" = "{size-used} / {size-total} ({size-percentage})";
         }
         "uptime"
         "shell"
