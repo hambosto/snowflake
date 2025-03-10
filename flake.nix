@@ -8,6 +8,7 @@
     spicetify-nix.url = "github:Gerg-L/spicetify-nix";
     nvf.url = "github:notashelf/nvf";
     nixcord.url = "github:kaylorben/nixcord";
+    go-encryption.url = "github:hambosto/go-encryption";
 
     home-manager = {
       url = "github:nix-community/home-manager";

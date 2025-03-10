@@ -1,6 +1,6 @@
 {
   programs.oh-my-posh = {
-    enable = true;
+    enable = false;
     settings = {
       version = 2;
       final_space = true;
