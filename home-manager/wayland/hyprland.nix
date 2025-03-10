@@ -39,7 +39,6 @@
         "ELECTRON_OZONE_PLATFORM_HINT,wayland"
       ];
 
-      # Window management and layout
       general = {
         gaps_in = 1;
         gaps_out = 1;
@@ -48,7 +47,6 @@
         layout = "dwindle";
       };
 
-      # Visual effects and animations
       animations = {
         enabled = true;
         bezier = [
@@ -69,7 +67,6 @@
         ];
       };
 
-      # Window decorations and effects
       decoration = {
         active_opacity = 1;
         inactive_opacity = 1;
@@ -96,7 +93,6 @@
         };
       };
 
-      # Input device configuration
       input = {
         kb_layout = "us";
         kb_variant = "";
@@ -116,14 +112,12 @@
         };
       };
 
-      # Miscellaneous settings
       misc = {
         disable_hyprland_logo = true;
         disable_splash_rendering = true;
         initial_workspace_tracking = 1;
       };
 
-      # Window and layer rules
       windowrulev2 = [
         "float, title:^(Picture-in-Picture)$"
         "pin, title:^(Picture-in-Picture)$"
@@ -135,7 +129,6 @@
         "move 100%-w-16 66,class:(org.nickvision.cavalier)"
       ];
 
-      # Gesture and cursor settings
       gestures = {
         workspace_swipe = true;
         workspace_swipe_fingers = 3;
@@ -152,9 +145,7 @@
         preserve_split = true;
       };
 
-      # Key bindings
       bind = [
-        # Application launchers
         "$mainMod, RETURN, exec, ${pkgs.kitty}/bin/kitty"
         "$mainMod, E, exec, ${pkgs.kitty}/bin/kitty -e ${pkgs.yazi}/bin/yazi"
         "$mainMod, M, exec, ${pkgs.kitty}/bin/kitty -e ${pkgs.btop}/bin/btop"
@@ -162,26 +153,21 @@
         "$mainMod, B, exec, ${pkgs.chromium}/bin/chromium"
         "$mainMod, SPACE, exec, menu"
 
-        # Window management
         "$mainMod, Q, killactive"
         "$mainMod, T, togglefloating"
         "$mainMod, F, fullscreen"
 
-        # Window focus
         "$mainMod, left, movefocus, l"
         "$mainMod, right, movefocus, r"
         "$mainMod, up, movefocus, u"
         "$mainMod, down, movefocus, d"
 
-        # Screenshot controls
         ",PRINT, exec, screenshot selection"
         "$mainMod, PRINT, exec, screenshot active"
         "SHIFT, PRINT, exec, screenshot everything"
 
-        # Close active windows
         "$mainMod SHIFT, Q, exec, hyprctl activewindow | grep pid | tr -d 'pid:' | xargs kill"
 
-        # Workspace management
         "$mainMod, 1, workspace, 1"
         "$mainMod, 2, workspace, 2"
         "$mainMod, 3, workspace, 3"
@@ -218,16 +204,13 @@
 
       ];
 
-      # Mouse bindings
       bindm = [
         "$mainMod,mouse:272, movewindow"
         "$mainMod,mouse:273, resizewindow"
       ];
 
-      # Hardware event bindings
       bindl = [ ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle" ];
 
-      # Volume and brightness controls
       bindle = [
         ",XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
         ",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"

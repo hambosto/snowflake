@@ -1,5 +1,4 @@
 {
-  inputs,
   lib,
   pkgs,
   ...
@@ -8,7 +7,6 @@
   stylix.targets.helix.enable = false;
   programs.helix = {
     enable = true;
-    package = inputs.helix-editor.packages.x86_64-linux.default;
     defaultEditor = true;
     settings = {
       theme = "tokyonight";
