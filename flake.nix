@@ -9,6 +9,7 @@
     nvf.url = "github:notashelf/nvf";
     nixcord.url = "github:kaylorben/nixcord";
     go-encryption.url = "github:hambosto/go-encryption";
+    helix-editor.url = "github:helix-editor/helix";
 
     home-manager = {
       url = "github:nix-community/home-manager";

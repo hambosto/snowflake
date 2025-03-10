@@ -15,6 +15,7 @@
     ./git.nix
     ./go-encryption.nix
     ./go.nix
+    ./helix.nix
     ./kitty.nix
     ./lazygit.nix
     ./nh.nix

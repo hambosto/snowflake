@@ -4,7 +4,7 @@
     overlays = [
       inputs.nix-vscode-extensions.overlays.default
       inputs.rust-overlay.overlays.default
-      # inputs.yazi.overlays.default
+      inputs.helix-editor.overlays.default
     ];
     config = {
       allowBroken = true;
