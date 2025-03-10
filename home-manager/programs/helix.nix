@@ -82,26 +82,28 @@
     };
     languages = {
       language-server = {
-        nixd.command = lib.meta.getExe pkgs.nixd;
-        nil.command = lib.meta.getExe pkgs.nil;
-        gopls.command = lib.meta.getExe pkgs.gopls;
+        nixd.command = lib.getExe pkgs.nixd;
+        gopls.command = lib.getExe pkgs.gopls;
+        # rust-analyzer.command = lib.getExe pkgs.rust-analyzer;
       };
       language = [
         {
           name = "nix";
           language-servers = [ "nixd" ];
           auto-format = true;
-          formatter.command = "${lib.meta.getExe pkgs.nixfmt-rfc-style}";
+          formatter.command = lib.getExe pkgs.nixfmt-rfc-style;
         }
         {
           name = "go";
           language-servers = [ "gopls" ];
           auto-format = true;
-          formatter.command = "${lib.meta.getExe pkgs.gosimports}";
+          formatter.command = lib.getExe pkgs.gosimports;
         }
-        {
-          name = "rust";
-        }
+        # {
+        #   name = "rust";
+        #   auto-format = true;
+        #   formatter.command = lib.getExe pkgs.rustfmt;
+        # }
       ];
     };
   };
