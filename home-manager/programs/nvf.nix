@@ -8,7 +8,7 @@
   imports = [ inputs.nvf.homeManagerModules.default ];
 
   programs.nvf = {
-    enable = true;
+    enable = false;
     settings = lib.mkForce {
       vim = {
         viAlias = true;
