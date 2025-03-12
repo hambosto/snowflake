@@ -8,5 +8,6 @@
     ./scripts
     ./services
     ./wayland
+    ./xdg
   ];
 }
