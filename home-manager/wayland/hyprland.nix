@@ -127,6 +127,7 @@
         "pin, class:(org.nickvision.cavalier)"
         "size 400 726,class:(org.nickvision.cavalier)"
         "move 100%-w-16 66,class:(org.nickvision.cavalier)"
+
       ];
 
       gestures = {

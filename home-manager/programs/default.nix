@@ -27,6 +27,7 @@
     ./starship.nix
     ./spicetify.nix
     ./vscode.nix
+    ./wallpaper-manager.nix
     ./yazi.nix
     ./zed-editor.nix
     ./zoxide.nix

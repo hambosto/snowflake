@@ -4,12 +4,27 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     hyprland.url = "github:hyprwm/Hyprland";
-    stylix.url = "github:danth/stylix";
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
-    nvf.url = "github:notashelf/nvf";
-    nixcord.url = "github:kaylorben/nixcord";
-    go-encryption.url = "github:hambosto/go-encryption";
-
+    wallpaper-manager.url = "github:hambosto/wallpaper-manager";
+    stylix = {
+      url = "github:danth/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nvf = {
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nixcord = {
+      url = "github:kaylorben/nixcord";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    go-encryption = {
+      url = "github:hambosto/go-encryption";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";

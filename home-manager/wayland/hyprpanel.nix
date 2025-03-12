@@ -49,7 +49,7 @@ in
       theme.bar.outer_spacing = "0px";
       theme.bar.buttons.y_margins = "0px";
       theme.bar.buttons.spacing = "0.1em";
-      theme.bar.buttons.radius = "20px";
+      theme.bar.buttons.radius = "13px";
       theme.bar.scaling = 85;
       theme.bar.floating = true;
       theme.bar.buttons.padding_x = "0.8rem";
