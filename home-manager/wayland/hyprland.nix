@@ -129,6 +129,7 @@
         "move 100%-w-16 66,class:(org.nickvision.cavalier)"
 
         "float,class:Wallpaper Manager"
+        "float,class:About Wallpaper Manager"
       ];
 
       gestures = {
