@@ -1410,11 +1410,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1741809406,
+        "lastModified": 1741814759,
         "narHash": "sha256-doF81aE7ZqEcp8TQLYuh2ixY9DrpI7Oxf7syRfmsrx0=",
         "owner": "hambosto",
         "repo": "wallpaper-manager",
-        "rev": "c46ae3aa1c64d7df181a24fdbec40a54803853bb",
+        "rev": "8128e7a03da950cbeaa8226747aa292dc729d3f3",
         "type": "github"
       },
       "original": {

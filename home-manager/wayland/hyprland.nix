@@ -128,6 +128,7 @@
         "size 400 726,class:(org.nickvision.cavalier)"
         "move 100%-w-16 66,class:(org.nickvision.cavalier)"
 
+        "float,class:Wallpaper Manager"
       ];
 
       gestures = {
@@ -154,6 +155,8 @@
         "$mainMod, B, exec, ${pkgs.chromium}/bin/chromium"
         "$mainMod, SPACE, exec, menu"
 
+        "$mainMod SHIFT, W, exec, wallpaper-manager"
+
         "$mainMod, Q, killactive"
         "$mainMod, T, togglefloating"
         "$mainMod, F, fullscreen"
@@ -166,8 +169,6 @@
         ",PRINT, exec, screenshot selection"
         "$mainMod, PRINT, exec, screenshot active"
         "SHIFT, PRINT, exec, screenshot everything"
-
-        "$mainMod SHIFT, Q, exec, hyprctl activewindow | grep pid | tr -d 'pid:' | xargs kill"
 
         "$mainMod, 1, workspace, 1"
         "$mainMod, 2, workspace, 2"
