@@ -10,39 +10,39 @@ let
     {
       icon = "󰑓";
       name = "Rebuild";
-      command = "nixctl rebuild";
+      command = "toolbox rebuild";
     }
     {
       icon = "󰦗";
       name = "Upgrade";
-      command = "nixctl upgrade";
+      command = "toolbox upgrade";
     }
     {
       icon = "󰚰";
       name = "Update";
-      command = "nixctl update";
+      command = "toolbox update";
     }
     {
       icon = "";
       name = "Optimise Nix Store";
-      command = "nixctl optimise";
+      command = "toolbox optimise";
     }
     {
       icon = "";
       name = "Collect Garbage";
-      command = "nixctl gc";
+      command = "toolbox gc";
     }
     {
       icon = "󰍜";
       name = "Clean Boot Menu";
-      command = "nixctl cb";
+      command = "toolbox cb";
     }
   ];
   menuItemsString = builtins.concatStringsSep "\n" (
     map (item: "${if item.icon == "" then "󰘳" else item.icon};${item.name};${item.command}") menuItems
   );
 
-  nixctl = pkgs.writeShellScriptBin "nixctl" ''
+  toolbox = pkgs.writeShellScriptBin "toolbox" ''
     function exec() {
       $@
     }
@@ -85,7 +85,7 @@ let
 
     function loop_mode() {
       while true; do
-        nixctl
+        toolbox
         echo "Press enter to continue, e to exit"
         read -n 1 REPLY
         clear
@@ -127,5 +127,5 @@ let
   '';
 in
 {
-  home.packages = [ nixctl ];
+  home.packages = [ toolbox ];
 }
