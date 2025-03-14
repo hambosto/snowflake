@@ -34,7 +34,26 @@ in
             "hyprsunset"
             "volume"
             "battery"
-            # "bluetooth" enable this when is needed.
+            "network"
+            "clock"
+            "notifications"
+          ];
+        };
+        "1" = {
+          left = [
+            "dashboard"
+            "workspaces"
+            "windowtitle"
+          ];
+          middle = [
+            "media"
+          ];
+          right = [
+            "systray"
+            "cava"
+            "hyprsunset"
+            "volume"
+            "battery"
             "network"
             "clock"
             "notifications"
