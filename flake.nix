@@ -4,7 +4,7 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     hyprland.url = "github:hyprwm/Hyprland";
-    wallpaper-manager.url = "github:hambosto/wallpaper-manager/1e4d7673dd8337b0457e4208c20d999c70868708";
+    wallpaper-manager.url = "github:hambosto/wallpaper-manager";
     stylix = {
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
