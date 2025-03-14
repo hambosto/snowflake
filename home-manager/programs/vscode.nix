@@ -25,7 +25,7 @@
         # "workbench.colorTheme" = "Mana Lord's Moon Light Theme";
 
         "workbench.colorTheme" = "Tokyo Night";
-        "workbench.iconTheme" = "material-icon-theme";
+        "workbench.iconTheme" = "symbols";
         "workbench.activityBar.location" = "hidden";
         "workbench.editor.showTabs" = "single";
         "workbench.statusBar.visible" = false;
@@ -42,7 +42,7 @@
         "explorer.decorations.badges" = false;
         "git.decorations.enabled" = false;
         "breadcrumbs.enabled" = false;
-        "material-icon-theme.hidesExplorerArrows" = true;
+
         "terminal.integrated.fontSize" = 14;
         "terminal.integrated.fontFamily" = "Fira Code";
         "telemetry.telemetryLevel" = "off";
@@ -82,11 +82,10 @@
       extensions = with pkgs.vscode-marketplace; [
         # manalord.mana-lord-theme
         enkia.tokyo-night
-        miguelsolorio.fluent-icons
         golang.go
         jnoortheen.nix-ide
         supermaven.supermaven
-        pkief.material-icon-theme
+        miguelsolorio.symbols
         # rust-lang.rust-analyzer
         # tamasfe.even-better-toml
         # fill-labs.dependi
