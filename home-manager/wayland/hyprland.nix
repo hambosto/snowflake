@@ -1,4 +1,6 @@
 {
+  config,
+  lib,
   pkgs,
   inputs,
   ...
@@ -42,9 +44,13 @@
       general = {
         gaps_in = 1;
         gaps_out = 1;
-        border_size = 2;
+        border_size = 3;
         resize_on_border = true;
         layout = "dwindle";
+        "col.active_border" =
+          lib.mkForce "rgb(${config.lib.stylix.colors.base08}) rgb(${config.lib.stylix.colors.base09}) rgb(${config.lib.stylix.colors.base0A}) rgb(${config.lib.stylix.colors.base0B}) rgb(${config.lib.stylix.colors.base0C}) rgb(${config.lib.stylix.colors.base0D}) 270deg";
+        "col.inactive_border" =
+          lib.mkForce "rgb(${config.lib.stylix.colors.base08}) rgb(${config.lib.stylix.colors.base09}) rgb(${config.lib.stylix.colors.base0A}) rgb(${config.lib.stylix.colors.base0B}) rgb(${config.lib.stylix.colors.base0C}) rgb(${config.lib.stylix.colors.base0D}) 270deg";
       };
 
       animations = {

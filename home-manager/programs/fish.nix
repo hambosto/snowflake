@@ -11,10 +11,6 @@
     '';
     plugins = [
       {
-        name = "grc";
-        src = pkgs.fishPlugins.grc.src;
-      }
-      {
         name = "z";
         src = pkgs.fishPlugins.z.src;
       }
@@ -51,7 +47,7 @@
       lt = "eza -a --tree --level=1 --icons=always";
       tree = "eza --icons=always --tree --no-quotes";
       config = "hx ~/.config/snowflake";
+      nos = "nh os switch";
     };
   };
-  home.packages = [ pkgs.grc ];
 }
