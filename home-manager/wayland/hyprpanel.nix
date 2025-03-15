@@ -71,7 +71,7 @@ in
       theme.bar.buttons.spacing = "0.1em";
       theme.bar.buttons.radius = "13px";
       theme.bar.scaling = 85;
-      theme.bar.floating = true;
+      theme.bar.floating = false;
       theme.bar.buttons.padding_x = "0.8rem";
       theme.bar.buttons.padding_y = "0.4rem";
       theme.bar.margin_top = "2";
