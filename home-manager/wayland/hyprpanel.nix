@@ -85,7 +85,7 @@ in
       bar.workspaces.workspaces = 5;
       bar.workspaces.monitorSpecific = false;
       bar.workspaces.numbered_active_indicator = "color";
-      bar.workspaces.applicationIconEmptyWorkspace = "";
+      bar.workspaces.applicationIconEmptyWorkspace = "󱙝";
       bar.workspaces.showApplicationIcons = true;
       bar.workspaces.showWsIcons = true;
       bar.windowtitle.label = true;
