@@ -1,3 +1,6 @@
 {
-  imports = [ ./podman.nix ];
+  imports = [
+    ./docker.nix
+    ./podman.nix
+  ];
 }
