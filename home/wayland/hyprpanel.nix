@@ -7,7 +7,7 @@
   ...
 }:
 let
-  profile_picture = ../../assets/default-wallpaper.png;
+  profile_picture = ../../assets/profile-picture.png;
 in
 {
   imports = [ inputs.hyprpanel.homeManagerModules.hyprpanel ];
