@@ -34,9 +34,9 @@ in
       };
       manager = {
         show_hidden = true;
-        sort_by = "mtime";
+        sort_by = "natural";
         sort_dir_first = true;
-        sort_reverse = true;
+        sort_reverse = false;
       };
     };
 

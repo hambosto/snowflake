@@ -1,7 +1,7 @@
 {
   imports = [
     ./boot
-    ./documentation
+    ./docs
     ./environment
     ./fonts
     ./hardware
