@@ -1,8 +1,18 @@
 {
+  config,
   inputs,
+  lib,
   pkgs,
   ...
 }:
+let
+  color08 = config.lib.stylix.colors.base08;
+  color09 = config.lib.stylix.colors.base09;
+  color0A = config.lib.stylix.colors.base0A;
+  color0B = config.lib.stylix.colors.base0B;
+  color0C = config.lib.stylix.colors.base0C;
+  color0D = config.lib.stylix.colors.base0D;
+in
 {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -42,11 +52,11 @@
       general = {
         gaps_in = 1;
         gaps_out = 1;
-        border_size = 0;
+        border_size = 2;
         resize_on_border = true;
         layout = "dwindle";
-        # "col.active_border" = lib.mkForce "rgb(${config.lib.stylix.colors.base08}) rgb(${config.lib.stylix.colors.base09}) rgb(${config.lib.stylix.colors.base0A}) rgb(${config.lib.stylix.colors.base0B}) rgb(${config.lib.stylix.colors.base0C}) rgb(${config.lib.stylix.colors.base0D}) 270deg";
-        # "col.inactive_border" = lib.mkForce "rgb(${config.lib.stylix.colors.base08}) rgb(${config.lib.stylix.colors.base09}) rgb(${config.lib.stylix.colors.base0A}) rgb(${config.lib.stylix.colors.base0B}) rgb(${config.lib.stylix.colors.base0C}) rgb(${config.lib.stylix.colors.base0D}) 270deg";
+        "col.active_border" =
+          lib.mkForce "rgb(${color08}) rgb(${color09}) rgb(${color0A}) rgb(${color0B}) rgb(${color0C}) rgb(${color0D}) 270deg";
       };
 
       animations = {
@@ -151,11 +161,11 @@
       };
 
       bind = [
-        "$mainMod, RETURN, exec, ${pkgs.kitty}/bin/kitty"
-        "$mainMod, E, exec, ${pkgs.kitty}/bin/kitty -e ${pkgs.yazi}/bin/yazi"
-        "$mainMod, M, exec, ${pkgs.kitty}/bin/kitty -e ${pkgs.btop}/bin/btop"
-        "$mainMod, L, exec, ${pkgs.hyprlock}/bin/hyprlock"
-        "$mainMod, B, exec, ${pkgs.chromium}/bin/chromium"
+        "$mainMod, RETURN, exec, ${lib.getExe pkgs.kitty}"
+        "$mainMod, E, exec, ${lib.getExe pkgs.kitty} -e ${lib.getExe pkgs.yazi}"
+        "$mainMod, M, exec, ${lib.getExe pkgs.kitty} -e ${lib.getExe pkgs.btop}"
+        "$mainMod, L, exec, ${lib.getExe pkgs.hyprlock}"
+        "$mainMod, B, exec, ${lib.getExe pkgs.chromium}"
         "$mainMod, SPACE, exec, menu"
 
         "$mainMod SHIFT, W, exec, wallpaper-manager"
@@ -219,8 +229,8 @@
       bindle = [
         ",XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
         ",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-        ",XF86MonBrightnessUp, exec, ${pkgs.brightnessctl}/bin/brightnessctl set +5%"
-        ",XF86MonBrightnessDown, exec, ${pkgs.brightnessctl}/bin/brightnessctl set 5%-"
+        ",XF86MonBrightnessUp, exec, ${lib.getExe pkgs.brightnessctl} set +5%"
+        ",XF86MonBrightnessDown, exec, ${lib.getExe pkgs.brightnessctl} set 5%-"
       ];
     };
   };
