@@ -1,18 +1,9 @@
 {
-  config,
   inputs,
   lib,
   pkgs,
   ...
 }:
-let
-  color08 = config.lib.stylix.colors.base08;
-  color09 = config.lib.stylix.colors.base09;
-  color0A = config.lib.stylix.colors.base0A;
-  color0B = config.lib.stylix.colors.base0B;
-  color0C = config.lib.stylix.colors.base0C;
-  color0D = config.lib.stylix.colors.base0D;
-in
 {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -21,6 +12,7 @@ in
     package = inputs.hyprland.packages.x86_64-linux.hyprland;
 
     settings = {
+
       "$mainMod" = "SUPER";
 
       monitor = [ ", preferred, auto, 1, bitdepth, 10" ];
@@ -52,11 +44,9 @@ in
       general = {
         gaps_in = 1;
         gaps_out = 1;
-        border_size = 2;
+        border_size = 3;
         resize_on_border = true;
         layout = "dwindle";
-        "col.active_border" =
-          lib.mkForce "rgb(${color08}) rgb(${color09}) rgb(${color0A}) rgb(${color0B}) rgb(${color0C}) rgb(${color0D}) 270deg";
       };
 
       animations = {

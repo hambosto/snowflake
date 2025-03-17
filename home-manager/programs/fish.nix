@@ -1,14 +1,16 @@
 {
+  lib,
   pkgs,
   ...
 }:
 {
+  stylix.targets.fish.enable = false;
   programs.fish = {
-    enable = true;
     interactiveShellInit = ''
       set fish_greeting # Disable greeting
-      ${pkgs.fastfetch}/bin/fastfetch
+      ${lib.getExe pkgs.fastfetch}
     '';
+    enable = true;
     plugins = [
       {
         name = "z";
@@ -46,6 +48,7 @@
       ll = "eza -al --icons=always";
       lt = "eza -a --tree --level=1 --icons=always";
       tree = "eza --icons=always --tree --no-quotes";
+      ssh = "kitty +kitten ssh";
       config = "hx ~/.config/snowflake";
       nos = "nh os switch";
     };

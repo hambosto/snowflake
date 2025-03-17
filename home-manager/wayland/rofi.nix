@@ -27,15 +27,17 @@
       in
       lib.mkForce {
         "*" = {
-          bg-col = mkLiteral "#${config.lib.stylix.colors.base00}";
-          bg-col-light = mkLiteral "#${config.lib.stylix.colors.base01}";
-          border-col = mkLiteral "#${config.lib.stylix.colors.base01}";
-          selected-col = mkLiteral "#${config.lib.stylix.colors.base01}";
-          fg-col = mkLiteral "#${config.lib.stylix.colors.base05}";
-          fg-col2 = mkLiteral "#${config.lib.stylix.colors.base08}";
-          grey = mkLiteral "#${config.lib.stylix.colors.base03}";
-          blue = mkLiteral "#${config.lib.stylix.colors.base0D}";
-          accent = mkLiteral "#${config.lib.stylix.colors.base0D}";
+          background-primary = mkLiteral "#${config.lib.stylix.colors.base00}";
+          background-secondary = mkLiteral "#${config.lib.stylix.colors.base01}";
+          border-color = mkLiteral "#${config.lib.stylix.colors.base01}";
+          selected-background = mkLiteral "#${config.lib.stylix.colors.base01}";
+          foreground-primary = mkLiteral "#${config.lib.stylix.colors.base05}";
+          muted-foreground = mkLiteral "#${config.lib.stylix.colors.base03}";
+          highlight = mkLiteral "#${config.lib.stylix.colors.base0D}";
+          accent-color = mkLiteral "#${config.lib.stylix.colors.base0D}";
+        };
+
+        "*" = {
           width = mkLiteral "600";
           border-radius = mkLiteral "15px";
         };
@@ -48,12 +50,12 @@
         "window" = {
           height = mkLiteral "360px";
           border = mkLiteral "2px";
-          border-color = mkLiteral "@accent";
-          background-color = mkLiteral "@bg-col";
+          border-color = mkLiteral "@accent-color";
+          background-color = mkLiteral "@background-primary";
         };
 
         "mainbox" = {
-          background-color = mkLiteral "@bg-col";
+          background-color = mkLiteral "@background-primary";
         };
 
         "inputbar" = {
@@ -61,15 +63,15 @@
             "prompt"
             "entry"
           ];
-          background-color = mkLiteral "@bg-col";
+          background-color = mkLiteral "@background-primary";
           border-radius = mkLiteral "5px";
           padding = mkLiteral "2px";
         };
 
         "prompt" = {
-          background-color = mkLiteral "@blue";
+          background-color = mkLiteral "@highlight";
           padding = mkLiteral "6px";
-          text-color = mkLiteral "@bg-col";
+          text-color = mkLiteral "@background-primary";
           border-radius = mkLiteral "3px";
           margin = mkLiteral "20px 0px 0px 20px";
         };
@@ -82,8 +84,8 @@
         "entry" = {
           padding = mkLiteral "6px";
           margin = mkLiteral "20px 0px 0px 10px";
-          text-color = mkLiteral "@fg-col";
-          background-color = mkLiteral "@bg-col";
+          text-color = mkLiteral "@foreground-primary";
+          background-color = mkLiteral "@background-primary";
         };
 
         "listview" = {
@@ -92,13 +94,13 @@
           margin = mkLiteral "10px 0px 0px 20px";
           columns = mkLiteral "2";
           lines = mkLiteral "5";
-          background-color = mkLiteral "@bg-col";
+          background-color = mkLiteral "@background-primary";
         };
 
         "element" = {
           padding = mkLiteral "5px";
-          background-color = mkLiteral "@bg-col";
-          text-color = mkLiteral "@fg-col";
+          background-color = mkLiteral "@background-primary";
+          text-color = mkLiteral "@foreground-primary";
         };
 
         "element-icon" = {
@@ -106,8 +108,8 @@
         };
 
         "element selected" = {
-          background-color = mkLiteral "@selected-col";
-          text-color = mkLiteral "@accent";
+          background-color = mkLiteral "@selected-background";
+          text-color = mkLiteral "@accent-color";
         };
 
         "mode-switcher" = {
@@ -116,19 +118,19 @@
 
         "button" = {
           padding = mkLiteral "10px";
-          background-color = mkLiteral "@bg-col-light";
-          text-color = mkLiteral "@grey";
+          background-color = mkLiteral "@background-secondary";
+          text-color = mkLiteral "@muted-foreground";
           vertical-align = mkLiteral "0.5";
           horizontal-align = mkLiteral "0.5";
         };
 
         "button selected" = {
-          background-color = mkLiteral "@bg-col";
-          text-color = mkLiteral "@blue";
+          background-color = mkLiteral "@background-primary";
+          text-color = mkLiteral "@highlight";
         };
 
         "message" = {
-          background-color = mkLiteral "@bg-col-light";
+          background-color = mkLiteral "@background-secondary";
           margin = mkLiteral "2px";
           padding = mkLiteral "2px";
           border-radius = mkLiteral "5px";
@@ -137,8 +139,8 @@
         "textbox" = {
           padding = mkLiteral "6px";
           margin = mkLiteral "20px 0px 0px 20px";
-          text-color = mkLiteral "@blue";
-          background-color = mkLiteral "@bg-col-light";
+          text-color = mkLiteral "@highlight";
+          background-color = mkLiteral "@background-secondary";
         };
       };
   };

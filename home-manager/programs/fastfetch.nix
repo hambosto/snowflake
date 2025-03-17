@@ -6,8 +6,8 @@
       logo = {
         source = ../../assets/nixos-logo.png;
         type = "auto";
-        height = 10;
-        width = 20;
+        height = 18;
+        width = 30;
         padding = {
           top = 2;
           left = 2;
@@ -15,111 +15,116 @@
       };
 
       display = {
-        color = {
-          keys = "35";
-        };
-        separator = " ➜ ";
+        separator = " : ";
       };
 
       modules = [
-        "break"
+        {
+          type = "command";
+          key = "  󰊠";
+          keyColor = "blue";
+          text = "hyprctl splash";
+        }
+        {
+          type = "custom";
+          format = "┌──────────────────────────────────────────────────┐";
+        }
+        {
+          type = "chassis";
+          key = "  󰇺 Chassis";
+          format = "{1} {2} {3}";
+        }
         {
           type = "os";
-          key = "OS   ";
-          keyColor = "31";
+          key = "   OS";
+          format = "{2}";
+          keyColor = "red";
         }
         {
           type = "kernel";
-          key = " ├  ";
-          keyColor = "31";
+          key = "   Kernel";
+          format = "{2}";
+          keyColor = "red";
         }
         {
           type = "packages";
-          key = " ├ 󰏖 ";
-          keyColor = "31";
+          key = "  󰏗 Packages";
+          keyColor = "green";
         }
         {
-          type = "shell";
-          key = " └  ";
-          keyColor = "31";
-        }
-        "break"
-        {
-          type = "wm";
-          key = "WM   ";
-          keyColor = "32";
-        }
-        {
-          type = "wmtheme";
-          key = " ├ 󰉼 ";
-          keyColor = "32";
-        }
-        {
-          type = "icons";
-          key = " ├ 󰀻 ";
-          keyColor = "32";
-        }
-        {
-          type = "cursor";
-          key = " ├  ";
-          keyColor = "32";
+          type = "display";
+          key = "  󰍹 Display";
+          format = "{1}x{2} @ {3}Hz [{7}]";
+          keyColor = "green";
         }
         {
           type = "terminal";
-          key = " ├  ";
-          keyColor = "32";
+          key = "   Terminal";
+          keyColor = "yellow";
         }
         {
-          type = "terminalfont";
-          key = " └  ";
-          keyColor = "32";
+          type = "wm";
+          key = "  󱗃 WM";
+          format = "{2}";
+          keyColor = "yellow";
+        }
+        {
+          type = "custom";
+          format = "└──────────────────────────────────────────────────┘";
         }
         "break"
         {
-          type = "host";
-          format = "{5} {1} Type {2}";
-          key = "PC   ";
-          keyColor = "33";
+          type = "title";
+          key = "  ";
+          format = "{6} {7} {8}";
+        }
+        {
+          type = "custom";
+          format = "┌──────────────────────────────────────────────────┐";
         }
         {
           type = "cpu";
-          format = "{1} ({3}) @ {7} GHz";
-          key = " ├  ";
-          keyColor = "33";
+          format = "{1} @ {7}";
+          key = "   CPU";
+          keyColor = "blue";
         }
         {
           type = "gpu";
-          format = "{1} {2} ";
-          key = " ├ 󰢮 ";
-          keyColor = "33";
+          format = "{1} {2}";
+          key = "  󰊴 GPU";
+          keyColor = "blue";
         }
-
+        {
+          type = "gpu";
+          format = "{3}";
+          key = "   GPU Driver";
+          keyColor = "magenta";
+        }
         {
           type = "memory";
-          key = " ├  ";
-          keyColor = "33";
+          key = "   Memory";
+          keyColor = "magenta";
         }
         {
           type = "disk";
-          key = " ├ 󰋊 ";
-          keyColor = "33";
+          key = "   Disk";
+          keyColor = "red";
         }
         {
-          type = "monitor";
-          key = " └  ";
-          keyColor = "33";
+          type = "uptime";
+          key = "  󱫐 Uptime";
+          keyColor = "red";
         }
         {
-          type = "player";
-          key = "└ 󰥠 ";
-          keyColor = "33";
+          type = "custom";
+          format = "└──────────────────────────────────────────────────┘";
         }
-
         {
-          type = "media";
-          key = " └ 󰝚 ";
-          keyColor = "33";
+          type = "colors";
+          paddingLeft = 2;
+          symbol = "circle";
         }
+        "break"
       ];
     };
   };
