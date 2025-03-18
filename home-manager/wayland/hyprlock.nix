@@ -1,14 +1,7 @@
 {
-  lib,
-  ...
-}:
-let
-  selected_wallpaper = ../../assets/default-wallpaper.png;
-in
-{
   programs.hyprlock = {
     enable = true;
-    settings = lib.mkForce {
+    settings = {
       general = {
         grace = 5;
         no_fadein = true;
@@ -16,8 +9,6 @@ in
       };
       background = {
         monitor = "";
-        path = "${selected_wallpaper}";
-        color = "rgb(303030)";
         blur_passes = 1;
         blur_size = 1;
         brightness = 0.5;
@@ -26,13 +17,10 @@ in
         monitor = "";
         size = "300, 50";
         outline_thickness = 0;
-        inner_color = "rgb(404040)";
         dots_size = 0.3;
         dots_center = false;
-        font_color = "rgb(f0f0f0)";
         fade_on_empty = false;
         placeholder_text = "Password";
-        fail_color = "rgb(9a1818)";
         position = "0, -200";
       };
       label = [

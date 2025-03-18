@@ -82,11 +82,15 @@ in
       bar.volume.label = true;
       bar.windowtitle.label = true;
       bar.workspaces.applicationIconEmptyWorkspace = "󱙝";
+      bar.workspaces.icons.active = "󰮯";
+      bar.workspaces.icons.available = "󰊠";
+      bar.workspaces.icons.occupied = "󰮯";
       bar.workspaces.monitorSpecific = false;
       bar.workspaces.numbered_active_indicator = "color";
-      bar.workspaces.showApplicationIcons = true;
+      bar.workspaces.showApplicationIcons = false;
       bar.workspaces.show_numbered = false;
-      bar.workspaces.showWsIcons = true;
+      bar.workspaces.showWsIcons = false;
+      bar.workspaces.show_icons = true;
       bar.workspaces.workspaces = 5;
       menus.clock.time.military = true;
       menus.clock.weather.key = "4afb0b6cb609401da30231750242807";
@@ -140,7 +144,7 @@ in
       theme.bar.outer_spacing = "0px";
       theme.bar.scaling = 85;
       theme.bar.transparent = true;
-      theme.font.name = "JetBrainsMono Nerd Font";
+      theme.font.name = "${config.stylix.fonts.monospace.name}";
       theme.font.size = "14px";
       theme.notification.border_radius = "20px";
       theme.osd.enable = true;
@@ -325,6 +329,8 @@ in
       "theme.bar.menus.menu.notifications.background" = "#${config.lib.stylix.colors.base00}";
       "theme.notification.close_button.label" = "#${config.lib.stylix.colors.base07}";
       "theme.notification.close_button.background" = "#${config.lib.stylix.colors.base08}";
+      "theme.bar.buttons.modules.cava.text" = "#${config.lib.stylix.colors.base0F}";
+      "theme.bar.buttons.modules.cava.icon" = "#${config.lib.stylix.colors.base0F}";
     };
   };
 }

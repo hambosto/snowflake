@@ -3,7 +3,7 @@
   imports = [ inputs.wallpaper-manager.homeManagerModules.default ];
 
   programs.wallpaper-manager = {
-    enable = true;
+    enable = false;
     # wallust = {
     #   enable = true;
     #   integrations = {

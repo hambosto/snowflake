@@ -4,8 +4,8 @@
     enable = true;
 
     iconTheme = {
-      package = pkgs.kora-icon-theme;
-      name = "kora";
+      package = pkgs.adwaita-icon-theme;
+      name = "Adwaita";
     };
 
     gtk3.extraConfig = {

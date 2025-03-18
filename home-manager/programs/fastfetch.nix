@@ -4,18 +4,11 @@
     settings = {
 
       logo = {
-        source = ../../assets/nixos-logo.png;
-        type = "auto";
-        height = 18;
-        width = 30;
-        padding = {
-          top = 2;
-          left = 2;
-        };
+        source = "NixOS";
       };
 
       display = {
-        separator = " : ";
+        separator = "  ";
       };
 
       modules = [
@@ -31,41 +24,40 @@
         }
         {
           type = "chassis";
-          key = "  󰇺 Chassis";
+          key = "  󰇺";
           format = "{1} {2} {3}";
         }
         {
           type = "os";
-          key = "   OS";
-          format = "{2}";
+          key = "  ";
+          format = "{3}";
           keyColor = "red";
         }
         {
           type = "kernel";
-          key = "   Kernel";
-          format = "{2}";
+          key = "  ";
+          format = "{1} {2}";
           keyColor = "red";
         }
         {
           type = "packages";
-          key = "  󰏗 Packages";
+          key = "  󰏗";
           keyColor = "green";
         }
         {
           type = "display";
-          key = "  󰍹 Display";
+          key = "  󰍹";
           format = "{1}x{2} @ {3}Hz [{7}]";
           keyColor = "green";
         }
         {
           type = "terminal";
-          key = "   Terminal";
+          key = "  ";
           keyColor = "yellow";
         }
         {
           type = "wm";
-          key = "  󱗃 WM";
-          format = "{2}";
+          key = "  ";
           keyColor = "yellow";
         }
         {
@@ -76,7 +68,7 @@
         {
           type = "title";
           key = "  ";
-          format = "{6} {7} {8}";
+          format = "{6}{7}{8}";
         }
         {
           type = "custom";
@@ -85,34 +77,28 @@
         {
           type = "cpu";
           format = "{1} @ {7}";
-          key = "   CPU";
+          key = "  ";
           keyColor = "blue";
         }
         {
           type = "gpu";
           format = "{1} {2}";
-          key = "  󰊴 GPU";
+          key = "  󰊴";
           keyColor = "blue";
         }
         {
-          type = "gpu";
-          format = "{3}";
-          key = "   GPU Driver";
-          keyColor = "magenta";
-        }
-        {
           type = "memory";
-          key = "   Memory";
+          key = "  ";
           keyColor = "magenta";
         }
         {
           type = "disk";
-          key = "   Disk";
+          key = "  ";
           keyColor = "red";
         }
         {
           type = "uptime";
-          key = "  󱫐 Uptime";
+          key = "  󱫐";
           keyColor = "red";
         }
         {

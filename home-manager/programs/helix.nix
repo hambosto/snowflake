@@ -4,12 +4,10 @@
   ...
 }:
 {
-  stylix.targets.helix.enable = false;
   programs.helix = {
     enable = true;
     defaultEditor = true;
     settings = {
-      theme = "tokyonight";
       editor = {
         soft-wrap.enable = true;
         color-modes = true;

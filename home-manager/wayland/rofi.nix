@@ -10,9 +10,9 @@
     package = pkgs.rofi-wayland;
     extraConfig = {
       modi = "drun";
-      font = "JetBrainsMono Nerd Font 13";
+      font = "${config.stylix.fonts.monospace.name} 14";
       show-icons = true;
-      terminal = "kitty";
+      terminal = "${lib.getExe pkgs.kitty}";
       drun-display-format = "{icon} {name}";
       location = 0;
       disable-history = true;
