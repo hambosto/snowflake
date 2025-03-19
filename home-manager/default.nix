@@ -7,6 +7,7 @@
     ./qt
     ./scripts
     ./services
+    ./stylix
     ./wayland
     ./xdg
   ];

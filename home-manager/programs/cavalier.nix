@@ -1,3 +1,4 @@
+{ config, ... }:
 {
   programs.cavalier = {
     enable = true;
@@ -7,16 +8,16 @@
         {
           Name = "Default";
           FgColors = [
-            "#ffed333b"
-            "#ffffa348"
-            "#fff8e45c"
-            "#ff57e389"
-            "#ff62a0ea"
-            "#ffc061cb"
+            "#${config.lib.stylix.colors.base0C}"
+            "#${config.lib.stylix.colors.base0D}"
+            "#${config.lib.stylix.colors.base07}"
+            "#${config.lib.stylix.colors.base0E}"
+            "#${config.lib.stylix.colors.base06}"
+            "#${config.lib.stylix.colors.base0A}"
+            "#${config.lib.stylix.colors.base0F}"
+            "#${config.lib.stylix.colors.base08}"
           ];
-          BgColors = [
-            "#ff1e1e2e"
-          ];
+          BgColors = [ "#${config.lib.stylix.colors.base00}" ];
           Theme = 1;
         }
       ];

@@ -3,8 +3,6 @@
   ...
 }:
 {
-  stylix.targets.vscode.enable = false;
-
   programs.vscode = {
     enable = true;
     profiles.default = {
