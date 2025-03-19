@@ -7,8 +7,5 @@
     cbonsai
     pipes
     cmatrix
-    eog
-    nautilus
-    gnome-disk-utility
   ];
 }
