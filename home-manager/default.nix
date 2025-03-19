@@ -1,5 +1,6 @@
 {
   imports = [
+    ./desktop
     ./gtk
     ./home
     ./nixpkgs
@@ -8,7 +9,6 @@
     ./scripts
     ./services
     ./stylix
-    ./wayland
     ./xdg
   ];
 }

@@ -144,7 +144,7 @@ in
       theme.bar.outer_spacing = "0px";
       theme.bar.scaling = 85;
       theme.bar.transparent = true;
-      theme.font.name = "${config.stylix.fonts.monospace.name}";
+      theme.font.name = "Ubuntu Nerd Font";
       theme.font.size = "14px";
       theme.notification.border_radius = "20px";
       theme.osd.enable = true;

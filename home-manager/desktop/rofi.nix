@@ -10,7 +10,7 @@
     package = pkgs.rofi-wayland;
     extraConfig = {
       modi = "drun";
-      font = "${config.stylix.fonts.monospace.name} 14";
+      font = "Ubuntu Nerd Font 14";
       show-icons = true;
       terminal = "${lib.getExe pkgs.kitty}";
       drun-display-format = "{icon} {name}";

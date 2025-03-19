@@ -1,7 +1,10 @@
 { pkgs, ... }:
 {
   fonts = {
-    packages = with pkgs; [ fira-code ];
+    packages = with pkgs; [
+      fira-code
+      nerd-fonts.ubuntu
+    ];
 
     enableDefaultPackages = false;
 
