@@ -8,7 +8,7 @@
     profiles.default = {
       userSettings = {
         "editor.fontSize" = 14;
-        "editor.fontFamily" = "Fira Code";
+        "editor.fontFamily" = "CaskaydiaCove Nerd Font";
         "editor.fontLigatures" = true;
         "editor.fontWeight" = "500";
         "editor.formatOnSave" = true;
@@ -42,7 +42,7 @@
         "breadcrumbs.enabled" = false;
 
         "terminal.integrated.fontSize" = 14;
-        "terminal.integrated.fontFamily" = "Fira Code";
+        "terminal.integrated.fontFamily" = "CaskaydiaCove Nerd Font";
         "telemetry.telemetryLevel" = "off";
         "window.menuBarVisibility" = "toggle";
         "window.titleBarStyle" = "native";

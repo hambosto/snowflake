@@ -29,10 +29,6 @@
         src = pkgs.fishPlugins.fzf-fish.src;
       }
       {
-        name = "done";
-        src = pkgs.fishPlugins.done.src;
-      }
-      {
         name = "autopair";
         src = pkgs.fishPlugins.autopair.src;
       }

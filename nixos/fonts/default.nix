@@ -2,8 +2,8 @@
 {
   fonts = {
     packages = with pkgs; [
-      fira-code
       nerd-fonts.ubuntu
+      nerd-fonts.caskaydia-cove
     ];
 
     enableDefaultPackages = false;
