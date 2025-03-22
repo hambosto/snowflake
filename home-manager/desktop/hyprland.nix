@@ -1,5 +1,4 @@
 {
-  inputs,
   lib,
   pkgs,
   ...
@@ -8,14 +7,18 @@
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
-    systemd.enable = true;
-    package = inputs.hyprland.packages.x86_64-linux.hyprland;
+    systemd = {
+      enableXdgAutostart = true;
+      variables = [ "--all" ];
+    };
+
+    package = pkgs.hyprland;
 
     settings = {
 
       "$mainMod" = "SUPER";
 
-      monitor = [ ", preferred, auto, 1, bitdepth, 10" ];
+      monitor = [ ",highres,auto,1" ];
 
       env = [
         "XDG_CURRENT_DESKTOP,Hyprland"
@@ -155,7 +158,7 @@
         "$mainMod, E, exec, ${lib.getExe pkgs.kitty} -e ${lib.getExe pkgs.yazi}"
         "$mainMod, M, exec, ${lib.getExe pkgs.kitty} -e ${lib.getExe pkgs.btop}"
         "$mainMod, L, exec, ${lib.getExe pkgs.hyprlock}"
-        "$mainMod, B, exec, ${lib.getExe pkgs.chromium}"
+        "$mainMod, B, exec, ${lib.getExe pkgs.brave}"
         "$mainMod, SPACE, exec, menu"
 
         "$mainMod SHIFT, W, exec, wallpaper-manager"

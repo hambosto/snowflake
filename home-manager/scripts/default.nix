@@ -1,6 +1,6 @@
 {
   imports = [
-    ./hyprland.nix
+    ./android-mirror.nix
     ./menu.nix
     ./screenshot.nix
     ./toolbox.nix

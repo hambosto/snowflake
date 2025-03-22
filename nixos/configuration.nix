@@ -11,6 +11,7 @@
     ./nix
     ./nixpkgs
     ./packages
+    ./programs
     ./security
     ./services
     ./shell
@@ -19,6 +20,5 @@
     ./time
     ./users
     ./virtualization
-    ./xdg
   ];
 }

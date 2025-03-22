@@ -8,6 +8,7 @@
     isNormalUser = true;
     description = "${fullname}";
     extraGroups = [
+      "adbusers"
       "networkmanager"
       "wheel"
     ];

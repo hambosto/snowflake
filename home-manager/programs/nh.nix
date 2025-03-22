@@ -1,11 +1,8 @@
-{
-  username,
-  ...
-}:
+{ config, ... }:
 {
   programs.nh = {
     enable = true;
-    flake = "/home/${username}/.config/snowflake";
+    flake = "${config.xdg.configHome}/snowflake";
     clean.enable = false;
     clean.extraArgs = "--keep-since 4d --keep 3";
   };

@@ -4,6 +4,7 @@
     ./gtk
     ./home
     ./nixpkgs
+    ./packages
     ./programs
     ./qt
     ./scripts
