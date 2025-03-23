@@ -39,10 +39,7 @@
     #   base0F = "ed5ba2";
     # };
 
-    image = pkgs.fetchurl {
-      url = "https://raw.githubusercontent.com/D3Ext/aesthetic-wallpapers/main/images/light-ring.jpg";
-      sha256 = "sha256-BRgwIUqrQaut9hb94gIgtNtp9SQYFbf4lQhtQXYmahw=";
-    };
+    image = ../../assets/aesthetic_deer.png;
 
     polarity = "dark";
 

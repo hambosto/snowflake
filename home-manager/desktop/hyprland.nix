@@ -11,14 +11,13 @@
       enableXdgAutostart = true;
       variables = [ "--all" ];
     };
-
     package = pkgs.hyprland;
 
     settings = {
 
       "$mainMod" = "SUPER";
 
-      monitor = [ ",highres,auto,1" ];
+      monitor = [ ",preferred,auto,1" ];
 
       env = [
         "XDG_CURRENT_DESKTOP,Hyprland"

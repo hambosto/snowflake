@@ -3,7 +3,7 @@
   fonts = {
     packages = with pkgs; [
       nerd-fonts.ubuntu
-      nerd-fonts.caskaydia-cove
+      nerd-fonts.geist-mono
     ];
 
     enableDefaultPackages = false;

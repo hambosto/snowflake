@@ -8,9 +8,9 @@
     profiles.default = {
       userSettings = {
         "editor.fontSize" = 14;
-        "editor.fontFamily" = "CaskaydiaCove Nerd Font";
+        "editor.fontFamily" = "GeistMono Nerd Font";
         "editor.fontLigatures" = true;
-        "editor.fontWeight" = "500";
+        "editor.fontWeight" = "600";
         "editor.formatOnSave" = true;
         "editor.minimap.enabled" = false;
         "editor.cursorBlinking" = "expand";
@@ -20,9 +20,7 @@
         "editor.acceptSuggestionOnEnter" = "on";
         "editor.autoClosingBrackets" = "always";
 
-        # "workbench.colorTheme" = "Mana Lord's Moon Light Theme";
-
-        "workbench.colorTheme" = "Tokyo Night";
+        "workbench.colorTheme" = "Mana Lord's Moon Light Theme";
         "workbench.iconTheme" = "symbols";
         "workbench.activityBar.location" = "hidden";
         "workbench.editor.showTabs" = "single";
@@ -42,7 +40,7 @@
         "breadcrumbs.enabled" = false;
 
         "terminal.integrated.fontSize" = 14;
-        "terminal.integrated.fontFamily" = "CaskaydiaCove Nerd Font";
+        "terminal.integrated.fontFamily" = "GeistMono Nerd Font";
         "telemetry.telemetryLevel" = "off";
         "window.menuBarVisibility" = "toggle";
         "window.titleBarStyle" = "native";
@@ -78,8 +76,7 @@
 
       };
       extensions = with pkgs.vscode-marketplace; [
-        # manalord.mana-lord-theme
-        enkia.tokyo-night
+        manalord.mana-lord-theme
         golang.go
         jnoortheen.nix-ide
         supermaven.supermaven

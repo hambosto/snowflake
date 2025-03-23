@@ -6,7 +6,7 @@
   programs.kitty = {
     enable = true;
     settings = {
-      font_family = "Cascadia Code";
+      font_family = "Iosevka Nerd Font";
       font_size = 12;
       bold_font = "auto";
       italic_font = "auto";
