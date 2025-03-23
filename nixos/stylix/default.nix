@@ -1,4 +1,8 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  ...
+}:
 {
   stylix = {
     enable = true;
@@ -39,8 +43,7 @@
     #   base0F = "ed5ba2";
     # };
 
-    image = ../../assets/aesthetic_deer.png;
-
+    image = ../../assets/tokyo-anime.png;
     polarity = "dark";
 
     cursor = {

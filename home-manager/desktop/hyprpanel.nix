@@ -1,13 +1,13 @@
 {
-  inputs,
   config,
+  inputs,
+  lib,
   pkgs,
   fullname,
-  lib,
   ...
 }:
 let
-  profile_picture = ../../assets/profile-picture.png;
+  profile_picture = ../../assets/profile-picture.jpg;
 in
 {
   imports = [ inputs.hyprpanel.homeManagerModules.hyprpanel ];
@@ -31,10 +31,11 @@ in
           ];
           right = [
             "systray"
-            "cava"
+            # "cava"
             "hyprsunset"
             "volume"
             "battery"
+            "bluetooth"
             "network"
             "clock"
             "notifications"
@@ -51,10 +52,11 @@ in
           ];
           right = [
             "systray"
-            "cava"
+            # "cava"
             "hyprsunset"
             "volume"
             "battery"
+            "bluetooth"
             "network"
             "clock"
             "notifications"
@@ -188,6 +190,7 @@ in
       "theme.bar.menus.menu.battery.icons.active" = "#${config.lib.stylix.colors.base08}";
       "theme.bar.menus.menu.battery.listitems.active" = "#${config.lib.stylix.colors.base08}";
       "theme.bar.menus.menu.battery.label.color" = "#${config.lib.stylix.colors.base08}";
+      "theme.bar.menus.menu.battery.border.color" = "#${config.lib.stylix.colors.base0D}";
       "theme.bar.menus.menu.clock.time.time" = "#${config.lib.stylix.colors.base0E}";
       "theme.bar.menus.menu.clock.calendar.weekdays" = "#${config.lib.stylix.colors.base0E}";
       "theme.bar.menus.menu.clock.calendar.paginator" = "#${config.lib.stylix.colors.base0E}";
@@ -197,15 +200,18 @@ in
       "theme.bar.menus.menu.clock.weather.hourly.time" = "#${config.lib.stylix.colors.base0E}";
       "theme.bar.menus.menu.clock.weather.hourly.icon" = "#${config.lib.stylix.colors.base0E}";
       "theme.bar.menus.menu.clock.weather.hourly.temperature" = "#${config.lib.stylix.colors.base0E}";
+      "theme.bar.menus.menu.clock.border.color" = "#${config.lib.stylix.colors.base0D}";
       "theme.bar.menus.menu.notifications.clear" = "#${config.lib.stylix.colors.base09}";
       "theme.bar.menus.menu.notifications.switch.enabled" = "#${config.lib.stylix.colors.base09}";
       "theme.bar.menus.menu.notifications.scrollbar.color" = "#${config.lib.stylix.colors.base09}";
       "theme.bar.menus.menu.notifications.label" = "#${config.lib.stylix.colors.base09}";
+      "theme.bar.menus.menu.notifications.border.color" = "#${config.lib.stylix.colors.base0D}";
       "theme.bar.menus.menu.network.label.color" = "#${config.lib.stylix.colors.base0B}";
       "theme.bar.menus.menu.network.listitems.active" = "#${config.lib.stylix.colors.base0B}";
       "theme.bar.menus.menu.network.icons.active" = "#${config.lib.stylix.colors.base0B}";
       "theme.bar.menus.menu.network.iconbuttons.active" = "#${config.lib.stylix.colors.base0B}";
       "theme.bar.menus.menu.network.switch.enabled" = "#${config.lib.stylix.colors.base0B}";
+      "theme.bar.menus.menu.network.border.color" = "#${config.lib.stylix.colors.base0D}";
       "theme.bar.menus.menu.volume.input_slider.primary" = "#${config.lib.stylix.colors.base0D}";
       "theme.bar.menus.menu.volume.audio_slider.primary" = "#${config.lib.stylix.colors.base0D}";
       "theme.bar.menus.menu.volume.label.color" = "#${config.lib.stylix.colors.base0D}";
@@ -284,7 +290,7 @@ in
       "theme.bar.menus.menu.dashboard.powermenu.logout" = "#${config.lib.stylix.colors.base0B}";
       "theme.bar.menus.menu.dashboard.powermenu.restart" = "#${config.lib.stylix.colors.base0A}";
       "theme.bar.menus.menu.dashboard.profile.name" = "#${config.lib.stylix.colors.base0E}";
-      "theme.bar.menus.menu.dashboard.border.color" = "#${config.lib.stylix.colors.base02}";
+      "theme.bar.menus.menu.dashboard.border.color" = "#${config.lib.stylix.colors.base0D}";
       "theme.bar.menus.menu.dashboard.background.color" = "#${config.lib.stylix.colors.base00}";
       "theme.bar.menus.menu.dashboard.card.color" = "#${config.lib.stylix.colors.base01}";
       "theme.bar.buttons.media.icon" = "#${config.lib.stylix.colors.base05}";
@@ -298,12 +304,20 @@ in
       "theme.bar.menus.menu.media.buttons.background" = "#${config.lib.stylix.colors.base05}";
       "theme.bar.menus.menu.media.buttons.enabled" = "#${config.lib.stylix.colors.base0B}";
       "theme.bar.menus.menu.media.buttons.inactive" = "#${config.lib.stylix.colors.base03}";
-      "theme.bar.menus.menu.media.border.color" = "#${config.lib.stylix.colors.base02}";
+      "theme.bar.menus.menu.media.border.color" = "#${config.lib.stylix.colors.base0D}";
       "theme.bar.menus.menu.media.background.color" = "#${config.lib.stylix.colors.base00}";
       "theme.bar.menus.menu.media.album" = "#${config.lib.stylix.colors.base0E}";
       "theme.bar.menus.menu.media.artist" = "#${config.lib.stylix.colors.base0B}";
       "theme.bar.menus.menu.media.song" = "#${config.lib.stylix.colors.base05}";
       "theme.bar.menus.menu.media.card.color" = "#${config.lib.stylix.colors.base01}";
+
+      "theme.bar.menus.menu.bluetooth.text" = "#${config.lib.stylix.colors.base05}";
+      "theme.bar.menus.menu.bluetooth.card.color" = "#${config.lib.stylix.colors.base01}";
+      "theme.bar.menus.menu.bluetooth.background.color" = "#${config.lib.stylix.colors.base00}";
+      "theme.bar.menus.menu.bluetooth.border.color" = "#${config.lib.stylix.colors.base0D}";
+      "theme.bar.menus.menu.bluetooth.label.color" = "#${config.lib.stylix.colors.base0C}";
+      "theme.bar.menus.menu.bluetooth.switch.enabled" = "#${config.lib.stylix.colors.base0C}";
+
       "theme.bar.buttons.media.icon_background" = "#${config.lib.stylix.colors.base05}";
       "theme.bar.buttons.media.border" = "#${config.lib.stylix.colors.base05}";
       "theme.bar.menus.menu.media.timestamp" = "#${config.lib.stylix.colors.base06}";
@@ -312,6 +326,8 @@ in
       "theme.bar.buttons.battery.background" = "#${config.lib.stylix.colors.base00}";
       "theme.bar.buttons.systray.background" = "#${config.lib.stylix.colors.base00}";
       "theme.bar.buttons.bluetooth.background" = "#${config.lib.stylix.colors.base00}";
+      "theme.bar.buttons.bluetooth.icon" = "#${config.lib.stylix.colors.base0C}";
+      "theme.bar.buttons.bluetooth.text" = "#${config.lib.stylix.colors.base0C}";
       "theme.bar.buttons.network.background" = "#${config.lib.stylix.colors.base00}";
       "theme.bar.buttons.volume.background" = "#${config.lib.stylix.colors.base00}";
       "theme.bar.buttons.windowtitle.background" = "#${config.lib.stylix.colors.base00}";
@@ -322,6 +338,7 @@ in
       "theme.bar.menus.menu.battery.card.color" = "#${config.lib.stylix.colors.base01}";
       "theme.bar.menus.menu.volume.background.color" = "#${config.lib.stylix.colors.base00}";
       "theme.bar.menus.menu.volume.card.color" = "#${config.lib.stylix.colors.base01}";
+      "theme.bar.menus.menu.volume.border.color" = "#${config.lib.stylix.colors.base0D}";
       "theme.bar.menus.menu.network.background.color" = "#${config.lib.stylix.colors.base00}";
       "theme.bar.menus.menu.network.card.color" = "#${config.lib.stylix.colors.base01}";
       "theme.bar.menus.menu.clock.background.color" = "#${config.lib.stylix.colors.base00}";
