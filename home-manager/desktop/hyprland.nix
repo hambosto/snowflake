@@ -158,7 +158,7 @@
         "$mainMod, M, exec, ${lib.getExe pkgs.kitty} -e ${lib.getExe pkgs.btop}"
         "$mainMod, L, exec, ${lib.getExe pkgs.hyprlock}"
         "$mainMod, B, exec, ${lib.getExe pkgs.brave}"
-        "$mainMod, SPACE, exec, menu"
+        "$mainMod, SPACE, exec, rofi-launcher"
 
         "$mainMod SHIFT, W, exec, wallpaper-manager"
 

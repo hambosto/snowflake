@@ -3,7 +3,7 @@
   ...
 }:
 let
-  menu = pkgs.writeShellScriptBin "menu" ''
+  rofi-launcher = pkgs.writeShellScriptBin "rofi-launcher" ''
     if [[ ! $(pidof rofi) ]]; then
     	rofi -show drun
     else
@@ -12,5 +12,5 @@ let
   '';
 in
 {
-  home.packages = [ menu ];
+  home.packages = [ rofi-launcher ];
 }

@@ -1,7 +1,7 @@
 {
   imports = [
     ./android-mirror.nix
-    ./menu.nix
+    ./rofi-launcher.nix
     ./screenshot.nix
     ./toolbox.nix
   ];

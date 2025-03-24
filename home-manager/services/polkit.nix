@@ -3,7 +3,7 @@
   ...
 }:
 {
-  systemd.user.services.polkit-gnome = {
+  systemd.user.services.polkit = {
     Unit = {
       Description = "PolicyKit Authentication Agent";
       After = [ "graphical-session-pre.target" ];
