@@ -280,7 +280,7 @@
           background: #${config.lib.stylix.colors.base01};
           margin: 8px 15px 8px 0px;
           padding: 2px 10px 0px 10px;
-          border-radius: 12px;
+          border-radius: 5px;
           color: #${config.lib.stylix.colors.base05};
           font-size: 16px;
           font-weight: normal;
@@ -310,7 +310,7 @@
           color: #${config.lib.stylix.colors.base05};
           border-radius: 5px;
           padding: 2px 10px 0px 10px;
-          margin: 8px 15px 8px 0px;
+          margin: 8px 10px 8px 0px;
           opacity: 0.8;
       }
 
