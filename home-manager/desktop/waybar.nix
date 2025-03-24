@@ -55,7 +55,7 @@
           "format-icons" = {
             "default" = "";
             "performance" = "";
-            "balanced" = "";
+            "balanced" = "";
             "power-saver" = "";
           };
         };
@@ -239,7 +239,7 @@
           background: #${config.lib.stylix.colors.base01};
           margin: 5px 1px 6px 1px;
           padding: 0px 1px;
-          border-radius: 15px;
+          border-radius: 5px;
           border: 0px;
           font-weight: bold;
           font-style: normal;
@@ -251,7 +251,7 @@
       #workspaces button {
           padding: 0px 5px;
           margin: 4px 3px;
-          border-radius: 15px;
+          border-radius: 5px;
           border: 0px;
           color: #${config.lib.stylix.colors.base05};
           background-color: #${config.lib.stylix.colors.base02};
@@ -262,7 +262,7 @@
       #workspaces button.active {
           color: #${config.lib.stylix.colors.base05};
           background: #${config.lib.stylix.colors.base0D};
-          border-radius: 15px;
+          border-radius: 5px;
           min-width: 40px;
           transition: all 0.3s ease-in-out;
           opacity: 1.0;
@@ -308,7 +308,7 @@
           background-color: #${config.lib.stylix.colors.base01};
           font-size: 16px;
           color: #${config.lib.stylix.colors.base05};
-          border-radius: 15px;
+          border-radius: 5px;
           padding: 2px 10px 0px 10px;
           margin: 8px 15px 8px 0px;
           opacity: 0.8;
@@ -388,10 +388,6 @@
       }
     '';
   };
-
-  # wayland.windowManager.hyprland.settings.exec-once = lib.mkIf config.programs.waybar.enable [
-  #   "${lib.getExe pkgs.networkmanagerapplet}"
-  # ];
 
   wayland.windowManager.hyprland.settings.windowrulev2 = lib.mkIf config.programs.waybar.enable [
     "float,class:(dotfiles-floating)"

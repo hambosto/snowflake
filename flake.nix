@@ -2,7 +2,7 @@
   description = "NixOS system configuration";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     wallpaper-manager.url = "github:hambosto/wallpaper-manager";
     helix-editor.url = "github:helix-editor/helix";
     stylix.url = "github:danth/stylix";
