@@ -6,7 +6,7 @@
   programs.kitty = {
     enable = true;
     settings = {
-      font_family = lib.mkForce "GeistMono Nerd Font";
+      font_family = lib.mkForce "JetBrainsMono Nerd Font";
       font_size = 12;
       bold_font = "auto";
       italic_font = "auto";

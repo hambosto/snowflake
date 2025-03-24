@@ -1,11 +1,16 @@
-{ pkgs, ... }:
+{
+  config,
+  pkgs,
+  ...
+}:
 {
   gtk = {
     enable = true;
 
     iconTheme = {
-      package = pkgs.adwaita-icon-theme;
-      name = "Adwaita";
+      package =
+        if config.programs.waybar.enable then pkgs.whitesur-icon-theme else pkgs.adwaita-icon-theme;
+      name = if config.programs.waybar.enable then "WhiteSur" else "Adwaita";
     };
 
     gtk3.extraConfig = {

@@ -25,25 +25,29 @@
     #   base0E = "f54fff"; # Keywords - Sugar Purple
     #   base0F = "ff6e9c"; # Deprecated - Strawberry Pink
 
-    #   base00 = "051649";
-    #   base01 = "104394";
-    #   base02 = "98557e";
-    #   base03 = "b48fd2";
-    #   base04 = "c9afde";
-    #   base05 = "f7daec";
-    #   base06 = "c9fbf0";
-    #   base07 = "e2f3fd";
-    #   base08 = "8589e2";
-    #   base09 = "a682c8";
-    #   base0A = "5d98a8";
-    #   base0B = "629f59";
-    #   base0C = "5092e8";
-    #   base0D = "d46cb7";
-    #   base0E = "8990aa";
-    #   base0F = "ed5ba2";
+    #   base00 = "#282a36";
+    #   base01 = "#363447";
+    #   base02 = "#44475a";
+    #   base03 = "#6272a4";
+    #   base04 = "#9ea8c7";
+    #   base05 = "#f8f8f2";
+    #   base06 = "#f0f1f4";
+    #   base07 = "#ffffff";
+    #   base08 = "#ff5555";
+    #   base09 = "#ffb86c";
+    #   base0A = "#f1fa8c";
+    #   base0B = "#50fa7b";
+    #   base0C = "#8be9fd";
+    #   base0D = "#80bfff";
+    #   base0E = "#ff79c6";
+    #   base0F = "#bd93f9";
     # };
 
-    image = ../../assets/tokyo-anime.png;
+    image = pkgs.fetchurl {
+      url = "https://raw.githubusercontent.com/D3Ext/aesthetic-wallpapers/main/images/light-ring.jpg";
+      sha256 = "sha256-BRgwIUqrQaut9hb94gIgtNtp9SQYFbf4lQhtQXYmahw=";
+    };
+
     polarity = "dark";
 
     cursor = {

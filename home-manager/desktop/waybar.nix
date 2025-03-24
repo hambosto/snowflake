@@ -1,5 +1,6 @@
 {
   config,
+  lib,
   pkgs,
   ...
 }:
@@ -21,9 +22,9 @@
         ];
         modules-right = [
           "power-profiles-daemon"
-          "cpu"
+          # "cpu"
           "network"
-          "memory"
+          # "memory"
           "pulseaudio"
           "backlight"
           "battery"
@@ -77,22 +78,22 @@
           };
         };
 
-        "memory" = {
-          interval = 5;
-          format = " {}%";
-          tooltip = true;
-        };
+        # "memory" = {
+        #   interval = 5;
+        #   format = " {}%";
+        #   tooltip = true;
+        # };
 
-        "cpu" = {
-          interval = 5;
-          format = " {usage:2}%";
-          tooltip = true;
-        };
+        # "cpu" = {
+        #   interval = 5;
+        #   format = " {usage:2}%";
+        #   tooltip = true;
+        # };
 
-        "disk" = {
-          format = " {free}";
-          tooltip = true;
-        };
+        # "disk" = {
+        #   format = " {free}";
+        #   tooltip = true;
+        # };
 
         "network" = {
           interval = 1;
@@ -107,6 +108,7 @@
           format-wifi = "{icon} {signalStrength}%";
           format-disconnected = "󰤮";
           tooltip = false;
+          on-click = "${pkgs.kitty}/bin/kitty --class dotfiles-floating -e nmtui";
         };
 
         "tray" = {
@@ -291,8 +293,8 @@
 
       /* Modules */
       #pulseaudio,
-      #cpu,
-      #memory,
+      /* #cpu, */
+      /* #memory, */
       #network,
       #backlight,
       #battery,
@@ -386,4 +388,15 @@
       }
     '';
   };
+
+  # wayland.windowManager.hyprland.settings.exec-once = lib.mkIf config.programs.waybar.enable [
+  #   "${lib.getExe pkgs.networkmanagerapplet}"
+  # ];
+
+  wayland.windowManager.hyprland.settings.windowrulev2 = lib.mkIf config.programs.waybar.enable [
+    "float,class:(dotfiles-floating)"
+    "size 1000 700,class:(dotfiles-floating)"
+    "center,class:(dotfiles-floating)"
+    "pin, class:(dotfiles-floating)"
+  ];
 }
