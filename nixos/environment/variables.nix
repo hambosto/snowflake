@@ -1,6 +1,6 @@
 {
   environment.variables = {
-    BROWSER = "chromium";
+    BROWSER = "firefox";
     TERMINAL = "kitty";
     EDITOR = "hx";
   };
