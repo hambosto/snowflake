@@ -4,7 +4,7 @@
   ...
 }:
 {
-  programs.firefox = {
+  programs.floorp = {
     enable = true;
     policies = {
       DisableTelemetry = true;
@@ -13,6 +13,16 @@
       DontCheckDefaultBrowser = true;
       DisableFirefoxAccounts = true;
       DisableAccounts = true;
+      NoDefaultBookmarks = true;
+      FirefoxHome = {
+        Pocket = false;
+        Snippets = false;
+      };
+      OfferToSaveLogins = false;
+      UserMessaging = {
+        SkipOnboarding = true;
+        ExtensionRecommendations = false;
+      };
       "AutofillAddressEnabled" = false;
       "AutofillCreditCardEnabled" = false;
       Preferences = {
@@ -141,7 +151,13 @@
         "browser.menu.showViewImageInfo" = true;
         "findbar.highlightAll" = true;
         "layout.word_select.eat_space_to_next_word" = false;
-        "browser.uidensity" = 1;
+        "browser.uidensity" = 0;
+
+        "extensions.formautofill.addresses.enabled" = false;
+        "extensions.formautofill.creditCards.enabled" = false;
+
+        "dom.security.https_only_mode_pbm" = true;
+        "dom.security.https_only_mode_error_page_user_suggestions" = true;
       };
 
       extensions.packages = with pkgs.nur.repos.rycee.firefox-addons; [

@@ -6,7 +6,7 @@
   stylix.targets = {
     vscode.enable = false;
     waybar.enable = false;
-    firefox = {
+    floorp = {
       enable = true;
       profileNames = [ "${username}" ];
     };

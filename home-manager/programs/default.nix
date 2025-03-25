@@ -8,8 +8,8 @@
     ./chromium.nix
     ./eza.nix
     ./fastfetch.nix
-    ./firefox.nix
     ./fish.nix
+    ./floorp.nix
     ./fzf.nix
     ./gemini-commit.nix
     ./ghostty.nix

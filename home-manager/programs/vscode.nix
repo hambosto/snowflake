@@ -19,8 +19,9 @@
         "editor.acceptSuggestionOnCommitCharacter" = true;
         "editor.acceptSuggestionOnEnter" = "on";
         "editor.autoClosingBrackets" = "always";
+        "editor.semanticHighlighting.enabled" = true;
 
-        "workbench.colorTheme" = "Mana Lord's Moon Light Theme";
+        "workbench.colorTheme" = "GitHub Dark Default";
         "workbench.iconTheme" = "symbols";
         "workbench.activityBar.location" = "hidden";
         "workbench.editor.showTabs" = "single";
@@ -41,10 +42,13 @@
 
         "terminal.integrated.fontSize" = 14;
         "terminal.integrated.fontFamily" = "JetBrainsMono Nerd Font";
+        "terminal.integrated.minimumContrastRatio" = 1;
+
         "telemetry.telemetryLevel" = "off";
         "window.menuBarVisibility" = "toggle";
         "window.titleBarStyle" = "native";
         "window.customTitleBarVisibility" = "never";
+
         "go.inlayHints.assignVariableTypes" = true;
         "go.inlayHints.constantValues" = true;
         "go.inlayHints.parameterNames" = true;
@@ -79,7 +83,7 @@
 
       };
       extensions = with pkgs.vscode-marketplace; [
-        manalord.mana-lord-theme
+        github.github-vscode-theme
         golang.go
         jnoortheen.nix-ide
         supermaven.supermaven
