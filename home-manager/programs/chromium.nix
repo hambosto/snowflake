@@ -1,6 +1,6 @@
 {
   programs.chromium = {
-    enable = true;
+    enable = false;
     extensions = [
       "cjpalhdlnbpafiamejdnhcphjbkeiagm" # ublock origin
       "mnjggcdmjocbbbhaepdhchncahnbgone" # SponsorBlock
