@@ -74,6 +74,9 @@
           };
         };
 
+        # "zig.path" = "${pkgs.zig}/bin/zig";
+        # "zig.zls.path" = "${pkgs.zls}/bin/zls";
+
       };
       extensions = with pkgs.vscode-marketplace; [
         manalord.mana-lord-theme
@@ -81,6 +84,7 @@
         jnoortheen.nix-ide
         supermaven.supermaven
         miguelsolorio.symbols
+        # ziglang.vscode-zig
         # rust-lang.rust-analyzer
         # tamasfe.even-better-toml
         # fill-labs.dependi

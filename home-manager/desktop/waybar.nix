@@ -1,7 +1,5 @@
 {
   config,
-  lib,
-  pkgs,
   ...
 }:
 {
@@ -21,15 +19,12 @@
           "hyprland/window"
         ];
         modules-right = [
+          "tray"
           "power-profiles-daemon"
-          # "cpu"
           "network"
-          # "memory"
           "pulseaudio"
           "backlight"
           "battery"
-          "tray"
-          "custom/notification"
           "clock"
           "custom/power"
         ];
@@ -78,23 +73,6 @@
           };
         };
 
-        # "memory" = {
-        #   interval = 5;
-        #   format = " {}%";
-        #   tooltip = true;
-        # };
-
-        # "cpu" = {
-        #   interval = 5;
-        #   format = " {usage:2}%";
-        #   tooltip = true;
-        # };
-
-        # "disk" = {
-        #   format = " {free}";
-        #   tooltip = true;
-        # };
-
         "network" = {
           interval = 1;
           format-icons = [
@@ -108,7 +86,7 @@
           format-wifi = "{icon} {signalStrength}%";
           format-disconnected = "󰤮";
           tooltip = false;
-          on-click = "${pkgs.kitty}/bin/kitty --class dotfiles-floating -e nmtui";
+          # on-click = "${pkgs.kitty}/bin/kitty --class dotfiles-floating -e nmtui";
         };
 
         "tray" = {
@@ -171,30 +149,10 @@
           on-click = "sleep 0.1 && rofi-launcher";
         };
 
-        "custom/notification" = {
-          tooltip = false;
-          format = "{icon} {}";
-          format-icons = {
-            notification = "<span foreground='red'><sup></sup></span>";
-            none = "";
-            dnd-notification = "<span foreground='red'><sup></sup></span>";
-            dnd-none = "";
-            inhibited-notification = "<span foreground='red'><sup></sup></span>";
-            inhibited-none = "";
-            dnd-inhibited-notification = "<span foreground='red'><sup></sup></span>";
-            dnd-inhibited-none = "";
-          };
-          return-type = "json";
-          exec-if = "which swaync-client";
-          exec = "swaync-client -swb";
-          on-click = "${pkgs.swaynotificationcenter}/bin/swaync-client -t";
-          escape = true;
-        };
-
         "battery" = {
           states = {
             warning = 30;
-            critical = 15;
+            critical = 20;
           };
           format = "{icon} {capacity}%";
           format-charging = "󰂄 {capacity}%";
@@ -216,6 +174,7 @@
         };
       }
     ];
+
     style = ''
       * {
           font-family: Ubuntu Nerd Font;
@@ -293,15 +252,12 @@
 
       /* Modules */
       #pulseaudio,
-      /* #cpu, */
-      /* #memory, */
       #network,
       #backlight,
       #battery,
       #clock,
       #tray,
       #backlight,
-      #custom-notification,
       #power-profiles-daemon,
       #custom-launcher,
       #custom-power {
@@ -312,19 +268,6 @@
           padding: 2px 10px 0px 10px;
           margin: 8px 10px 8px 0px;
           opacity: 0.8;
-      }
-
-      #idle_inhibitor {
-          margin-right: 17px;
-          font-size: 20px;
-          font-weight: bold;
-          opacity: 0.8;
-          color: #${config.lib.stylix.colors.base0D};
-      }
-
-      #idle_inhibitor.activated {
-          margin-right: 15px;
-          color: #dc2f2f;
       }
 
       /* States */
@@ -388,11 +331,4 @@
       }
     '';
   };
-
-  wayland.windowManager.hyprland.settings.windowrulev2 = lib.mkIf config.programs.waybar.enable [
-    "float,class:(dotfiles-floating)"
-    "size 1000 700,class:(dotfiles-floating)"
-    "center,class:(dotfiles-floating)"
-    "pin, class:(dotfiles-floating)"
-  ];
 }
