@@ -1,13 +1,11 @@
-{ pkgs, ... }:
 {
   programs.chromium = {
     enable = true;
-    package = pkgs.brave;
-    # commandLineArgs = [ "--ozone-platform-hint=wayland" ];
     extensions = [
-      # "cjpalhdlnbpafiamejdnhcphjbkeiagm" # ublock origin
+      "cjpalhdlnbpafiamejdnhcphjbkeiagm" # ublock origin
       "mnjggcdmjocbbbhaepdhchncahnbgone" # SponsorBlock
       "nngceckbapebfimnlniiiahkandclblb" # Bitwarden
+      "hkgfoiooedgoejojocmhlaklaeopbecg" # Picture in Picture
       # "bfnaelmomeimhlpmgjnjophhpkkoljpa" # Phantom Wallet
       # "nkbihfbeogaeaoehlefnkodbefgpgknn" # MetaMask
       "bggfcpfjbdkhfhfmkjpbhnkhnpjjeomc" # Material Icons for GitHub
