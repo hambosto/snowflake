@@ -8,7 +8,7 @@
     mimeApps = {
       enable = true;
       defaultApplications = {
-        "application/pdf" = "org.pwmt.zathura-pdf-mupdf.desktop";
+        # "application/pdf" = "org.pwmt.zathura-pdf-mupdf.desktop";
       };
     };
     portal = {

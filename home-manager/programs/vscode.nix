@@ -88,6 +88,7 @@
         supermaven.supermaven
         miguelsolorio.symbols
         jdinhlife.gruvbox
+        # oven.bun-vscode
         # ziglang.vscode-zig
         # rust-lang.rust-analyzer
         # tamasfe.even-better-toml

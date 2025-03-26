@@ -1,7 +1,7 @@
 { config, ... }:
 {
   programs.cavalier = {
-    enable = true;
+    enable = false;
     settings.general = {
       ShowControls = true;
       ColorProfiles = [

@@ -6,10 +6,6 @@
 {
   stylix.targets.fish.enable = false;
   programs.fish = {
-    interactiveShellInit = ''
-      set fish_greeting # Disable greeting
-      ${lib.getExe pkgs.fastfetch}
-    '';
     enable = true;
     plugins = [
       {
@@ -46,7 +42,10 @@
       tree = "eza --icons=always --tree --no-quotes";
       ssh = "kitty +kitten ssh";
       config = "hx ~/.config/snowflake";
-      nos = "nh os switch";
     };
+    interactiveShellInit = ''
+      set fish_greeting # Disable greeting
+      ${lib.getExe pkgs.fastfetch}
+    '';
   };
 }

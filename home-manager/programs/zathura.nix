@@ -1,6 +1,6 @@
 {
   programs.zathura = {
-    enable = true;
+    enable = false;
 
     options = {
       guioptions = "v";

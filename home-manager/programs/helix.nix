@@ -7,7 +7,7 @@
 {
   programs.helix = {
     enable = true;
-    package = inputs.helix-editor.packages.x86_64-linux.default;
+    # package = inputs.helix-editor.packages.x86_64-linux.default;
     defaultEditor = true;
     settings = {
       editor = {
