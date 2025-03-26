@@ -4,13 +4,16 @@
   ...
 }:
 {
-  users.users."${username}" = {
-    isNormalUser = true;
-    description = "${fullname}";
-    extraGroups = [
-      "adbusers"
-      "networkmanager"
-      "wheel"
-    ];
+  users = {
+    users = {
+      "${username}" = {
+        isNormalUser = true;
+        description = "${fullname}";
+        extraGroups = [
+          "networkmanager"
+          "wheel"
+        ];
+      };
+    };
   };
 }
