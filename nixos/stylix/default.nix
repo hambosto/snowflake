@@ -43,9 +43,14 @@
     #   base0F = "#bd93f9";
     # };
 
+    # image = pkgs.fetchurl {
+    #   url = "https://raw.githubusercontent.com/hydraPV/.dotfiles/master/hyprland/Gruvbox/wallpapers/forest-1.jpg";
+    #   sha256 = "sha256-RqzCCnn4b5kU7EYgaPF19Gr9I5cZrkEdsTu+wGaaMFI=";
+    # };
+
     image = pkgs.fetchurl {
-      url = "https://raw.githubusercontent.com/hydraPV/.dotfiles/master/hyprland/Gruvbox/wallpapers/forest-1.jpg";
-      sha256 = "sha256-RqzCCnn4b5kU7EYgaPF19Gr9I5cZrkEdsTu+wGaaMFI=";
+      url = "https://raw.githubusercontent.com/D3Ext/aesthetic-wallpapers/main/images/light-ring.jpg";
+      sha256 = "sha256-BRgwIUqrQaut9hb94gIgtNtp9SQYFbf4lQhtQXYmahw=";
     };
 
     polarity = "dark";
