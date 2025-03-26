@@ -9,5 +9,6 @@
     pipes
     cmatrix
     neovim
+    rustup
   ];
 }
