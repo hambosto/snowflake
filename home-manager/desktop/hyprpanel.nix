@@ -13,7 +13,7 @@ in
   imports = [ inputs.hyprpanel.homeManagerModules.hyprpanel ];
 
   programs.hyprpanel = {
-    enable = false;
+    enable = true;
     hyprland.enable = true;
     overwrite.enable = true;
     overlay.enable = true;
@@ -129,7 +129,7 @@ in
       theme.bar.buttons.monochrome = false;
       theme.bar.buttons.padding_x = "0.8rem";
       theme.bar.buttons.padding_y = "0.4rem";
-      theme.bar.buttons.radius = "13px";
+      theme.bar.buttons.radius = "5px";
       theme.bar.buttons.spacing = "0.1em";
       theme.bar.buttons.y_margins = "0px";
       theme.bar.floating = false;

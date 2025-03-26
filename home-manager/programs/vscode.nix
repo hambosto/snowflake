@@ -4,7 +4,7 @@
 }:
 {
   programs.vscode = {
-    enable = false;
+    enable = true;
     profiles.default = {
       userSettings = {
         "editor.fontSize" = 14;

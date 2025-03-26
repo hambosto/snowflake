@@ -5,25 +5,22 @@
   ...
 }:
 let
-  rust-module =
+  rust-package =
     with lib;
     let
       cfg = config.programs.rust;
-      rust-profile = pkgs.rust-bin.selectLatestNightlyWith (
-        toolchain:
-        toolchain.default.override {
-          extensions = [
-            "cargo"
-            "clippy"
-            "rust-docs"
-            "rust-std"
-            "rustc"
-            "rustfmt"
-            "rust-analyzer"
-          ];
-          targets = [ "x86_64-unknown-linux-gnu" ];
-        }
-      );
+      rust-profile = pkgs.rust-bin.stable.latest.default.override {
+        extensions = [
+          "cargo"
+          "clippy"
+          "rust-docs"
+          "rust-std"
+          "rustc"
+          "rustfmt"
+          "rust-analyzer"
+        ];
+        targets = [ "x86_64-unknown-linux-gnu" ];
+      };
     in
     {
       options.programs.rust = {
@@ -42,7 +39,7 @@ let
     };
 in
 {
-  imports = [ rust-module ];
+  imports = [ rust-package ];
 
   programs.rust = {
     enable = false;
