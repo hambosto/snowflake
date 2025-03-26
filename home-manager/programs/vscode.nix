@@ -21,7 +21,7 @@
         "editor.autoClosingBrackets" = "always";
         "editor.semanticHighlighting.enabled" = true;
 
-        "workbench.colorTheme" = "GitHub Dark Default";
+        "workbench.colorTheme" = "Gruvbox Dark Hard";
         "workbench.iconTheme" = "symbols";
         "workbench.activityBar.location" = "hidden";
         "workbench.editor.showTabs" = "single";
@@ -83,11 +83,11 @@
 
       };
       extensions = with pkgs.vscode-marketplace; [
-        github.github-vscode-theme
         golang.go
         jnoortheen.nix-ide
         supermaven.supermaven
         miguelsolorio.symbols
+        jdinhlife.gruvbox
         # ziglang.vscode-zig
         # rust-lang.rust-analyzer
         # tamasfe.even-better-toml

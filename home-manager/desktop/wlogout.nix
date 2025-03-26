@@ -59,7 +59,7 @@
         ), url("${config.stylix.image}");
         background-size: cover;
         font-size: 16pt;
-        color: #${config.lib.stylix.colors.base05};
+        color: #${config.lib.stylix.colors.base0D};
       }
 
       button {
