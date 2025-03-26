@@ -8,5 +8,6 @@
     cbonsai
     pipes
     cmatrix
+    neovim
   ];
 }
