@@ -26,7 +26,7 @@
           "backlight"
           "battery"
           "clock"
-          "custom/power"
+          "custom/wlogout"
         ];
 
         "hyprland/workspaces" = {
@@ -38,27 +38,25 @@
           };
           on-scroll-up = "hyprctl dispatch workspace e+1";
           on-scroll-down = "hyprctl dispatch workspace e-1";
-          "persistent-workspaces" = {
+          persistent-workspaces = {
             "*" = 5;
           };
         };
 
-        "power-profiles-daemon" = {
-          "format" = "{icon}";
-          "tooltip-format" = "Power profile: {profile}\nDriver: {driver}";
-          "tooltip" = true;
-          "format-icons" = {
-            "default" = "";
-            "performance" = "";
-            "balanced" = "";
-            "power-saver" = "";
+        power-profiles-daemon = {
+          format = "{icon}";
+          tooltip-format = "Power profile: {profile}\nDriver: {driver}";
+          tooltip = true;
+          format-icons = {
+            default = "";
+            performance = "";
+            balanced = "";
+            power-saver = "";
           };
         };
 
-        "clock" = {
+        clock = {
           format = " {:L%H:%M}";
-          tooltip = true;
-          tooltip-format = "<big>{:%A, %d.%B %Y }</big>\n<tt><small>{calendar}</small></tt>";
         };
 
         "hyprland/window" = {
@@ -73,29 +71,19 @@
           };
         };
 
-        "network" = {
-          interval = 1;
-          format-icons = [
-            "󰤯"
-            "󰤟"
-            "󰤢"
-            "󰤥"
-            "󰤨"
-          ];
-          format-ethernet = " {bandwidthDownOctets}";
-          format-wifi = "{icon} {signalStrength}%";
-          format-disconnected = "󰤮";
-          tooltip = false;
-          # on-click = "${pkgs.kitty}/bin/kitty --class dotfiles-floating -e nmtui";
+        network = {
+          format-ethernet = " {ifname}";
+          format-wifi = "  {signalStrength}%";
+          format-disconnected = "Disconnected ⚠";
         };
 
-        "tray" = {
+        tray = {
           spacing = 12;
         };
 
-        "backlight" = {
-          "format" = "{icon} {percent}%";
-          "format-icons" = [
+        backlight = {
+          format = "{icon} {percent}%";
+          format-icons = [
             ""
             ""
             ""
@@ -112,20 +100,18 @@
             ""
             ""
           ];
-          "scroll-step" = 1;
+          scroll-step = 1;
         };
 
-        "pulseaudio" = {
+        pulseaudio = {
           format = "{icon} {volume}%";
-          format-bluetooth = "{volume}% {icon} {format_source}";
-          format-bluetooth-muted = " {icon} {format_source}";
-          format-muted = " {format_source}";
+          format-muted = "󰝟 {format_source}";
           format-source = " {volume}%";
           format-source-muted = "";
           format-icons = {
             headphone = "";
-            hands-free = "";
-            headset = "";
+            hands-free = "";
+            headset = "";
             phone = "";
             portable = "";
             car = "";
@@ -137,27 +123,26 @@
           };
         };
 
-        "custom/power" = {
-          tooltip = false;
+        "custom/wlogout" = {
           format = "";
           on-click = "sleep 0.1 && wlogout";
         };
 
         "custom/launcher" = {
-          tooltip = false;
           format = "";
           on-click = "sleep 0.1 && rofi-launcher";
         };
 
-        "battery" = {
+        battery = {
           states = {
             warning = 30;
             critical = 20;
           };
           format = "{icon} {capacity}%";
-          format-charging = "󰂄 {capacity}%";
-          format-plugged = "󱘖 {capacity}%";
+          format-charging = " {capacity}%";
+          format-plugged = " {capacity}%";
           format-icons = [
+            "󰂎"
             "󰁺"
             "󰁻"
             "󰁼"
@@ -169,8 +154,6 @@
             "󰂂"
             "󰁹"
           ];
-          on-click = "";
-          tooltip = false;
         };
       }
     ];
@@ -260,7 +243,7 @@
       #backlight,
       #power-profiles-daemon,
       #custom-launcher,
-      #custom-power {
+      #custom-wlogout {
           background-color: #${config.lib.stylix.colors.base01};
           font-size: 16px;
           color: #${config.lib.stylix.colors.base05};
