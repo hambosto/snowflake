@@ -13,7 +13,7 @@ in
   imports = [ inputs.hyprpanel.homeManagerModules.hyprpanel ];
 
   programs.hyprpanel = {
-    enable = true;
+    enable = false;
     hyprland.enable = true;
     overwrite.enable = true;
     overlay.enable = true;

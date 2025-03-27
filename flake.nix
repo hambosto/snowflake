@@ -7,10 +7,6 @@
       url = "github:hambosto/wallpaper-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    helix-editor = {
-      url = "github:helix-editor/helix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     stylix = {
       url = "github:danth/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
