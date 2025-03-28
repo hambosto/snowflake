@@ -43,9 +43,28 @@
     #   base0F = "#bd93f9";
     # };
 
+    base16Scheme = {
+      base00 = "232136";
+      base01 = "2a273f";
+      base02 = "393552";
+      base03 = "6e6a86";
+      base04 = "908caa";
+      base05 = "e0def4";
+      base06 = "e0def4";
+      base07 = "56526e";
+      base08 = "eb6f92";
+      base09 = "f6c177";
+      base0A = "ea9a97";
+      base0B = "3e8fb0";
+      base0C = "9ccfd8";
+      base0D = "c4a7e7";
+      base0E = "f6c177";
+      base0F = "56526e";
+    };
+
     image = pkgs.fetchurl {
-      url = "https://raw.githubusercontent.com/hydraPV/.dotfiles/master/hyprland/Gruvbox/wallpapers/forest-1.jpg";
-      sha256 = "sha256-RqzCCnn4b5kU7EYgaPF19Gr9I5cZrkEdsTu+wGaaMFI=";
+      url = "https://raw.githubusercontent.com/alokinho1/hyprpine-dots/main/Wallpaper/Wallpaper_woods_upscayl_4x_RealESRGAN_General_x4_v3.png";
+      sha256 = "sha256-cWixfeuwlyqXZ+XQ16TJoBuRNT3cMbhOBpziAn++H2Y=";
     };
 
     # image = pkgs.fetchurl {
