@@ -1,5 +1,4 @@
 {
-  inputs,
   lib,
   pkgs,
   ...
@@ -7,7 +6,6 @@
 {
   programs.helix = {
     enable = true;
-    # package = inputs.helix-editor.packages.x86_64-linux.default;
     defaultEditor = true;
     settings = {
       editor = {

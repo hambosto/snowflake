@@ -12,19 +12,15 @@ in
   stylix.targets.spicetify.enable = false;
 
   programs.spicetify = {
-    enable = false;
-    theme = lib.mkForce spicePkgs.themes.lucid;
+    enable = true;
+    theme = lib.mkForce spicePkgs.themes.catppuccin;
 
-    colorScheme = "dark";
+    colorScheme = "mocha";
 
     enabledExtensions = with spicePkgs.extensions; [
-      playlistIcons
-      lastfm
-      historyShortcut
       hidePodcasts
       adblock
       fullAppDisplay
-      shuffle
     ];
   };
 }

@@ -9,13 +9,13 @@
       ui_font_family = lib.mkForce "JetBrainsMono Nerd Font";
       buffer_font_size = lib.mkForce 14;
       buffer_font_family = lib.mkForce "JetBrainsMono Nerd Font";
+
       inlay_hints.enabled = true;
 
       lsp = {
         rust-analyzer = {
           binary = {
-            # $ which rust-analyzer
-            # path = "/home/ilham/.nix-profile/bin/rust-analyzer";
+            path_lookup = true;
           };
           settings = {
             diagnostics = {
@@ -85,9 +85,6 @@
       };
     };
 
-    extensions = [
-      "tokyo-night"
-      "toml"
-    ];
+    extensions = [ "tokyo-night" ];
   };
 }
