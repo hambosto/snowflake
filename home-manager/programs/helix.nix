@@ -5,38 +5,79 @@
 }:
 {
   programs.helix = {
-    enable = true;
     defaultEditor = true;
+    enable = true;
+
+    languages = {
+      language = [
+        {
+          auto-format = true;
+          formatter.command = lib.getExe pkgs.gosimports;
+          language-servers = [ "gopls" ];
+          name = "go";
+        }
+        {
+          auto-format = true;
+          formatter.command = lib.getExe pkgs.nixfmt-rfc-style;
+          language-servers = [ "nixd" ];
+          name = "nix";
+        }
+        # {
+        #   auto-format = true;
+        #   formatter.command = lib.getExe pkgs.rustfmt;
+        #   name = "rust";
+        # }
+      ];
+
+      language-server = {
+        gopls.command = lib.getExe pkgs.gopls;
+        nixd.command = lib.getExe pkgs.nixd;
+        # rust-analyzer.command = lib.getExe pkgs.rust-analyzer;
+      };
+    };
+
     settings = {
       editor = {
-        soft-wrap.enable = true;
         color-modes = true;
-        cursorline = true;
         completion-replace = true;
-        end-of-line-diagnostics = "hint";
-        cursor-shape = {
-          normal = "block";
-          insert = "bar";
-          select = "underline";
-
-        };
-        file-picker.hidden = false;
-        true-color = true;
         completion-timeout = 1;
-        idle-timeout = 1;
-
+        cursorline = true;
+        end-of-line-diagnostics = "hint";
+        file-picker.hidden = false;
         gutters = [
           "diff"
           "diagnostics"
           "line-numbers"
           "spacer"
         ];
+        idle-timeout = 1;
+        indent-guides = {
+          character = "┆";
+          rainbow = "dim";
+          render = true;
+        };
+        lsp = {
+          auto-signature-help = true;
+          display-inlay-hints = true;
+          display-messages = true;
+          display-progress-messages = true;
+          display-signature-help-docs = true;
+          enable = true;
+          goto-reference-include-declaration = true;
+          snippets = true;
+        };
+        soft-wrap.enable = true;
         statusline = {
+          center = [ "file-name" ];
           left = [
             "mode"
             "spinner"
           ];
-          center = [ "file-name" ];
+          mode = {
+            insert = "INSERT";
+            normal = "NORMAL";
+            select = "SELECT";
+          };
           right = [
             "diagnostics"
             "selections"
@@ -46,63 +87,23 @@
             "version-control"
           ];
           separator = "|";
-          mode = {
-            normal = "NORMAL";
-            insert = "INSERT";
-            select = "SELECT";
-          };
         };
-        lsp = {
-          enable = true;
-          display-messages = true;
-          display-progress-messages = true;
-          auto-signature-help = true;
-          display-inlay-hints = true;
-          display-signature-help-docs = true;
-          snippets = true;
-          goto-reference-include-declaration = true;
-        };
-        indent-guides = {
-          render = true;
-          rainbow = "dim";
-          character = "┆";
-        };
+        true-color = true;
         whitespace = {
           characters = {
-            space = "·";
             nbsp = "⍽";
-            tab = "→";
             newline = "⏎";
+            space = "·";
+            tab = "→";
             tabpad = "·";
           };
         };
+        cursor-shape = {
+          insert = "bar";
+          normal = "block";
+          select = "underline";
+        };
       };
-    };
-    languages = {
-      language-server = {
-        nixd.command = lib.getExe pkgs.nixd;
-        gopls.command = lib.getExe pkgs.gopls;
-        # rust-analyzer.command = lib.getExe pkgs.rust-analyzer;
-      };
-      language = [
-        {
-          name = "nix";
-          language-servers = [ "nixd" ];
-          auto-format = true;
-          formatter.command = lib.getExe pkgs.nixfmt-rfc-style;
-        }
-        {
-          name = "go";
-          language-servers = [ "gopls" ];
-          auto-format = true;
-          formatter.command = lib.getExe pkgs.gosimports;
-        }
-        # {
-        #   name = "rust";
-        #   auto-format = true;
-        #   formatter.command = lib.getExe pkgs.rustfmt;
-        # }
-      ];
     };
   };
 }

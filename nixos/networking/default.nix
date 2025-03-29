@@ -1,10 +1,15 @@
 { hostname, ... }:
 {
   networking.networkmanager.enable = true;
-  networking.networkmanager.wifi.macAddress = "random";
+  networking.networkmanager.wifi.backend = "iwd";
+  networking.networkmanager.wifi.powersave = false;
   networking.hostName = hostname;
-  networking.nameservers = [
-    "1.1.1.1"
-    "1.0.0.1"
-  ];
+  networking.useDHCP = false;
+  networking.wireless.iwd = {
+    enable = true;
+    settings = {
+      General.AddressRandomization = "once";
+      General.AddressRandomizationRange = "full";
+    };
+  };
 }

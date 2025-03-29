@@ -1,22 +1,38 @@
 {
+  pkgs,
+  ...
+}:
+{
   nix = {
-    settings = {
-      auto-optimise-store = true;
-      warn-dirty = false;
-      experimental-features = [
-        "nix-command"
-        "flakes"
-      ];
-      substituters = [ ];
-      trusted-public-keys = [ ];
-      extra-substituters = [ ];
-      extra-trusted-public-keys = [ ];
-    };
+    daemonCPUSchedPolicy = "idle";
+    daemonIOSchedClass = "idle";
+
     gc = {
       automatic = true;
       dates = "weekly";
       options = "--delete-older-than 7d";
     };
+
     optimise.automatic = true;
+    package = pkgs.lix;
+
+    settings = {
+      allowed-users = [ "@wheel" ];
+      auto-optimise-store = true;
+      builders-use-substitutes = true;
+      extra-substituters = [ ];
+      extra-trusted-public-keys = [ ];
+
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
+
+      max-jobs = "auto";
+      substituters = [ ];
+      trusted-public-keys = [ ];
+      trusted-users = [ "@wheel" ];
+      warn-dirty = false;
+    };
   };
 }

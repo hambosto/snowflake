@@ -11,83 +11,11 @@
     enable = false;
     settings = lib.mkForce {
       vim = {
-        viAlias = true;
-        vimAlias = true;
-
-        enableLuaLoader = true;
-        syntaxHighlighting = true;
-        lineNumberMode = "number";
-        useSystemClipboard = true;
-        preventJunkFiles = true;
-
-        undoFile.enable = true;
-        telescope.enable = true;
-        globals.editorconfig = true;
-
-        options = {
-          tabstop = 2;
-          shiftwidth = 2;
-          expandtab = true;
-
-          autoindent = true;
-        };
+        autopairs.nvim-autopairs.enable = true;
 
         binds = {
           cheatsheet.enable = true;
           whichKey.enable = true;
-        };
-
-        dashboard = {
-          dashboard-nvim.enable = true;
-          alpha.enable = true;
-          startify.enable = true;
-        };
-
-        mini = {
-          icons.enable = true;
-          statusline.enable = true;
-          git.enable = true;
-          diff.enable = true;
-          align.enable = true;
-          notify.enable = true;
-          operators.enable = true;
-          starter.enable = true;
-          comment.enable = true;
-          move.enable = true;
-          pairs.enable = true;
-          splitjoin.enable = true;
-          bracketed.enable = true;
-          indentscope.enable = true;
-        };
-
-        tabline.nvimBufferline = {
-          enable = true;
-
-          mappings = {
-            cycleNext = "<leader>e";
-            cyclePrevious = "<leader>q";
-          };
-        };
-
-        terminal.toggleterm = {
-          enable = true;
-          lazygit.enable = true;
-        };
-
-        autopairs.nvim-autopairs.enable = true;
-
-        autocomplete.nvim-cmp = {
-          enable = true;
-
-          mappings = {
-            close = "<C-e>";
-            complete = "<C-Space>";
-            confirm = "<CR>";
-            next = "<Tab>";
-            previous = "<S-Tab>";
-            scrollDocsDown = "<C-f>";
-            scrollDocsUp = "<C-d>";
-          };
         };
 
         comments.comment-nvim = {
@@ -98,12 +26,18 @@
           };
         };
 
+        dashboard = {
+          alpha.enable = true;
+          dashboard-nvim.enable = true;
+          startify.enable = true;
+        };
+
         debugger.nvim-dap = {
           enable = true;
 
           ui = {
-            enable = true;
             autoStart = true;
+            enable = true;
           };
         };
 
@@ -114,6 +48,8 @@
             toggle = "<C-n>";
           };
         };
+
+        globals.editorconfig = true;
 
         languages = {
           enableDAP = true;
@@ -133,8 +69,8 @@
             enable = true;
             extraDiagnostics.enable = true;
             format = {
-              type = "nixfmt";
               package = pkgs.nixfmt-rfc-style;
+              type = "nixfmt";
             };
             lsp.enable = true;
             treesitter.enable = true;
@@ -148,25 +84,65 @@
             treesitter.enable = true;
 
             crates = {
-              enable = true;
               codeActions = true;
+              enable = true;
             };
           };
         };
 
-        snippets.luasnip.enable = true;
-
         lsp = {
           enable = true;
           formatOnSave = true;
-          lspkind.enable = true;
-          trouble.enable = true;
-          otter-nvim.enable = true;
           lightbulb.enable = true;
-          lspsaga.enable = true;
           lspSignature.enable = true;
+          lspkind.enable = true;
           lsplines.enable = true;
+          lspsaga.enable = true;
           nvim-docs-view.enable = true;
+          otter-nvim.enable = true;
+          trouble.enable = true;
+        };
+
+        mini = {
+          align.enable = true;
+          bracketed.enable = true;
+          comment.enable = true;
+          diff.enable = true;
+          git.enable = true;
+          icons.enable = true;
+          indentscope.enable = true;
+          move.enable = true;
+          notify.enable = true;
+          operators.enable = true;
+          pairs.enable = true;
+          splitjoin.enable = true;
+          starter.enable = true;
+          statusline.enable = true;
+        };
+
+        options = {
+          autoindent = true;
+          expandtab = true;
+          shiftwidth = 2;
+          tabstop = 2;
+        };
+
+        snippets.luasnip.enable = true;
+
+        tabline.nvimBufferline = {
+          enable = true;
+
+          mappings = {
+            cycleNext = "<leader>e";
+            cyclePrevious = "<leader>q";
+          };
+        };
+
+        telescope.enable = true;
+
+        terminal.toggleterm = {
+          enable = true;
+          lazygit.enable = true;
         };
 
         theme = {
@@ -176,17 +152,25 @@
           transparent = true;
         };
 
-        treesitter.context.enable = true;
-        treesitter.highlight.enable = true;
-        treesitter.indent.enable = true;
-
-        ui = {
-          noice.enable = true;
+        treesitter = {
+          context.enable = true;
+          highlight.enable = true;
+          indent.enable = true;
         };
 
-        visuals = {
-          nvim-web-devicons.enable = true;
-        };
+        ui.noice.enable = true;
+
+        visuals.nvim-web-devicons.enable = true;
+
+        viAlias = true;
+        vimAlias = true;
+
+        enableLuaLoader = true;
+        lineNumberMode = "number";
+        preventJunkFiles = true;
+        syntaxHighlighting = true;
+        undoFile.enable = true;
+        useSystemClipboard = true;
       };
     };
   };
