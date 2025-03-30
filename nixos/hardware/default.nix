@@ -1,7 +1,7 @@
 {
   imports = [
-    ./amd.nix
     ./bluetooth.nix
+    ./cpu.nix
     ./graphics.nix
     ./wireless.nix
   ];
