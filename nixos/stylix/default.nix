@@ -63,8 +63,8 @@
     };
 
     image = pkgs.fetchurl {
-      url = "https://raw.githubusercontent.com/alokinho1/hyprpine-dots/main/Wallpaper/Wallpaper_woods_upscayl_4x_RealESRGAN_General_x4_v3.png";
-      sha256 = "sha256-cWixfeuwlyqXZ+XQ16TJoBuRNT3cMbhOBpziAn++H2Y=";
+      url = "https://raw.githubusercontent.com/rose-pine/wallpapers/main/leafy-moon.png";
+      sha256 = "sha256-adxw9sKppsEs9IliLtmFpF54nrp6hr8/C0YkXxaZglU=";
     };
 
     # image = pkgs.fetchurl {

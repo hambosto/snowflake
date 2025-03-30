@@ -1,10 +1,11 @@
 {
   config,
+  pkgs,
   ...
 }:
 {
   programs.waybar = {
-    enable = false;
+    enable = true;
     systemd = {
       enable = true;
       target = "hyprland-session.target";
@@ -75,6 +76,7 @@
           format-ethernet = " {ifname}";
           format-wifi = "  {signalStrength}%";
           format-disconnected = "Disconnected ⚠";
+          on-click = "${pkgs.kitty}/bin/kitty -e nmtui";
         };
 
         tray = {

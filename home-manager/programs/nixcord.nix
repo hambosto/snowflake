@@ -6,7 +6,11 @@
     enable = false;
     discord.enable = false;
     vesktop.enable = true;
+    quickCss = ''
+      @import url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/css/source.css);
+    '';
     config = {
+      useQuickCss = true;
       frameless = true;
       plugins = {
         anonymiseFileNames.enable = true;

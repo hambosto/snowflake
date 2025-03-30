@@ -1,15 +1,13 @@
-{ hostname, ... }:
 {
-  networking.networkmanager.enable = true;
-  networking.networkmanager.wifi.backend = "iwd";
-  networking.networkmanager.wifi.powersave = false;
+  hostname,
+  ...
+}:
+{
   networking.hostName = hostname;
+  networking.nameservers = [
+    "8.8.8.8"
+    "8.8.4.4"
+  ];
+  networking.networkmanager.enable = true;
   networking.useDHCP = false;
-  networking.wireless.iwd = {
-    enable = true;
-    settings = {
-      General.AddressRandomization = "once";
-      General.AddressRandomizationRange = "full";
-    };
-  };
 }

@@ -75,7 +75,7 @@
 
       button:focus {
         background-size: 22%;
-        border: 2px solid #${config.lib.stylix.colors.base0E};
+        border: 2px solid #${config.lib.stylix.colors.base0D};
       }
 
       button:hover {
