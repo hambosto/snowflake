@@ -5,8 +5,8 @@
 {
   networking.hostName = hostname;
   networking.nameservers = [
-    "8.8.8.8"
-    "8.8.4.4"
+    "1.1.1.1#one.one.one.one"
+    "1.0.0.1#one.one.one.one"
   ];
   networking.networkmanager.enable = true;
   networking.useDHCP = false;
