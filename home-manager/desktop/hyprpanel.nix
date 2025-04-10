@@ -18,54 +18,53 @@ in
     overwrite.enable = true;
     overlay.enable = true;
 
-    layout = {
-      "bar.layouts" = {
-        "0" = {
-          left = [
-            "dashboard"
-            "workspaces"
-            "windowtitle"
-          ];
-          middle = [
-            "media"
-          ];
-          right = [
-            "systray"
-            # "cava"
-            "hyprsunset"
-            "volume"
-            "battery"
-            "bluetooth"
-            "network"
-            "clock"
-            "notifications"
-          ];
-        };
-        "1" = {
-          left = [
-            "dashboard"
-            "workspaces"
-            "windowtitle"
-          ];
-          middle = [
-            "media"
-          ];
-          right = [
-            "systray"
-            # "cava"
-            "hyprsunset"
-            "volume"
-            "battery"
-            "bluetooth"
-            "network"
-            "clock"
-            "notifications"
-          ];
+    settings = {
+      layout = {
+        "bar.layouts" = {
+          "0" = {
+            left = [
+              "dashboard"
+              "workspaces"
+              "windowtitle"
+            ];
+            middle = [
+              "media"
+            ];
+            right = [
+              "systray"
+              # "cava"
+              "hyprsunset"
+              "volume"
+              "battery"
+              "bluetooth"
+              "network"
+              "clock"
+              "notifications"
+            ];
+          };
+          "1" = {
+            left = [
+              "dashboard"
+              "workspaces"
+              "windowtitle"
+            ];
+            middle = [
+              "media"
+            ];
+            right = [
+              "systray"
+              # "cava"
+              "hyprsunset"
+              "volume"
+              "battery"
+              "bluetooth"
+              "network"
+              "clock"
+              "notifications"
+            ];
+          };
         };
       };
-    };
-
-    settings = {
       bar.clock.format = "%H:%M %Z";
       bar.clock.icon = "";
       bar.clock.showIcon = true;
