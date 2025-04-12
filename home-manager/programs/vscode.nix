@@ -21,7 +21,7 @@
         "editor.autoClosingBrackets" = "always";
         "editor.semanticHighlighting.enabled" = true;
 
-        "workbench.colorTheme" = "Rosé Pine Moon";
+        "workbench.colorTheme" = "Default Dark Modern";
         "workbench.iconTheme" = "symbols";
         "workbench.activityBar.location" = "hidden";
         "workbench.editor.showTabs" = "single";
@@ -87,7 +87,6 @@
         jnoortheen.nix-ide
         supermaven.supermaven
         miguelsolorio.symbols
-        mvllow.rose-pine
         # oven.bun-vscode
         # ziglang.vscode-zig
         # rust-lang.rust-analyzer
