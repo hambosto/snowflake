@@ -3,7 +3,7 @@
   ...
 }:
 {
-  imports = [ inputs.go-encryption.nixosModules.default ];
+  imports = [ inputs.go-encryption.homeManagerModules.default ];
 
   programs.go-encryption.enable = false;
 }
