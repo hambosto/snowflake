@@ -44,8 +44,8 @@
     # };
 
     image = pkgs.fetchurl {
-      url = "https://raw.githubusercontent.com/anotherhadi/awesome-wallpapers/main/app/static/wallpapers/a-purple-planet_purple.png";
-      sha256 = "sha256-TTlA/GPh+IPSMRoMKkDvs+KkqwNPi1JMaB6oOvwD5F0=";
+      url = "https://raw.githubusercontent.com/basecamp/omakub/master/themes/catppuccin/background.png";
+      sha256 = "sha256-ZsXVPg8bLrr1d48NvqY+qmgPxvq2c0HBqtTP+VOhmFc=";
     };
 
     # image = pkgs.fetchurl {
