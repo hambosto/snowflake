@@ -43,15 +43,15 @@
     # base0F = "bd93f9";
     # };
 
-    image = pkgs.fetchurl {
-      url = "https://raw.githubusercontent.com/basecamp/omakub/master/themes/catppuccin/background.png";
-      sha256 = "sha256-ZsXVPg8bLrr1d48NvqY+qmgPxvq2c0HBqtTP+VOhmFc=";
-    };
-
     # image = pkgs.fetchurl {
-    #   url = "https://raw.githubusercontent.com/D3Ext/aesthetic-wallpapers/main/images/light-ring.jpg";
-    #   sha256 = "sha256-BRgwIUqrQaut9hb94gIgtNtp9SQYFbf4lQhtQXYmahw=";
+    #   url = "https://raw.githubusercontent.com/basecamp/omakub/master/themes/catppuccin/background.png";
+    #   sha256 = "sha256-ZsXVPg8bLrr1d48NvqY+qmgPxvq2c0HBqtTP+VOhmFc=";
     # };
+
+    image = pkgs.fetchurl {
+      url = "https://raw.githubusercontent.com/D3Ext/aesthetic-wallpapers/main/images/light-ring.jpg";
+      sha256 = "sha256-BRgwIUqrQaut9hb94gIgtNtp9SQYFbf4lQhtQXYmahw=";
+    };
 
     polarity = "dark";
 
