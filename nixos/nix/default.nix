@@ -15,8 +15,8 @@
       allowed-users = [ "@wheel" ];
       auto-optimise-store = true;
       builders-use-substitutes = true;
-      extra-substituters = [ "https://helix.cachix.org" ];
-      extra-trusted-public-keys = [ "helix.cachix.org-1:ejp9KQpR1FBI2onstMQ34yogDm4OgU2ru6lIwPvuCVs=" ];
+      extra-substituters = [ ];
+      extra-trusted-public-keys = [ ];
 
       experimental-features = [
         "nix-command"

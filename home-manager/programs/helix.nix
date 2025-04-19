@@ -1,5 +1,4 @@
 {
-  inputs,
   lib,
   pkgs,
   ...
@@ -8,7 +7,6 @@
   programs.helix = {
     enable = true;
     defaultEditor = true;
-    package = inputs.helix-editor.packages.x86_64-linux.default;
 
     languages = {
       language = [
@@ -26,6 +24,18 @@
         }
         # {
         #   auto-format = true;
+        #   formatter = {
+        #     command = lib.getExe pkgs.zig;
+        #     args = [
+        #       "fmt"
+        #       "--stdin"
+        #     ];
+        #   };
+        #   language-servers = [ "zls" ];
+        #   name = "zig";
+        # }
+        # {
+        #   auto-format = true;
         #   formatter.command = lib.getExe pkgs.rustfmt;
         #   name = "rust";
         # }
@@ -34,6 +44,7 @@
       language-server = {
         gopls.command = lib.getExe pkgs.gopls;
         nixd.command = lib.getExe pkgs.nixd;
+        # zls.command = lib.getExe pkgs.zls;
         # rust-analyzer.command = lib.getExe pkgs.rust-analyzer;
       };
     };
