@@ -26,20 +26,20 @@
     #   base0F = "ff6e9c"; # Deprecated - Strawberry Pink
     # };
 
-    # image = pkgs.fetchurl {
-    #   url = "https://raw.githubusercontent.com/HyDE-Project/hyde-themes/Tokyo-Night/Configs/.config/hyde/themes/Tokyo%20Night/wallpapers/edger_lucy_neon.jpg";
-    #   sha256 = "sha256-DcJlqThWgy/lR4q03KVoQyvXbHxzCWNCMo62y/x5fHQ=";
-    # };
+    image = pkgs.fetchurl {
+      url = "https://raw.githubusercontent.com/HyDE-Project/hyde-themes/Tokyo-Night/Configs/.config/hyde/themes/Tokyo%20Night/wallpapers/edger_lucy_neon.jpg";
+      sha256 = "sha256-DcJlqThWgy/lR4q03KVoQyvXbHxzCWNCMo62y/x5fHQ=";
+    };
 
     # image = pkgs.fetchurl {
     #   url = "https://raw.githubusercontent.com/HyDE-Project/hyde-themes/Catppuccin-Mocha/Configs/.config/hyde/themes/Catppuccin%20Mocha/wallpapers/rebellious_tower.png";
     #   sha256 = "sha256-+0aBVMBVaobTwWp5/Dx5VHVwGi26SjM4+xqK/oWbyNI=";
     # };
 
-    image = pkgs.fetchurl {
-      url = "https://raw.githubusercontent.com/HyDE-Project/hyde-themes/Catppuccin-Mocha/Configs/.config/hyde/themes/Catppuccin%20Mocha/wallpapers/aesthetic_deer.png";
-      sha256 = "sha256-PAYE7IjDpUMNsZ94noVkggW3MHNHxA629omYTDtRae0=";
-    };
+    # image = pkgs.fetchurl {
+    #   url = "https://raw.githubusercontent.com/HyDE-Project/hyde-themes/Catppuccin-Mocha/Configs/.config/hyde/themes/Catppuccin%20Mocha/wallpapers/aesthetic_deer.png";
+    #   sha256 = "sha256-PAYE7IjDpUMNsZ94noVkggW3MHNHxA629omYTDtRae0=";
+    # };
 
     # image = pkgs.fetchurl {
     #   url = "https://raw.githubusercontent.com/D3Ext/aesthetic-wallpapers/main/images/light-ring.jpg";
@@ -85,7 +85,7 @@
     };
   };
 
-  stylix.targets = {
-    chromium.enable = false;
-  };
+  # stylix.targets = {
+  #   chromium.enable = false;
+  # };
 }

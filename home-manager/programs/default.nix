@@ -9,7 +9,6 @@
     ./eza.nix
     ./fastfetch.nix
     ./fish.nix
-    ./floorp.nix
     ./fzf.nix
     ./gemini-commit.nix
     ./ghostty.nix

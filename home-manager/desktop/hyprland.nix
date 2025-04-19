@@ -173,7 +173,7 @@
         "$mainMod, E, exec, ${lib.getExe pkgs.kitty} -e ${lib.getExe pkgs.yazi}"
         "$mainMod, M, exec, ${lib.getExe pkgs.kitty} -e ${lib.getExe pkgs.btop}"
         "$mainMod, L, exec, ${lib.getExe pkgs.hyprlock}"
-        "$mainMod, B, exec, ${lib.getExe pkgs.floorp}"
+        "$mainMod, B, exec, ${lib.getExe pkgs.chromium}"
         "$mainMod, SPACE, exec, rofi-launcher"
 
         # "$mainMod SHIFT, W, exec, wallpaper-manager"
