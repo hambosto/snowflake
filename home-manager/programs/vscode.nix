@@ -21,7 +21,7 @@
         "editor.autoClosingBrackets" = "always";
         "editor.semanticHighlighting.enabled" = true;
 
-        "workbench.colorTheme" = "Default Dark Modern";
+        "workbench.colorTheme" = "Tokyo Night";
         "workbench.iconTheme" = "symbols";
         "workbench.activityBar.location" = "hidden";
         "workbench.editor.showTabs" = "single";
@@ -87,6 +87,7 @@
         jnoortheen.nix-ide
         supermaven.supermaven
         miguelsolorio.symbols
+        enkia.tokyo-night
         # oven.bun-vscode
         # ziglang.vscode-zig
         # rust-lang.rust-analyzer

@@ -123,17 +123,33 @@
       };
 
       windowrulev2 = [
-        "float, title:^(Picture-in-Picture)$"
-        "pin, title:^(Picture-in-Picture)$"
-        "move 69.5% 4%, title:^(Picture-in-Picture)$"
+        "float,title:^(Picture-in-Picture)$"
+        "pin,title:^(Picture-in-Picture)$"
+        "move 69.5% 4%,title:^(Picture-in-Picture)$"
 
-        "float, class:(org.nickvision.cavalier)"
-        "pin, class:(org.nickvision.cavalier)"
-        "size 400 726,class:(org.nickvision.cavalier)"
-        "move 100%-w-16 66,class:(org.nickvision.cavalier)"
+        # "float, class:(org.nickvision.cavalier)"
+        # "pin, class:(org.nickvision.cavalier)"
+        # "size 400 726,class:(org.nickvision.cavalier)"
+        # "move 100%-w-16 66,class:(org.nickvision.cavalier)"
 
-        "float,class:Wallpaper Manager"
-        "float,class:About Wallpaper Manager"
+        # "float,class:Wallpaper Manager"
+        # "float,class:About Wallpaper Manager"
+
+        "float,class:(.*org.pulseaudio.pavucontrol.*)"
+        "size 700 600,class:(.*org.pulseaudio.pavucontrol.*)"
+        "center,class:(.*org.pulseaudio.pavucontrol.*)"
+        "pin,class:(.*org.pulseaudio.pavucontrol.*)"
+
+        "float,class:(org.twosheds.iwgtk)"
+        "size 700 600,class:(org.twosheds.iwgtk)"
+        "center,class:(org.twosheds.iwgtk)"
+        "pin,class:(org.twosheds.iwgtk)"
+
+        "float,title:^(Wireless network credentials)$"
+        "size 700 600,title:^(Wireless network credentials)$"
+        "center,title:^(Wireless network credentials)$"
+        "pin,title:^(Wireless network credentials)$"
+
       ];
 
       gestures = {
@@ -160,7 +176,7 @@
         "$mainMod, B, exec, ${lib.getExe pkgs.floorp}"
         "$mainMod, SPACE, exec, rofi-launcher"
 
-        "$mainMod SHIFT, W, exec, wallpaper-manager"
+        # "$mainMod SHIFT, W, exec, wallpaper-manager"
 
         "$mainMod, Q, killactive"
         "$mainMod, T, togglefloating"

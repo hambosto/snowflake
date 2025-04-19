@@ -1,5 +1,6 @@
 {
   config,
+  lib,
   pkgs,
   ...
 }:
@@ -16,7 +17,7 @@
         position = "top";
         modules-center = [ "hyprland/workspaces" ];
         modules-left = [
-          "custom/launcher"
+          "custom/rofi"
           "hyprland/window"
         ];
         modules-right = [
@@ -76,7 +77,7 @@
           format-ethernet = " {ifname}";
           format-wifi = "  {signalStrength}%";
           format-disconnected = "Disconnected ⚠";
-          on-click = "${pkgs.kitty}/bin/kitty -e nmtui";
+          on-click = lib.getExe pkgs.iwgtk;
         };
 
         tray = {
@@ -123,6 +124,7 @@
               ""
             ];
           };
+          on-click = lib.getExe pkgs.pavucontrol;
         };
 
         "custom/wlogout" = {
@@ -130,7 +132,7 @@
           on-click = "sleep 0.1 && wlogout";
         };
 
-        "custom/launcher" = {
+        "custom/rofi" = {
           format = "";
           on-click = "sleep 0.1 && rofi-launcher";
         };
@@ -241,7 +243,7 @@
       #tray,
       #backlight,
       #power-profiles-daemon,
-      #custom-launcher,
+      #custom-rofi,
       #custom-wlogout {
           background-color: #${config.lib.stylix.colors.base01};
           font-size: 16px;
