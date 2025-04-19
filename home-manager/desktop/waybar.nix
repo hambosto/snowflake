@@ -5,7 +5,7 @@
 }:
 {
   programs.waybar = {
-    enable = false;
+    enable = true;
     systemd = {
       enable = true;
       target = "hyprland-session.target";
@@ -46,12 +46,12 @@
 
         power-profiles-daemon = {
           format = "{icon}";
-          tooltip-format = "Power profile: {profile}\nDriver: {driver}";
+          tooltip-format = "Power profile: {profile}";
           tooltip = true;
           format-icons = {
             default = "";
             performance = "";
-            balanced = "";
+            balanced = "󰈐";
             power-saver = "";
           };
         };
@@ -168,10 +168,7 @@
       }
 
       window#waybar {
-          background-color: rgba(0,0,0,0.2);
-          border-bottom: 0px solid #ffffff;
-          transition-property: background-color;
-          transition-duration: .5s;
+          background: transparent;
       }
 
       .modules-left {

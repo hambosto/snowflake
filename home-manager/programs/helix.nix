@@ -1,12 +1,14 @@
 {
+  inputs,
   lib,
   pkgs,
   ...
 }:
 {
   programs.helix = {
-    defaultEditor = true;
     enable = true;
+    defaultEditor = true;
+    package = inputs.helix-editor.packages.x86_64-linux.default;
 
     languages = {
       language = [
@@ -37,6 +39,7 @@
     };
 
     settings = {
+      theme = lib.mkForce "tokyonight";
       editor = {
         color-modes = true;
         completion-replace = true;

@@ -1,8 +1,4 @@
 {
-  pkgs,
-  ...
-}:
-{
   nix = {
     daemonCPUSchedPolicy = "idle";
     daemonIOSchedClass = "idle";
@@ -14,14 +10,13 @@
     };
 
     optimise.automatic = true;
-    package = pkgs.lix;
 
     settings = {
       allowed-users = [ "@wheel" ];
       auto-optimise-store = true;
       builders-use-substitutes = true;
-      extra-substituters = [ ];
-      extra-trusted-public-keys = [ ];
+      extra-substituters = [ "https://helix.cachix.org" ];
+      extra-trusted-public-keys = [ "helix.cachix.org-1:ejp9KQpR1FBI2onstMQ34yogDm4OgU2ru6lIwPvuCVs=" ];
 
       experimental-features = [
         "nix-command"
