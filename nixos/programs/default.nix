@@ -1,3 +1,6 @@
 {
-  imports = [ ./fish.nix ];
+  imports = [
+    ./fish.nix
+    ./virt-manager.nix
+  ];
 }
